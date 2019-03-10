@@ -1,6 +1,8 @@
 syntax = "proto3";
 package services;
 
+option go_package = "github.com/quorumcontrol/messages/services";
+
 import "transactions/transactions.proto";
 
 message Credentials {
