@@ -195,4 +195,5 @@ service WalletRPCService {
   rpc Resolve (ResolveRequest) returns (ResolveResponse);
   rpc EstablishCoin (EstablishCoinRequest) returns (EstablishCoinResponse);
   rpc MintCoin (MintCoinRequest) returns (MintCoinResponse);
+  rpc PlayTransactions (PlayTransactionsRequest) returns (PlayTransactionsResponse);
 }
