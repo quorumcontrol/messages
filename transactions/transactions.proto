@@ -5,6 +5,15 @@ option go_package = "github.com/quorumcontrol/messages/transactions";
 
 import "google/protobuf/any.proto";
 
+enum TransactionType {
+  Unknown = 0;
+  SetData = 1;
+  SetOwnership = 2;
+  EstablishCoin = 3;
+  MintCoin = 4;
+  Stake = 5;
+}
+
 message SetDataPayload {
   string path = 1;
   bytes value = 2;
@@ -29,6 +38,6 @@ message MintCoinPayload{
 }
 
 message Transaction{
-  string type = 1;
+  TransactionType type = 1;
   google.protobuf.Any Payload = 2;
 }
