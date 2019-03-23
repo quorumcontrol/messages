@@ -3,7 +3,7 @@ package services;
 
 option go_package = "github.com/quorumcontrol/messages/services";
 
-import "transactions/transactions.proto";
+import "github.com/quorumcontrol/messages/transactions/transactions.proto";
 
 message Credentials {
   string wallet_name = 1;
