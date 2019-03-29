@@ -9,8 +9,8 @@ enum TransactionType {
   Unknown = 0;
   SetData = 1;
   SetOwnership = 2;
-  EstablishCoin = 3;
-  MintCoin = 4;
+  EstablishToken = 3;
+  MintToken = 4;
   Stake = 5;
 }
 
@@ -23,16 +23,16 @@ message SetOwnershipPayload {
   repeated string authentication = 1;
 }
 
-message CoinMonetaryPolicy{
+message TokenMonetaryPolicy{
   uint64 maximum = 1;
 }
 
-message EstablishCoinPayload{
+message EstablishTokenPayload{
   string name = 1;
-  CoinMonetaryPolicy monetary_policy = 2;
+  TokenMonetaryPolicy monetary_policy = 2;
 }
 
-message MintCoinPayload{
+message MintTokenPayload{
   string name = 1;
   uint64 amount = 2;
 }
