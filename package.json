@@ -1,0 +1,11 @@
+{
+  "name": "tupelo-messages",
+  "version": "0.1.0",
+  "description": "Tupelo JavaScript messages implementation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuorumControl/messages.git"
+  },
+  "author": "Quorum Control",
+  "dependencies": {}
+}
