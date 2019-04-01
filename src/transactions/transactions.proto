@@ -3,8 +3,6 @@ package transactions;
 
 option go_package = "github.com/quorumcontrol/messages/transactions";
 
-import "google/protobuf/any.proto";
-
 enum TransactionType {
   Unknown = 0;
   SetData = 1;
