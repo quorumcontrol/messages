@@ -39,5 +39,10 @@ message MintTokenPayload{
 
 message Transaction{
   TransactionType type = 1;
-  google.protobuf.Any Payload = 2;
+  oneof payload {
+    SetDataPayload set_data = 2;
+    SetOwnershipPayload set_ownership = 3;
+    EstablishTokenPayload establish_token = 4;
+    MintTokenPayload mint_token = 5;
+  }
 }
