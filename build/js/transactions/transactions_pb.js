@@ -934,10 +934,10 @@ proto.transactions.Transaction.oneofGroups_ = [[2,3,4,5]];
  */
 proto.transactions.Transaction.PayloadCase = {
   PAYLOAD_NOT_SET: 0,
-  SET_DATA: 2,
-  SET_OWNERSHIP: 3,
-  ESTABLISH_TOKEN: 4,
-  MINT_TOKEN: 5
+  SET_DATA_PAYLOAD: 2,
+  SET_OWNERSHIP_PAYLOAD: 3,
+  ESTABLISH_TOKEN_PAYLOAD: 4,
+  MINT_TOKEN_PAYLOAD: 5
 };
 
 /**
@@ -977,10 +977,10 @@ proto.transactions.Transaction.prototype.toObject = function(opt_includeInstance
 proto.transactions.Transaction.toObject = function(includeInstance, msg) {
   var obj = {
     type: jspb.Message.getFieldWithDefault(msg, 1, 0),
-    setData: (f = msg.getSetData()) && proto.transactions.SetDataPayload.toObject(includeInstance, f),
-    setOwnership: (f = msg.getSetOwnership()) && proto.transactions.SetOwnershipPayload.toObject(includeInstance, f),
-    establishToken: (f = msg.getEstablishToken()) && proto.transactions.EstablishTokenPayload.toObject(includeInstance, f),
-    mintToken: (f = msg.getMintToken()) && proto.transactions.MintTokenPayload.toObject(includeInstance, f)
+    setDataPayload: (f = msg.getSetDataPayload()) && proto.transactions.SetDataPayload.toObject(includeInstance, f),
+    setOwnershipPayload: (f = msg.getSetOwnershipPayload()) && proto.transactions.SetOwnershipPayload.toObject(includeInstance, f),
+    establishTokenPayload: (f = msg.getEstablishTokenPayload()) && proto.transactions.EstablishTokenPayload.toObject(includeInstance, f),
+    mintTokenPayload: (f = msg.getMintTokenPayload()) && proto.transactions.MintTokenPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1024,22 +1024,22 @@ proto.transactions.Transaction.deserializeBinaryFromReader = function(msg, reade
     case 2:
       var value = new proto.transactions.SetDataPayload;
       reader.readMessage(value,proto.transactions.SetDataPayload.deserializeBinaryFromReader);
-      msg.setSetData(value);
+      msg.setSetDataPayload(value);
       break;
     case 3:
       var value = new proto.transactions.SetOwnershipPayload;
       reader.readMessage(value,proto.transactions.SetOwnershipPayload.deserializeBinaryFromReader);
-      msg.setSetOwnership(value);
+      msg.setSetOwnershipPayload(value);
       break;
     case 4:
       var value = new proto.transactions.EstablishTokenPayload;
       reader.readMessage(value,proto.transactions.EstablishTokenPayload.deserializeBinaryFromReader);
-      msg.setEstablishToken(value);
+      msg.setEstablishTokenPayload(value);
       break;
     case 5:
       var value = new proto.transactions.MintTokenPayload;
       reader.readMessage(value,proto.transactions.MintTokenPayload.deserializeBinaryFromReader);
-      msg.setMintToken(value);
+      msg.setMintTokenPayload(value);
       break;
     default:
       reader.skipField();
@@ -1077,7 +1077,7 @@ proto.transactions.Transaction.serializeBinaryToWriter = function(message, write
       f
     );
   }
-  f = message.getSetData();
+  f = message.getSetDataPayload();
   if (f != null) {
     writer.writeMessage(
       2,
@@ -1085,7 +1085,7 @@ proto.transactions.Transaction.serializeBinaryToWriter = function(message, write
       proto.transactions.SetDataPayload.serializeBinaryToWriter
     );
   }
-  f = message.getSetOwnership();
+  f = message.getSetOwnershipPayload();
   if (f != null) {
     writer.writeMessage(
       3,
@@ -1093,7 +1093,7 @@ proto.transactions.Transaction.serializeBinaryToWriter = function(message, write
       proto.transactions.SetOwnershipPayload.serializeBinaryToWriter
     );
   }
-  f = message.getEstablishToken();
+  f = message.getEstablishTokenPayload();
   if (f != null) {
     writer.writeMessage(
       4,
@@ -1101,7 +1101,7 @@ proto.transactions.Transaction.serializeBinaryToWriter = function(message, write
       proto.transactions.EstablishTokenPayload.serializeBinaryToWriter
     );
   }
-  f = message.getMintToken();
+  f = message.getMintTokenPayload();
   if (f != null) {
     writer.writeMessage(
       5,
@@ -1128,17 +1128,17 @@ proto.transactions.Transaction.prototype.setType = function(value) {
 
 
 /**
- * optional SetDataPayload set_data = 2;
+ * optional SetDataPayload set_data_payload = 2;
  * @return {?proto.transactions.SetDataPayload}
  */
-proto.transactions.Transaction.prototype.getSetData = function() {
+proto.transactions.Transaction.prototype.getSetDataPayload = function() {
   return /** @type{?proto.transactions.SetDataPayload} */ (
     jspb.Message.getWrapperField(this, proto.transactions.SetDataPayload, 2));
 };
 
 
 /** @param {?proto.transactions.SetDataPayload|undefined} value */
-proto.transactions.Transaction.prototype.setSetData = function(value) {
+proto.transactions.Transaction.prototype.setSetDataPayload = function(value) {
   jspb.Message.setOneofWrapperField(this, 2, proto.transactions.Transaction.oneofGroups_[0], value);
 };
 
@@ -1146,8 +1146,8 @@ proto.transactions.Transaction.prototype.setSetData = function(value) {
 /**
  * Clears the message field making it undefined.
  */
-proto.transactions.Transaction.prototype.clearSetData = function() {
-  this.setSetData(undefined);
+proto.transactions.Transaction.prototype.clearSetDataPayload = function() {
+  this.setSetDataPayload(undefined);
 };
 
 
@@ -1155,23 +1155,23 @@ proto.transactions.Transaction.prototype.clearSetData = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.transactions.Transaction.prototype.hasSetData = function() {
+proto.transactions.Transaction.prototype.hasSetDataPayload = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * optional SetOwnershipPayload set_ownership = 3;
+ * optional SetOwnershipPayload set_ownership_payload = 3;
  * @return {?proto.transactions.SetOwnershipPayload}
  */
-proto.transactions.Transaction.prototype.getSetOwnership = function() {
+proto.transactions.Transaction.prototype.getSetOwnershipPayload = function() {
   return /** @type{?proto.transactions.SetOwnershipPayload} */ (
     jspb.Message.getWrapperField(this, proto.transactions.SetOwnershipPayload, 3));
 };
 
 
 /** @param {?proto.transactions.SetOwnershipPayload|undefined} value */
-proto.transactions.Transaction.prototype.setSetOwnership = function(value) {
+proto.transactions.Transaction.prototype.setSetOwnershipPayload = function(value) {
   jspb.Message.setOneofWrapperField(this, 3, proto.transactions.Transaction.oneofGroups_[0], value);
 };
 
@@ -1179,8 +1179,8 @@ proto.transactions.Transaction.prototype.setSetOwnership = function(value) {
 /**
  * Clears the message field making it undefined.
  */
-proto.transactions.Transaction.prototype.clearSetOwnership = function() {
-  this.setSetOwnership(undefined);
+proto.transactions.Transaction.prototype.clearSetOwnershipPayload = function() {
+  this.setSetOwnershipPayload(undefined);
 };
 
 
@@ -1188,23 +1188,23 @@ proto.transactions.Transaction.prototype.clearSetOwnership = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.transactions.Transaction.prototype.hasSetOwnership = function() {
+proto.transactions.Transaction.prototype.hasSetOwnershipPayload = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * optional EstablishTokenPayload establish_token = 4;
+ * optional EstablishTokenPayload establish_token_payload = 4;
  * @return {?proto.transactions.EstablishTokenPayload}
  */
-proto.transactions.Transaction.prototype.getEstablishToken = function() {
+proto.transactions.Transaction.prototype.getEstablishTokenPayload = function() {
   return /** @type{?proto.transactions.EstablishTokenPayload} */ (
     jspb.Message.getWrapperField(this, proto.transactions.EstablishTokenPayload, 4));
 };
 
 
 /** @param {?proto.transactions.EstablishTokenPayload|undefined} value */
-proto.transactions.Transaction.prototype.setEstablishToken = function(value) {
+proto.transactions.Transaction.prototype.setEstablishTokenPayload = function(value) {
   jspb.Message.setOneofWrapperField(this, 4, proto.transactions.Transaction.oneofGroups_[0], value);
 };
 
@@ -1212,8 +1212,8 @@ proto.transactions.Transaction.prototype.setEstablishToken = function(value) {
 /**
  * Clears the message field making it undefined.
  */
-proto.transactions.Transaction.prototype.clearEstablishToken = function() {
-  this.setEstablishToken(undefined);
+proto.transactions.Transaction.prototype.clearEstablishTokenPayload = function() {
+  this.setEstablishTokenPayload(undefined);
 };
 
 
@@ -1221,23 +1221,23 @@ proto.transactions.Transaction.prototype.clearEstablishToken = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.transactions.Transaction.prototype.hasEstablishToken = function() {
+proto.transactions.Transaction.prototype.hasEstablishTokenPayload = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * optional MintTokenPayload mint_token = 5;
+ * optional MintTokenPayload mint_token_payload = 5;
  * @return {?proto.transactions.MintTokenPayload}
  */
-proto.transactions.Transaction.prototype.getMintToken = function() {
+proto.transactions.Transaction.prototype.getMintTokenPayload = function() {
   return /** @type{?proto.transactions.MintTokenPayload} */ (
     jspb.Message.getWrapperField(this, proto.transactions.MintTokenPayload, 5));
 };
 
 
 /** @param {?proto.transactions.MintTokenPayload|undefined} value */
-proto.transactions.Transaction.prototype.setMintToken = function(value) {
+proto.transactions.Transaction.prototype.setMintTokenPayload = function(value) {
   jspb.Message.setOneofWrapperField(this, 5, proto.transactions.Transaction.oneofGroups_[0], value);
 };
 
@@ -1245,8 +1245,8 @@ proto.transactions.Transaction.prototype.setMintToken = function(value) {
 /**
  * Clears the message field making it undefined.
  */
-proto.transactions.Transaction.prototype.clearMintToken = function() {
-  this.setMintToken(undefined);
+proto.transactions.Transaction.prototype.clearMintTokenPayload = function() {
+  this.setMintTokenPayload(undefined);
 };
 
 
@@ -1254,7 +1254,7 @@ proto.transactions.Transaction.prototype.clearMintToken = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.transactions.Transaction.prototype.hasMintToken = function() {
+proto.transactions.Transaction.prototype.hasMintTokenPayload = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
