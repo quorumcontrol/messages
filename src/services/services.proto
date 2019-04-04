@@ -116,7 +116,8 @@ message SetOwnerRequest {
   Credentials creds = 1;
   string chain_id = 2;
   string key_addr = 3;
-  repeated string new_owner_keys = 4;
+  // index 4 is a deleted key and intentionally omitted
+  transactions.SetOwnershipPayload payload = 5;
 }
 
 message SetOwnerResponse {
@@ -127,8 +128,8 @@ message SetDataRequest {
   Credentials creds = 1;
   string chain_id = 2;
   string key_addr = 3;
-  string path = 4;
-  bytes value = 5;
+  // indexes 4 and 5 are deleted keys and intentionally omitted
+  transactions.SetDataPayload payload = 6;
 }
 
 message SetDataResponse {
@@ -150,8 +151,8 @@ message EstablishTokenRequest {
   Credentials creds = 1;
   string chain_id = 2;
   string key_addr = 3;
-  string coin_name = 4;
-  uint64 maximum = 5;
+  // indexes 4 and 5 are deleted keys and intentionally omitted
+  transactions.EstablishTokenPayload payload = 6;
 }
 
 message EstablishTokenResponse {
@@ -162,8 +163,8 @@ message MintTokenRequest {
   Credentials creds = 1;
   string chain_id = 2;
   string key_addr = 3;
-  string coin_name = 4;
-  uint64 amount = 5;
+  // indexes 4 and 5 are deleted keys and intentionally omitted
+  transactions.MintTokenPayload payload = 6;
 }
 
 message MintTokenResponse {

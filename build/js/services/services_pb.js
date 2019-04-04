@@ -520,7 +520,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.services.SetOwnerRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.SetOwnerRequest.repeatedFields_, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.services.SetOwnerRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -4309,13 +4309,6 @@ proto.services.ListKeysResponse.prototype.clearKeyAddrsList = function() {
 
 
 
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.services.SetOwnerRequest.repeatedFields_ = [4];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -4348,7 +4341,7 @@ proto.services.SetOwnerRequest.toObject = function(includeInstance, msg) {
     creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    newOwnerKeysList: jspb.Message.getRepeatedField(msg, 4)
+    payload: (f = msg.getPayload()) && transactions_transactions_pb.SetOwnershipPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4398,9 +4391,10 @@ proto.services.SetOwnerRequest.deserializeBinaryFromReader = function(msg, reade
       var value = /** @type {string} */ (reader.readString());
       msg.setKeyAddr(value);
       break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.addNewOwnerKeys(value);
+    case 5:
+      var value = new transactions_transactions_pb.SetOwnershipPayload;
+      reader.readMessage(value,transactions_transactions_pb.SetOwnershipPayload.deserializeBinaryFromReader);
+      msg.setPayload(value);
       break;
     default:
       reader.skipField();
@@ -4453,11 +4447,12 @@ proto.services.SetOwnerRequest.serializeBinaryToWriter = function(message, write
       f
     );
   }
-  f = message.getNewOwnerKeysList();
-  if (f.length > 0) {
-    writer.writeRepeatedString(
-      4,
-      f
+  f = message.getPayload();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      transactions_transactions_pb.SetOwnershipPayload.serializeBinaryToWriter
     );
   }
 };
@@ -4527,34 +4522,35 @@ proto.services.SetOwnerRequest.prototype.setKeyAddr = function(value) {
 
 
 /**
- * repeated string new_owner_keys = 4;
- * @return {!Array<string>}
+ * optional transactions.SetOwnershipPayload payload = 5;
+ * @return {?proto.transactions.SetOwnershipPayload}
  */
-proto.services.SetOwnerRequest.prototype.getNewOwnerKeysList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+proto.services.SetOwnerRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.SetOwnershipPayload} */ (
+    jspb.Message.getWrapperField(this, transactions_transactions_pb.SetOwnershipPayload, 5));
 };
 
 
-/** @param {!Array<string>} value */
-proto.services.SetOwnerRequest.prototype.setNewOwnerKeysList = function(value) {
-  jspb.Message.setField(this, 4, value || []);
-};
-
-
-/**
- * @param {string} value
- * @param {number=} opt_index
- */
-proto.services.SetOwnerRequest.prototype.addNewOwnerKeys = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+/** @param {?proto.transactions.SetOwnershipPayload|undefined} value */
+proto.services.SetOwnerRequest.prototype.setPayload = function(value) {
+  jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
- * Clears the list making it empty but non-null.
+ * Clears the message field making it undefined.
  */
-proto.services.SetOwnerRequest.prototype.clearNewOwnerKeysList = function() {
-  this.setNewOwnerKeysList([]);
+proto.services.SetOwnerRequest.prototype.clearPayload = function() {
+  this.setPayload(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.services.SetOwnerRequest.prototype.hasPayload = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
@@ -4716,8 +4712,7 @@ proto.services.SetDataRequest.toObject = function(includeInstance, msg) {
     creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    path: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    value: msg.getValue_asB64()
+    payload: (f = msg.getPayload()) && transactions_transactions_pb.SetDataPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4767,13 +4762,10 @@ proto.services.SetDataRequest.deserializeBinaryFromReader = function(msg, reader
       var value = /** @type {string} */ (reader.readString());
       msg.setKeyAddr(value);
       break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setPath(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setValue(value);
+    case 6:
+      var value = new transactions_transactions_pb.SetDataPayload;
+      reader.readMessage(value,transactions_transactions_pb.SetDataPayload.deserializeBinaryFromReader);
+      msg.setPayload(value);
       break;
     default:
       reader.skipField();
@@ -4826,18 +4818,12 @@ proto.services.SetDataRequest.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = message.getPath();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getValue_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      5,
-      f
+  f = message.getPayload();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      transactions_transactions_pb.SetDataPayload.serializeBinaryToWriter
     );
   }
 };
@@ -4907,56 +4893,35 @@ proto.services.SetDataRequest.prototype.setKeyAddr = function(value) {
 
 
 /**
- * optional string path = 4;
- * @return {string}
+ * optional transactions.SetDataPayload payload = 6;
+ * @return {?proto.transactions.SetDataPayload}
  */
-proto.services.SetDataRequest.prototype.getPath = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.services.SetDataRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.SetDataPayload} */ (
+    jspb.Message.getWrapperField(this, transactions_transactions_pb.SetDataPayload, 6));
 };
 
 
-/** @param {string} value */
-proto.services.SetDataRequest.prototype.setPath = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+/** @param {?proto.transactions.SetDataPayload|undefined} value */
+proto.services.SetDataRequest.prototype.setPayload = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
- * optional bytes value = 5;
- * @return {!(string|Uint8Array)}
+ * Clears the message field making it undefined.
  */
-proto.services.SetDataRequest.prototype.getValue = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+proto.services.SetDataRequest.prototype.clearPayload = function() {
+  this.setPayload(undefined);
 };
 
 
 /**
- * optional bytes value = 5;
- * This is a type-conversion wrapper around `getValue()`
- * @return {string}
+ * Returns whether this field is set.
+ * @return {boolean}
  */
-proto.services.SetDataRequest.prototype.getValue_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getValue()));
-};
-
-
-/**
- * optional bytes value = 5;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getValue()`
- * @return {!Uint8Array}
- */
-proto.services.SetDataRequest.prototype.getValue_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getValue()));
-};
-
-
-/** @param {!(string|Uint8Array)} value */
-proto.services.SetDataRequest.prototype.setValue = function(value) {
-  jspb.Message.setProto3BytesField(this, 5, value);
+proto.services.SetDataRequest.prototype.hasPayload = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -5493,8 +5458,7 @@ proto.services.EstablishTokenRequest.toObject = function(includeInstance, msg) {
     creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    coinName: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    maximum: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    payload: (f = msg.getPayload()) && transactions_transactions_pb.EstablishTokenPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5544,13 +5508,10 @@ proto.services.EstablishTokenRequest.deserializeBinaryFromReader = function(msg,
       var value = /** @type {string} */ (reader.readString());
       msg.setKeyAddr(value);
       break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCoinName(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setMaximum(value);
+    case 6:
+      var value = new transactions_transactions_pb.EstablishTokenPayload;
+      reader.readMessage(value,transactions_transactions_pb.EstablishTokenPayload.deserializeBinaryFromReader);
+      msg.setPayload(value);
       break;
     default:
       reader.skipField();
@@ -5603,18 +5564,12 @@ proto.services.EstablishTokenRequest.serializeBinaryToWriter = function(message,
       f
     );
   }
-  f = message.getCoinName();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getMaximum();
-  if (f !== 0) {
-    writer.writeUint64(
-      5,
-      f
+  f = message.getPayload();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      transactions_transactions_pb.EstablishTokenPayload.serializeBinaryToWriter
     );
   }
 };
@@ -5684,32 +5639,35 @@ proto.services.EstablishTokenRequest.prototype.setKeyAddr = function(value) {
 
 
 /**
- * optional string coin_name = 4;
- * @return {string}
+ * optional transactions.EstablishTokenPayload payload = 6;
+ * @return {?proto.transactions.EstablishTokenPayload}
  */
-proto.services.EstablishTokenRequest.prototype.getCoinName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.services.EstablishTokenRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.EstablishTokenPayload} */ (
+    jspb.Message.getWrapperField(this, transactions_transactions_pb.EstablishTokenPayload, 6));
 };
 
 
-/** @param {string} value */
-proto.services.EstablishTokenRequest.prototype.setCoinName = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+/** @param {?proto.transactions.EstablishTokenPayload|undefined} value */
+proto.services.EstablishTokenRequest.prototype.setPayload = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
- * optional uint64 maximum = 5;
- * @return {number}
+ * Clears the message field making it undefined.
  */
-proto.services.EstablishTokenRequest.prototype.getMaximum = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+proto.services.EstablishTokenRequest.prototype.clearPayload = function() {
+  this.setPayload(undefined);
 };
 
 
-/** @param {number} value */
-proto.services.EstablishTokenRequest.prototype.setMaximum = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.services.EstablishTokenRequest.prototype.hasPayload = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
@@ -5871,8 +5829,7 @@ proto.services.MintTokenRequest.toObject = function(includeInstance, msg) {
     creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    coinName: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    amount: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    payload: (f = msg.getPayload()) && transactions_transactions_pb.MintTokenPayload.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5922,13 +5879,10 @@ proto.services.MintTokenRequest.deserializeBinaryFromReader = function(msg, read
       var value = /** @type {string} */ (reader.readString());
       msg.setKeyAddr(value);
       break;
-    case 4:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setCoinName(value);
-      break;
-    case 5:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setAmount(value);
+    case 6:
+      var value = new transactions_transactions_pb.MintTokenPayload;
+      reader.readMessage(value,transactions_transactions_pb.MintTokenPayload.deserializeBinaryFromReader);
+      msg.setPayload(value);
       break;
     default:
       reader.skipField();
@@ -5981,18 +5935,12 @@ proto.services.MintTokenRequest.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getCoinName();
-  if (f.length > 0) {
-    writer.writeString(
-      4,
-      f
-    );
-  }
-  f = message.getAmount();
-  if (f !== 0) {
-    writer.writeUint64(
-      5,
-      f
+  f = message.getPayload();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      transactions_transactions_pb.MintTokenPayload.serializeBinaryToWriter
     );
   }
 };
@@ -6062,32 +6010,35 @@ proto.services.MintTokenRequest.prototype.setKeyAddr = function(value) {
 
 
 /**
- * optional string coin_name = 4;
- * @return {string}
+ * optional transactions.MintTokenPayload payload = 6;
+ * @return {?proto.transactions.MintTokenPayload}
  */
-proto.services.MintTokenRequest.prototype.getCoinName = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+proto.services.MintTokenRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.MintTokenPayload} */ (
+    jspb.Message.getWrapperField(this, transactions_transactions_pb.MintTokenPayload, 6));
 };
 
 
-/** @param {string} value */
-proto.services.MintTokenRequest.prototype.setCoinName = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+/** @param {?proto.transactions.MintTokenPayload|undefined} value */
+proto.services.MintTokenRequest.prototype.setPayload = function(value) {
+  jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
- * optional uint64 amount = 5;
- * @return {number}
+ * Clears the message field making it undefined.
  */
-proto.services.MintTokenRequest.prototype.getAmount = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+proto.services.MintTokenRequest.prototype.clearPayload = function() {
+  this.setPayload(undefined);
 };
 
 
-/** @param {number} value */
-proto.services.MintTokenRequest.prototype.setAmount = function(value) {
-  jspb.Message.setProto3IntField(this, 5, value);
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.services.MintTokenRequest.prototype.hasPayload = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
