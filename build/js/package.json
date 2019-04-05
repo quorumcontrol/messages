@@ -7,5 +7,7 @@
     "url": "https://github.com/QuorumControl/messages.git"
   },
   "author": "Quorum Control",
-  "dependencies": {}
+  "dependencies": {
+    "google-protobuf": "~3.7.1"
+  }
 }
