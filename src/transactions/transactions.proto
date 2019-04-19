@@ -3,15 +3,6 @@ package transactions;
 
 option go_package = "github.com/quorumcontrol/messages/transactions";
 
-enum TransactionType {
-  Unknown = 0;
-  SetData = 1;
-  SetOwnership = 2;
-  EstablishToken = 3;
-  MintToken = 4;
-  Stake = 5;
-}
-
 message SetDataPayload {
   string path = 1;
   bytes value = 2;
@@ -36,7 +27,16 @@ message MintTokenPayload{
 }
 
 message Transaction{
-  TransactionType type = 1;
+  enum Type {
+    UNKNOWN = 0;
+    SETDATA = 1;
+    SETOWNERSHIP = 2;
+    ESTABLISHTOKEN = 3;
+    MINTTOKEN = 4;
+    STAKE = 5;
+  }
+
+  Type type = 1;
   oneof payload {
     SetDataPayload set_data_payload = 2;
     SetOwnershipPayload set_ownership_payload = 3;
