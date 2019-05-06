@@ -3,6 +3,7 @@ package services;
 
 option go_package = "github.com/quorumcontrol/messages/services";
 
+import "signatures/signatures.proto";
 import "transactions/transactions.proto";
 
 message Credentials {
@@ -10,15 +11,9 @@ message Credentials {
   string pass_phrase = 2;
 }
 
-message SerializableSignature {
-  repeated bool signers = 1;
-  bytes signature = 2;
-  string type = 3;
-}
-
 message SerializableChainTree {
   repeated bytes dag = 1;
-  map<string, SerializableSignature> signatures = 2;
+  map<string, signatures.Signature> signatures = 2;
   // tip is a string because of compatability with the javascript layer
   // which cannot seem to parse a golang cid.Bytes()
   string tip = 3;
