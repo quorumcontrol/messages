@@ -68,7 +68,9 @@ message ImportChainRequest {
   // index 2 is a deleted key, intentionally omitted
   string chain_tree = 3;
   StorageAdapterConfig storage_adapter = 4;
+  bool skip_validation = 5;
 }
+
 
 message ImportChainResponse {
   string chain_id = 1;
@@ -142,6 +144,13 @@ message ResolveResponse {
   bytes data = 2;
 }
 
+message ResolveAtRequest {
+  Credentials creds = 1;
+  string chain_id = 2;
+  string tip = 3;
+  string path = 4;
+}
+
 message EstablishTokenRequest {
   Credentials creds = 1;
   string chain_id = 2;
@@ -165,6 +174,40 @@ message MintTokenRequest {
 message MintTokenResponse {
   string tip = 1;
 }
+
+message SendTokenRequest {
+  Credentials creds = 1;
+  string chain_id = 2;
+  string key_addr = 3;
+  string token_name = 4;
+  string destination_chain_id = 5;
+  uint64 amount = 6;
+  transactions.SendTokenPayload payload = 7;
+}
+
+message SendTokenResponse {
+  string send_token = 1;
+  string tip = 2;
+}
+
+message ReceiveTokenRequest {
+  Credentials creds = 1;
+  string chain_id = 2;
+  string key_addr = 3;
+  string token_payload = 4;
+}
+
+message ReceiveTokenResponse {
+  string tip = 1;
+}
+
+message GetTokenBalanceRequest {
+  Credentials creds = 1;
+  string chain_id = 2;
+  string token_name = 3;
+}
+
+message GetTokenBalanceResponse { uint64 amount = 1; }
 
 message PlayTransactionsRequest {
   Credentials creds = 1;
