@@ -41,7 +41,6 @@ message ReceiveTokenPayload{
   bytes tip = 2;
   signatures.Signature signature = 3;
   repeated bytes Leaves = 4;
-
 }
 
 message TokenPayload {
