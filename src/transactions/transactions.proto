@@ -4,7 +4,6 @@ package transactions;
 option go_package = "github.com/quorumcontrol/messages/build/go/transactions";
 
 import "signatures/signatures.proto";
-import "google/protobuf/any.proto";
 
 message SetDataPayload {
   string path = 1;
@@ -63,5 +62,10 @@ message Transaction{
   }
 
   Type type = 1;
-  google.protobuf.Any payload = 2;
+  SetDataPayload set_data_payload = 2;
+  SetOwnershipPayload set_ownership_payload = 3;
+  EstablishTokenPayload establish_token_payload = 4;
+  MintTokenPayload mint_token_payload = 5;
+  SendTokenPayload send_token_payload = 6;
+  ReceiveTokenPayload receive_token_payload = 7;
 }
