@@ -83,6 +83,19 @@ func fakeReceiveToken() (*ReceiveTokenPayload, *Transaction) {
 
 }
 
+func fakeStake() (*StakePayload, *Transaction) {
+	payload := &StakePayload{
+		GroupId: "foo",
+		Amount:  5,
+	}
+
+	return payload, &Transaction{
+		Type:         Transaction_STAKE,
+		StakePayload: payload,
+	}
+
+}
+
 func TestEnsureSetDataPayload(t *testing.T) {
 	// Success when the transaction is of type SETDATA
 	setDataPayload, setDataTxn := fakeSetData()
@@ -163,6 +176,20 @@ func TestEnsureReceiveTokenPayload(t *testing.T) {
 	// Failure when the transaction is of type RECEIVETOKEN
 	_, sendTokenTxn := fakeSendToken()
 	p, err = sendTokenTxn.EnsureReceiveTokenPayload()
+	require.NotNil(t, err)
+	require.Nil(t, p)
+}
+
+func TestEnsureStakePayload(t *testing.T) {
+	// Success when the transaction is of type STAKE
+	receiveTokenPayload, receiveTokenTxn := fakeStake()
+	p, err := receiveTokenTxn.EnsureStakePayload()
+	require.Nil(t, err)
+	require.Equal(t, p, receiveTokenPayload)
+
+	// Failure when the transaction is of type STAKE
+	_, sendTokenTxn := fakeSendToken()
+	p, err = sendTokenTxn.EnsureStakePayload()
 	require.NotNil(t, err)
 	require.Nil(t, p)
 }

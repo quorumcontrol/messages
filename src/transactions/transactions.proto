@@ -49,6 +49,13 @@ message TokenPayload {
   repeated bytes leaves = 4;
 }
 
+message StakePayload{
+  string group_id = 1;
+  uint64 amount = 2;
+  signatures.PublicKey dst_key = 3;
+  signatures.PublicKey ver_key = 4;
+}
+
 message Transaction{
   enum Type {
     UNKNOWN = 0;
@@ -68,4 +75,5 @@ message Transaction{
   MintTokenPayload mint_token_payload = 5;
   SendTokenPayload send_token_payload = 6;
   ReceiveTokenPayload receive_token_payload = 7;
+  StakePayload stake_payload = 8;
 }

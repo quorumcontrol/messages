@@ -49,3 +49,11 @@ func (txn *Transaction) EnsureReceiveTokenPayload() (*ReceiveTokenPayload, error
 		return nil, fmt.Errorf("not a RECEIVETOKEN transaction")
 	}
 }
+
+func (txn *Transaction) EnsureStakePayload() (*StakePayload, error) {
+	if txn.Type == Transaction_STAKE {
+		return txn.StakePayload, nil
+	} else {
+		return nil, fmt.Errorf("not a STAKE transaction")
+	}
+}
