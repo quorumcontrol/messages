@@ -103,7 +103,7 @@ func TestEnsureSetDataPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, setDataPayload)
 
-	// Failure when the transaction is of type SETDATA
+	// Failure when the transaction is not of type SETDATA
 	_, receiveTokenTxn := fakeReceiveToken()
 	p, err = receiveTokenTxn.EnsureSetDataPayload()
 	require.NotNil(t, err)
@@ -117,7 +117,7 @@ func TestEnsureSetOwnershipPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, setOwnershipPayload)
 
-	// Failure when the transaction is of type SETOWNERSHIP
+	// Failure when the transaction is not of type SETOWNERSHIP
 	_, receiveTokenTxn := fakeReceiveToken()
 	p, err = receiveTokenTxn.EnsureSetOwnershipPayload()
 	require.NotNil(t, err)
@@ -131,7 +131,7 @@ func TestEnsureEstablishTokenPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, establishTokenPayload)
 
-	// Failure when the transaction is of type ESTABLISHTOKEN
+	// Failure when the transaction is not of type ESTABLISHTOKEN
 	_, receiveTokenTxn := fakeReceiveToken()
 	p, err = receiveTokenTxn.EnsureEstablishTokenPayload()
 	require.NotNil(t, err)
@@ -145,7 +145,7 @@ func TestEnsureMintTokenPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, mintTokenPayload)
 
-	// Failure when the transaction is of type MINTTOKEN
+	// Failure when the transaction is not of type MINTTOKEN
 	_, receiveTokenTxn := fakeReceiveToken()
 	p, err = receiveTokenTxn.EnsureMintTokenPayload()
 	require.NotNil(t, err)
@@ -159,7 +159,7 @@ func TestEnsureSendTokenPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, sendTokenPayload)
 
-	// Failure when the transaction is of type SENDTOKEN
+	// Failure when the transaction is not of type SENDTOKEN
 	_, receiveTokenTxn := fakeReceiveToken()
 	p, err = receiveTokenTxn.EnsureSendTokenPayload()
 	require.NotNil(t, err)
@@ -173,7 +173,7 @@ func TestEnsureReceiveTokenPayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, receiveTokenPayload)
 
-	// Failure when the transaction is of type RECEIVETOKEN
+	// Failure when the transaction is not of type RECEIVETOKEN
 	_, sendTokenTxn := fakeSendToken()
 	p, err = sendTokenTxn.EnsureReceiveTokenPayload()
 	require.NotNil(t, err)
@@ -187,7 +187,7 @@ func TestEnsureStakePayload(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, p, receiveTokenPayload)
 
-	// Failure when the transaction is of type STAKE
+	// Failure when the transaction is not of type STAKE
 	_, sendTokenTxn := fakeSendToken()
 	p, err = sendTokenTxn.EnsureStakePayload()
 	require.NotNil(t, err)
