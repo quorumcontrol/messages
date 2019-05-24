@@ -3,6 +3,12 @@ package signatures;
 
 option go_package = "github.com/quorumcontrol/messages/build/go/signatures";
 
+message PublicKey {
+  string id = 1;
+  string type = 2;
+  bytes public_key = 3;
+}
+
 message Signature {
   repeated bool signers = 1;
   bytes signature = 2;
