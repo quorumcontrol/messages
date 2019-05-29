@@ -226,6 +226,28 @@ function deserialize_services_PlayTransactionsResponse(buffer_arg) {
   return services_services_pb.PlayTransactionsResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_services_ReceiveTokenRequest(arg) {
+  if (!(arg instanceof services_services_pb.ReceiveTokenRequest)) {
+    throw new Error('Expected argument of type services.ReceiveTokenRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_services_ReceiveTokenRequest(buffer_arg) {
+  return services_services_pb.ReceiveTokenRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_services_ReceiveTokenResponse(arg) {
+  if (!(arg instanceof services_services_pb.ReceiveTokenResponse)) {
+    throw new Error('Expected argument of type services.ReceiveTokenResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_services_ReceiveTokenResponse(buffer_arg) {
+  return services_services_pb.ReceiveTokenResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_services_RegisterWalletRequest(arg) {
   if (!(arg instanceof services_services_pb.RegisterWalletRequest)) {
     throw new Error('Expected argument of type services.RegisterWalletRequest');
@@ -248,6 +270,17 @@ function deserialize_services_RegisterWalletResponse(buffer_arg) {
   return services_services_pb.RegisterWalletResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
+function serialize_services_ResolveAtRequest(arg) {
+  if (!(arg instanceof services_services_pb.ResolveAtRequest)) {
+    throw new Error('Expected argument of type services.ResolveAtRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_services_ResolveAtRequest(buffer_arg) {
+  return services_services_pb.ResolveAtRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
 function serialize_services_ResolveRequest(arg) {
   if (!(arg instanceof services_services_pb.ResolveRequest)) {
     throw new Error('Expected argument of type services.ResolveRequest');
@@ -268,6 +301,28 @@ function serialize_services_ResolveResponse(arg) {
 
 function deserialize_services_ResolveResponse(buffer_arg) {
   return services_services_pb.ResolveResponse.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_services_SendTokenRequest(arg) {
+  if (!(arg instanceof services_services_pb.SendTokenRequest)) {
+    throw new Error('Expected argument of type services.SendTokenRequest');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_services_SendTokenRequest(buffer_arg) {
+  return services_services_pb.SendTokenRequest.deserializeBinary(new Uint8Array(buffer_arg));
+}
+
+function serialize_services_SendTokenResponse(arg) {
+  if (!(arg instanceof services_services_pb.SendTokenResponse)) {
+    throw new Error('Expected argument of type services.SendTokenResponse');
+  }
+  return Buffer.from(arg.serializeBinary());
+}
+
+function deserialize_services_SendTokenResponse(buffer_arg) {
+  return services_services_pb.SendTokenResponse.deserializeBinary(new Uint8Array(buffer_arg));
 }
 
 function serialize_services_SetDataRequest(arg) {
@@ -437,6 +492,17 @@ var WalletRPCServiceService = exports.WalletRPCServiceService = {
     responseSerialize: serialize_services_ResolveResponse,
     responseDeserialize: deserialize_services_ResolveResponse,
   },
+  resolveAt: {
+    path: '/services.WalletRPCService/ResolveAt',
+    requestStream: false,
+    responseStream: false,
+    requestType: services_services_pb.ResolveAtRequest,
+    responseType: services_services_pb.ResolveResponse,
+    requestSerialize: serialize_services_ResolveAtRequest,
+    requestDeserialize: deserialize_services_ResolveAtRequest,
+    responseSerialize: serialize_services_ResolveResponse,
+    responseDeserialize: deserialize_services_ResolveResponse,
+  },
   establishToken: {
     path: '/services.WalletRPCService/EstablishToken',
     requestStream: false,
@@ -458,6 +524,28 @@ var WalletRPCServiceService = exports.WalletRPCServiceService = {
     requestDeserialize: deserialize_services_MintTokenRequest,
     responseSerialize: serialize_services_MintTokenResponse,
     responseDeserialize: deserialize_services_MintTokenResponse,
+  },
+  sendToken: {
+    path: '/services.WalletRPCService/SendToken',
+    requestStream: false,
+    responseStream: false,
+    requestType: services_services_pb.SendTokenRequest,
+    responseType: services_services_pb.SendTokenResponse,
+    requestSerialize: serialize_services_SendTokenRequest,
+    requestDeserialize: deserialize_services_SendTokenRequest,
+    responseSerialize: serialize_services_SendTokenResponse,
+    responseDeserialize: deserialize_services_SendTokenResponse,
+  },
+  receiveToken: {
+    path: '/services.WalletRPCService/ReceiveToken',
+    requestStream: false,
+    responseStream: false,
+    requestType: services_services_pb.ReceiveTokenRequest,
+    responseType: services_services_pb.ReceiveTokenResponse,
+    requestSerialize: serialize_services_ReceiveTokenRequest,
+    requestDeserialize: deserialize_services_ReceiveTokenRequest,
+    responseSerialize: serialize_services_ReceiveTokenResponse,
+    responseDeserialize: deserialize_services_ReceiveTokenResponse,
   },
   playTransactions: {
     path: '/services.WalletRPCService/PlayTransactions',
