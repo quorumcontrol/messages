@@ -21,10 +21,10 @@ build/go/transactions/transactions.pb.go: src/transactions/transactions.proto
 	protoc --proto_path=src --go_out=paths=source_relative,plugins=grpc:build/go $<
 
 build/js/transactions/transactions_pb.js: src/transactions/transactions.proto
-	protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js $<
+	grpc_tools_node_protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js --grpc_out=build/js --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` $<
 
 build/js/services/services_pb.js: src/services/services.proto
-	protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js $<
+	grpc_tools_node_protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js --grpc_out=build/js --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` $<
 
 build/js/signatures/signatures_pb.js: src/signatures/signatures.proto
-	protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js $<
+	grpc_tools_node_protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js --grpc_out=build/js --plugin=protoc-gen-grpc=`which grpc_tools_node_protoc_plugin` $<

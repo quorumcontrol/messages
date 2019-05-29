@@ -1,6 +1,6 @@
 {
   "name": "tupelo-messages",
-  "version": "0.0.1-rc1",
+  "version": "0.0.1-rc5",
   "description": "Tupelo JavaScript messages implementation",
   "repository": {
     "type": "git",
@@ -8,6 +8,7 @@
   },
   "author": "Quorum Control",
   "dependencies": {
-    "google-protobuf": "~3.7.1"
+    "google-protobuf": "~3.7.1",
+    "grpc": "~1.21"
   }
 }
