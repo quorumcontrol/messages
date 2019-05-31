@@ -6,6 +6,20 @@ option go_package = "github.com/quorumcontrol/messages/build/go/services";
 import "signatures/signatures.proto";
 import "transactions/transactions.proto";
 
+// This is the message we currently refer to as "Transaction" at the tupelo level
+message AddBlockRequest {
+  bytes object_id = 1;
+  bytes previous_tip = 2;
+  uint64 height = 3;
+  bytes new_tip = 4;
+  bytes payload = 5;
+  repeated bytes state = 6;
+}
+
+message ReceiveCurrentStateSnapshot {
+  // no payload
+}
+
 message Credentials {
   string wallet_name = 1;
   string pass_phrase = 2;

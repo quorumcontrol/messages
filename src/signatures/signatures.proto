@@ -9,6 +9,11 @@ message PublicKey {
   bytes public_key = 3;
 }
 
+// TODO: we might just drop this, but it's useful for transition #1
+message CurrentState {
+  Signature signature = 1;
+}
+
 message Signature {
   repeated uint32 signers = 1;
   bytes signature = 2;
