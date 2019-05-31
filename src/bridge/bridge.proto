@@ -1,0 +1,20 @@
+syntax = "proto3";
+package bridge;
+
+option go_package = "github.com/quorumcontrol/messages/build/go/bridge";
+
+import "google/protobuf/any.proto";
+
+message ActorPID {
+    string address = 1;
+    string id = 2;
+}
+
+message WireDelivery {
+    map<string,string> header = 1;
+    google.protobuf.Any message = 2;
+    ActorPID target = 3;
+    ActorPID sender = 4;
+    bool outgoing = 5;
+    map<string,string> tracing = 6;
+}
