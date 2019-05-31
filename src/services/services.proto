@@ -20,6 +20,10 @@ message ReceiveCurrentStateSnapshot {
   // no payload
 }
 
+message RequestCurrentStateSnapshot {
+  // no payload
+}
+
 message Ping {
   string msg = 1;
 }
