@@ -20,6 +20,14 @@ message ReceiveCurrentStateSnapshot {
   // no payload
 }
 
+message Ping {
+  string msg = 1;
+}
+
+message Pong {
+  string msg = 1;
+}
+
 message Credentials {
   string wallet_name = 1;
   string pass_phrase = 2;
