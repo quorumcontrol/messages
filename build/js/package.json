@@ -1,6 +1,6 @@
 {
   "name": "tupelo-messages",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Tupelo JavaScript messages implementation",
   "repository": {
     "type": "git",
