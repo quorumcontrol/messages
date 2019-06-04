@@ -13,6 +13,5 @@ Run `make` in the root directory.
 ## Testing
 ### Go
 ```
-cd build/go
-go test ./...
+make test
 ```

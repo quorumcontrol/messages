@@ -15,8 +15,11 @@ build/go/%.pb.go: src/%.proto
 build/js/%_pb.js: src/%.proto $(NODE_PROTOC_PLUGIN)
 	grpc_tools_node_protoc --proto_path=src --js_out=import_style=commonjs,binary:build/js --grpc_out=build/js --plugin=protoc-gen-grpc=$(NODE_PROTOC_PLUGIN) $<
 
+test:
+	cd build/go && go test ./...
+
 clean:
 	find build -name '*.pb.go' -exec rm {} \;
 	find build -name '*_pb.js' -exec rm {} \;
 
-.PHONY: all clean go js
+.PHONY: all clean go js test
