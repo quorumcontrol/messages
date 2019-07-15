@@ -386,7 +386,7 @@ proto.signatures.CurrentState.prototype.clearSignature = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.signatures.CurrentState.prototype.hasSignature = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -651,7 +651,7 @@ proto.signatures.Signature.prototype.setSignersList = function(value) {
 
 
 /**
- * @param {number} value
+ * @param {!number} value
  * @param {number=} opt_index
  */
 proto.signatures.Signature.prototype.addSigners = function(value, opt_index) {

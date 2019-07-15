@@ -12,7 +12,6 @@ var goog = jspb;
 var global = Function('return this')();
 
 var signatures_signatures_pb = require('../signatures/signatures_pb.js');
-goog.object.extend(proto, signatures_signatures_pb);
 goog.exportSymbol('proto.transactions.EstablishTokenPayload', null, global);
 goog.exportSymbol('proto.transactions.MintTokenPayload', null, global);
 goog.exportSymbol('proto.transactions.ReceiveTokenPayload', null, global);
@@ -367,7 +366,7 @@ proto.transactions.SetOwnershipPayload.prototype.setAuthenticationList = functio
 
 
 /**
- * @param {string} value
+ * @param {!string} value
  * @param {number=} opt_index
  */
 proto.transactions.SetOwnershipPayload.prototype.addAuthentication = function(value, opt_index) {
@@ -701,7 +700,7 @@ proto.transactions.EstablishTokenPayload.prototype.clearMonetaryPolicy = functio
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.EstablishTokenPayload.prototype.hasMonetaryPolicy = function() {
   return jspb.Message.getField(this, 2) != null;
@@ -1349,7 +1348,7 @@ proto.transactions.ReceiveTokenPayload.prototype.clearSignature = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.ReceiveTokenPayload.prototype.hasSignature = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -1634,7 +1633,7 @@ proto.transactions.TokenPayload.prototype.clearSignature = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.TokenPayload.prototype.hasSignature = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -1914,7 +1913,7 @@ proto.transactions.StakePayload.prototype.clearDstKey = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.StakePayload.prototype.hasDstKey = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -1944,7 +1943,7 @@ proto.transactions.StakePayload.prototype.clearVerKey = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.StakePayload.prototype.hasVerKey = function() {
   return jspb.Message.getField(this, 4) != null;
@@ -2228,7 +2227,7 @@ proto.transactions.Transaction.prototype.clearSetDataPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasSetDataPayload = function() {
   return jspb.Message.getField(this, 2) != null;
@@ -2258,7 +2257,7 @@ proto.transactions.Transaction.prototype.clearSetOwnershipPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasSetOwnershipPayload = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -2288,7 +2287,7 @@ proto.transactions.Transaction.prototype.clearEstablishTokenPayload = function()
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasEstablishTokenPayload = function() {
   return jspb.Message.getField(this, 4) != null;
@@ -2318,7 +2317,7 @@ proto.transactions.Transaction.prototype.clearMintTokenPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasMintTokenPayload = function() {
   return jspb.Message.getField(this, 5) != null;
@@ -2348,7 +2347,7 @@ proto.transactions.Transaction.prototype.clearSendTokenPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasSendTokenPayload = function() {
   return jspb.Message.getField(this, 6) != null;
@@ -2378,7 +2377,7 @@ proto.transactions.Transaction.prototype.clearReceiveTokenPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasReceiveTokenPayload = function() {
   return jspb.Message.getField(this, 7) != null;
@@ -2408,7 +2407,7 @@ proto.transactions.Transaction.prototype.clearStakePayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.transactions.Transaction.prototype.hasStakePayload = function() {
   return jspb.Message.getField(this, 8) != null;

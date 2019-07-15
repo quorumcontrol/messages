@@ -12,7 +12,6 @@ var goog = jspb;
 var global = Function('return this')();
 
 var google_protobuf_any_pb = require('google-protobuf/google/protobuf/any_pb.js');
-goog.object.extend(proto, google_protobuf_any_pb);
 goog.exportSymbol('proto.bridge.ActorPID', null, global);
 goog.exportSymbol('proto.bridge.WireDelivery', null, global);
 
@@ -416,7 +415,7 @@ proto.bridge.WireDelivery.prototype.clearMessage = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.bridge.WireDelivery.prototype.hasMessage = function() {
   return jspb.Message.getField(this, 2) != null;
@@ -446,7 +445,7 @@ proto.bridge.WireDelivery.prototype.clearTarget = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.bridge.WireDelivery.prototype.hasTarget = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -476,7 +475,7 @@ proto.bridge.WireDelivery.prototype.clearSender = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.bridge.WireDelivery.prototype.hasSender = function() {
   return jspb.Message.getField(this, 4) != null;

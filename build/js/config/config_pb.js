@@ -494,7 +494,7 @@ proto.config.NotaryGroup.prototype.setValidatorGeneratorsList = function(value) 
 
 
 /**
- * @param {string} value
+ * @param {!string} value
  * @param {number=} opt_index
  */
 proto.config.NotaryGroup.prototype.addValidatorGenerators = function(value, opt_index) {
@@ -523,7 +523,7 @@ proto.config.NotaryGroup.prototype.setTransactionsList = function(value) {
 
 
 /**
- * @param {string} value
+ * @param {!string} value
  * @param {number=} opt_index
  */
 proto.config.NotaryGroup.prototype.addTransactions = function(value, opt_index) {
