@@ -198,8 +198,10 @@ export class TokenPayload extends jspb.Message {
   getTransactionId(): string;
   setTransactionId(value: string): void;
 
-  getTip(): string;
-  setTip(value: string): void;
+  getTip(): Uint8Array | string;
+  getTip_asU8(): Uint8Array;
+  getTip_asB64(): string;
+  setTip(value: Uint8Array | string): void;
 
   hasSignature(): boolean;
   clearSignature(): void;
@@ -226,7 +228,7 @@ export class TokenPayload extends jspb.Message {
 export namespace TokenPayload {
   export type AsObject = {
     transactionId: string,
-    tip: string,
+    tip: Uint8Array | string,
     signature?: signatures_signatures_pb.Signature.AsObject,
     leavesList: Array<Uint8Array | string>,
   }

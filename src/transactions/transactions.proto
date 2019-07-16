@@ -44,7 +44,7 @@ message ReceiveTokenPayload{
 
 message TokenPayload {
   string transaction_id = 1;
-  string tip = 2;
+  bytes tip = 2;
   signatures.Signature signature = 3;
   repeated bytes leaves = 4;
 }
