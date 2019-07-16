@@ -6,6 +6,8 @@
     "type": "git",
     "url": "https://github.com/QuorumControl/messages.git"
   },
+  "main": "index.js",
+  "types": "index.d.ts",
   "author": "Quorum Control",
   "dependencies": {
     "google-protobuf": "~3.7.1",

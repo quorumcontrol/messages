@@ -12,9 +12,7 @@ var goog = jspb;
 var global = Function('return this')();
 
 var signatures_signatures_pb = require('../signatures/signatures_pb.js');
-goog.object.extend(proto, signatures_signatures_pb);
 var transactions_transactions_pb = require('../transactions/transactions_pb.js');
-goog.object.extend(proto, transactions_transactions_pb);
 goog.exportSymbol('proto.services.AddBlockRequest', null, global);
 goog.exportSymbol('proto.services.Credentials', null, global);
 goog.exportSymbol('proto.services.EstablishTokenRequest', null, global);
@@ -1608,7 +1606,7 @@ proto.services.RegisterWalletRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.RegisterWalletRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -2289,7 +2287,7 @@ proto.services.StorageAdapterConfig.prototype.clearBadger = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.StorageAdapterConfig.prototype.hasBadger = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -2319,7 +2317,7 @@ proto.services.StorageAdapterConfig.prototype.clearIpld = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.StorageAdapterConfig.prototype.hasIpld = function() {
   return jspb.Message.getField(this, 2) != null;
@@ -2504,7 +2502,7 @@ proto.services.GenerateChainRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.GenerateChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -2549,7 +2547,7 @@ proto.services.GenerateChainRequest.prototype.clearStorageAdapter = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.GenerateChainRequest.prototype.hasStorageAdapter = function() {
   return jspb.Message.getField(this, 3) != null;
@@ -2862,7 +2860,7 @@ proto.services.ExportChainRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ExportChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -3216,7 +3214,7 @@ proto.services.ImportChainRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ImportChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -3261,7 +3259,7 @@ proto.services.ImportChainRequest.prototype.clearStorageAdapter = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ImportChainRequest.prototype.hasStorageAdapter = function() {
   return jspb.Message.getField(this, 4) != null;
@@ -3579,7 +3577,7 @@ proto.services.GenerateKeyRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.GenerateKeyRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -3892,7 +3890,7 @@ proto.services.GetTipRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.GetTipRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -4208,7 +4206,7 @@ proto.services.ListChainIdsRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ListChainIdsRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -4365,7 +4363,7 @@ proto.services.ListChainIdsResponse.prototype.setChainIdsList = function(value) 
 
 
 /**
- * @param {string} value
+ * @param {!string} value
  * @param {number=} opt_index
  */
 proto.services.ListChainIdsResponse.prototype.addChainIds = function(value, opt_index) {
@@ -4530,7 +4528,7 @@ proto.services.ListKeysRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ListKeysRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -4687,7 +4685,7 @@ proto.services.ListKeysResponse.prototype.setKeyAddrsList = function(value) {
 
 
 /**
- * @param {string} value
+ * @param {!string} value
  * @param {number=} opt_index
  */
 proto.services.ListKeysResponse.prototype.addKeyAddrs = function(value, opt_index) {
@@ -4890,7 +4888,7 @@ proto.services.SetOwnerRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SetOwnerRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -4950,7 +4948,7 @@ proto.services.SetOwnerRequest.prototype.clearPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SetOwnerRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 5) != null;
@@ -5289,7 +5287,7 @@ proto.services.SetDataRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SetDataRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -5349,7 +5347,7 @@ proto.services.SetDataRequest.prototype.clearPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SetDataRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
@@ -5674,7 +5672,7 @@ proto.services.ResolveRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ResolveRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -6092,7 +6090,7 @@ proto.services.ResolveAtRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ResolveAtRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -6334,7 +6332,7 @@ proto.services.EstablishTokenRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.EstablishTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -6394,7 +6392,7 @@ proto.services.EstablishTokenRequest.prototype.clearPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.EstablishTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
@@ -6733,7 +6731,7 @@ proto.services.MintTokenRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.MintTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -6793,7 +6791,7 @@ proto.services.MintTokenRequest.prototype.clearPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.MintTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
@@ -7168,7 +7166,7 @@ proto.services.SendTokenRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SendTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -7273,7 +7271,7 @@ proto.services.SendTokenRequest.prototype.clearPayload = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.SendTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 7) != null;
@@ -7637,7 +7635,7 @@ proto.services.ReceiveTokenRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.ReceiveTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -8007,7 +8005,7 @@ proto.services.GetTokenBalanceRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.GetTokenBalanceRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
@@ -8384,7 +8382,7 @@ proto.services.PlayTransactionsRequest.prototype.clearCreds = function() {
 
 /**
  * Returns whether this field is set.
- * @return {boolean}
+ * @return {!boolean}
  */
 proto.services.PlayTransactionsRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
