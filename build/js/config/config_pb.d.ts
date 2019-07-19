@@ -6,11 +6,15 @@
 import * as jspb from "google-protobuf";
 
 export class PublicKeySet extends jspb.Message { 
-    getVerKeyHex(): string;
-    setVerKeyHex(value: string): void;
+    getVerKey(): Uint8Array | string;
+    getVerKey_asU8(): Uint8Array;
+    getVerKey_asB64(): string;
+    setVerKey(value: Uint8Array | string): void;
 
-    getDestKeyHex(): string;
-    setDestKeyHex(value: string): void;
+    getDestKey(): Uint8Array | string;
+    getDestKey_asU8(): Uint8Array;
+    getDestKey_asB64(): string;
+    setDestKey(value: Uint8Array | string): void;
 
 
     serializeBinary(): Uint8Array;
@@ -25,8 +29,8 @@ export class PublicKeySet extends jspb.Message {
 
 export namespace PublicKeySet {
     export type AsObject = {
-        verKeyHex: string,
-        destKeyHex: string,
+        verKey: Uint8Array | string,
+        destKey: Uint8Array | string,
     }
 }
 
@@ -61,6 +65,11 @@ export class NotaryGroup extends jspb.Message {
     setSignersList(value: Array<PublicKeySet>): void;
     addSigners(value?: PublicKeySet, index?: number): PublicKeySet;
 
+    clearBootstrapAddressesList(): void;
+    getBootstrapAddressesList(): Array<string>;
+    setBootstrapAddressesList(value: Array<string>): void;
+    addBootstrapAddresses(value: string, index?: number): string;
+
 
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): NotaryGroup.AsObject;
@@ -82,5 +91,6 @@ export namespace NotaryGroup {
         validatorGeneratorsList: Array<string>,
         transactionsList: Array<string>,
         signersList: Array<PublicKeySet.AsObject>,
+        bootstrapAddressesList: Array<string>,
     }
 }

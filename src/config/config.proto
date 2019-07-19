@@ -4,8 +4,8 @@ package config;
 option go_package = "github.com/quorumcontrol/messages/build/go/config";
 
 message PublicKeySet {
-    string ver_key_hex = 1;
-    string dest_key_hex = 2;
+    bytes ver_key = 1;
+    bytes dest_key = 2;
 }
 
 message NotaryGroup {
@@ -17,4 +17,5 @@ message NotaryGroup {
    repeated string validator_generators = 6;
    repeated string transactions = 7;
    repeated PublicKeySet signers = 8;
+   repeated string bootstrap_addresses = 9;
 }

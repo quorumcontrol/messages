@@ -60,8 +60,8 @@ proto.config.PublicKeySet.prototype.toObject = function(opt_includeInstance) {
  */
 proto.config.PublicKeySet.toObject = function(includeInstance, msg) {
   var f, obj = {
-    verKeyHex: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    destKeyHex: jspb.Message.getFieldWithDefault(msg, 2, "")
+    verKey: msg.getVerKey_asB64(),
+    destKey: msg.getDestKey_asB64()
   };
 
   if (includeInstance) {
@@ -99,12 +99,12 @@ proto.config.PublicKeySet.deserializeBinaryFromReader = function(msg, reader) {
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setVerKeyHex(value);
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setVerKey(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setDestKeyHex(value);
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setDestKey(value);
       break;
     default:
       reader.skipField();
@@ -135,16 +135,16 @@ proto.config.PublicKeySet.prototype.serializeBinary = function() {
  */
 proto.config.PublicKeySet.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getVerKeyHex();
+  f = message.getVerKey_asU8();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeBytes(
       1,
       f
     );
   }
-  f = message.getDestKeyHex();
+  f = message.getDestKey_asU8();
   if (f.length > 0) {
-    writer.writeString(
+    writer.writeBytes(
       2,
       f
     );
@@ -153,32 +153,80 @@ proto.config.PublicKeySet.serializeBinaryToWriter = function(message, writer) {
 
 
 /**
- * optional string ver_key_hex = 1;
- * @return {string}
+ * optional bytes ver_key = 1;
+ * @return {!(string|Uint8Array)}
  */
-proto.config.PublicKeySet.prototype.getVerKeyHex = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
-};
-
-
-/** @param {string} value */
-proto.config.PublicKeySet.prototype.setVerKeyHex = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+proto.config.PublicKeySet.prototype.getVerKey = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
- * optional string dest_key_hex = 2;
+ * optional bytes ver_key = 1;
+ * This is a type-conversion wrapper around `getVerKey()`
  * @return {string}
  */
-proto.config.PublicKeySet.prototype.getDestKeyHex = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+proto.config.PublicKeySet.prototype.getVerKey_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getVerKey()));
 };
 
 
-/** @param {string} value */
-proto.config.PublicKeySet.prototype.setDestKeyHex = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+/**
+ * optional bytes ver_key = 1;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getVerKey()`
+ * @return {!Uint8Array}
+ */
+proto.config.PublicKeySet.prototype.getVerKey_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getVerKey()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.config.PublicKeySet.prototype.setVerKey = function(value) {
+  jspb.Message.setProto3BytesField(this, 1, value);
+};
+
+
+/**
+ * optional bytes dest_key = 2;
+ * @return {!(string|Uint8Array)}
+ */
+proto.config.PublicKeySet.prototype.getDestKey = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/**
+ * optional bytes dest_key = 2;
+ * This is a type-conversion wrapper around `getDestKey()`
+ * @return {string}
+ */
+proto.config.PublicKeySet.prototype.getDestKey_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getDestKey()));
+};
+
+
+/**
+ * optional bytes dest_key = 2;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getDestKey()`
+ * @return {!Uint8Array}
+ */
+proto.config.PublicKeySet.prototype.getDestKey_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getDestKey()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.config.PublicKeySet.prototype.setDestKey = function(value) {
+  jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -205,7 +253,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.config.NotaryGroup.repeatedFields_ = [6,7,8];
+proto.config.NotaryGroup.repeatedFields_ = [6,7,8,9];
 
 
 
@@ -244,7 +292,8 @@ proto.config.NotaryGroup.toObject = function(includeInstance, msg) {
     validatorGeneratorsList: jspb.Message.getRepeatedField(msg, 6),
     transactionsList: jspb.Message.getRepeatedField(msg, 7),
     signersList: jspb.Message.toObjectList(msg.getSignersList(),
-    proto.config.PublicKeySet.toObject, includeInstance)
+    proto.config.PublicKeySet.toObject, includeInstance),
+    bootstrapAddressesList: jspb.Message.getRepeatedField(msg, 9)
   };
 
   if (includeInstance) {
@@ -313,6 +362,10 @@ proto.config.NotaryGroup.deserializeBinaryFromReader = function(msg, reader) {
       var value = new proto.config.PublicKeySet;
       reader.readMessage(value,proto.config.PublicKeySet.deserializeBinaryFromReader);
       msg.addSigners(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addBootstrapAddresses(value);
       break;
     default:
       reader.skipField();
@@ -398,6 +451,13 @@ proto.config.NotaryGroup.serializeBinaryToWriter = function(message, writer) {
       8,
       f,
       proto.config.PublicKeySet.serializeBinaryToWriter
+    );
+  }
+  f = message.getBootstrapAddressesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      9,
+      f
     );
   }
 };
@@ -564,6 +624,35 @@ proto.config.NotaryGroup.prototype.addSigners = function(opt_value, opt_index) {
 
 proto.config.NotaryGroup.prototype.clearSignersList = function() {
   this.setSignersList([]);
+};
+
+
+/**
+ * repeated string bootstrap_addresses = 9;
+ * @return {!Array<string>}
+ */
+proto.config.NotaryGroup.prototype.getBootstrapAddressesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 9));
+};
+
+
+/** @param {!Array<string>} value */
+proto.config.NotaryGroup.prototype.setBootstrapAddressesList = function(value) {
+  jspb.Message.setField(this, 9, value || []);
+};
+
+
+/**
+ * @param {!string} value
+ * @param {number=} opt_index
+ */
+proto.config.NotaryGroup.prototype.addBootstrapAddresses = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+};
+
+
+proto.config.NotaryGroup.prototype.clearBootstrapAddressesList = function() {
+  this.setBootstrapAddressesList([]);
 };
 
 
