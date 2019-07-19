@@ -1,0 +1,20 @@
+syntax = "proto3";
+package config;
+
+option go_package = "github.com/quorumcontrol/messages/build/go/config";
+
+message PublicKeySet {
+    string ver_key_hex = 1;
+    string dest_key_hex = 2;
+}
+
+message NotaryGroup {
+   string id = 1;
+   string transaction_token = 2;
+   uint64 burn_amount = 3;
+   string transaction_topic = 4;
+   string commit_topic = 5;
+   repeated string validator_generators = 6;
+   repeated string transactions = 7;
+   repeated PublicKeySet signers = 8;
+}
