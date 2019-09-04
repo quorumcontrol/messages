@@ -1742,8 +1742,8 @@ proto.transactions.StakePayload.toObject = function(includeInstance, msg) {
   var f, obj = {
     groupId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    dstKey: (f = msg.getDstKey()) && signatures_signatures_pb.PublicKey.toObject(includeInstance, f),
-    verKey: (f = msg.getVerKey()) && signatures_signatures_pb.PublicKey.toObject(includeInstance, f)
+    dstKey: (f = msg.getDstKey()) && signatures_signatures_pb.Ownership.toObject(includeInstance, f),
+    verKey: (f = msg.getVerKey()) && signatures_signatures_pb.Ownership.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1789,13 +1789,13 @@ proto.transactions.StakePayload.deserializeBinaryFromReader = function(msg, read
       msg.setAmount(value);
       break;
     case 3:
-      var value = new signatures_signatures_pb.PublicKey;
-      reader.readMessage(value,signatures_signatures_pb.PublicKey.deserializeBinaryFromReader);
+      var value = new signatures_signatures_pb.Ownership;
+      reader.readMessage(value,signatures_signatures_pb.Ownership.deserializeBinaryFromReader);
       msg.setDstKey(value);
       break;
     case 4:
-      var value = new signatures_signatures_pb.PublicKey;
-      reader.readMessage(value,signatures_signatures_pb.PublicKey.deserializeBinaryFromReader);
+      var value = new signatures_signatures_pb.Ownership;
+      reader.readMessage(value,signatures_signatures_pb.Ownership.deserializeBinaryFromReader);
       msg.setVerKey(value);
       break;
     default:
@@ -1846,7 +1846,7 @@ proto.transactions.StakePayload.serializeBinaryToWriter = function(message, writ
     writer.writeMessage(
       3,
       f,
-      signatures_signatures_pb.PublicKey.serializeBinaryToWriter
+      signatures_signatures_pb.Ownership.serializeBinaryToWriter
     );
   }
   f = message.getVerKey();
@@ -1854,7 +1854,7 @@ proto.transactions.StakePayload.serializeBinaryToWriter = function(message, writ
     writer.writeMessage(
       4,
       f,
-      signatures_signatures_pb.PublicKey.serializeBinaryToWriter
+      signatures_signatures_pb.Ownership.serializeBinaryToWriter
     );
   }
 };
@@ -1891,16 +1891,16 @@ proto.transactions.StakePayload.prototype.setAmount = function(value) {
 
 
 /**
- * optional signatures.PublicKey dst_key = 3;
- * @return {?proto.signatures.PublicKey}
+ * optional signatures.Ownership dst_key = 3;
+ * @return {?proto.signatures.Ownership}
  */
 proto.transactions.StakePayload.prototype.getDstKey = function() {
-  return /** @type{?proto.signatures.PublicKey} */ (
-    jspb.Message.getWrapperField(this, signatures_signatures_pb.PublicKey, 3));
+  return /** @type{?proto.signatures.Ownership} */ (
+    jspb.Message.getWrapperField(this, signatures_signatures_pb.Ownership, 3));
 };
 
 
-/** @param {?proto.signatures.PublicKey|undefined} value */
+/** @param {?proto.signatures.Ownership|undefined} value */
 proto.transactions.StakePayload.prototype.setDstKey = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
@@ -1921,16 +1921,16 @@ proto.transactions.StakePayload.prototype.hasDstKey = function() {
 
 
 /**
- * optional signatures.PublicKey ver_key = 4;
- * @return {?proto.signatures.PublicKey}
+ * optional signatures.Ownership ver_key = 4;
+ * @return {?proto.signatures.Ownership}
  */
 proto.transactions.StakePayload.prototype.getVerKey = function() {
-  return /** @type{?proto.signatures.PublicKey} */ (
-    jspb.Message.getWrapperField(this, signatures_signatures_pb.PublicKey, 4));
+  return /** @type{?proto.signatures.Ownership} */ (
+    jspb.Message.getWrapperField(this, signatures_signatures_pb.Ownership, 4));
 };
 
 
-/** @param {?proto.signatures.PublicKey|undefined} value */
+/** @param {?proto.signatures.Ownership|undefined} value */
 proto.transactions.StakePayload.prototype.setVerKey = function(value) {
   jspb.Message.setWrapperField(this, 4, value);
 };
