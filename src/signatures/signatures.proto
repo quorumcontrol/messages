@@ -21,7 +21,7 @@ message Signature {
   string pre_image = 4;
 }
 
-message CurrentState {
+message TreeState {
   Signature signature = 1;
   bytes object_id = 2;
   bytes previous_tip = 3;

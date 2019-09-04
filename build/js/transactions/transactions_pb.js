@@ -1155,7 +1155,7 @@ proto.transactions.ReceiveTokenPayload.toObject = function(includeInstance, msg)
   var f, obj = {
     sendTokenTransactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: msg.getTip_asB64(),
-    signature: (f = msg.getSignature()) && signatures_signatures_pb.Signature.toObject(includeInstance, f),
+    currentState: (f = msg.getCurrentState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
     leavesList: msg.getLeavesList_asB64()
   };
 
@@ -1202,9 +1202,9 @@ proto.transactions.ReceiveTokenPayload.deserializeBinaryFromReader = function(ms
       msg.setTip(value);
       break;
     case 3:
-      var value = new signatures_signatures_pb.Signature;
-      reader.readMessage(value,signatures_signatures_pb.Signature.deserializeBinaryFromReader);
-      msg.setSignature(value);
+      var value = new signatures_signatures_pb.TreeState;
+      reader.readMessage(value,signatures_signatures_pb.TreeState.deserializeBinaryFromReader);
+      msg.setCurrentState(value);
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -1253,12 +1253,12 @@ proto.transactions.ReceiveTokenPayload.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getSignature();
+  f = message.getCurrentState();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      signatures_signatures_pb.Signature.serializeBinaryToWriter
+      signatures_signatures_pb.TreeState.serializeBinaryToWriter
     );
   }
   f = message.getLeavesList_asU8();
@@ -1326,23 +1326,23 @@ proto.transactions.ReceiveTokenPayload.prototype.setTip = function(value) {
 
 
 /**
- * optional signatures.Signature signature = 3;
- * @return {?proto.signatures.Signature}
+ * optional signatures.TreeState current_state = 3;
+ * @return {?proto.signatures.TreeState}
  */
-proto.transactions.ReceiveTokenPayload.prototype.getSignature = function() {
-  return /** @type{?proto.signatures.Signature} */ (
-    jspb.Message.getWrapperField(this, signatures_signatures_pb.Signature, 3));
+proto.transactions.ReceiveTokenPayload.prototype.getCurrentState = function() {
+  return /** @type{?proto.signatures.TreeState} */ (
+    jspb.Message.getWrapperField(this, signatures_signatures_pb.TreeState, 3));
 };
 
 
-/** @param {?proto.signatures.Signature|undefined} value */
-proto.transactions.ReceiveTokenPayload.prototype.setSignature = function(value) {
+/** @param {?proto.signatures.TreeState|undefined} value */
+proto.transactions.ReceiveTokenPayload.prototype.setCurrentState = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.transactions.ReceiveTokenPayload.prototype.clearSignature = function() {
-  this.setSignature(undefined);
+proto.transactions.ReceiveTokenPayload.prototype.clearCurrentState = function() {
+  this.setCurrentState(undefined);
 };
 
 
@@ -1350,7 +1350,7 @@ proto.transactions.ReceiveTokenPayload.prototype.clearSignature = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.transactions.ReceiveTokenPayload.prototype.hasSignature = function() {
+proto.transactions.ReceiveTokenPayload.prototype.hasCurrentState = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -1464,7 +1464,7 @@ proto.transactions.TokenPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
     transactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    signature: (f = msg.getSignature()) && signatures_signatures_pb.Signature.toObject(includeInstance, f),
+    currentState: (f = msg.getCurrentState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
     leavesList: msg.getLeavesList_asB64()
   };
 
@@ -1511,9 +1511,9 @@ proto.transactions.TokenPayload.deserializeBinaryFromReader = function(msg, read
       msg.setTip(value);
       break;
     case 3:
-      var value = new signatures_signatures_pb.Signature;
-      reader.readMessage(value,signatures_signatures_pb.Signature.deserializeBinaryFromReader);
-      msg.setSignature(value);
+      var value = new signatures_signatures_pb.TreeState;
+      reader.readMessage(value,signatures_signatures_pb.TreeState.deserializeBinaryFromReader);
+      msg.setCurrentState(value);
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -1562,12 +1562,12 @@ proto.transactions.TokenPayload.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getSignature();
+  f = message.getCurrentState();
   if (f != null) {
     writer.writeMessage(
       3,
       f,
-      signatures_signatures_pb.Signature.serializeBinaryToWriter
+      signatures_signatures_pb.TreeState.serializeBinaryToWriter
     );
   }
   f = message.getLeavesList_asU8();
@@ -1611,23 +1611,23 @@ proto.transactions.TokenPayload.prototype.setTip = function(value) {
 
 
 /**
- * optional signatures.Signature signature = 3;
- * @return {?proto.signatures.Signature}
+ * optional signatures.TreeState current_state = 3;
+ * @return {?proto.signatures.TreeState}
  */
-proto.transactions.TokenPayload.prototype.getSignature = function() {
-  return /** @type{?proto.signatures.Signature} */ (
-    jspb.Message.getWrapperField(this, signatures_signatures_pb.Signature, 3));
+proto.transactions.TokenPayload.prototype.getCurrentState = function() {
+  return /** @type{?proto.signatures.TreeState} */ (
+    jspb.Message.getWrapperField(this, signatures_signatures_pb.TreeState, 3));
 };
 
 
-/** @param {?proto.signatures.Signature|undefined} value */
-proto.transactions.TokenPayload.prototype.setSignature = function(value) {
+/** @param {?proto.signatures.TreeState|undefined} value */
+proto.transactions.TokenPayload.prototype.setCurrentState = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.transactions.TokenPayload.prototype.clearSignature = function() {
-  this.setSignature(undefined);
+proto.transactions.TokenPayload.prototype.clearCurrentState = function() {
+  this.setCurrentState(undefined);
 };
 
 
@@ -1635,7 +1635,7 @@ proto.transactions.TokenPayload.prototype.clearSignature = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.transactions.TokenPayload.prototype.hasSignature = function() {
+proto.transactions.TokenPayload.prototype.hasCurrentState = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
