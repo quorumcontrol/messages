@@ -1155,7 +1155,7 @@ proto.transactions.ReceiveTokenPayload.toObject = function(includeInstance, msg)
   var f, obj = {
     sendTokenTransactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: msg.getTip_asB64(),
-    currentState: (f = msg.getCurrentState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
+    treeState: (f = msg.getTreeState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
     leavesList: msg.getLeavesList_asB64()
   };
 
@@ -1204,7 +1204,7 @@ proto.transactions.ReceiveTokenPayload.deserializeBinaryFromReader = function(ms
     case 3:
       var value = new signatures_signatures_pb.TreeState;
       reader.readMessage(value,signatures_signatures_pb.TreeState.deserializeBinaryFromReader);
-      msg.setCurrentState(value);
+      msg.setTreeState(value);
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -1253,7 +1253,7 @@ proto.transactions.ReceiveTokenPayload.serializeBinaryToWriter = function(messag
       f
     );
   }
-  f = message.getCurrentState();
+  f = message.getTreeState();
   if (f != null) {
     writer.writeMessage(
       3,
@@ -1326,23 +1326,23 @@ proto.transactions.ReceiveTokenPayload.prototype.setTip = function(value) {
 
 
 /**
- * optional signatures.TreeState current_state = 3;
+ * optional signatures.TreeState tree_state = 3;
  * @return {?proto.signatures.TreeState}
  */
-proto.transactions.ReceiveTokenPayload.prototype.getCurrentState = function() {
+proto.transactions.ReceiveTokenPayload.prototype.getTreeState = function() {
   return /** @type{?proto.signatures.TreeState} */ (
     jspb.Message.getWrapperField(this, signatures_signatures_pb.TreeState, 3));
 };
 
 
 /** @param {?proto.signatures.TreeState|undefined} value */
-proto.transactions.ReceiveTokenPayload.prototype.setCurrentState = function(value) {
+proto.transactions.ReceiveTokenPayload.prototype.setTreeState = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.transactions.ReceiveTokenPayload.prototype.clearCurrentState = function() {
-  this.setCurrentState(undefined);
+proto.transactions.ReceiveTokenPayload.prototype.clearTreeState = function() {
+  this.setTreeState(undefined);
 };
 
 
@@ -1350,7 +1350,7 @@ proto.transactions.ReceiveTokenPayload.prototype.clearCurrentState = function() 
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.transactions.ReceiveTokenPayload.prototype.hasCurrentState = function() {
+proto.transactions.ReceiveTokenPayload.prototype.hasTreeState = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -1464,7 +1464,7 @@ proto.transactions.TokenPayload.toObject = function(includeInstance, msg) {
   var f, obj = {
     transactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    currentState: (f = msg.getCurrentState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
+    treeState: (f = msg.getTreeState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
     leavesList: msg.getLeavesList_asB64()
   };
 
@@ -1513,7 +1513,7 @@ proto.transactions.TokenPayload.deserializeBinaryFromReader = function(msg, read
     case 3:
       var value = new signatures_signatures_pb.TreeState;
       reader.readMessage(value,signatures_signatures_pb.TreeState.deserializeBinaryFromReader);
-      msg.setCurrentState(value);
+      msg.setTreeState(value);
       break;
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
@@ -1562,7 +1562,7 @@ proto.transactions.TokenPayload.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getCurrentState();
+  f = message.getTreeState();
   if (f != null) {
     writer.writeMessage(
       3,
@@ -1611,23 +1611,23 @@ proto.transactions.TokenPayload.prototype.setTip = function(value) {
 
 
 /**
- * optional signatures.TreeState current_state = 3;
+ * optional signatures.TreeState tree_state = 3;
  * @return {?proto.signatures.TreeState}
  */
-proto.transactions.TokenPayload.prototype.getCurrentState = function() {
+proto.transactions.TokenPayload.prototype.getTreeState = function() {
   return /** @type{?proto.signatures.TreeState} */ (
     jspb.Message.getWrapperField(this, signatures_signatures_pb.TreeState, 3));
 };
 
 
 /** @param {?proto.signatures.TreeState|undefined} value */
-proto.transactions.TokenPayload.prototype.setCurrentState = function(value) {
+proto.transactions.TokenPayload.prototype.setTreeState = function(value) {
   jspb.Message.setWrapperField(this, 3, value);
 };
 
 
-proto.transactions.TokenPayload.prototype.clearCurrentState = function() {
-  this.setCurrentState(undefined);
+proto.transactions.TokenPayload.prototype.clearTreeState = function() {
+  this.setTreeState(undefined);
 };
 
 
@@ -1635,7 +1635,7 @@ proto.transactions.TokenPayload.prototype.clearCurrentState = function() {
  * Returns whether this field is set.
  * @return {!boolean}
  */
-proto.transactions.TokenPayload.prototype.hasCurrentState = function() {
+proto.transactions.TokenPayload.prototype.hasTreeState = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 

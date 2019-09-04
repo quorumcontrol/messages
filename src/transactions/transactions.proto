@@ -38,14 +38,14 @@ message SendTokenPayload{
 message ReceiveTokenPayload{
   string send_token_transaction_id = 1;
   bytes tip = 2;
-  signatures.TreeState current_state = 3;
+  signatures.TreeState tree_state = 3;
   repeated bytes Leaves = 4;
 }
 
 message TokenPayload {
   string transaction_id = 1;
   string tip = 2;
-  signatures.TreeState current_state = 3;
+  signatures.TreeState tree_state = 3;
   repeated bytes leaves = 4;
 }
 
