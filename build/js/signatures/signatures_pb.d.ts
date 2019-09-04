@@ -9,8 +9,8 @@ export class PublicKey extends jspb.Message {
     getId(): string;
     setId(value: string): void;
 
-    getType(): string;
-    setType(value: string): void;
+    getType(): PublicKey.Type;
+    setType(value: PublicKey.Type): void;
 
     getPublicKey(): Uint8Array | string;
     getPublicKey_asU8(): Uint8Array;
@@ -31,36 +31,52 @@ export class PublicKey extends jspb.Message {
 export namespace PublicKey {
     export type AsObject = {
         id: string,
-        type: string,
+        type: PublicKey.Type,
         publicKey: Uint8Array | string,
     }
+
+    export enum Type {
+    KEYTYPEBLSGROUPSIG = 0,
+    KEYTYPESECP256K1 = 1,
+    }
+
 }
 
-export class CurrentState extends jspb.Message { 
+export class Ownership extends jspb.Message { 
 
-    hasSignature(): boolean;
-    clearSignature(): void;
-    getSignature(): Signature | undefined;
-    setSignature(value?: Signature): void;
+    hasPublicKey(): boolean;
+    clearPublicKey(): void;
+    getPublicKey(): PublicKey | undefined;
+    setPublicKey(value?: PublicKey): void;
+
+    getConditions(): string;
+    setConditions(value: string): void;
 
 
     serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): CurrentState.AsObject;
-    static toObject(includeInstance: boolean, msg: CurrentState): CurrentState.AsObject;
+    toObject(includeInstance?: boolean): Ownership.AsObject;
+    static toObject(includeInstance: boolean, msg: Ownership): Ownership.AsObject;
     static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
     static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: CurrentState, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): CurrentState;
-    static deserializeBinaryFromReader(message: CurrentState, reader: jspb.BinaryReader): CurrentState;
+    static serializeBinaryToWriter(message: Ownership, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Ownership;
+    static deserializeBinaryFromReader(message: Ownership, reader: jspb.BinaryReader): Ownership;
 }
 
-export namespace CurrentState {
+export namespace Ownership {
     export type AsObject = {
-        signature?: Signature.AsObject,
+        publicKey?: PublicKey.AsObject,
+        conditions: string,
     }
 }
 
 export class Signature extends jspb.Message { 
+
+    hasOwnership(): boolean;
+    clearOwnership(): void;
+    getOwnership(): Ownership | undefined;
+    setOwnership(value?: Ownership): void;
+
     clearSignersList(): void;
     getSignersList(): Array<number>;
     setSignersList(value: Array<number>): void;
@@ -71,8 +87,35 @@ export class Signature extends jspb.Message {
     getSignature_asB64(): string;
     setSignature(value: Uint8Array | string): void;
 
-    getType(): string;
-    setType(value: string): void;
+    getPreImage(): string;
+    setPreImage(value: string): void;
+
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): Signature.AsObject;
+    static toObject(includeInstance: boolean, msg: Signature): Signature.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: Signature, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): Signature;
+    static deserializeBinaryFromReader(message: Signature, reader: jspb.BinaryReader): Signature;
+}
+
+export namespace Signature {
+    export type AsObject = {
+        ownership?: Ownership.AsObject,
+        signersList: Array<number>,
+        signature: Uint8Array | string,
+        preImage: string,
+    }
+}
+
+export class CurrentState extends jspb.Message { 
+
+    hasSignature(): boolean;
+    clearSignature(): void;
+    getSignature(): Signature | undefined;
+    setSignature(value?: Signature): void;
 
     getObjectId(): Uint8Array | string;
     getObjectId_asU8(): Uint8Array;
@@ -105,20 +148,18 @@ export class Signature extends jspb.Message {
 
 
     serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): Signature.AsObject;
-    static toObject(includeInstance: boolean, msg: Signature): Signature.AsObject;
+    toObject(includeInstance?: boolean): CurrentState.AsObject;
+    static toObject(includeInstance: boolean, msg: CurrentState): CurrentState.AsObject;
     static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
     static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: Signature, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): Signature;
-    static deserializeBinaryFromReader(message: Signature, reader: jspb.BinaryReader): Signature;
+    static serializeBinaryToWriter(message: CurrentState, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): CurrentState;
+    static deserializeBinaryFromReader(message: CurrentState, reader: jspb.BinaryReader): CurrentState;
 }
 
-export namespace Signature {
+export namespace CurrentState {
     export type AsObject = {
-        signersList: Array<number>,
-        signature: Uint8Array | string,
-        type: string,
+        signature?: Signature.AsObject,
         objectId: Uint8Array | string,
         previousTip: Uint8Array | string,
         newTip: Uint8Array | string,
