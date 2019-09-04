@@ -3,7 +3,7 @@ package signatures;
 
 option go_package = "github.com/quorumcontrol/messages/build/go/signatures";
 
-message PublicKey {
+message Ownership {
   enum Type {
     KeyTypeBLSGroupSig = 0;
   	KeyTypeSecp256k1 = 1;
@@ -11,11 +11,7 @@ message PublicKey {
   string id = 1;
   Type type = 2;
   bytes public_key = 3;
-}
-
-message Ownership {
-  PublicKey public_key = 1;
-  string conditions = 2;
+  string conditions = 4;
 }
 
 message Signature {
@@ -25,27 +21,6 @@ message Signature {
   string pre_image = 4;
 }
 
-// type Signature struct {
-// 	*Ownership
-// 	// Signers is an optional array of counts of the public keys of signers
-// 	// used for aggregated BLS signatures where the public keys are known out-of-band of signatures
-// 	Signers []uint32
-// 	// The actual signature bytes
-// 	Signature []byte
-// 	// PreImage is an optional field used for the hash-preimage condition
-// 	PreImage string
-// }
-
-// type Ownership struct {
-// 	// Type is an ENUM of the supported signature types
-// 	Type string
-// 	//PublicKey is optional when on a signature, some signatures contain a public key
-// 	PublicKey []byte
-// 	// Conditions is an optional parens script
-// 	Conditions string
-// }
-
-// TODO: we might just drop this, but it's useful for transition #1
 message CurrentState {
   Signature signature = 1;
   bytes object_id = 2;
