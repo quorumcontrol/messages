@@ -12,7 +12,9 @@ var goog = jspb;
 var global = Function('return this')();
 
 goog.exportSymbol('proto.signatures.CurrentState', null, global);
+goog.exportSymbol('proto.signatures.Ownership', null, global);
 goog.exportSymbol('proto.signatures.PublicKey', null, global);
+goog.exportSymbol('proto.signatures.PublicKey.Type', null, global);
 goog.exportSymbol('proto.signatures.Signature', null, global);
 
 /**
@@ -62,7 +64,7 @@ proto.signatures.PublicKey.prototype.toObject = function(opt_includeInstance) {
 proto.signatures.PublicKey.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    type: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    type: jspb.Message.getFieldWithDefault(msg, 2, 0),
     publicKey: msg.getPublicKey_asB64()
   };
 
@@ -105,7 +107,7 @@ proto.signatures.PublicKey.deserializeBinaryFromReader = function(msg, reader) {
       msg.setId(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
+      var value = /** @type {!proto.signatures.PublicKey.Type} */ (reader.readEnum());
       msg.setType(value);
       break;
     case 3:
@@ -149,8 +151,8 @@ proto.signatures.PublicKey.serializeBinaryToWriter = function(message, writer) {
     );
   }
   f = message.getType();
-  if (f.length > 0) {
-    writer.writeString(
+  if (f !== 0.0) {
+    writer.writeEnum(
       2,
       f
     );
@@ -164,6 +166,14 @@ proto.signatures.PublicKey.serializeBinaryToWriter = function(message, writer) {
   }
 };
 
+
+/**
+ * @enum {number}
+ */
+proto.signatures.PublicKey.Type = {
+  KEYTYPEBLSGROUPSIG: 0,
+  KEYTYPESECP256K1: 1
+};
 
 /**
  * optional string id = 1;
@@ -181,17 +191,17 @@ proto.signatures.PublicKey.prototype.setId = function(value) {
 
 
 /**
- * optional string type = 2;
- * @return {string}
+ * optional Type type = 2;
+ * @return {!proto.signatures.PublicKey.Type}
  */
 proto.signatures.PublicKey.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+  return /** @type {!proto.signatures.PublicKey.Type} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
-/** @param {string} value */
+/** @param {!proto.signatures.PublicKey.Type} value */
 proto.signatures.PublicKey.prototype.setType = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3EnumField(this, 2, value);
 };
 
 
@@ -245,6 +255,477 @@ proto.signatures.PublicKey.prototype.setPublicKey = function(value) {
  * @extends {jspb.Message}
  * @constructor
  */
+proto.signatures.Ownership = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+};
+goog.inherits(proto.signatures.Ownership, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.signatures.Ownership.displayName = 'proto.signatures.Ownership';
+}
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.signatures.Ownership.prototype.toObject = function(opt_includeInstance) {
+  return proto.signatures.Ownership.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.signatures.Ownership} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.signatures.Ownership.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    publicKey: (f = msg.getPublicKey()) && proto.signatures.PublicKey.toObject(includeInstance, f),
+    conditions: jspb.Message.getFieldWithDefault(msg, 2, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.signatures.Ownership}
+ */
+proto.signatures.Ownership.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.signatures.Ownership;
+  return proto.signatures.Ownership.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.signatures.Ownership} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.signatures.Ownership}
+ */
+proto.signatures.Ownership.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.signatures.PublicKey;
+      reader.readMessage(value,proto.signatures.PublicKey.deserializeBinaryFromReader);
+      msg.setPublicKey(value);
+      break;
+    case 2:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setConditions(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.signatures.Ownership.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.signatures.Ownership.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.signatures.Ownership} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.signatures.Ownership.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getPublicKey();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.signatures.PublicKey.serializeBinaryToWriter
+    );
+  }
+  f = message.getConditions();
+  if (f.length > 0) {
+    writer.writeString(
+      2,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional PublicKey public_key = 1;
+ * @return {?proto.signatures.PublicKey}
+ */
+proto.signatures.Ownership.prototype.getPublicKey = function() {
+  return /** @type{?proto.signatures.PublicKey} */ (
+    jspb.Message.getWrapperField(this, proto.signatures.PublicKey, 1));
+};
+
+
+/** @param {?proto.signatures.PublicKey|undefined} value */
+proto.signatures.Ownership.prototype.setPublicKey = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.signatures.Ownership.prototype.clearPublicKey = function() {
+  this.setPublicKey(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.signatures.Ownership.prototype.hasPublicKey = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * optional string conditions = 2;
+ * @return {string}
+ */
+proto.signatures.Ownership.prototype.getConditions = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
+};
+
+
+/** @param {string} value */
+proto.signatures.Ownership.prototype.setConditions = function(value) {
+  jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
+proto.signatures.Signature = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.signatures.Signature.repeatedFields_, null);
+};
+goog.inherits(proto.signatures.Signature, jspb.Message);
+if (goog.DEBUG && !COMPILED) {
+  proto.signatures.Signature.displayName = 'proto.signatures.Signature';
+}
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.signatures.Signature.repeatedFields_ = [2];
+
+
+
+if (jspb.Message.GENERATE_TO_OBJECT) {
+/**
+ * Creates an object representation of this proto suitable for use in Soy templates.
+ * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
+ * For the list of reserved names please see:
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
+ * @return {!Object}
+ */
+proto.signatures.Signature.prototype.toObject = function(opt_includeInstance) {
+  return proto.signatures.Signature.toObject(opt_includeInstance, this);
+};
+
+
+/**
+ * Static version of the {@see toObject} method.
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
+ * @param {!proto.signatures.Signature} msg The msg instance to transform.
+ * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.signatures.Signature.toObject = function(includeInstance, msg) {
+  var f, obj = {
+    ownership: (f = msg.getOwnership()) && proto.signatures.Ownership.toObject(includeInstance, f),
+    signersList: jspb.Message.getRepeatedField(msg, 2),
+    signature: msg.getSignature_asB64(),
+    preImage: jspb.Message.getFieldWithDefault(msg, 4, "")
+  };
+
+  if (includeInstance) {
+    obj.$jspbMessageInstance = msg;
+  }
+  return obj;
+};
+}
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.signatures.Signature}
+ */
+proto.signatures.Signature.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.signatures.Signature;
+  return proto.signatures.Signature.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.signatures.Signature} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.signatures.Signature}
+ */
+proto.signatures.Signature.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.signatures.Ownership;
+      reader.readMessage(value,proto.signatures.Ownership.deserializeBinaryFromReader);
+      msg.setOwnership(value);
+      break;
+    case 2:
+      var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
+      msg.setSignersList(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setSignature(value);
+      break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setPreImage(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.signatures.Signature.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  proto.signatures.Signature.serializeBinaryToWriter(this, writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.signatures.Signature} message
+ * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
+ */
+proto.signatures.Signature.serializeBinaryToWriter = function(message, writer) {
+  var f = undefined;
+  f = message.getOwnership();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.signatures.Ownership.serializeBinaryToWriter
+    );
+  }
+  f = message.getSignersList();
+  if (f.length > 0) {
+    writer.writePackedUint32(
+      2,
+      f
+    );
+  }
+  f = message.getSignature_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
+      f
+    );
+  }
+  f = message.getPreImage();
+  if (f.length > 0) {
+    writer.writeString(
+      4,
+      f
+    );
+  }
+};
+
+
+/**
+ * optional Ownership ownership = 1;
+ * @return {?proto.signatures.Ownership}
+ */
+proto.signatures.Signature.prototype.getOwnership = function() {
+  return /** @type{?proto.signatures.Ownership} */ (
+    jspb.Message.getWrapperField(this, proto.signatures.Ownership, 1));
+};
+
+
+/** @param {?proto.signatures.Ownership|undefined} value */
+proto.signatures.Signature.prototype.setOwnership = function(value) {
+  jspb.Message.setWrapperField(this, 1, value);
+};
+
+
+proto.signatures.Signature.prototype.clearOwnership = function() {
+  this.setOwnership(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {!boolean}
+ */
+proto.signatures.Signature.prototype.hasOwnership = function() {
+  return jspb.Message.getField(this, 1) != null;
+};
+
+
+/**
+ * repeated uint32 signers = 2;
+ * @return {!Array<number>}
+ */
+proto.signatures.Signature.prototype.getSignersList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 2));
+};
+
+
+/** @param {!Array<number>} value */
+proto.signatures.Signature.prototype.setSignersList = function(value) {
+  jspb.Message.setField(this, 2, value || []);
+};
+
+
+/**
+ * @param {!number} value
+ * @param {number=} opt_index
+ */
+proto.signatures.Signature.prototype.addSigners = function(value, opt_index) {
+  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+};
+
+
+proto.signatures.Signature.prototype.clearSignersList = function() {
+  this.setSignersList([]);
+};
+
+
+/**
+ * optional bytes signature = 3;
+ * @return {!(string|Uint8Array)}
+ */
+proto.signatures.Signature.prototype.getSignature = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * optional bytes signature = 3;
+ * This is a type-conversion wrapper around `getSignature()`
+ * @return {string}
+ */
+proto.signatures.Signature.prototype.getSignature_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getSignature()));
+};
+
+
+/**
+ * optional bytes signature = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getSignature()`
+ * @return {!Uint8Array}
+ */
+proto.signatures.Signature.prototype.getSignature_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getSignature()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.signatures.Signature.prototype.setSignature = function(value) {
+  jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+/**
+ * optional string pre_image = 4;
+ * @return {string}
+ */
+proto.signatures.Signature.prototype.getPreImage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
+};
+
+
+/** @param {string} value */
+proto.signatures.Signature.prototype.setPreImage = function(value) {
+  jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+
+/**
+ * Generated by JsPbCodeGenerator.
+ * @param {Array=} opt_data Optional initial data array, typically from a
+ * server response, or constructed directly in Javascript. The array is used
+ * in place and becomes part of the constructed object. It is not cloned.
+ * If no data is provided, the constructed object will be empty, but still
+ * valid.
+ * @extends {jspb.Message}
+ * @constructor
+ */
 proto.signatures.CurrentState = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
@@ -281,7 +762,14 @@ proto.signatures.CurrentState.prototype.toObject = function(opt_includeInstance)
  */
 proto.signatures.CurrentState.toObject = function(includeInstance, msg) {
   var f, obj = {
-    signature: (f = msg.getSignature()) && proto.signatures.Signature.toObject(includeInstance, f)
+    signature: (f = msg.getSignature()) && proto.signatures.Signature.toObject(includeInstance, f),
+    objectId: msg.getObjectId_asB64(),
+    previousTip: msg.getPreviousTip_asB64(),
+    newTip: msg.getNewTip_asB64(),
+    view: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    cycle: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    height: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    transactionId: msg.getTransactionId_asB64()
   };
 
   if (includeInstance) {
@@ -323,6 +811,34 @@ proto.signatures.CurrentState.deserializeBinaryFromReader = function(msg, reader
       reader.readMessage(value,proto.signatures.Signature.deserializeBinaryFromReader);
       msg.setSignature(value);
       break;
+    case 2:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setObjectId(value);
+      break;
+    case 3:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setPreviousTip(value);
+      break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setNewTip(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setView(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setCycle(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readUint64());
+      msg.setHeight(value);
+      break;
+    case 8:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.setTransactionId(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -360,6 +876,55 @@ proto.signatures.CurrentState.serializeBinaryToWriter = function(message, writer
       proto.signatures.Signature.serializeBinaryToWriter
     );
   }
+  f = message.getObjectId_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      2,
+      f
+    );
+  }
+  f = message.getPreviousTip_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      3,
+      f
+    );
+  }
+  f = message.getNewTip_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      4,
+      f
+    );
+  }
+  f = message.getView();
+  if (f !== 0) {
+    writer.writeUint64(
+      5,
+      f
+    );
+  }
+  f = message.getCycle();
+  if (f !== 0) {
+    writer.writeUint64(
+      6,
+      f
+    );
+  }
+  f = message.getHeight();
+  if (f !== 0) {
+    writer.writeUint64(
+      7,
+      f
+    );
+  }
+  f = message.getTransactionId_asU8();
+  if (f.length > 0) {
+    writer.writeBytes(
+      8,
+      f
+    );
+  }
 };
 
 
@@ -393,529 +958,204 @@ proto.signatures.CurrentState.prototype.hasSignature = function() {
 };
 
 
-
 /**
- * Generated by JsPbCodeGenerator.
- * @param {Array=} opt_data Optional initial data array, typically from a
- * server response, or constructed directly in Javascript. The array is used
- * in place and becomes part of the constructed object. It is not cloned.
- * If no data is provided, the constructed object will be empty, but still
- * valid.
- * @extends {jspb.Message}
- * @constructor
- */
-proto.signatures.Signature = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.signatures.Signature.repeatedFields_, null);
-};
-goog.inherits(proto.signatures.Signature, jspb.Message);
-if (goog.DEBUG && !COMPILED) {
-  proto.signatures.Signature.displayName = 'proto.signatures.Signature';
-}
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.signatures.Signature.repeatedFields_ = [1];
-
-
-
-if (jspb.Message.GENERATE_TO_OBJECT) {
-/**
- * Creates an object representation of this proto suitable for use in Soy templates.
- * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
- * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
- * @return {!Object}
- */
-proto.signatures.Signature.prototype.toObject = function(opt_includeInstance) {
-  return proto.signatures.Signature.toObject(opt_includeInstance, this);
-};
-
-
-/**
- * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
- *     http://goto/soy-param-migration
- * @param {!proto.signatures.Signature} msg The msg instance to transform.
- * @return {!Object}
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.signatures.Signature.toObject = function(includeInstance, msg) {
-  var f, obj = {
-    signersList: jspb.Message.getRepeatedField(msg, 1),
-    signature: msg.getSignature_asB64(),
-    type: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    objectId: msg.getObjectId_asB64(),
-    previousTip: msg.getPreviousTip_asB64(),
-    newTip: msg.getNewTip_asB64(),
-    view: jspb.Message.getFieldWithDefault(msg, 7, 0),
-    cycle: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    height: jspb.Message.getFieldWithDefault(msg, 9, 0),
-    transactionId: msg.getTransactionId_asB64()
-  };
-
-  if (includeInstance) {
-    obj.$jspbMessageInstance = msg;
-  }
-  return obj;
-};
-}
-
-
-/**
- * Deserializes binary data (in protobuf wire format).
- * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.signatures.Signature}
- */
-proto.signatures.Signature.deserializeBinary = function(bytes) {
-  var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.signatures.Signature;
-  return proto.signatures.Signature.deserializeBinaryFromReader(msg, reader);
-};
-
-
-/**
- * Deserializes binary data (in protobuf wire format) from the
- * given reader into the given message object.
- * @param {!proto.signatures.Signature} msg The message object to deserialize into.
- * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.signatures.Signature}
- */
-proto.signatures.Signature.deserializeBinaryFromReader = function(msg, reader) {
-  while (reader.nextField()) {
-    if (reader.isEndGroup()) {
-      break;
-    }
-    var field = reader.getFieldNumber();
-    switch (field) {
-    case 1:
-      var value = /** @type {!Array<number>} */ (reader.readPackedUint32());
-      msg.setSignersList(value);
-      break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setSignature(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setType(value);
-      break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setObjectId(value);
-      break;
-    case 5:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setPreviousTip(value);
-      break;
-    case 6:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setNewTip(value);
-      break;
-    case 7:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setView(value);
-      break;
-    case 8:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setCycle(value);
-      break;
-    case 9:
-      var value = /** @type {number} */ (reader.readUint64());
-      msg.setHeight(value);
-      break;
-    case 10:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setTransactionId(value);
-      break;
-    default:
-      reader.skipField();
-      break;
-    }
-  }
-  return msg;
-};
-
-
-/**
- * Serializes the message to binary data (in protobuf wire format).
- * @return {!Uint8Array}
- */
-proto.signatures.Signature.prototype.serializeBinary = function() {
-  var writer = new jspb.BinaryWriter();
-  proto.signatures.Signature.serializeBinaryToWriter(this, writer);
-  return writer.getResultBuffer();
-};
-
-
-/**
- * Serializes the given message to binary data (in protobuf wire
- * format), writing to the given BinaryWriter.
- * @param {!proto.signatures.Signature} message
- * @param {!jspb.BinaryWriter} writer
- * @suppress {unusedLocalVariables} f is only used for nested messages
- */
-proto.signatures.Signature.serializeBinaryToWriter = function(message, writer) {
-  var f = undefined;
-  f = message.getSignersList();
-  if (f.length > 0) {
-    writer.writePackedUint32(
-      1,
-      f
-    );
-  }
-  f = message.getSignature_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      2,
-      f
-    );
-  }
-  f = message.getType();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
-  f = message.getObjectId_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      4,
-      f
-    );
-  }
-  f = message.getPreviousTip_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      5,
-      f
-    );
-  }
-  f = message.getNewTip_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      6,
-      f
-    );
-  }
-  f = message.getView();
-  if (f !== 0) {
-    writer.writeUint64(
-      7,
-      f
-    );
-  }
-  f = message.getCycle();
-  if (f !== 0) {
-    writer.writeUint64(
-      8,
-      f
-    );
-  }
-  f = message.getHeight();
-  if (f !== 0) {
-    writer.writeUint64(
-      9,
-      f
-    );
-  }
-  f = message.getTransactionId_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      10,
-      f
-    );
-  }
-};
-
-
-/**
- * repeated uint32 signers = 1;
- * @return {!Array<number>}
- */
-proto.signatures.Signature.prototype.getSignersList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedField(this, 1));
-};
-
-
-/** @param {!Array<number>} value */
-proto.signatures.Signature.prototype.setSignersList = function(value) {
-  jspb.Message.setField(this, 1, value || []);
-};
-
-
-/**
- * @param {!number} value
- * @param {number=} opt_index
- */
-proto.signatures.Signature.prototype.addSigners = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 1, value, opt_index);
-};
-
-
-proto.signatures.Signature.prototype.clearSignersList = function() {
-  this.setSignersList([]);
-};
-
-
-/**
- * optional bytes signature = 2;
+ * optional bytes object_id = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.signatures.Signature.prototype.getSignature = function() {
+proto.signatures.CurrentState.prototype.getObjectId = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
- * optional bytes signature = 2;
- * This is a type-conversion wrapper around `getSignature()`
+ * optional bytes object_id = 2;
+ * This is a type-conversion wrapper around `getObjectId()`
  * @return {string}
  */
-proto.signatures.Signature.prototype.getSignature_asB64 = function() {
+proto.signatures.CurrentState.prototype.getObjectId_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getSignature()));
+      this.getObjectId()));
 };
 
 
 /**
- * optional bytes signature = 2;
+ * optional bytes object_id = 2;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getSignature()`
+ * This is a type-conversion wrapper around `getObjectId()`
  * @return {!Uint8Array}
  */
-proto.signatures.Signature.prototype.getSignature_asU8 = function() {
+proto.signatures.CurrentState.prototype.getObjectId_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getSignature()));
+      this.getObjectId()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.signatures.Signature.prototype.setSignature = function(value) {
+proto.signatures.CurrentState.prototype.setObjectId = function(value) {
   jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
 /**
- * optional string type = 3;
- * @return {string}
+ * optional bytes previous_tip = 3;
+ * @return {!(string|Uint8Array)}
  */
-proto.signatures.Signature.prototype.getType = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/** @param {string} value */
-proto.signatures.Signature.prototype.setType = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+proto.signatures.CurrentState.prototype.getPreviousTip = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
- * optional bytes object_id = 4;
+ * optional bytes previous_tip = 3;
+ * This is a type-conversion wrapper around `getPreviousTip()`
+ * @return {string}
+ */
+proto.signatures.CurrentState.prototype.getPreviousTip_asB64 = function() {
+  return /** @type {string} */ (jspb.Message.bytesAsB64(
+      this.getPreviousTip()));
+};
+
+
+/**
+ * optional bytes previous_tip = 3;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getPreviousTip()`
+ * @return {!Uint8Array}
+ */
+proto.signatures.CurrentState.prototype.getPreviousTip_asU8 = function() {
+  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
+      this.getPreviousTip()));
+};
+
+
+/** @param {!(string|Uint8Array)} value */
+proto.signatures.CurrentState.prototype.setPreviousTip = function(value) {
+  jspb.Message.setProto3BytesField(this, 3, value);
+};
+
+
+/**
+ * optional bytes new_tip = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.signatures.Signature.prototype.getObjectId = function() {
+proto.signatures.CurrentState.prototype.getNewTip = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
- * optional bytes object_id = 4;
- * This is a type-conversion wrapper around `getObjectId()`
+ * optional bytes new_tip = 4;
+ * This is a type-conversion wrapper around `getNewTip()`
  * @return {string}
  */
-proto.signatures.Signature.prototype.getObjectId_asB64 = function() {
+proto.signatures.CurrentState.prototype.getNewTip_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getObjectId()));
+      this.getNewTip()));
 };
 
 
 /**
- * optional bytes object_id = 4;
+ * optional bytes new_tip = 4;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getObjectId()`
+ * This is a type-conversion wrapper around `getNewTip()`
  * @return {!Uint8Array}
  */
-proto.signatures.Signature.prototype.getObjectId_asU8 = function() {
+proto.signatures.CurrentState.prototype.getNewTip_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getObjectId()));
+      this.getNewTip()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.signatures.Signature.prototype.setObjectId = function(value) {
+proto.signatures.CurrentState.prototype.setNewTip = function(value) {
   jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
 /**
- * optional bytes previous_tip = 5;
- * @return {!(string|Uint8Array)}
- */
-proto.signatures.Signature.prototype.getPreviousTip = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
-};
-
-
-/**
- * optional bytes previous_tip = 5;
- * This is a type-conversion wrapper around `getPreviousTip()`
- * @return {string}
- */
-proto.signatures.Signature.prototype.getPreviousTip_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getPreviousTip()));
-};
-
-
-/**
- * optional bytes previous_tip = 5;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getPreviousTip()`
- * @return {!Uint8Array}
- */
-proto.signatures.Signature.prototype.getPreviousTip_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getPreviousTip()));
-};
-
-
-/** @param {!(string|Uint8Array)} value */
-proto.signatures.Signature.prototype.setPreviousTip = function(value) {
-  jspb.Message.setProto3BytesField(this, 5, value);
-};
-
-
-/**
- * optional bytes new_tip = 6;
- * @return {!(string|Uint8Array)}
- */
-proto.signatures.Signature.prototype.getNewTip = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
-};
-
-
-/**
- * optional bytes new_tip = 6;
- * This is a type-conversion wrapper around `getNewTip()`
- * @return {string}
- */
-proto.signatures.Signature.prototype.getNewTip_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getNewTip()));
-};
-
-
-/**
- * optional bytes new_tip = 6;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getNewTip()`
- * @return {!Uint8Array}
- */
-proto.signatures.Signature.prototype.getNewTip_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getNewTip()));
-};
-
-
-/** @param {!(string|Uint8Array)} value */
-proto.signatures.Signature.prototype.setNewTip = function(value) {
-  jspb.Message.setProto3BytesField(this, 6, value);
-};
-
-
-/**
- * optional uint64 view = 7;
+ * optional uint64 view = 5;
  * @return {number}
  */
-proto.signatures.Signature.prototype.getView = function() {
+proto.signatures.CurrentState.prototype.getView = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/** @param {number} value */
+proto.signatures.CurrentState.prototype.setView = function(value) {
+  jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional uint64 cycle = 6;
+ * @return {number}
+ */
+proto.signatures.CurrentState.prototype.getCycle = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/** @param {number} value */
+proto.signatures.CurrentState.prototype.setCycle = function(value) {
+  jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional uint64 height = 7;
+ * @return {number}
+ */
+proto.signatures.CurrentState.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
 };
 
 
 /** @param {number} value */
-proto.signatures.Signature.prototype.setView = function(value) {
+proto.signatures.CurrentState.prototype.setHeight = function(value) {
   jspb.Message.setProto3IntField(this, 7, value);
 };
 
 
 /**
- * optional uint64 cycle = 8;
- * @return {number}
- */
-proto.signatures.Signature.prototype.getCycle = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 8, 0));
-};
-
-
-/** @param {number} value */
-proto.signatures.Signature.prototype.setCycle = function(value) {
-  jspb.Message.setProto3IntField(this, 8, value);
-};
-
-
-/**
- * optional uint64 height = 9;
- * @return {number}
- */
-proto.signatures.Signature.prototype.getHeight = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 9, 0));
-};
-
-
-/** @param {number} value */
-proto.signatures.Signature.prototype.setHeight = function(value) {
-  jspb.Message.setProto3IntField(this, 9, value);
-};
-
-
-/**
- * optional bytes transaction_id = 10;
+ * optional bytes transaction_id = 8;
  * @return {!(string|Uint8Array)}
  */
-proto.signatures.Signature.prototype.getTransactionId = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+proto.signatures.CurrentState.prototype.getTransactionId = function() {
+  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
 /**
- * optional bytes transaction_id = 10;
+ * optional bytes transaction_id = 8;
  * This is a type-conversion wrapper around `getTransactionId()`
  * @return {string}
  */
-proto.signatures.Signature.prototype.getTransactionId_asB64 = function() {
+proto.signatures.CurrentState.prototype.getTransactionId_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getTransactionId()));
 };
 
 
 /**
- * optional bytes transaction_id = 10;
+ * optional bytes transaction_id = 8;
  * Note that Uint8Array is not supported on all browsers.
  * @see http://caniuse.com/Uint8Array
  * This is a type-conversion wrapper around `getTransactionId()`
  * @return {!Uint8Array}
  */
-proto.signatures.Signature.prototype.getTransactionId_asU8 = function() {
+proto.signatures.CurrentState.prototype.getTransactionId_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getTransactionId()));
 };
 
 
 /** @param {!(string|Uint8Array)} value */
-proto.signatures.Signature.prototype.setTransactionId = function(value) {
-  jspb.Message.setProto3BytesField(this, 10, value);
+proto.signatures.CurrentState.prototype.setTransactionId = function(value) {
+  jspb.Message.setProto3BytesField(this, 8, value);
 };
 
 
