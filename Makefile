@@ -26,7 +26,7 @@ build/js/%_pb.js: src/%.proto $(NODE_PROTOC_PLUGIN) ${FIRSTGOPATH}/src/github.co
 	protoc -I=src -I=${FIRSTGOPATH}/src/github.com/gogo/protobuf/protobuf --js_out=import_style=commonjs,binary:build/js --grpc_out=build/js --plugin=protoc-gen-grpc=$(NODE_PROTOC_PLUGIN) $<
 
 build/js/%_pb.d.ts: src/%.proto $(NODE_PROTOC_TS_PLUGIN) ${FIRSTGOPATH}/src/github.com/gogo/protobuf/protobuf
-	protoc -I=src -I=${FIRSTGOPATH}/src/github.com/gogo/protobuf/protobuf --ts_out=build/js --plugin="protoc-gen-ts=${NODE_PROTOC_TS_PLUGIN}" $<
+	protoc -I=src -I=${FIRSTGOPATH}/src/github.com/gogo/protobuf/protobuf --ts_out="service=grpc-web:build/js" --plugin="protoc-gen-ts=${NODE_PROTOC_TS_PLUGIN}" $<
 
 test:
 	cd build/go && go test ./...
