@@ -173,10 +173,10 @@ export class ReceiveTokenPayload extends jspb.Message {
     setTip(value: Uint8Array | string): void;
 
 
-    hasSignature(): boolean;
-    clearSignature(): void;
-    getSignature(): signatures_signatures_pb.Signature | undefined;
-    setSignature(value?: signatures_signatures_pb.Signature): void;
+    hasCurrentState(): boolean;
+    clearCurrentState(): void;
+    getCurrentState(): signatures_signatures_pb.TreeState | undefined;
+    setCurrentState(value?: signatures_signatures_pb.TreeState): void;
 
     clearLeavesList(): void;
     getLeavesList(): Array<Uint8Array | string>;
@@ -200,7 +200,7 @@ export namespace ReceiveTokenPayload {
     export type AsObject = {
         sendTokenTransactionId: string,
         tip: Uint8Array | string,
-        signature?: signatures_signatures_pb.Signature.AsObject,
+        currentState?: signatures_signatures_pb.TreeState.AsObject,
         leavesList: Array<Uint8Array | string>,
     }
 }
@@ -213,10 +213,10 @@ export class TokenPayload extends jspb.Message {
     setTip(value: string): void;
 
 
-    hasSignature(): boolean;
-    clearSignature(): void;
-    getSignature(): signatures_signatures_pb.Signature | undefined;
-    setSignature(value?: signatures_signatures_pb.Signature): void;
+    hasCurrentState(): boolean;
+    clearCurrentState(): void;
+    getCurrentState(): signatures_signatures_pb.TreeState | undefined;
+    setCurrentState(value?: signatures_signatures_pb.TreeState): void;
 
     clearLeavesList(): void;
     getLeavesList(): Array<Uint8Array | string>;
@@ -240,7 +240,7 @@ export namespace TokenPayload {
     export type AsObject = {
         transactionId: string,
         tip: string,
-        signature?: signatures_signatures_pb.Signature.AsObject,
+        currentState?: signatures_signatures_pb.TreeState.AsObject,
         leavesList: Array<Uint8Array | string>,
     }
 }

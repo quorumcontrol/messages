@@ -86,7 +86,7 @@ export namespace Signature {
     }
 }
 
-export class CurrentState extends jspb.Message { 
+export class TreeState extends jspb.Message { 
 
     hasSignature(): boolean;
     clearSignature(): void;
@@ -124,16 +124,16 @@ export class CurrentState extends jspb.Message {
 
 
     serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): CurrentState.AsObject;
-    static toObject(includeInstance: boolean, msg: CurrentState): CurrentState.AsObject;
+    toObject(includeInstance?: boolean): TreeState.AsObject;
+    static toObject(includeInstance: boolean, msg: TreeState): TreeState.AsObject;
     static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
     static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: CurrentState, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): CurrentState;
-    static deserializeBinaryFromReader(message: CurrentState, reader: jspb.BinaryReader): CurrentState;
+    static serializeBinaryToWriter(message: TreeState, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): TreeState;
+    static deserializeBinaryFromReader(message: TreeState, reader: jspb.BinaryReader): TreeState;
 }
 
-export namespace CurrentState {
+export namespace TreeState {
     export type AsObject = {
         signature?: Signature.AsObject,
         objectId: Uint8Array | string,
