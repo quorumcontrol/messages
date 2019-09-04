@@ -5,49 +5,17 @@
 
 import * as jspb from "google-protobuf";
 
-export class PublicKey extends jspb.Message { 
+export class Ownership extends jspb.Message { 
     getId(): string;
     setId(value: string): void;
 
-    getType(): PublicKey.Type;
-    setType(value: PublicKey.Type): void;
+    getType(): Ownership.Type;
+    setType(value: Ownership.Type): void;
 
     getPublicKey(): Uint8Array | string;
     getPublicKey_asU8(): Uint8Array;
     getPublicKey_asB64(): string;
     setPublicKey(value: Uint8Array | string): void;
-
-
-    serializeBinary(): Uint8Array;
-    toObject(includeInstance?: boolean): PublicKey.AsObject;
-    static toObject(includeInstance: boolean, msg: PublicKey): PublicKey.AsObject;
-    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
-    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
-    static serializeBinaryToWriter(message: PublicKey, writer: jspb.BinaryWriter): void;
-    static deserializeBinary(bytes: Uint8Array): PublicKey;
-    static deserializeBinaryFromReader(message: PublicKey, reader: jspb.BinaryReader): PublicKey;
-}
-
-export namespace PublicKey {
-    export type AsObject = {
-        id: string,
-        type: PublicKey.Type,
-        publicKey: Uint8Array | string,
-    }
-
-    export enum Type {
-    KEYTYPEBLSGROUPSIG = 0,
-    KEYTYPESECP256K1 = 1,
-    }
-
-}
-
-export class Ownership extends jspb.Message { 
-
-    hasPublicKey(): boolean;
-    clearPublicKey(): void;
-    getPublicKey(): PublicKey | undefined;
-    setPublicKey(value?: PublicKey): void;
 
     getConditions(): string;
     setConditions(value: string): void;
@@ -65,9 +33,17 @@ export class Ownership extends jspb.Message {
 
 export namespace Ownership {
     export type AsObject = {
-        publicKey?: PublicKey.AsObject,
+        id: string,
+        type: Ownership.Type,
+        publicKey: Uint8Array | string,
         conditions: string,
     }
+
+    export enum Type {
+    KEYTYPEBLSGROUPSIG = 0,
+    KEYTYPESECP256K1 = 1,
+    }
+
 }
 
 export class Signature extends jspb.Message { 
