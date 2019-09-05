@@ -6,7 +6,7 @@ option go_package = "github.com/quorumcontrol/messages/build/go/signatures";
 message Ownership {
   enum Type {
     KeyTypeBLSGroupSig = 0;
-  	KeyTypeSecp256k1 = 1;
+    KeyTypeSecp256k1 = 1;
   }
   string id = 1;
   Type type = 2;
