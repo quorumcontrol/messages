@@ -65,11 +65,10 @@ func (a *Ack) Sign(key *ecdsa.PrivateKey) ([]byte, error) {
 
 func (rm *RequestMissing) Signable() []byte {
 	seqBytes := uint64ToBytes(rm.Sequence)
+	preImage := appendMultiple(rm.Identifier, seqBytes)
+	hsh := sha256.Sum256(preImage)
 
-	return appendMultiple(
-		rm.Identifier,
-		seqBytes,
-	)
+	return hsh[:]
 }
 
 func (rm *RequestMissing) Sign(key *ecdsa.PrivateKey) ([]byte, error) {
