@@ -255,14 +255,14 @@ export class StakePayload extends jspb.Message {
 
     hasDstKey(): boolean;
     clearDstKey(): void;
-    getDstKey(): signatures_signatures_pb.Ownership | undefined;
-    setDstKey(value?: signatures_signatures_pb.Ownership): void;
+    getDstKey(): signatures_signatures_pb.PublicKey | undefined;
+    setDstKey(value?: signatures_signatures_pb.PublicKey): void;
 
 
     hasVerKey(): boolean;
     clearVerKey(): void;
-    getVerKey(): signatures_signatures_pb.Ownership | undefined;
-    setVerKey(value?: signatures_signatures_pb.Ownership): void;
+    getVerKey(): signatures_signatures_pb.PublicKey | undefined;
+    setVerKey(value?: signatures_signatures_pb.PublicKey): void;
 
 
     serializeBinary(): Uint8Array;
@@ -279,8 +279,8 @@ export namespace StakePayload {
     export type AsObject = {
         groupId: string,
         amount: number,
-        dstKey?: signatures_signatures_pb.Ownership.AsObject,
-        verKey?: signatures_signatures_pb.Ownership.AsObject,
+        dstKey?: signatures_signatures_pb.PublicKey.AsObject,
+        verKey?: signatures_signatures_pb.PublicKey.AsObject,
     }
 }
 

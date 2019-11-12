@@ -52,8 +52,8 @@ message TokenPayload {
 message StakePayload{
   string group_id = 1;
   uint64 amount = 2;
-  signatures.Ownership dst_key = 3;
-  signatures.Ownership ver_key = 4;
+  signatures.PublicKey dst_key = 3;
+  signatures.PublicKey ver_key = 4;
 }
 
 message Transaction{

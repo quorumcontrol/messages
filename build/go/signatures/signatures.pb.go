@@ -22,43 +22,94 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
 
-type Ownership_Type int32
+type PublicKey_Type int32
 
 const (
-	Ownership_KeyTypeBLSGroupSig Ownership_Type = 0
-	Ownership_KeyTypeSecp256k1   Ownership_Type = 1
+	PublicKey_KeyTypeBLSGroupSig PublicKey_Type = 0
+	PublicKey_KeyTypeSecp256k1   PublicKey_Type = 1
 )
 
-var Ownership_Type_name = map[int32]string{
+var PublicKey_Type_name = map[int32]string{
 	0: "KeyTypeBLSGroupSig",
 	1: "KeyTypeSecp256k1",
 }
 
-var Ownership_Type_value = map[string]int32{
+var PublicKey_Type_value = map[string]int32{
 	"KeyTypeBLSGroupSig": 0,
 	"KeyTypeSecp256k1":   1,
 }
 
-func (x Ownership_Type) String() string {
-	return proto.EnumName(Ownership_Type_name, int32(x))
+func (x PublicKey_Type) String() string {
+	return proto.EnumName(PublicKey_Type_name, int32(x))
 }
 
-func (Ownership_Type) EnumDescriptor() ([]byte, []int) {
+func (PublicKey_Type) EnumDescriptor() ([]byte, []int) {
 	return fileDescriptor_9fded3881b857d68, []int{0, 0}
 }
 
+type PublicKey struct {
+	Type      PublicKey_Type `protobuf:"varint,1,opt,name=type,proto3,enum=signatures.PublicKey_Type" json:"type,omitempty"`
+	PublicKey []byte         `protobuf:"bytes,2,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
+}
+
+func (m *PublicKey) Reset()         { *m = PublicKey{} }
+func (m *PublicKey) String() string { return proto.CompactTextString(m) }
+func (*PublicKey) ProtoMessage()    {}
+func (*PublicKey) Descriptor() ([]byte, []int) {
+	return fileDescriptor_9fded3881b857d68, []int{0}
+}
+func (m *PublicKey) XXX_Unmarshal(b []byte) error {
+	return m.Unmarshal(b)
+}
+func (m *PublicKey) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	if deterministic {
+		return xxx_messageInfo_PublicKey.Marshal(b, m, deterministic)
+	} else {
+		b = b[:cap(b)]
+		n, err := m.MarshalTo(b)
+		if err != nil {
+			return nil, err
+		}
+		return b[:n], nil
+	}
+}
+func (m *PublicKey) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_PublicKey.Merge(m, src)
+}
+func (m *PublicKey) XXX_Size() int {
+	return m.Size()
+}
+func (m *PublicKey) XXX_DiscardUnknown() {
+	xxx_messageInfo_PublicKey.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_PublicKey proto.InternalMessageInfo
+
+func (m *PublicKey) GetType() PublicKey_Type {
+	if m != nil {
+		return m.Type
+	}
+	return PublicKey_KeyTypeBLSGroupSig
+}
+
+func (m *PublicKey) GetPublicKey() []byte {
+	if m != nil {
+		return m.PublicKey
+	}
+	return nil
+}
+
 type Ownership struct {
-	Id         string         `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
-	Type       Ownership_Type `protobuf:"varint,2,opt,name=type,proto3,enum=signatures.Ownership_Type" json:"type,omitempty"`
-	PublicKey  []byte         `protobuf:"bytes,3,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
-	Conditions string         `protobuf:"bytes,4,opt,name=conditions,proto3" json:"conditions,omitempty"`
+	Id         string     `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
+	PublicKey  *PublicKey `protobuf:"bytes,2,opt,name=public_key,json=publicKey,proto3" json:"public_key,omitempty"`
+	Conditions string     `protobuf:"bytes,3,opt,name=conditions,proto3" json:"conditions,omitempty"`
 }
 
 func (m *Ownership) Reset()         { *m = Ownership{} }
 func (m *Ownership) String() string { return proto.CompactTextString(m) }
 func (*Ownership) ProtoMessage()    {}
 func (*Ownership) Descriptor() ([]byte, []int) {
-	return fileDescriptor_9fded3881b857d68, []int{0}
+	return fileDescriptor_9fded3881b857d68, []int{1}
 }
 func (m *Ownership) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -94,14 +145,7 @@ func (m *Ownership) GetId() string {
 	return ""
 }
 
-func (m *Ownership) GetType() Ownership_Type {
-	if m != nil {
-		return m.Type
-	}
-	return Ownership_KeyTypeBLSGroupSig
-}
-
-func (m *Ownership) GetPublicKey() []byte {
+func (m *Ownership) GetPublicKey() *PublicKey {
 	if m != nil {
 		return m.PublicKey
 	}
@@ -126,7 +170,7 @@ func (m *Signature) Reset()         { *m = Signature{} }
 func (m *Signature) String() string { return proto.CompactTextString(m) }
 func (*Signature) ProtoMessage()    {}
 func (*Signature) Descriptor() ([]byte, []int) {
-	return fileDescriptor_9fded3881b857d68, []int{1}
+	return fileDescriptor_9fded3881b857d68, []int{2}
 }
 func (m *Signature) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -188,17 +232,17 @@ type TreeState struct {
 	ObjectId      []byte     `protobuf:"bytes,2,opt,name=object_id,json=objectId,proto3" json:"object_id,omitempty"`
 	PreviousTip   []byte     `protobuf:"bytes,3,opt,name=previous_tip,json=previousTip,proto3" json:"previous_tip,omitempty"`
 	NewTip        []byte     `protobuf:"bytes,4,opt,name=new_tip,json=newTip,proto3" json:"new_tip,omitempty"`
-	View          uint64     `protobuf:"varint,5,opt,name=view,proto3" json:"view,omitempty"`
-	Cycle         uint64     `protobuf:"varint,6,opt,name=cycle,proto3" json:"cycle,omitempty"`
-	Height        uint64     `protobuf:"varint,7,opt,name=height,proto3" json:"height,omitempty"`
-	TransactionId []byte     `protobuf:"bytes,8,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
+	TransactionId []byte     `protobuf:"bytes,5,opt,name=transaction_id,json=transactionId,proto3" json:"transaction_id,omitempty"`
+	Height        uint64     `protobuf:"varint,6,opt,name=height,proto3" json:"height,omitempty"`
+	View          uint64     `protobuf:"varint,7,opt,name=view,proto3" json:"view,omitempty"`
+	Cycle         uint64     `protobuf:"varint,8,opt,name=cycle,proto3" json:"cycle,omitempty"`
 }
 
 func (m *TreeState) Reset()         { *m = TreeState{} }
 func (m *TreeState) String() string { return proto.CompactTextString(m) }
 func (*TreeState) ProtoMessage()    {}
 func (*TreeState) Descriptor() ([]byte, []int) {
-	return fileDescriptor_9fded3881b857d68, []int{2}
+	return fileDescriptor_9fded3881b857d68, []int{3}
 }
 func (m *TreeState) XXX_Unmarshal(b []byte) error {
 	return m.Unmarshal(b)
@@ -255,6 +299,20 @@ func (m *TreeState) GetNewTip() []byte {
 	return nil
 }
 
+func (m *TreeState) GetTransactionId() []byte {
+	if m != nil {
+		return m.TransactionId
+	}
+	return nil
+}
+
+func (m *TreeState) GetHeight() uint64 {
+	if m != nil {
+		return m.Height
+	}
+	return 0
+}
+
 func (m *TreeState) GetView() uint64 {
 	if m != nil {
 		return m.View
@@ -269,22 +327,9 @@ func (m *TreeState) GetCycle() uint64 {
 	return 0
 }
 
-func (m *TreeState) GetHeight() uint64 {
-	if m != nil {
-		return m.Height
-	}
-	return 0
-}
-
-func (m *TreeState) GetTransactionId() []byte {
-	if m != nil {
-		return m.TransactionId
-	}
-	return nil
-}
-
 func init() {
-	proto.RegisterEnum("signatures.Ownership_Type", Ownership_Type_name, Ownership_Type_value)
+	proto.RegisterEnum("signatures.PublicKey_Type", PublicKey_Type_name, PublicKey_Type_value)
+	proto.RegisterType((*PublicKey)(nil), "signatures.PublicKey")
 	proto.RegisterType((*Ownership)(nil), "signatures.Ownership")
 	proto.RegisterType((*Signature)(nil), "signatures.Signature")
 	proto.RegisterType((*TreeState)(nil), "signatures.TreeState")
@@ -293,37 +338,67 @@ func init() {
 func init() { proto.RegisterFile("signatures/signatures.proto", fileDescriptor_9fded3881b857d68) }
 
 var fileDescriptor_9fded3881b857d68 = []byte{
-	// 472 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x92, 0xcf, 0x6e, 0xda, 0x40,
+	// 486 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x6c, 0x93, 0xcf, 0x6e, 0xda, 0x40,
 	0x10, 0xc6, 0x59, 0xe2, 0x00, 0x9e, 0x10, 0x84, 0x56, 0x69, 0x6a, 0x35, 0xad, 0x45, 0x91, 0x2a,
-	0x71, 0xb2, 0x55, 0xd2, 0xf4, 0x01, 0x72, 0xa9, 0x50, 0x2a, 0x45, 0xb2, 0x39, 0xf5, 0x82, 0xfc,
-	0x67, 0x64, 0xb6, 0x01, 0xef, 0x76, 0x77, 0x1d, 0xe4, 0x6b, 0x9f, 0xa0, 0x97, 0xbe, 0x4f, 0x8f,
-	0x3d, 0xe6, 0xd8, 0x63, 0x05, 0x2f, 0x52, 0x79, 0xc1, 0x80, 0xaa, 0xdc, 0x66, 0x7e, 0x33, 0xfb,
-	0xed, 0xf7, 0x69, 0x17, 0xae, 0x14, 0xcb, 0xf2, 0x48, 0x17, 0x12, 0x95, 0x7f, 0x28, 0x3d, 0x21,
-	0xb9, 0xe6, 0x14, 0x0e, 0x64, 0xf8, 0x8b, 0x80, 0x7d, 0xbf, 0xca, 0x51, 0xaa, 0x39, 0x13, 0xb4,
-	0x07, 0x4d, 0x96, 0x3a, 0x64, 0x40, 0x46, 0x76, 0xd0, 0x64, 0x29, 0xf5, 0xc0, 0xd2, 0xa5, 0x40,
-	0xa7, 0x39, 0x20, 0xa3, 0xde, 0xf8, 0x95, 0x77, 0x24, 0xb5, 0x3f, 0xe4, 0x4d, 0x4b, 0x81, 0x81,
-	0xd9, 0xa3, 0x6f, 0x00, 0x44, 0x11, 0x2f, 0x58, 0x32, 0x7b, 0xc0, 0xd2, 0x39, 0x19, 0x90, 0x51,
-	0x37, 0xb0, 0xb7, 0xe4, 0x0e, 0x4b, 0xea, 0x02, 0x24, 0x3c, 0x4f, 0x99, 0x66, 0x3c, 0x57, 0x8e,
-	0x65, 0xae, 0x39, 0x22, 0xc3, 0x0f, 0x60, 0x55, 0x62, 0xf4, 0x12, 0xe8, 0x1d, 0x96, 0x55, 0x79,
-	0xfb, 0x39, 0xfc, 0x24, 0x79, 0x21, 0x42, 0x96, 0xf5, 0x1b, 0xf4, 0x02, 0xfa, 0x3b, 0x1e, 0x62,
-	0x22, 0xc6, 0x37, 0x1f, 0x1f, 0xde, 0xf7, 0xc9, 0xf0, 0x27, 0x01, 0x3b, 0xac, 0x8d, 0xd1, 0x6b,
-	0xb0, 0x79, 0x6d, 0xcd, 0x24, 0x39, 0x1b, 0xbf, 0x78, 0xd6, 0x77, 0x70, 0xd8, 0xa3, 0x0e, 0xb4,
-	0xab, 0x15, 0x94, 0xca, 0x69, 0x0e, 0x4e, 0x46, 0xe7, 0x41, 0xdd, 0xd2, 0xd7, 0x60, 0xef, 0x0f,
-	0xd7, 0x81, 0xf6, 0x80, 0x5e, 0x81, 0x2d, 0x24, 0xce, 0xd8, 0x32, 0xca, 0x70, 0x97, 0xa7, 0x23,
-	0x24, 0x4e, 0xaa, 0x7e, 0xf8, 0xbd, 0x09, 0xf6, 0x54, 0x22, 0x86, 0x3a, 0xd2, 0xc6, 0xd7, 0x41,
-	0xe8, 0x19, 0x5f, 0xfb, 0x04, 0xff, 0xe9, 0xf3, 0xf8, 0x2b, 0x26, 0x7a, 0xc6, 0x52, 0xf3, 0x08,
-	0xdd, 0xa0, 0xb3, 0x05, 0x93, 0x94, 0xbe, 0x85, 0xae, 0x90, 0xf8, 0xc8, 0x78, 0xa1, 0x66, 0x9a,
-	0x89, 0x9d, 0xbb, 0xb3, 0x9a, 0x4d, 0x99, 0xa0, 0x2f, 0xa1, 0x9d, 0xe3, 0xca, 0x4c, 0x2d, 0x33,
-	0x6d, 0xe5, 0xb8, 0xaa, 0x06, 0x14, 0xac, 0x47, 0x86, 0x2b, 0xe7, 0x74, 0x40, 0x46, 0x56, 0x60,
-	0x6a, 0x7a, 0x01, 0xa7, 0x49, 0x99, 0x2c, 0xd0, 0x69, 0x19, 0xb8, 0x6d, 0xe8, 0x25, 0xb4, 0xe6,
-	0xc8, 0xb2, 0xb9, 0x76, 0xda, 0x06, 0xef, 0x3a, 0xfa, 0x0e, 0x7a, 0x5a, 0x46, 0xb9, 0x8a, 0x92,
-	0xea, 0xed, 0x2a, 0x7f, 0x1d, 0x73, 0xc3, 0xf9, 0x11, 0x9d, 0xa4, 0xb7, 0xf7, 0xbf, 0xd7, 0x2e,
-	0x79, 0x5a, 0xbb, 0xe4, 0xef, 0xda, 0x25, 0x3f, 0x36, 0x6e, 0xe3, 0x69, 0xe3, 0x36, 0xfe, 0x6c,
-	0xdc, 0xc6, 0x97, 0x9b, 0x8c, 0xe9, 0x79, 0x11, 0x7b, 0x09, 0x5f, 0xfa, 0xdf, 0x0a, 0x2e, 0x8b,
-	0x65, 0xc2, 0x73, 0x2d, 0xf9, 0xc2, 0x5f, 0xa2, 0x52, 0x51, 0x86, 0xca, 0x8f, 0x0b, 0xb6, 0x48,
-	0xfd, 0x8c, 0x1f, 0x7d, 0xe1, 0xb8, 0x65, 0xfe, 0xf0, 0xf5, 0xbf, 0x00, 0x00, 0x00, 0xff, 0xff,
-	0x33, 0x7b, 0xab, 0x2f, 0xe2, 0x02, 0x00, 0x00,
+	0x71, 0x02, 0x95, 0x24, 0x7d, 0x80, 0x5c, 0x2a, 0x94, 0x4a, 0xa9, 0x0c, 0xa7, 0x5e, 0x90, 0xff,
+	0x8c, 0xcc, 0x36, 0xe0, 0xdd, 0xec, 0xae, 0x83, 0x7c, 0xed, 0x13, 0xe4, 0xd2, 0x77, 0xea, 0x31,
+	0xc7, 0x1e, 0x2b, 0x78, 0x91, 0xca, 0x1b, 0x8c, 0xad, 0x24, 0xb7, 0x99, 0xdf, 0x7c, 0xfb, 0xcd,
+	0x67, 0xaf, 0x16, 0xce, 0x14, 0x8b, 0x13, 0x5f, 0xa7, 0x12, 0xd5, 0xa8, 0x2c, 0x87, 0x42, 0x72,
+	0xcd, 0x29, 0x94, 0xa4, 0xff, 0x40, 0xc0, 0xfe, 0x9e, 0x06, 0x4b, 0x16, 0x5e, 0x63, 0x46, 0x87,
+	0x60, 0xe9, 0x4c, 0xa0, 0x43, 0x7a, 0x64, 0xd0, 0x19, 0xbf, 0x1b, 0x56, 0x8e, 0xee, 0x45, 0xc3,
+	0x59, 0x26, 0xd0, 0x33, 0x3a, 0xfa, 0x01, 0x40, 0x18, 0x3e, 0xbf, 0xc5, 0xcc, 0xa9, 0xf7, 0xc8,
+	0xa0, 0xed, 0xd9, 0xa2, 0x50, 0xf6, 0x2f, 0xc0, 0xca, 0xc5, 0xf4, 0x14, 0xe8, 0x35, 0x66, 0x79,
+	0x79, 0xf5, 0x6d, 0xfa, 0x55, 0xf2, 0x54, 0x4c, 0x59, 0xdc, 0xad, 0xd1, 0x13, 0xe8, 0xee, 0xf8,
+	0x14, 0x43, 0x31, 0xbe, 0xfc, 0x72, 0xfb, 0xb9, 0x4b, 0xfa, 0x77, 0x60, 0xdf, 0xac, 0x13, 0x94,
+	0x6a, 0xc1, 0x04, 0xed, 0x40, 0x9d, 0x45, 0x26, 0x8f, 0xed, 0xd5, 0x59, 0x44, 0x2f, 0x5e, 0x6c,
+	0x3c, 0x1a, 0xbf, 0x79, 0x35, 0x67, 0x25, 0x08, 0x75, 0x01, 0x42, 0x9e, 0x44, 0x4c, 0x33, 0x9e,
+	0x28, 0xe7, 0xc0, 0xb8, 0x55, 0x48, 0xff, 0x37, 0x01, 0x7b, 0x5a, 0x78, 0xd0, 0x73, 0xb0, 0x79,
+	0x11, 0xc0, 0xac, 0x7e, 0xb6, 0x62, 0x9f, 0xce, 0x2b, 0x75, 0xd4, 0x81, 0x66, 0x2e, 0x41, 0xa9,
+	0x9c, 0x7a, 0xef, 0x60, 0x70, 0xec, 0x15, 0x2d, 0x7d, 0x0f, 0xf6, 0xfe, 0xb0, 0xd9, 0xdd, 0xf6,
+	0x4a, 0x40, 0xcf, 0xc0, 0x16, 0x12, 0xe7, 0x6c, 0xe5, 0xc7, 0xe8, 0x58, 0x26, 0x59, 0x4b, 0x48,
+	0x9c, 0xe4, 0x7d, 0xff, 0x57, 0x1d, 0xec, 0x99, 0x44, 0x9c, 0x6a, 0x5f, 0x9b, 0x5c, 0xa5, 0xd1,
+	0x2b, 0xb9, 0xf6, 0x5f, 0xf0, 0xcc, 0x9f, 0x07, 0x3f, 0x31, 0xd4, 0x73, 0x16, 0xed, 0x6e, 0xa8,
+	0xf5, 0x04, 0x26, 0x11, 0xfd, 0x08, 0x6d, 0x21, 0xf1, 0x9e, 0xf1, 0x54, 0xcd, 0x35, 0x13, 0xbb,
+	0x74, 0x47, 0x05, 0x9b, 0x31, 0x41, 0xdf, 0x42, 0x33, 0xc1, 0xb5, 0x99, 0x5a, 0x66, 0xda, 0x48,
+	0x70, 0x9d, 0x0f, 0x3e, 0x41, 0x47, 0x4b, 0x3f, 0x51, 0x7e, 0x98, 0xff, 0xc3, 0xdc, 0xfd, 0xd0,
+	0xcc, 0x8f, 0x2b, 0x74, 0x12, 0xd1, 0x53, 0x68, 0x2c, 0x90, 0xc5, 0x0b, 0xed, 0x34, 0x7a, 0x64,
+	0x60, 0x79, 0xbb, 0x8e, 0x52, 0xb0, 0xee, 0x19, 0xae, 0x9d, 0xa6, 0xa1, 0xa6, 0xa6, 0x27, 0x70,
+	0x18, 0x66, 0xe1, 0x12, 0x9d, 0x96, 0x81, 0x4f, 0xcd, 0xd5, 0xcd, 0x9f, 0x8d, 0x4b, 0x1e, 0x37,
+	0x2e, 0xf9, 0xb7, 0x71, 0xc9, 0xc3, 0xd6, 0xad, 0x3d, 0x6e, 0xdd, 0xda, 0xdf, 0xad, 0x5b, 0xfb,
+	0x71, 0x19, 0x33, 0xbd, 0x48, 0x83, 0x61, 0xc8, 0x57, 0xa3, 0xbb, 0x94, 0xcb, 0x74, 0x15, 0xf2,
+	0x44, 0x4b, 0xbe, 0x1c, 0xad, 0x50, 0x29, 0x3f, 0x46, 0x35, 0x0a, 0x52, 0xb6, 0x8c, 0x46, 0x31,
+	0xaf, 0xbc, 0x82, 0xa0, 0x61, 0x9e, 0xc1, 0xf9, 0xff, 0x00, 0x00, 0x00, 0xff, 0xff, 0xa2, 0x0e,
+	0xc5, 0xc1, 0x25, 0x03, 0x00, 0x00,
+}
+
+func (m *PublicKey) Marshal() (dAtA []byte, err error) {
+	size := m.Size()
+	dAtA = make([]byte, size)
+	n, err := m.MarshalTo(dAtA)
+	if err != nil {
+		return nil, err
+	}
+	return dAtA[:n], nil
+}
+
+func (m *PublicKey) MarshalTo(dAtA []byte) (int, error) {
+	var i int
+	_ = i
+	var l int
+	_ = l
+	if m.Type != 0 {
+		dAtA[i] = 0x8
+		i++
+		i = encodeVarintSignatures(dAtA, i, uint64(m.Type))
+	}
+	if len(m.PublicKey) > 0 {
+		dAtA[i] = 0x12
+		i++
+		i = encodeVarintSignatures(dAtA, i, uint64(len(m.PublicKey)))
+		i += copy(dAtA[i:], m.PublicKey)
+	}
+	return i, nil
 }
 
 func (m *Ownership) Marshal() (dAtA []byte, err error) {
@@ -347,19 +422,18 @@ func (m *Ownership) MarshalTo(dAtA []byte) (int, error) {
 		i = encodeVarintSignatures(dAtA, i, uint64(len(m.Id)))
 		i += copy(dAtA[i:], m.Id)
 	}
-	if m.Type != 0 {
-		dAtA[i] = 0x10
+	if m.PublicKey != nil {
+		dAtA[i] = 0x12
 		i++
-		i = encodeVarintSignatures(dAtA, i, uint64(m.Type))
-	}
-	if len(m.PublicKey) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintSignatures(dAtA, i, uint64(len(m.PublicKey)))
-		i += copy(dAtA[i:], m.PublicKey)
+		i = encodeVarintSignatures(dAtA, i, uint64(m.PublicKey.Size()))
+		n1, err1 := m.PublicKey.MarshalTo(dAtA[i:])
+		if err1 != nil {
+			return 0, err1
+		}
+		i += n1
 	}
 	if len(m.Conditions) > 0 {
-		dAtA[i] = 0x22
+		dAtA[i] = 0x1a
 		i++
 		i = encodeVarintSignatures(dAtA, i, uint64(len(m.Conditions)))
 		i += copy(dAtA[i:], m.Conditions)
@@ -386,28 +460,28 @@ func (m *Signature) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0xa
 		i++
 		i = encodeVarintSignatures(dAtA, i, uint64(m.Ownership.Size()))
-		n1, err1 := m.Ownership.MarshalTo(dAtA[i:])
-		if err1 != nil {
-			return 0, err1
+		n2, err2 := m.Ownership.MarshalTo(dAtA[i:])
+		if err2 != nil {
+			return 0, err2
 		}
-		i += n1
+		i += n2
 	}
 	if len(m.Signers) > 0 {
-		dAtA3 := make([]byte, len(m.Signers)*10)
-		var j2 int
+		dAtA4 := make([]byte, len(m.Signers)*10)
+		var j3 int
 		for _, num := range m.Signers {
 			for num >= 1<<7 {
-				dAtA3[j2] = uint8(uint64(num)&0x7f | 0x80)
+				dAtA4[j3] = uint8(uint64(num)&0x7f | 0x80)
 				num >>= 7
-				j2++
+				j3++
 			}
-			dAtA3[j2] = uint8(num)
-			j2++
+			dAtA4[j3] = uint8(num)
+			j3++
 		}
 		dAtA[i] = 0x12
 		i++
-		i = encodeVarintSignatures(dAtA, i, uint64(j2))
-		i += copy(dAtA[i:], dAtA3[:j2])
+		i = encodeVarintSignatures(dAtA, i, uint64(j3))
+		i += copy(dAtA[i:], dAtA4[:j3])
 	}
 	if len(m.Signature) > 0 {
 		dAtA[i] = 0x1a
@@ -443,11 +517,11 @@ func (m *TreeState) MarshalTo(dAtA []byte) (int, error) {
 		dAtA[i] = 0xa
 		i++
 		i = encodeVarintSignatures(dAtA, i, uint64(m.Signature.Size()))
-		n4, err4 := m.Signature.MarshalTo(dAtA[i:])
-		if err4 != nil {
-			return 0, err4
+		n5, err5 := m.Signature.MarshalTo(dAtA[i:])
+		if err5 != nil {
+			return 0, err5
 		}
-		i += n4
+		i += n5
 	}
 	if len(m.ObjectId) > 0 {
 		dAtA[i] = 0x12
@@ -467,26 +541,26 @@ func (m *TreeState) MarshalTo(dAtA []byte) (int, error) {
 		i = encodeVarintSignatures(dAtA, i, uint64(len(m.NewTip)))
 		i += copy(dAtA[i:], m.NewTip)
 	}
+	if len(m.TransactionId) > 0 {
+		dAtA[i] = 0x2a
+		i++
+		i = encodeVarintSignatures(dAtA, i, uint64(len(m.TransactionId)))
+		i += copy(dAtA[i:], m.TransactionId)
+	}
+	if m.Height != 0 {
+		dAtA[i] = 0x30
+		i++
+		i = encodeVarintSignatures(dAtA, i, uint64(m.Height))
+	}
 	if m.View != 0 {
-		dAtA[i] = 0x28
+		dAtA[i] = 0x38
 		i++
 		i = encodeVarintSignatures(dAtA, i, uint64(m.View))
 	}
 	if m.Cycle != 0 {
-		dAtA[i] = 0x30
+		dAtA[i] = 0x40
 		i++
 		i = encodeVarintSignatures(dAtA, i, uint64(m.Cycle))
-	}
-	if m.Height != 0 {
-		dAtA[i] = 0x38
-		i++
-		i = encodeVarintSignatures(dAtA, i, uint64(m.Height))
-	}
-	if len(m.TransactionId) > 0 {
-		dAtA[i] = 0x42
-		i++
-		i = encodeVarintSignatures(dAtA, i, uint64(len(m.TransactionId)))
-		i += copy(dAtA[i:], m.TransactionId)
 	}
 	return i, nil
 }
@@ -500,6 +574,22 @@ func encodeVarintSignatures(dAtA []byte, offset int, v uint64) int {
 	dAtA[offset] = uint8(v)
 	return offset + 1
 }
+func (m *PublicKey) Size() (n int) {
+	if m == nil {
+		return 0
+	}
+	var l int
+	_ = l
+	if m.Type != 0 {
+		n += 1 + sovSignatures(uint64(m.Type))
+	}
+	l = len(m.PublicKey)
+	if l > 0 {
+		n += 1 + l + sovSignatures(uint64(l))
+	}
+	return n
+}
+
 func (m *Ownership) Size() (n int) {
 	if m == nil {
 		return 0
@@ -510,11 +600,8 @@ func (m *Ownership) Size() (n int) {
 	if l > 0 {
 		n += 1 + l + sovSignatures(uint64(l))
 	}
-	if m.Type != 0 {
-		n += 1 + sovSignatures(uint64(m.Type))
-	}
-	l = len(m.PublicKey)
-	if l > 0 {
+	if m.PublicKey != nil {
+		l = m.PublicKey.Size()
 		n += 1 + l + sovSignatures(uint64(l))
 	}
 	l = len(m.Conditions)
@@ -574,18 +661,18 @@ func (m *TreeState) Size() (n int) {
 	if l > 0 {
 		n += 1 + l + sovSignatures(uint64(l))
 	}
+	l = len(m.TransactionId)
+	if l > 0 {
+		n += 1 + l + sovSignatures(uint64(l))
+	}
+	if m.Height != 0 {
+		n += 1 + sovSignatures(uint64(m.Height))
+	}
 	if m.View != 0 {
 		n += 1 + sovSignatures(uint64(m.View))
 	}
 	if m.Cycle != 0 {
 		n += 1 + sovSignatures(uint64(m.Cycle))
-	}
-	if m.Height != 0 {
-		n += 1 + sovSignatures(uint64(m.Height))
-	}
-	l = len(m.TransactionId)
-	if l > 0 {
-		n += 1 + l + sovSignatures(uint64(l))
 	}
 	return n
 }
@@ -595,6 +682,112 @@ func sovSignatures(x uint64) (n int) {
 }
 func sozSignatures(x uint64) (n int) {
 	return sovSignatures(uint64((x << 1) ^ uint64((int64(x) >> 63))))
+}
+func (m *PublicKey) Unmarshal(dAtA []byte) error {
+	l := len(dAtA)
+	iNdEx := 0
+	for iNdEx < l {
+		preIndex := iNdEx
+		var wire uint64
+		for shift := uint(0); ; shift += 7 {
+			if shift >= 64 {
+				return ErrIntOverflowSignatures
+			}
+			if iNdEx >= l {
+				return io.ErrUnexpectedEOF
+			}
+			b := dAtA[iNdEx]
+			iNdEx++
+			wire |= uint64(b&0x7F) << shift
+			if b < 0x80 {
+				break
+			}
+		}
+		fieldNum := int32(wire >> 3)
+		wireType := int(wire & 0x7)
+		if wireType == 4 {
+			return fmt.Errorf("proto: PublicKey: wiretype end group for non-group")
+		}
+		if fieldNum <= 0 {
+			return fmt.Errorf("proto: PublicKey: illegal tag %d (wire type %d)", fieldNum, wire)
+		}
+		switch fieldNum {
+		case 1:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Type", wireType)
+			}
+			m.Type = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSignatures
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.Type |= PublicKey_Type(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+		case 2:
+			if wireType != 2 {
+				return fmt.Errorf("proto: wrong wireType = %d for field PublicKey", wireType)
+			}
+			var byteLen int
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSignatures
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				byteLen |= int(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+			if byteLen < 0 {
+				return ErrInvalidLengthSignatures
+			}
+			postIndex := iNdEx + byteLen
+			if postIndex < 0 {
+				return ErrInvalidLengthSignatures
+			}
+			if postIndex > l {
+				return io.ErrUnexpectedEOF
+			}
+			m.PublicKey = append(m.PublicKey[:0], dAtA[iNdEx:postIndex]...)
+			if m.PublicKey == nil {
+				m.PublicKey = []byte{}
+			}
+			iNdEx = postIndex
+		default:
+			iNdEx = preIndex
+			skippy, err := skipSignatures(dAtA[iNdEx:])
+			if err != nil {
+				return err
+			}
+			if skippy < 0 {
+				return ErrInvalidLengthSignatures
+			}
+			if (iNdEx + skippy) < 0 {
+				return ErrInvalidLengthSignatures
+			}
+			if (iNdEx + skippy) > l {
+				return io.ErrUnexpectedEOF
+			}
+			iNdEx += skippy
+		}
+	}
+
+	if iNdEx > l {
+		return io.ErrUnexpectedEOF
+	}
+	return nil
 }
 func (m *Ownership) Unmarshal(dAtA []byte) error {
 	l := len(dAtA)
@@ -658,29 +851,10 @@ func (m *Ownership) Unmarshal(dAtA []byte) error {
 			m.Id = string(dAtA[iNdEx:postIndex])
 			iNdEx = postIndex
 		case 2:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Type", wireType)
-			}
-			m.Type = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowSignatures
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.Type |= Ownership_Type(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 3:
 			if wireType != 2 {
 				return fmt.Errorf("proto: wrong wireType = %d for field PublicKey", wireType)
 			}
-			var byteLen int
+			var msglen int
 			for shift := uint(0); ; shift += 7 {
 				if shift >= 64 {
 					return ErrIntOverflowSignatures
@@ -690,27 +864,29 @@ func (m *Ownership) Unmarshal(dAtA []byte) error {
 				}
 				b := dAtA[iNdEx]
 				iNdEx++
-				byteLen |= int(b&0x7F) << shift
+				msglen |= int(b&0x7F) << shift
 				if b < 0x80 {
 					break
 				}
 			}
-			if byteLen < 0 {
+			if msglen < 0 {
 				return ErrInvalidLengthSignatures
 			}
-			postIndex := iNdEx + byteLen
+			postIndex := iNdEx + msglen
 			if postIndex < 0 {
 				return ErrInvalidLengthSignatures
 			}
 			if postIndex > l {
 				return io.ErrUnexpectedEOF
 			}
-			m.PublicKey = append(m.PublicKey[:0], dAtA[iNdEx:postIndex]...)
 			if m.PublicKey == nil {
-				m.PublicKey = []byte{}
+				m.PublicKey = &PublicKey{}
+			}
+			if err := m.PublicKey.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
+				return err
 			}
 			iNdEx = postIndex
-		case 4:
+		case 3:
 			if wireType != 2 {
 				return fmt.Errorf("proto: wrong wireType = %d for field Conditions", wireType)
 			}
@@ -1165,63 +1341,6 @@ func (m *TreeState) Unmarshal(dAtA []byte) error {
 			}
 			iNdEx = postIndex
 		case 5:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field View", wireType)
-			}
-			m.View = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowSignatures
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.View |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 6:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Cycle", wireType)
-			}
-			m.Cycle = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowSignatures
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.Cycle |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 7:
-			if wireType != 0 {
-				return fmt.Errorf("proto: wrong wireType = %d for field Height", wireType)
-			}
-			m.Height = 0
-			for shift := uint(0); ; shift += 7 {
-				if shift >= 64 {
-					return ErrIntOverflowSignatures
-				}
-				if iNdEx >= l {
-					return io.ErrUnexpectedEOF
-				}
-				b := dAtA[iNdEx]
-				iNdEx++
-				m.Height |= uint64(b&0x7F) << shift
-				if b < 0x80 {
-					break
-				}
-			}
-		case 8:
 			if wireType != 2 {
 				return fmt.Errorf("proto: wrong wireType = %d for field TransactionId", wireType)
 			}
@@ -1255,6 +1374,63 @@ func (m *TreeState) Unmarshal(dAtA []byte) error {
 				m.TransactionId = []byte{}
 			}
 			iNdEx = postIndex
+		case 6:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Height", wireType)
+			}
+			m.Height = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSignatures
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.Height |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+		case 7:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field View", wireType)
+			}
+			m.View = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSignatures
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.View |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
+		case 8:
+			if wireType != 0 {
+				return fmt.Errorf("proto: wrong wireType = %d for field Cycle", wireType)
+			}
+			m.Cycle = 0
+			for shift := uint(0); ; shift += 7 {
+				if shift >= 64 {
+					return ErrIntOverflowSignatures
+				}
+				if iNdEx >= l {
+					return io.ErrUnexpectedEOF
+				}
+				b := dAtA[iNdEx]
+				iNdEx++
+				m.Cycle |= uint64(b&0x7F) << shift
+				if b < 0x80 {
+					break
+				}
+			}
 		default:
 			iNdEx = preIndex
 			skippy, err := skipSignatures(dAtA[iNdEx:])

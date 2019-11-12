@@ -5,17 +5,48 @@
 
 import * as jspb from "google-protobuf";
 
-export class Ownership extends jspb.Message { 
-    getId(): string;
-    setId(value: string): void;
-
-    getType(): Ownership.Type;
-    setType(value: Ownership.Type): void;
+export class PublicKey extends jspb.Message { 
+    getType(): PublicKey.Type;
+    setType(value: PublicKey.Type): void;
 
     getPublicKey(): Uint8Array | string;
     getPublicKey_asU8(): Uint8Array;
     getPublicKey_asB64(): string;
     setPublicKey(value: Uint8Array | string): void;
+
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): PublicKey.AsObject;
+    static toObject(includeInstance: boolean, msg: PublicKey): PublicKey.AsObject;
+    static extensions: {[key: number]: jspb.ExtensionFieldInfo<jspb.Message>};
+    static extensionsBinary: {[key: number]: jspb.ExtensionFieldBinaryInfo<jspb.Message>};
+    static serializeBinaryToWriter(message: PublicKey, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): PublicKey;
+    static deserializeBinaryFromReader(message: PublicKey, reader: jspb.BinaryReader): PublicKey;
+}
+
+export namespace PublicKey {
+    export type AsObject = {
+        type: PublicKey.Type,
+        publicKey: Uint8Array | string,
+    }
+
+    export enum Type {
+    KEYTYPEBLSGROUPSIG = 0,
+    KEYTYPESECP256K1 = 1,
+    }
+
+}
+
+export class Ownership extends jspb.Message { 
+    getId(): string;
+    setId(value: string): void;
+
+
+    hasPublicKey(): boolean;
+    clearPublicKey(): void;
+    getPublicKey(): PublicKey | undefined;
+    setPublicKey(value?: PublicKey): void;
 
     getConditions(): string;
     setConditions(value: string): void;
@@ -34,16 +65,9 @@ export class Ownership extends jspb.Message {
 export namespace Ownership {
     export type AsObject = {
         id: string,
-        type: Ownership.Type,
-        publicKey: Uint8Array | string,
+        publicKey?: PublicKey.AsObject,
         conditions: string,
     }
-
-    export enum Type {
-    KEYTYPEBLSGROUPSIG = 0,
-    KEYTYPESECP256K1 = 1,
-    }
-
 }
 
 export class Signature extends jspb.Message { 
@@ -108,19 +132,19 @@ export class TreeState extends jspb.Message {
     getNewTip_asB64(): string;
     setNewTip(value: Uint8Array | string): void;
 
+    getTransactionId(): Uint8Array | string;
+    getTransactionId_asU8(): Uint8Array;
+    getTransactionId_asB64(): string;
+    setTransactionId(value: Uint8Array | string): void;
+
+    getHeight(): number;
+    setHeight(value: number): void;
+
     getView(): number;
     setView(value: number): void;
 
     getCycle(): number;
     setCycle(value: number): void;
-
-    getHeight(): number;
-    setHeight(value: number): void;
-
-    getTransactionId(): Uint8Array | string;
-    getTransactionId_asU8(): Uint8Array;
-    getTransactionId_asB64(): string;
-    setTransactionId(value: Uint8Array | string): void;
 
 
     serializeBinary(): Uint8Array;
@@ -139,9 +163,9 @@ export namespace TreeState {
         objectId: Uint8Array | string,
         previousTip: Uint8Array | string,
         newTip: Uint8Array | string,
+        transactionId: Uint8Array | string,
+        height: number,
         view: number,
         cycle: number,
-        height: number,
-        transactionId: Uint8Array | string,
     }
 }
