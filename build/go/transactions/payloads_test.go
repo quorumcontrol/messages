@@ -3,7 +3,7 @@ package transactions
 import (
 	"testing"
 
-	signatures "github.com/quorumcontrol/messages/build/go/signatures"
+	signatures "github.com/quorumcontrol/messages/build/go/v2/signatures"
 	"github.com/stretchr/testify/require"
 )
 
@@ -39,7 +39,7 @@ func fakeEstablishToken() (*EstablishTokenPayload, *Transaction) {
 	}
 
 	return payload, &Transaction{
-		Type: Transaction_ESTABLISHTOKEN,
+		Type:                  Transaction_ESTABLISHTOKEN,
 		EstablishTokenPayload: payload,
 	}
 }
@@ -71,9 +71,9 @@ func fakeSendToken() (*SendTokenPayload, *Transaction) {
 func fakeReceiveToken() (*ReceiveTokenPayload, *Transaction) {
 	payload := &ReceiveTokenPayload{
 		SendTokenTransactionId: "foo",
-		Tip:       []byte("tip"),
-		Signature: &signatures.Signature{},
-		Leaves:    [][]byte{},
+		Tip:                    []byte("tip"),
+		Signature:              &signatures.Signature{},
+		Leaves:                 [][]byte{},
 	}
 
 	return payload, &Transaction{

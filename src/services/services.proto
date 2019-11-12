@@ -1,7 +1,7 @@
 syntax = "proto3";
 package services;
 
-option go_package = "github.com/quorumcontrol/messages/build/go/services";
+option go_package = "github.com/quorumcontrol/messages/build/go/v2/services";
 
 import "signatures/signatures.proto";
 import "transactions/transactions.proto";
