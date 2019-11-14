@@ -1,4 +1,4 @@
-module github.com/quorumcontrol/messages/build/go/v2
+module github.com/quorumcontrol/messages/v2
 
 go 1.12
 
