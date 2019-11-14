@@ -1,7 +1,7 @@
 syntax = "proto3";
 package bridge;
 
-option go_package = "github.com/quorumcontrol/messages/build/go/v2/bridge";
+option go_package = "github.com/quorumcontrol/messages/v2/build/go/bridge";
 
 import "google/protobuf/any.proto";
 

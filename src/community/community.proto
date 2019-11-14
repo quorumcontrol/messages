@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/quorumcontrol/messages/build/go/v2/community";
+option go_package = "github.com/quorumcontrol/messages/v2/build/go/community";
 
 package community;
 
