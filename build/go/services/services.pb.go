@@ -26,7 +26,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 // This is the message we currently refer to as "Transaction" at the tupelo level
 type AddBlockRequest struct {
@@ -52,7 +52,7 @@ func (m *AddBlockRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, err
 		return xxx_messageInfo_AddBlockRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -131,7 +131,7 @@ func (m *ReceiveCurrentStateSnapshot) XXX_Marshal(b []byte, deterministic bool) 
 		return xxx_messageInfo_ReceiveCurrentStateSnapshot.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -174,7 +174,7 @@ func (m *RequestCurrentStateSnapshot) XXX_Marshal(b []byte, deterministic bool) 
 		return xxx_messageInfo_RequestCurrentStateSnapshot.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -211,7 +211,7 @@ func (m *Ping) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Ping.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -255,7 +255,7 @@ func (m *Pong) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Pong.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -300,7 +300,7 @@ func (m *Credentials) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) 
 		return xxx_messageInfo_Credentials.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -355,7 +355,7 @@ func (m *SerializableChainTree) XXX_Marshal(b []byte, deterministic bool) ([]byt
 		return xxx_messageInfo_SerializableChainTree.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -413,7 +413,7 @@ func (m *RegisterWalletRequest) XXX_Marshal(b []byte, deterministic bool) ([]byt
 		return xxx_messageInfo_RegisterWalletRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -457,7 +457,7 @@ func (m *RegisterWalletResponse) XXX_Marshal(b []byte, deterministic bool) ([]by
 		return xxx_messageInfo_RegisterWalletResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -501,7 +501,7 @@ func (m *StorageAdapterConfigForBadger) XXX_Marshal(b []byte, deterministic bool
 		return xxx_messageInfo_StorageAdapterConfigForBadger.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -547,7 +547,7 @@ func (m *StorageAdapterConfigForIpld) XXX_Marshal(b []byte, deterministic bool) 
 		return xxx_messageInfo_StorageAdapterConfigForIpld.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -608,7 +608,7 @@ func (m *StorageAdapterConfig) XXX_Marshal(b []byte, deterministic bool) ([]byte
 		return xxx_messageInfo_StorageAdapterConfig.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -664,78 +664,12 @@ func (m *StorageAdapterConfig) GetIpld() *StorageAdapterConfigForIpld {
 	return nil
 }
 
-// XXX_OneofFuncs is for the internal use of the proto package.
-func (*StorageAdapterConfig) XXX_OneofFuncs() (func(msg proto.Message, b *proto.Buffer) error, func(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error), func(msg proto.Message) (n int), []interface{}) {
-	return _StorageAdapterConfig_OneofMarshaler, _StorageAdapterConfig_OneofUnmarshaler, _StorageAdapterConfig_OneofSizer, []interface{}{
+// XXX_OneofWrappers is for the internal use of the proto package.
+func (*StorageAdapterConfig) XXX_OneofWrappers() []interface{} {
+	return []interface{}{
 		(*StorageAdapterConfig_Badger)(nil),
 		(*StorageAdapterConfig_Ipld)(nil),
 	}
-}
-
-func _StorageAdapterConfig_OneofMarshaler(msg proto.Message, b *proto.Buffer) error {
-	m := msg.(*StorageAdapterConfig)
-	// adapter_config
-	switch x := m.AdapterConfig.(type) {
-	case *StorageAdapterConfig_Badger:
-		_ = b.EncodeVarint(1<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Badger); err != nil {
-			return err
-		}
-	case *StorageAdapterConfig_Ipld:
-		_ = b.EncodeVarint(2<<3 | proto.WireBytes)
-		if err := b.EncodeMessage(x.Ipld); err != nil {
-			return err
-		}
-	case nil:
-	default:
-		return fmt.Errorf("StorageAdapterConfig.AdapterConfig has unexpected type %T", x)
-	}
-	return nil
-}
-
-func _StorageAdapterConfig_OneofUnmarshaler(msg proto.Message, tag, wire int, b *proto.Buffer) (bool, error) {
-	m := msg.(*StorageAdapterConfig)
-	switch tag {
-	case 1: // adapter_config.badger
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(StorageAdapterConfigForBadger)
-		err := b.DecodeMessage(msg)
-		m.AdapterConfig = &StorageAdapterConfig_Badger{msg}
-		return true, err
-	case 2: // adapter_config.ipld
-		if wire != proto.WireBytes {
-			return true, proto.ErrInternalBadWireType
-		}
-		msg := new(StorageAdapterConfigForIpld)
-		err := b.DecodeMessage(msg)
-		m.AdapterConfig = &StorageAdapterConfig_Ipld{msg}
-		return true, err
-	default:
-		return false, nil
-	}
-}
-
-func _StorageAdapterConfig_OneofSizer(msg proto.Message) (n int) {
-	m := msg.(*StorageAdapterConfig)
-	// adapter_config
-	switch x := m.AdapterConfig.(type) {
-	case *StorageAdapterConfig_Badger:
-		s := proto.Size(x.Badger)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case *StorageAdapterConfig_Ipld:
-		s := proto.Size(x.Ipld)
-		n += 1 // tag and wire
-		n += proto.SizeVarint(uint64(s))
-		n += s
-	case nil:
-	default:
-		panic(fmt.Sprintf("proto: unexpected type %T in oneof", x))
-	}
-	return n
 }
 
 type GenerateChainRequest struct {
@@ -758,7 +692,7 @@ func (m *GenerateChainRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte
 		return xxx_messageInfo_GenerateChainRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -816,7 +750,7 @@ func (m *GenerateChainResponse) XXX_Marshal(b []byte, deterministic bool) ([]byt
 		return xxx_messageInfo_GenerateChainResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -861,7 +795,7 @@ func (m *ExportChainRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, 
 		return xxx_messageInfo_ExportChainRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -912,7 +846,7 @@ func (m *ExportChainResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_ExportChainResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -960,7 +894,7 @@ func (m *ImportChainRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, 
 		return xxx_messageInfo_ImportChainRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1025,7 +959,7 @@ func (m *ImportChainResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_ImportChainResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1069,7 +1003,7 @@ func (m *GenerateKeyRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, 
 		return xxx_messageInfo_GenerateKeyRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1113,7 +1047,7 @@ func (m *GenerateKeyResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_GenerateKeyResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1158,7 +1092,7 @@ func (m *GetTipRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error
 		return xxx_messageInfo_GetTipRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1209,7 +1143,7 @@ func (m *GetTipResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return xxx_messageInfo_GetTipResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1253,7 +1187,7 @@ func (m *ListChainIdsRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_ListChainIdsRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1297,7 +1231,7 @@ func (m *ListChainIdsResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte
 		return xxx_messageInfo_ListChainIdsResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1341,7 +1275,7 @@ func (m *ListKeysRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, err
 		return xxx_messageInfo_ListKeysRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1385,7 +1319,7 @@ func (m *ListKeysResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_ListKeysResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1433,7 +1367,7 @@ func (m *SetOwnerRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, err
 		return xxx_messageInfo_SetOwnerRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1498,7 +1432,7 @@ func (m *SetOwnerResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_SetOwnerResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1546,7 +1480,7 @@ func (m *SetDataRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return xxx_messageInfo_SetDataRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1611,7 +1545,7 @@ func (m *SetDataResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, err
 		return xxx_messageInfo_SetDataResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1657,7 +1591,7 @@ func (m *ResolveRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return xxx_messageInfo_ResolveRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1716,7 +1650,7 @@ func (m *ResolveResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, err
 		return xxx_messageInfo_ResolveResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1770,7 +1704,7 @@ func (m *ResolveAtRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_ResolveAtRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1839,7 +1773,7 @@ func (m *EstablishTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byt
 		return xxx_messageInfo_EstablishTokenRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1904,7 +1838,7 @@ func (m *EstablishTokenResponse) XXX_Marshal(b []byte, deterministic bool) ([]by
 		return xxx_messageInfo_EstablishTokenResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -1952,7 +1886,7 @@ func (m *MintTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_MintTokenRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2017,7 +1951,7 @@ func (m *MintTokenResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, e
 		return xxx_messageInfo_MintTokenResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2067,7 +2001,7 @@ func (m *SendTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_SendTokenRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2154,7 +2088,7 @@ func (m *SendTokenResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte, e
 		return xxx_messageInfo_SendTokenResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2208,7 +2142,7 @@ func (m *ReceiveTokenRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_ReceiveTokenRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2273,7 +2207,7 @@ func (m *ReceiveTokenResponse) XXX_Marshal(b []byte, deterministic bool) ([]byte
 		return xxx_messageInfo_ReceiveTokenResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2319,7 +2253,7 @@ func (m *GetTokenBalanceRequest) XXX_Marshal(b []byte, deterministic bool) ([]by
 		return xxx_messageInfo_GetTokenBalanceRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2377,7 +2311,7 @@ func (m *GetTokenBalanceResponse) XXX_Marshal(b []byte, deterministic bool) ([]b
 		return xxx_messageInfo_GetTokenBalanceResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2424,7 +2358,7 @@ func (m *PlayTransactionsRequest) XXX_Marshal(b []byte, deterministic bool) ([]b
 		return xxx_messageInfo_PlayTransactionsRequest.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2489,7 +2423,7 @@ func (m *PlayTransactionsResponse) XXX_Marshal(b []byte, deterministic bool) ([]
 		return xxx_messageInfo_PlayTransactionsResponse.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -2516,161 +2450,162 @@ func (m *PlayTransactionsResponse) GetTip() string {
 }
 
 func init() {
-	proto.RegisterType((*AddBlockRequest)(nil), "services.AddBlockRequest")
-	proto.RegisterType((*ReceiveCurrentStateSnapshot)(nil), "services.ReceiveCurrentStateSnapshot")
-	proto.RegisterType((*RequestCurrentStateSnapshot)(nil), "services.RequestCurrentStateSnapshot")
-	proto.RegisterType((*Ping)(nil), "services.Ping")
-	proto.RegisterType((*Pong)(nil), "services.Pong")
-	proto.RegisterType((*Credentials)(nil), "services.Credentials")
-	proto.RegisterType((*SerializableChainTree)(nil), "services.SerializableChainTree")
-	proto.RegisterMapType((map[string]*signatures.Signature)(nil), "services.SerializableChainTree.SignaturesEntry")
-	proto.RegisterType((*RegisterWalletRequest)(nil), "services.RegisterWalletRequest")
-	proto.RegisterType((*RegisterWalletResponse)(nil), "services.RegisterWalletResponse")
-	proto.RegisterType((*StorageAdapterConfigForBadger)(nil), "services.StorageAdapterConfigForBadger")
-	proto.RegisterType((*StorageAdapterConfigForIpld)(nil), "services.StorageAdapterConfigForIpld")
-	proto.RegisterType((*StorageAdapterConfig)(nil), "services.StorageAdapterConfig")
-	proto.RegisterType((*GenerateChainRequest)(nil), "services.GenerateChainRequest")
-	proto.RegisterType((*GenerateChainResponse)(nil), "services.GenerateChainResponse")
-	proto.RegisterType((*ExportChainRequest)(nil), "services.ExportChainRequest")
-	proto.RegisterType((*ExportChainResponse)(nil), "services.ExportChainResponse")
-	proto.RegisterType((*ImportChainRequest)(nil), "services.ImportChainRequest")
-	proto.RegisterType((*ImportChainResponse)(nil), "services.ImportChainResponse")
-	proto.RegisterType((*GenerateKeyRequest)(nil), "services.GenerateKeyRequest")
-	proto.RegisterType((*GenerateKeyResponse)(nil), "services.GenerateKeyResponse")
-	proto.RegisterType((*GetTipRequest)(nil), "services.GetTipRequest")
-	proto.RegisterType((*GetTipResponse)(nil), "services.GetTipResponse")
-	proto.RegisterType((*ListChainIdsRequest)(nil), "services.ListChainIdsRequest")
-	proto.RegisterType((*ListChainIdsResponse)(nil), "services.ListChainIdsResponse")
-	proto.RegisterType((*ListKeysRequest)(nil), "services.ListKeysRequest")
-	proto.RegisterType((*ListKeysResponse)(nil), "services.ListKeysResponse")
-	proto.RegisterType((*SetOwnerRequest)(nil), "services.SetOwnerRequest")
-	proto.RegisterType((*SetOwnerResponse)(nil), "services.SetOwnerResponse")
-	proto.RegisterType((*SetDataRequest)(nil), "services.SetDataRequest")
-	proto.RegisterType((*SetDataResponse)(nil), "services.SetDataResponse")
-	proto.RegisterType((*ResolveRequest)(nil), "services.ResolveRequest")
-	proto.RegisterType((*ResolveResponse)(nil), "services.ResolveResponse")
-	proto.RegisterType((*ResolveAtRequest)(nil), "services.ResolveAtRequest")
-	proto.RegisterType((*EstablishTokenRequest)(nil), "services.EstablishTokenRequest")
-	proto.RegisterType((*EstablishTokenResponse)(nil), "services.EstablishTokenResponse")
-	proto.RegisterType((*MintTokenRequest)(nil), "services.MintTokenRequest")
-	proto.RegisterType((*MintTokenResponse)(nil), "services.MintTokenResponse")
-	proto.RegisterType((*SendTokenRequest)(nil), "services.SendTokenRequest")
-	proto.RegisterType((*SendTokenResponse)(nil), "services.SendTokenResponse")
-	proto.RegisterType((*ReceiveTokenRequest)(nil), "services.ReceiveTokenRequest")
-	proto.RegisterType((*ReceiveTokenResponse)(nil), "services.ReceiveTokenResponse")
-	proto.RegisterType((*GetTokenBalanceRequest)(nil), "services.GetTokenBalanceRequest")
-	proto.RegisterType((*GetTokenBalanceResponse)(nil), "services.GetTokenBalanceResponse")
-	proto.RegisterType((*PlayTransactionsRequest)(nil), "services.PlayTransactionsRequest")
-	proto.RegisterType((*PlayTransactionsResponse)(nil), "services.PlayTransactionsResponse")
+	proto.RegisterType((*AddBlockRequest)(nil), "v1services.AddBlockRequest")
+	proto.RegisterType((*ReceiveCurrentStateSnapshot)(nil), "v1services.ReceiveCurrentStateSnapshot")
+	proto.RegisterType((*RequestCurrentStateSnapshot)(nil), "v1services.RequestCurrentStateSnapshot")
+	proto.RegisterType((*Ping)(nil), "v1services.Ping")
+	proto.RegisterType((*Pong)(nil), "v1services.Pong")
+	proto.RegisterType((*Credentials)(nil), "v1services.Credentials")
+	proto.RegisterType((*SerializableChainTree)(nil), "v1services.SerializableChainTree")
+	proto.RegisterMapType((map[string]*signatures.Signature)(nil), "v1services.SerializableChainTree.SignaturesEntry")
+	proto.RegisterType((*RegisterWalletRequest)(nil), "v1services.RegisterWalletRequest")
+	proto.RegisterType((*RegisterWalletResponse)(nil), "v1services.RegisterWalletResponse")
+	proto.RegisterType((*StorageAdapterConfigForBadger)(nil), "v1services.StorageAdapterConfigForBadger")
+	proto.RegisterType((*StorageAdapterConfigForIpld)(nil), "v1services.StorageAdapterConfigForIpld")
+	proto.RegisterType((*StorageAdapterConfig)(nil), "v1services.StorageAdapterConfig")
+	proto.RegisterType((*GenerateChainRequest)(nil), "v1services.GenerateChainRequest")
+	proto.RegisterType((*GenerateChainResponse)(nil), "v1services.GenerateChainResponse")
+	proto.RegisterType((*ExportChainRequest)(nil), "v1services.ExportChainRequest")
+	proto.RegisterType((*ExportChainResponse)(nil), "v1services.ExportChainResponse")
+	proto.RegisterType((*ImportChainRequest)(nil), "v1services.ImportChainRequest")
+	proto.RegisterType((*ImportChainResponse)(nil), "v1services.ImportChainResponse")
+	proto.RegisterType((*GenerateKeyRequest)(nil), "v1services.GenerateKeyRequest")
+	proto.RegisterType((*GenerateKeyResponse)(nil), "v1services.GenerateKeyResponse")
+	proto.RegisterType((*GetTipRequest)(nil), "v1services.GetTipRequest")
+	proto.RegisterType((*GetTipResponse)(nil), "v1services.GetTipResponse")
+	proto.RegisterType((*ListChainIdsRequest)(nil), "v1services.ListChainIdsRequest")
+	proto.RegisterType((*ListChainIdsResponse)(nil), "v1services.ListChainIdsResponse")
+	proto.RegisterType((*ListKeysRequest)(nil), "v1services.ListKeysRequest")
+	proto.RegisterType((*ListKeysResponse)(nil), "v1services.ListKeysResponse")
+	proto.RegisterType((*SetOwnerRequest)(nil), "v1services.SetOwnerRequest")
+	proto.RegisterType((*SetOwnerResponse)(nil), "v1services.SetOwnerResponse")
+	proto.RegisterType((*SetDataRequest)(nil), "v1services.SetDataRequest")
+	proto.RegisterType((*SetDataResponse)(nil), "v1services.SetDataResponse")
+	proto.RegisterType((*ResolveRequest)(nil), "v1services.ResolveRequest")
+	proto.RegisterType((*ResolveResponse)(nil), "v1services.ResolveResponse")
+	proto.RegisterType((*ResolveAtRequest)(nil), "v1services.ResolveAtRequest")
+	proto.RegisterType((*EstablishTokenRequest)(nil), "v1services.EstablishTokenRequest")
+	proto.RegisterType((*EstablishTokenResponse)(nil), "v1services.EstablishTokenResponse")
+	proto.RegisterType((*MintTokenRequest)(nil), "v1services.MintTokenRequest")
+	proto.RegisterType((*MintTokenResponse)(nil), "v1services.MintTokenResponse")
+	proto.RegisterType((*SendTokenRequest)(nil), "v1services.SendTokenRequest")
+	proto.RegisterType((*SendTokenResponse)(nil), "v1services.SendTokenResponse")
+	proto.RegisterType((*ReceiveTokenRequest)(nil), "v1services.ReceiveTokenRequest")
+	proto.RegisterType((*ReceiveTokenResponse)(nil), "v1services.ReceiveTokenResponse")
+	proto.RegisterType((*GetTokenBalanceRequest)(nil), "v1services.GetTokenBalanceRequest")
+	proto.RegisterType((*GetTokenBalanceResponse)(nil), "v1services.GetTokenBalanceResponse")
+	proto.RegisterType((*PlayTransactionsRequest)(nil), "v1services.PlayTransactionsRequest")
+	proto.RegisterType((*PlayTransactionsResponse)(nil), "v1services.PlayTransactionsResponse")
 }
 
 func init() { proto.RegisterFile("services/services.proto", fileDescriptor_20616c573d3cd2a9) }
 
 var fileDescriptor_20616c573d3cd2a9 = []byte{
-	// 1642 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x58, 0x5d, 0x6f, 0x1b, 0x45,
-	0x17, 0xce, 0xc6, 0x4e, 0x62, 0x1f, 0xa7, 0xb6, 0x3b, 0xf9, 0x72, 0x9c, 0xc6, 0x49, 0xb7, 0x6f,
-	0xd5, 0xe8, 0xed, 0xab, 0xb8, 0x6f, 0x82, 0xa0, 0x50, 0x51, 0x29, 0x1f, 0xa5, 0x0d, 0x6d, 0xda,
-	0x68, 0x1d, 0x51, 0x81, 0x90, 0xac, 0x89, 0x77, 0x6a, 0x0f, 0x5e, 0xef, 0x6e, 0x77, 0xc6, 0x09,
-	0xe6, 0x06, 0xc4, 0x2f, 0xe0, 0x92, 0x1b, 0xae, 0x41, 0xe2, 0x02, 0xc1, 0x1d, 0xe2, 0x0f, 0x70,
-	0x59, 0x71, 0xc5, 0x25, 0x4a, 0xff, 0x08, 0xda, 0xd9, 0xaf, 0x59, 0xef, 0x3a, 0x95, 0xd2, 0x28,
-	0x77, 0x3b, 0x33, 0xe7, 0xeb, 0x39, 0xe7, 0x78, 0xce, 0x33, 0x86, 0x05, 0x46, 0x9c, 0x63, 0xda,
-	0x22, 0xac, 0x1e, 0x7c, 0xac, 0xdb, 0x8e, 0xc5, 0x2d, 0x94, 0x0b, 0xd6, 0xd5, 0x25, 0x46, 0xdb,
-	0x26, 0xe6, 0x7d, 0xc7, 0x15, 0x0a, 0x3f, 0x3d, 0xb1, 0xea, 0x0a, 0x77, 0xb0, 0xc9, 0x70, 0x8b,
-	0x53, 0xcb, 0x64, 0x75, 0x79, 0xe1, 0x09, 0xa8, 0xbf, 0x29, 0x50, 0xda, 0xd2, 0xf5, 0x6d, 0xc3,
-	0x6a, 0x75, 0x35, 0xf2, 0xb2, 0x4f, 0x18, 0x47, 0x4b, 0x90, 0xb7, 0x8e, 0xbe, 0x20, 0x2d, 0xde,
-	0xa4, 0x7a, 0x45, 0x59, 0x55, 0xd6, 0xa6, 0xb5, 0x9c, 0xb7, 0xb1, 0xa7, 0xa3, 0xeb, 0x30, 0x6d,
-	0x3b, 0xe4, 0x98, 0x5a, 0x7d, 0xd6, 0xe4, 0xd4, 0xae, 0x8c, 0x8b, 0xf3, 0x42, 0xb0, 0x77, 0x48,
-	0x6d, 0x34, 0x0f, 0x93, 0x1d, 0x42, 0xdb, 0x1d, 0x5e, 0xc9, 0xac, 0x2a, 0x6b, 0x59, 0xcd, 0x5f,
-	0xa1, 0x05, 0x98, 0x32, 0xc9, 0x89, 0xd0, 0xca, 0x0a, 0xad, 0x49, 0x93, 0x9c, 0xb8, 0x0a, 0x15,
-	0x98, 0xb2, 0xf1, 0xc0, 0xb0, 0xb0, 0x5e, 0x99, 0x10, 0x07, 0xc1, 0x12, 0xcd, 0xc2, 0x04, 0xe3,
-	0x98, 0x93, 0xca, 0xe4, 0x6a, 0x66, 0x6d, 0x5a, 0xf3, 0x16, 0xea, 0x7b, 0xb0, 0xa4, 0x91, 0x16,
-	0xa1, 0xc7, 0x64, 0xa7, 0xef, 0x38, 0xc4, 0xe4, 0x0d, 0x77, 0xbb, 0x61, 0x62, 0x9b, 0x75, 0x2c,
-	0x2e, 0x9b, 0x53, 0x62, 0xe6, 0xd4, 0x65, 0x57, 0x51, 0x80, 0x4c, 0x53, 0x54, 0x2b, 0x90, 0x3d,
-	0xa0, 0x66, 0x1b, 0x95, 0x21, 0xd3, 0x63, 0x6d, 0xa1, 0x9c, 0xd7, 0xdc, 0x4f, 0x71, 0x62, 0xa5,
-	0x9e, 0x3c, 0x83, 0xc2, 0x8e, 0x43, 0x74, 0x62, 0x72, 0x8a, 0x0d, 0x86, 0x56, 0xa0, 0x70, 0x82,
-	0x0d, 0x83, 0xf0, 0xa6, 0x89, 0x7b, 0xc4, 0x17, 0x04, 0x6f, 0xeb, 0x29, 0xee, 0x11, 0x57, 0xc0,
-	0xc6, 0x8c, 0x35, 0xed, 0x8e, 0x83, 0x19, 0x11, 0xe9, 0xcb, 0x6b, 0xe0, 0x6e, 0x1d, 0x88, 0x1d,
-	0xf5, 0x54, 0x81, 0xb9, 0x06, 0x71, 0x28, 0x36, 0xe8, 0x57, 0xf8, 0xc8, 0x20, 0x3b, 0x1d, 0x4c,
-	0xcd, 0x43, 0x87, 0x10, 0xd7, 0xb9, 0x8e, 0x5d, 0xe7, 0x6e, 0x2a, 0xdc, 0x4f, 0xf4, 0x0c, 0x20,
-	0x2a, 0x79, 0x65, 0x7c, 0x35, 0xb3, 0x56, 0xd8, 0xa8, 0xaf, 0x87, 0xad, 0x92, 0x6a, 0x66, 0xbd,
-	0x11, 0x6a, 0x3c, 0x30, 0xb9, 0x33, 0xd0, 0x24, 0x13, 0xae, 0x0b, 0xb7, 0x3c, 0x19, 0x0f, 0x1f,
-	0xa7, 0x76, 0xf5, 0x10, 0x4a, 0x43, 0x0a, 0xae, 0x50, 0x97, 0x0c, 0x82, 0x24, 0x74, 0xc9, 0x00,
-	0xdd, 0x86, 0x89, 0x63, 0x6c, 0xf4, 0x3d, 0x38, 0x85, 0x8d, 0xb9, 0x75, 0xa9, 0x11, 0x43, 0x6d,
-	0xcd, 0x93, 0xf9, 0x60, 0xfc, 0xae, 0xa2, 0xee, 0xc2, 0x9c, 0x46, 0xda, 0x94, 0x71, 0xe2, 0x3c,
-	0x17, 0xb9, 0x09, 0x7a, 0xef, 0x36, 0x4c, 0xb4, 0x1c, 0xa2, 0x33, 0x61, 0x5d, 0x58, 0x0a, 0xc0,
-	0x48, 0x59, 0xd6, 0x3c, 0x19, 0xf5, 0x7d, 0x98, 0x1f, 0xb6, 0xc2, 0x6c, 0xcb, 0x64, 0xe4, 0x8d,
-	0x65, 0x50, 0x37, 0x61, 0xb9, 0xc1, 0x2d, 0x07, 0xb7, 0xc9, 0x96, 0x8e, 0x6d, 0x4e, 0x9c, 0x1d,
-	0xcb, 0x7c, 0x41, 0xdb, 0x1f, 0x59, 0xce, 0x36, 0xd6, 0xdb, 0xc4, 0x41, 0x08, 0xb2, 0x36, 0xe6,
-	0x1d, 0x5f, 0x55, 0x7c, 0xab, 0x04, 0x96, 0x46, 0x28, 0xed, 0xd9, 0x86, 0x9e, 0xa6, 0xe2, 0xf6,
-	0x22, 0xd6, 0x75, 0x87, 0x30, 0xe6, 0x97, 0x3a, 0x58, 0xba, 0x27, 0xd6, 0x8b, 0x17, 0x06, 0x35,
-	0x89, 0x48, 0x77, 0x4e, 0x0b, 0x96, 0xea, 0x4f, 0x0a, 0xcc, 0xa6, 0xf9, 0x41, 0x5b, 0x30, 0x79,
-	0x24, 0xa2, 0xf3, 0xb3, 0x73, 0x4b, 0x2a, 0xf5, 0x59, 0x60, 0x1e, 0x8d, 0x69, 0xbe, 0x22, 0xba,
-	0x07, 0x59, 0x6a, 0x1b, 0xba, 0x5f, 0xa8, 0x9b, 0x6f, 0x34, 0xe0, 0x02, 0x7b, 0x34, 0xa6, 0x09,
-	0xa5, 0xed, 0x32, 0x14, 0xb1, 0x77, 0xde, 0x6c, 0x09, 0x01, 0xf5, 0x47, 0x05, 0x66, 0x1f, 0x12,
-	0x93, 0x38, 0x98, 0x7b, 0x1d, 0x76, 0x9e, 0x3a, 0xa2, 0x45, 0xc8, 0x75, 0xc9, 0xa0, 0xe9, 0x66,
-	0x26, 0xc8, 0x52, 0x97, 0x0c, 0xb6, 0x74, 0xdd, 0x41, 0x0f, 0xa1, 0xc4, 0xbc, 0xc8, 0x9a, 0xbe,
-	0x6b, 0x91, 0xad, 0xc2, 0x46, 0xed, 0xec, 0xd0, 0xb5, 0x22, 0x8b, 0xed, 0xaa, 0x1b, 0x30, 0x37,
-	0x14, 0xa8, 0xdf, 0x2a, 0x8b, 0x90, 0x6b, 0xb9, 0x1b, 0xc1, 0x65, 0x97, 0xd7, 0xa6, 0xc4, 0x7a,
-	0x4f, 0x57, 0x3f, 0x07, 0xf4, 0xe0, 0x4b, 0xdb, 0x72, 0xf8, 0x5b, 0x41, 0x0b, 0xad, 0x8f, 0xc7,
-	0xad, 0xbf, 0x03, 0x33, 0x31, 0xeb, 0x7e, 0x3c, 0xcb, 0x00, 0x9e, 0x06, 0x77, 0x48, 0xd0, 0xb9,
-	0xf9, 0x56, 0xf0, 0xeb, 0x55, 0xff, 0x52, 0x00, 0xed, 0xf5, 0xde, 0x2e, 0xa8, 0xb8, 0x8b, 0xcc,
-	0x90, 0x8b, 0xb4, 0x9c, 0x67, 0xcf, 0x93, 0x73, 0x74, 0x0b, 0x4a, 0xac, 0x4b, 0xed, 0xe6, 0x31,
-	0x36, 0xa8, 0x8e, 0xdd, 0xb1, 0x23, 0xee, 0xf7, 0x9c, 0x56, 0x74, 0xb7, 0x3f, 0x09, 0x77, 0xd5,
-	0x3b, 0x30, 0x13, 0xc3, 0xf4, 0xe6, 0xd2, 0x6c, 0x01, 0x0a, 0xca, 0xf9, 0x98, 0x0c, 0xce, 0x75,
-	0x7b, 0xdc, 0x81, 0x99, 0x98, 0x89, 0xc8, 0x69, 0xd8, 0x8c, 0x4a, 0xac, 0x19, 0xd5, 0xe7, 0x70,
-	0xe5, 0x21, 0xe1, 0x87, 0xd4, 0xbe, 0xe8, 0x56, 0x50, 0xa1, 0x18, 0x18, 0xf6, 0xa3, 0xf0, 0x2f,
-	0x62, 0x25, 0xbc, 0x88, 0xd5, 0x6d, 0x98, 0x79, 0x42, 0x99, 0x97, 0xa1, 0x3d, 0x9d, 0x9d, 0x0b,
-	0xf2, 0x26, 0xcc, 0xc6, 0x6d, 0xf8, 0xde, 0x96, 0x20, 0x1f, 0x84, 0xc6, 0xc4, 0x7c, 0xc9, 0x6b,
-	0x39, 0x3f, 0x36, 0xa6, 0xde, 0x87, 0x92, 0xab, 0xf4, 0x98, 0x0c, 0xce, 0xe7, 0xb4, 0x0e, 0xe5,
-	0x48, 0x3f, 0x72, 0x18, 0x24, 0x39, 0x74, 0xe8, 0x67, 0x99, 0xa9, 0xbf, 0x2a, 0x50, 0x6a, 0x10,
-	0xfe, 0xec, 0xc4, 0x24, 0xce, 0x05, 0x67, 0x3a, 0x56, 0xdd, 0x4c, 0xfc, 0xaa, 0xb9, 0x17, 0x67,
-	0x21, 0x85, 0x8d, 0xeb, 0xeb, 0x31, 0xc2, 0x14, 0x84, 0xc4, 0x3a, 0xd4, 0x3e, 0xf0, 0x04, 0x23,
-	0x66, 0xf1, 0x1f, 0x28, 0x47, 0x21, 0x8f, 0xac, 0xe1, 0xcf, 0x0a, 0x14, 0x1b, 0x84, 0xef, 0x62,
-	0x8e, 0x2f, 0x11, 0xd8, 0xbb, 0x11, 0xb0, 0x49, 0xe1, 0xe4, 0x5a, 0x02, 0x98, 0x1b, 0x51, 0x02,
-	0xd3, 0x0d, 0x51, 0x06, 0x2f, 0xd8, 0x91, 0x90, 0x0c, 0x28, 0x6a, 0x84, 0x59, 0xc6, 0x31, 0xb9,
-	0x68, 0x44, 0xc1, 0x38, 0xcd, 0x48, 0x13, 0xf8, 0x09, 0x94, 0x42, 0x6f, 0x7e, 0x48, 0x37, 0xa1,
-	0xe8, 0x90, 0x1e, 0xa6, 0x26, 0x35, 0xdb, 0x4d, 0x69, 0xfe, 0x5e, 0x09, 0x77, 0x0f, 0xdc, 0x41,
-	0x8c, 0x20, 0xab, 0x63, 0x8e, 0x7d, 0xbe, 0x2a, 0xbe, 0xd5, 0x6f, 0x14, 0x28, 0xfb, 0xe6, 0xb6,
-	0xf8, 0x45, 0x87, 0x9f, 0xa0, 0x52, 0x21, 0xa0, 0xac, 0x04, 0xe8, 0x77, 0x05, 0xe6, 0x1e, 0x30,
-	0x8e, 0x8f, 0x0c, 0xca, 0x3a, 0x87, 0x56, 0x97, 0x98, 0x97, 0xd8, 0x18, 0x1f, 0x0e, 0x37, 0xc6,
-	0x8d, 0x78, 0x63, 0xc4, 0x03, 0x4b, 0xf4, 0xc7, 0x7f, 0x61, 0x7e, 0x38, 0xf4, 0x91, 0x6d, 0xf2,
-	0x8b, 0x02, 0xe5, 0x7d, 0x6a, 0xf2, 0xcb, 0x86, 0x78, 0x77, 0x18, 0x62, 0x2d, 0x0e, 0x31, 0x8c,
-	0x29, 0x81, 0xee, 0x26, 0x5c, 0x95, 0x02, 0x1e, 0x09, 0xec, 0xfb, 0x71, 0xf7, 0x97, 0x6f, 0xea,
-	0x97, 0x0d, 0x6c, 0x19, 0x80, 0xbb, 0x2e, 0x3d, 0x82, 0xeb, 0xb5, 0x54, 0x5e, 0xec, 0x88, 0x67,
-	0xc6, 0x1d, 0x98, 0xd5, 0x09, 0xe3, 0xd4, 0x14, 0x03, 0xb6, 0x19, 0x3a, 0x98, 0x10, 0x82, 0x48,
-	0x3a, 0xf3, 0x87, 0x81, 0xfb, 0x6a, 0xc3, 0x3d, 0xab, 0x6f, 0x72, 0x91, 0xa8, 0xac, 0xe6, 0xaf,
-	0xe4, 0x0c, 0x4e, 0xa5, 0x65, 0x30, 0x04, 0x9f, 0xc8, 0xe0, 0x2e, 0x5c, 0x95, 0x32, 0x13, 0xd1,
-	0x1b, 0x46, 0x4c, 0xbd, 0x29, 0x42, 0x0d, 0xe8, 0x0d, 0x0b, 0xc4, 0x82, 0x04, 0x8f, 0x47, 0x09,
-	0xfe, 0x41, 0x81, 0x19, 0xff, 0xb5, 0x77, 0xd9, 0x39, 0xbe, 0x01, 0x57, 0xbc, 0x1c, 0x07, 0x09,
-	0xf0, 0xd2, 0x3c, 0xcd, 0x25, 0xb8, 0xea, 0x1a, 0xcc, 0xc6, 0xc3, 0x1b, 0xd9, 0x2a, 0x5f, 0xc3,
-	0xbc, 0x3b, 0xe5, 0x5d, 0xa9, 0x6d, 0x6c, 0x60, 0xb3, 0x75, 0xe1, 0x57, 0x66, 0xbc, 0x29, 0x32,
-	0x43, 0x4d, 0xa1, 0xfe, 0x1f, 0x16, 0x12, 0x01, 0xf8, 0xd1, 0x46, 0xd5, 0x57, 0xe4, 0xea, 0xab,
-	0x7f, 0x28, 0xb0, 0x70, 0x60, 0xe0, 0xc1, 0xa1, 0x54, 0xf2, 0x4b, 0xbd, 0xa1, 0xa6, 0xe5, 0x66,
-	0xab, 0x64, 0xc5, 0x13, 0x77, 0x31, 0xde, 0x81, 0x52, 0x6c, 0x5a, 0x4c, 0x5c, 0xfd, 0x1f, 0x54,
-	0x92, 0xc1, 0x8f, 0xaa, 0xcf, 0xc6, 0xb7, 0x00, 0x65, 0xff, 0x1d, 0x79, 0xb0, 0xd3, 0xf0, 0xb0,
-	0xa0, 0x7d, 0xc8, 0x05, 0x6f, 0x4c, 0xb4, 0x12, 0x21, 0x4c, 0x7d, 0xbd, 0x56, 0x57, 0x47, 0x0b,
-	0xf8, 0x5e, 0x3f, 0x86, 0x82, 0x44, 0x3a, 0xd1, 0xb5, 0x48, 0x21, 0x49, 0x67, 0xab, 0xcb, 0x23,
-	0x4e, 0x7d, 0x5b, 0x1a, 0x94, 0x76, 0x1c, 0x12, 0x3c, 0x68, 0x04, 0x75, 0xaf, 0x25, 0x35, 0xe4,
-	0x67, 0x42, 0x75, 0x65, 0xe4, 0xb9, 0x6f, 0xf3, 0x29, 0x94, 0xa4, 0x47, 0x89, 0xb0, 0x29, 0xc5,
-	0x98, 0x7c, 0x0d, 0xc9, 0x31, 0xa6, 0xbd, 0x66, 0x9e, 0x42, 0x49, 0x62, 0xf6, 0xc3, 0xf6, 0x92,
-	0x0f, 0x19, 0xd9, 0x5e, 0xda, 0x93, 0xe0, 0x1e, 0x4c, 0x7a, 0x4c, 0x19, 0x2d, 0xc8, 0x50, 0x24,
-	0x52, 0x5e, 0xad, 0x24, 0x0f, 0x7c, 0xe5, 0x7d, 0x98, 0x96, 0xe9, 0x2f, 0x92, 0x7c, 0xa5, 0x50,
-	0xeb, 0x6a, 0x6d, 0xd4, 0xb1, 0x6f, 0x6e, 0x0b, 0x72, 0x01, 0xb1, 0x45, 0x8b, 0x71, 0x59, 0x89,
-	0x2c, 0x57, 0xab, 0x69, 0x47, 0x91, 0x89, 0x80, 0x36, 0xca, 0x26, 0x86, 0xd8, 0xaf, 0x6c, 0x22,
-	0xc1, 0x32, 0xef, 0xc3, 0x94, 0xcf, 0xd2, 0x50, 0x25, 0x26, 0x26, 0xb1, 0xcc, 0xea, 0x62, 0xca,
-	0x49, 0xa4, 0xef, 0x73, 0x20, 0x59, 0x3f, 0xce, 0xe9, 0x64, 0xfd, 0x61, 0xfe, 0xb5, 0x0d, 0xf9,
-	0x90, 0x43, 0xa1, 0x6a, 0x42, 0x2e, 0x24, 0x56, 0x67, 0xd9, 0x68, 0x40, 0x31, 0xce, 0x24, 0xe4,
-	0x9f, 0x5a, 0x2a, 0x3d, 0x92, 0x7f, 0x6a, 0x23, 0x48, 0xc8, 0x2e, 0xe4, 0xc3, 0x01, 0x2e, 0x07,
-	0x36, 0x4c, 0x43, 0xaa, 0x4b, 0xa9, 0x67, 0x91, 0x95, 0x70, 0x88, 0xa1, 0x58, 0x1d, 0xe2, 0x33,
-	0x5f, 0xb6, 0x92, 0x9c, 0x7a, 0xfb, 0x30, 0x2d, 0x0f, 0x09, 0xb9, 0xf3, 0x52, 0x66, 0x9b, 0xdc,
-	0x79, 0xa9, 0xb3, 0xe5, 0x53, 0x28, 0x0f, 0xdf, 0x6b, 0xe8, 0x7a, 0xa4, 0x33, 0xe2, 0xc2, 0xae,
-	0xaa, 0x67, 0x89, 0x78, 0xa6, 0xb7, 0xf7, 0xff, 0x3c, 0xad, 0x29, 0xaf, 0x4e, 0x6b, 0xca, 0x3f,
-	0xa7, 0x35, 0xe5, 0xbb, 0xd7, 0xb5, 0xb1, 0x57, 0xaf, 0x6b, 0x63, 0x7f, 0xbf, 0xae, 0x8d, 0x7d,
-	0xb6, 0xd9, 0xa6, 0xbc, 0xd3, 0x3f, 0x5a, 0x6f, 0x59, 0xbd, 0xfa, 0xcb, 0xbe, 0xe5, 0xf4, 0x7b,
-	0x2d, 0xcb, 0xe4, 0x8e, 0x65, 0xd4, 0x7b, 0x84, 0x31, 0xdc, 0x26, 0xac, 0x7e, 0xd4, 0xa7, 0x86,
-	0x5e, 0x6f, 0x5b, 0xe1, 0xbf, 0xd5, 0x47, 0x93, 0xe2, 0x6f, 0xe6, 0xcd, 0x7f, 0x03, 0x00, 0x00,
-	0xff, 0xff, 0x8d, 0x42, 0xd8, 0x09, 0xc9, 0x16, 0x00, 0x00,
+	// 1657 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xbc, 0x58, 0xdd, 0x6e, 0xdb, 0xc8,
+	0x15, 0x36, 0x2d, 0xd9, 0x96, 0x8e, 0x1c, 0x49, 0x19, 0xff, 0x29, 0x52, 0xac, 0x28, 0x74, 0x82,
+	0xb8, 0x45, 0x63, 0xc7, 0x76, 0x81, 0xa6, 0x01, 0x82, 0xd4, 0x56, 0x9c, 0xc4, 0xc8, 0x9f, 0x4d,
+	0x19, 0x09, 0x5a, 0xa0, 0x15, 0xc6, 0xe2, 0x44, 0x62, 0x4d, 0x91, 0x0c, 0x67, 0x24, 0x57, 0xbd,
+	0x6b, 0x9f, 0xa0, 0x0f, 0x50, 0xa0, 0x0f, 0xd0, 0x05, 0x16, 0xd8, 0xc5, 0x5e, 0x2e, 0xf6, 0x6e,
+	0xb1, 0x97, 0xb9, 0x5a, 0xec, 0xe5, 0x22, 0x01, 0xf6, 0x39, 0x16, 0x1c, 0x0e, 0x29, 0x0e, 0x45,
+	0x39, 0x0b, 0xc7, 0xeb, 0x3b, 0xce, 0xcc, 0x39, 0xdf, 0xf9, 0xd5, 0xcc, 0x77, 0x04, 0x4b, 0x94,
+	0xb8, 0x7d, 0xa3, 0x45, 0xe8, 0x7a, 0xf0, 0xb1, 0xe6, 0xb8, 0x36, 0xb3, 0x11, 0xf4, 0x37, 0x82,
+	0x9d, 0x72, 0x85, 0x1a, 0x6d, 0x0b, 0xb3, 0x9e, 0xeb, 0x89, 0x85, 0x9f, 0xbe, 0x60, 0xf9, 0x1a,
+	0x73, 0xb1, 0x45, 0x71, 0x8b, 0x19, 0xb6, 0x45, 0xd7, 0xa3, 0x0b, 0x5f, 0x40, 0xfd, 0x42, 0x81,
+	0xc2, 0xb6, 0xae, 0xef, 0x98, 0x76, 0xeb, 0x58, 0x23, 0x6f, 0x7b, 0x84, 0x32, 0x54, 0x81, 0xac,
+	0x7d, 0xf4, 0x77, 0xd2, 0x62, 0x4d, 0x43, 0x2f, 0x29, 0x35, 0x65, 0x75, 0x56, 0xcb, 0xf8, 0x1b,
+	0x7b, 0x3a, 0xba, 0x0e, 0xb3, 0x8e, 0x4b, 0xfa, 0x86, 0xdd, 0xa3, 0x4d, 0x66, 0x38, 0xa5, 0x49,
+	0x7e, 0x9e, 0x0b, 0xf6, 0x0e, 0x0d, 0x07, 0x2d, 0xc2, 0x74, 0x87, 0x18, 0xed, 0x0e, 0x2b, 0xa5,
+	0x6a, 0xca, 0x6a, 0x5a, 0x13, 0x2b, 0xb4, 0x04, 0x33, 0x16, 0x39, 0xe1, 0x5a, 0x69, 0xae, 0x35,
+	0x6d, 0x91, 0x13, 0x4f, 0xa1, 0x04, 0x33, 0x0e, 0x1e, 0x98, 0x36, 0xd6, 0x4b, 0x53, 0xfc, 0x20,
+	0x58, 0xa2, 0x79, 0x98, 0xa2, 0x0c, 0x33, 0x52, 0x9a, 0xae, 0xa5, 0x56, 0x67, 0x35, 0x7f, 0xa1,
+	0xfe, 0x01, 0x2a, 0x1a, 0x69, 0x11, 0xa3, 0x4f, 0xea, 0x3d, 0xd7, 0x25, 0x16, 0x6b, 0x78, 0xdb,
+	0x0d, 0x0b, 0x3b, 0xb4, 0x63, 0xb3, 0x28, 0x9c, 0x22, 0xc1, 0xa9, 0xcb, 0x9e, 0x22, 0x0f, 0x32,
+	0x49, 0x51, 0x2d, 0x41, 0x7a, 0xdf, 0xb0, 0xda, 0xa8, 0x08, 0xa9, 0x2e, 0x6d, 0x73, 0xe5, 0xac,
+	0xe6, 0x7d, 0xf2, 0x13, 0x3b, 0xf1, 0xe4, 0x25, 0xe4, 0xea, 0x2e, 0xd1, 0x89, 0xc5, 0x0c, 0x6c,
+	0x52, 0x74, 0x0d, 0x72, 0x27, 0xd8, 0x34, 0x09, 0x6b, 0x5a, 0xb8, 0x4b, 0x84, 0x20, 0xf8, 0x5b,
+	0x2f, 0x70, 0x97, 0x78, 0x02, 0x0e, 0xa6, 0xb4, 0xe9, 0x74, 0x5c, 0x4c, 0x09, 0x4f, 0x5f, 0x56,
+	0x03, 0x6f, 0x6b, 0x9f, 0xef, 0xa8, 0x3f, 0x29, 0xb0, 0xd0, 0x20, 0xae, 0x81, 0x4d, 0xe3, 0x9f,
+	0xf8, 0xc8, 0x24, 0xf5, 0x0e, 0x36, 0xac, 0x43, 0x97, 0x10, 0xcf, 0xb8, 0x8e, 0x3d, 0xe3, 0x5e,
+	0x2a, 0xbc, 0x4f, 0x74, 0x00, 0x30, 0x2c, 0x79, 0x69, 0xb2, 0x96, 0x5a, 0xcd, 0x6d, 0x6e, 0xac,
+	0x0d, 0x9b, 0x63, 0x2d, 0x11, 0x68, 0xad, 0x11, 0xea, 0xec, 0x5a, 0xcc, 0x1d, 0x68, 0x11, 0x10,
+	0xcf, 0x88, 0x57, 0xa0, 0x94, 0x1f, 0x21, 0x33, 0x9c, 0xf2, 0x2b, 0x28, 0xc4, 0x14, 0x3c, 0xa1,
+	0x63, 0x32, 0x08, 0xd2, 0x70, 0x4c, 0x06, 0xe8, 0x36, 0x4c, 0xf5, 0xb1, 0xd9, 0xf3, 0x03, 0xca,
+	0x6d, 0x2e, 0x79, 0x4e, 0x0c, 0x9b, 0x31, 0xd4, 0xd7, 0x7c, 0xa9, 0x7b, 0x93, 0x77, 0x15, 0xf5,
+	0x11, 0x2c, 0x68, 0xa4, 0x6d, 0x50, 0x46, 0xdc, 0xd7, 0x3c, 0x3f, 0x41, 0xff, 0xdd, 0x86, 0xa9,
+	0x96, 0x4b, 0x74, 0xca, 0xf1, 0x05, 0x56, 0x10, 0x50, 0x24, 0xd7, 0x9a, 0x2f, 0xa5, 0xfe, 0x11,
+	0x16, 0xe3, 0x38, 0xd4, 0xb1, 0x2d, 0x4a, 0x3e, 0x5a, 0x0c, 0x75, 0x0b, 0x96, 0x1b, 0xcc, 0x76,
+	0x71, 0x9b, 0x6c, 0xeb, 0xd8, 0x61, 0xc4, 0xad, 0xdb, 0xd6, 0x1b, 0xa3, 0xfd, 0xc8, 0x76, 0x77,
+	0xb0, 0xde, 0x26, 0x2e, 0x42, 0x90, 0x76, 0x30, 0xeb, 0x08, 0x55, 0xfe, 0xad, 0x12, 0xa8, 0x8c,
+	0x51, 0xda, 0x73, 0x4c, 0x3d, 0x49, 0xc5, 0xeb, 0x48, 0xac, 0xeb, 0x2e, 0xa1, 0x54, 0x14, 0x3c,
+	0x58, 0x7a, 0x27, 0xf6, 0x9b, 0x37, 0xa6, 0x61, 0x11, 0x9e, 0xf2, 0x8c, 0x16, 0x2c, 0xd5, 0xcf,
+	0x14, 0x98, 0x4f, 0xb2, 0x83, 0xea, 0x30, 0x7d, 0xc4, 0xbd, 0x13, 0xf9, 0xf9, 0x8d, 0x54, 0xf0,
+	0xd3, 0xc2, 0x79, 0x32, 0xa1, 0x09, 0x55, 0x74, 0x1f, 0xd2, 0x86, 0x63, 0xea, 0xa2, 0x5c, 0xb7,
+	0x7e, 0x01, 0x84, 0x17, 0xdc, 0x93, 0x09, 0x8d, 0xab, 0xed, 0x14, 0x21, 0x8f, 0xfd, 0xf3, 0x66,
+	0x8b, 0x0b, 0xa8, 0xff, 0x57, 0x60, 0xfe, 0x31, 0xb1, 0x88, 0x8b, 0x99, 0xdf, 0x69, 0x67, 0xab,
+	0x26, 0xba, 0x02, 0x99, 0x63, 0x32, 0x68, 0x7a, 0xf9, 0x09, 0x72, 0x75, 0x4c, 0x06, 0xdb, 0xba,
+	0xee, 0xa2, 0x3d, 0x28, 0x50, 0xdf, 0xb7, 0xa6, 0x30, 0xce, 0x73, 0x96, 0xdb, 0xac, 0x7d, 0xcc,
+	0x7d, 0x2d, 0x4f, 0xa5, 0x5d, 0x75, 0x13, 0x16, 0x62, 0xce, 0x8a, 0x96, 0xb9, 0x02, 0x99, 0x96,
+	0xb7, 0x11, 0x5c, 0x7d, 0x59, 0x6d, 0x86, 0xaf, 0xf7, 0x74, 0xf5, 0x6f, 0x80, 0x76, 0xff, 0xe1,
+	0xd8, 0x2e, 0xfb, 0xc4, 0xf0, 0x42, 0xfc, 0x49, 0x19, 0xff, 0xf7, 0x30, 0x27, 0xe1, 0x0b, 0x8f,
+	0x96, 0x01, 0x7c, 0x0d, 0xe6, 0x92, 0xa0, 0x87, 0xb3, 0xad, 0xe0, 0xb7, 0xac, 0x7e, 0xaf, 0x00,
+	0xda, 0xeb, 0x7e, 0xaa, 0x5b, 0xb2, 0x91, 0x54, 0xcc, 0x48, 0x52, 0xe6, 0xd3, 0x67, 0xcb, 0x3c,
+	0xba, 0x05, 0x05, 0x7a, 0x6c, 0x38, 0xcd, 0x3e, 0x36, 0x0d, 0x1d, 0x7b, 0x4f, 0x11, 0xbf, 0xf3,
+	0x33, 0x5a, 0xde, 0xdb, 0x7e, 0x15, 0xee, 0xaa, 0x77, 0x60, 0x4e, 0x8a, 0xeb, 0xe3, 0x05, 0xaa,
+	0x03, 0x0a, 0x8a, 0xfa, 0x94, 0x0c, 0xce, 0x78, 0x9b, 0xdc, 0x81, 0x39, 0x09, 0x64, 0x68, 0x36,
+	0x6c, 0x4b, 0x45, 0x6a, 0x4b, 0xf5, 0xcf, 0x70, 0xe9, 0x31, 0x61, 0x87, 0x86, 0x73, 0xfe, 0x2d,
+	0xa1, 0x42, 0x3e, 0x80, 0x16, 0x7e, 0x88, 0xeb, 0x59, 0x09, 0xaf, 0x67, 0xf5, 0x21, 0xcc, 0x3d,
+	0x33, 0xa8, 0x9f, 0xa5, 0x3d, 0x9d, 0x9e, 0x31, 0xec, 0x2d, 0x98, 0x97, 0x51, 0x84, 0xbd, 0x0a,
+	0x64, 0x03, 0xe7, 0x28, 0x7f, 0x79, 0xb2, 0x5a, 0x46, 0x78, 0x47, 0xd5, 0x3f, 0x41, 0xc1, 0x53,
+	0x7a, 0x4a, 0x06, 0x67, 0x35, 0xbb, 0x0e, 0xc5, 0x21, 0xc2, 0xd0, 0x64, 0x90, 0xea, 0xd0, 0xa4,
+	0xc8, 0x35, 0x55, 0xbf, 0x52, 0xa0, 0xd0, 0x20, 0xec, 0xe5, 0x89, 0x45, 0xdc, 0x73, 0xcf, 0xb7,
+	0x54, 0xe5, 0x94, 0x7c, 0xf9, 0xdc, 0x97, 0x39, 0x4a, 0x6e, 0x73, 0x65, 0xad, 0xbf, 0x21, 0x11,
+	0xaa, 0xc0, 0x2d, 0xda, 0x31, 0x9c, 0x7d, 0x5f, 0x74, 0xc8, 0x3c, 0x6e, 0x40, 0x71, 0xe8, 0xf6,
+	0xd8, 0x5a, 0x7e, 0xae, 0x40, 0xbe, 0x41, 0xd8, 0x43, 0xcc, 0xf0, 0x85, 0x06, 0x77, 0x77, 0x18,
+	0xdc, 0x34, 0x37, 0x53, 0x4d, 0x08, 0xce, 0xf3, 0x6a, 0x24, 0xae, 0x15, 0x5e, 0x0e, 0xdf, 0xe1,
+	0xb1, 0x61, 0x59, 0x90, 0xd7, 0x08, 0xb5, 0xcd, 0x3e, 0x39, 0xff, 0xa8, 0x82, 0xe7, 0x36, 0x15,
+	0x79, 0xa1, 0x9f, 0x41, 0x21, 0xb4, 0x27, 0x9c, 0xba, 0x09, 0x79, 0x97, 0x74, 0xb1, 0x61, 0x19,
+	0x56, 0xbb, 0x19, 0x79, 0x9f, 0x2f, 0x85, 0xbb, 0xfb, 0xde, 0x43, 0x8d, 0x20, 0xad, 0x63, 0x86,
+	0x05, 0xab, 0xe5, 0xdf, 0xea, 0xbf, 0x15, 0x28, 0x0a, 0xb8, 0x6d, 0x76, 0xfe, 0x01, 0x8c, 0x10,
+	0xae, 0x30, 0xa4, 0x74, 0x24, 0xa4, 0xaf, 0x15, 0x58, 0xd8, 0xa5, 0x0c, 0x1f, 0x99, 0x06, 0xed,
+	0x1c, 0xda, 0xc7, 0xc4, 0xba, 0xd0, 0x06, 0x79, 0x10, 0x6f, 0x90, 0x9b, 0xf1, 0x06, 0x91, 0x9d,
+	0x1b, 0xe9, 0x93, 0xdf, 0xc2, 0x62, 0xdc, 0xfd, 0xb1, 0xed, 0xf2, 0xa5, 0x02, 0xc5, 0xe7, 0x86,
+	0xc5, 0x2e, 0x3e, 0xcc, 0x7b, 0xf1, 0x30, 0x6b, 0xf1, 0x30, 0x43, 0xbf, 0x46, 0x22, 0xbc, 0x09,
+	0x97, 0x23, 0x4e, 0x8f, 0x0d, 0xee, 0xbf, 0x93, 0xde, 0x4d, 0x60, 0xe9, 0x17, 0x1f, 0xdc, 0x32,
+	0x00, 0xf3, 0x8c, 0xfa, 0x64, 0xd8, 0x6f, 0xae, 0x2c, 0xdf, 0xe1, 0x83, 0xc9, 0x1d, 0x98, 0xd7,
+	0x09, 0x65, 0x86, 0xc5, 0x9f, 0xdf, 0x66, 0x68, 0x60, 0x8a, 0x0b, 0xa2, 0xc8, 0x99, 0x78, 0x24,
+	0xbc, 0x39, 0x0f, 0x77, 0xed, 0x9e, 0xc5, 0x78, 0xb2, 0xd2, 0x9a, 0x58, 0x45, 0xb3, 0x38, 0x93,
+	0x9c, 0xc5, 0x30, 0x01, 0x23, 0x59, 0x7c, 0x08, 0x97, 0x23, 0xd9, 0x19, 0x52, 0x20, 0x4a, 0x2c,
+	0xbd, 0xc9, 0x9d, 0x0d, 0x28, 0x10, 0x0d, 0xc4, 0x82, 0x24, 0x4f, 0x0e, 0x93, 0xfc, 0x3f, 0x05,
+	0xe6, 0xc4, 0x84, 0x78, 0xf1, 0x79, 0x5e, 0x81, 0x4b, 0x7e, 0x9e, 0x83, 0x24, 0xf8, 0xa9, 0x9e,
+	0x65, 0x91, 0x80, 0xd5, 0x55, 0x98, 0x97, 0x1d, 0x1c, 0xdb, 0x30, 0xff, 0x52, 0x60, 0xd1, 0x23,
+	0x01, 0x9e, 0xd8, 0x0e, 0x36, 0xb1, 0xd5, 0xfa, 0x15, 0x6e, 0x51, 0xb9, 0x37, 0x52, 0xb1, 0xde,
+	0x50, 0x37, 0x60, 0x69, 0xc4, 0x05, 0xe1, 0xf0, 0xb0, 0x09, 0x94, 0x68, 0x13, 0xa8, 0xdf, 0x28,
+	0xb0, 0xb4, 0x6f, 0xe2, 0xc1, 0x61, 0xa4, 0xee, 0x17, 0x7c, 0x65, 0xcd, 0x46, 0x7b, 0xae, 0x94,
+	0xe6, 0xd3, 0x71, 0x25, 0xde, 0x8a, 0x11, 0xff, 0x34, 0x49, 0x41, 0xfd, 0x1d, 0x94, 0x46, 0x03,
+	0x18, 0x57, 0xa6, 0xcd, 0x6f, 0x01, 0x8a, 0x62, 0xfc, 0xdc, 0xaf, 0x37, 0xfc, 0x68, 0xd0, 0x01,
+	0x64, 0x82, 0xd1, 0x14, 0x5d, 0x8f, 0x46, 0x99, 0x38, 0xf8, 0x96, 0xd5, 0xd3, 0x44, 0x84, 0xe5,
+	0x17, 0x90, 0x8b, 0xf0, 0x53, 0x54, 0x8d, 0xaa, 0x8c, 0xb2, 0xdf, 0xf2, 0xb5, 0xb1, 0xe7, 0x02,
+	0xef, 0x15, 0x14, 0xea, 0x2e, 0x09, 0xe6, 0x20, 0xce, 0xf6, 0x6b, 0x49, 0x3a, 0xd1, 0xe9, 0xa2,
+	0x7c, 0xfd, 0x14, 0x09, 0x81, 0xab, 0x41, 0x21, 0x32, 0xcd, 0x70, 0x5c, 0xc9, 0xd7, 0xd1, 0x51,
+	0x4a, 0xf6, 0x35, 0x69, 0x14, 0xd2, 0xa0, 0x10, 0x19, 0x09, 0x46, 0x31, 0x47, 0xe7, 0x20, 0x19,
+	0x33, 0x69, 0x9e, 0x78, 0x00, 0xd3, 0x3e, 0xc5, 0x46, 0x57, 0xe4, 0xa0, 0x22, 0x8c, 0xbe, 0x5c,
+	0x4e, 0x3a, 0x12, 0x00, 0x07, 0x30, 0x1b, 0x65, 0xce, 0x48, 0xb2, 0x98, 0xc0, 0xcc, 0xcb, 0xb5,
+	0xf1, 0x02, 0x02, 0x72, 0x17, 0x32, 0x01, 0x2b, 0x46, 0x95, 0xb8, 0x74, 0x84, 0x6d, 0x97, 0xaf,
+	0x26, 0x1f, 0x0e, 0x61, 0x02, 0xce, 0x29, 0xc3, 0xc4, 0x08, 0xb4, 0x0c, 0x33, 0x42, 0x53, 0x77,
+	0x60, 0x46, 0x50, 0x3c, 0x54, 0x8e, 0x09, 0x46, 0x88, 0x6a, 0xb9, 0x92, 0x78, 0x36, 0xc4, 0x10,
+	0x14, 0x4a, 0xc6, 0x90, 0x69, 0xa1, 0x8c, 0x11, 0xa7, 0x70, 0x8f, 0x20, 0x1b, 0xd2, 0x30, 0x74,
+	0x35, 0x41, 0x32, 0x64, 0x67, 0xa7, 0xe3, 0xbc, 0x86, 0xbc, 0x4c, 0x45, 0xe4, 0x9f, 0x66, 0x22,
+	0xcb, 0x92, 0x7f, 0x9a, 0x63, 0x98, 0xcc, 0x13, 0xc8, 0x86, 0x0c, 0x40, 0x76, 0x30, 0xce, 0x66,
+	0xca, 0xcb, 0x63, 0x4e, 0x87, 0x48, 0xe1, 0x2b, 0x88, 0x62, 0xd5, 0x91, 0xa9, 0x83, 0x8c, 0x34,
+	0xfa, 0x74, 0x1e, 0xc0, 0x6c, 0xf4, 0x9d, 0x91, 0xbb, 0x33, 0xe1, 0x89, 0x94, 0xbb, 0x33, 0xf1,
+	0x89, 0xfa, 0x2b, 0x14, 0xe3, 0xf7, 0x22, 0x5a, 0x89, 0x6a, 0x8d, 0xb9, 0xf6, 0xcb, 0x37, 0x4e,
+	0x17, 0xf2, 0xe1, 0x77, 0x9e, 0x7f, 0xf7, 0xbe, 0xaa, 0xbc, 0x7b, 0x5f, 0x55, 0x7e, 0x7c, 0x5f,
+	0x55, 0xfe, 0xf3, 0xa1, 0x3a, 0xf1, 0xee, 0x43, 0x75, 0xe2, 0x87, 0x0f, 0xd5, 0x89, 0xbf, 0x6c,
+	0xb5, 0x0d, 0xd6, 0xe9, 0x1d, 0xad, 0xb5, 0xec, 0xee, 0xfa, 0xdb, 0x9e, 0xed, 0xf6, 0xba, 0x2d,
+	0xdb, 0x62, 0xae, 0x6d, 0xae, 0x77, 0x09, 0xa5, 0xb8, 0x4d, 0xe8, 0xfa, 0x51, 0xcf, 0x30, 0xf5,
+	0xf5, 0xb6, 0x1d, 0xfe, 0x61, 0x7e, 0x34, 0xcd, 0xff, 0xe7, 0xde, 0xfa, 0x39, 0x00, 0x00, 0xff,
+	0xff, 0x6f, 0x81, 0xcd, 0x50, 0x4c, 0x17, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -2714,7 +2649,7 @@ func NewWalletRPCServiceClient(cc *grpc.ClientConn) WalletRPCServiceClient {
 
 func (c *walletRPCServiceClient) Register(ctx context.Context, in *RegisterWalletRequest, opts ...grpc.CallOption) (*RegisterWalletResponse, error) {
 	out := new(RegisterWalletResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/Register", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/Register", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2723,7 +2658,7 @@ func (c *walletRPCServiceClient) Register(ctx context.Context, in *RegisterWalle
 
 func (c *walletRPCServiceClient) GenerateKey(ctx context.Context, in *GenerateKeyRequest, opts ...grpc.CallOption) (*GenerateKeyResponse, error) {
 	out := new(GenerateKeyResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/GenerateKey", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/GenerateKey", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2732,7 +2667,7 @@ func (c *walletRPCServiceClient) GenerateKey(ctx context.Context, in *GenerateKe
 
 func (c *walletRPCServiceClient) CreateChainTree(ctx context.Context, in *GenerateChainRequest, opts ...grpc.CallOption) (*GenerateChainResponse, error) {
 	out := new(GenerateChainResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/CreateChainTree", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/CreateChainTree", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2741,7 +2676,7 @@ func (c *walletRPCServiceClient) CreateChainTree(ctx context.Context, in *Genera
 
 func (c *walletRPCServiceClient) ExportChainTree(ctx context.Context, in *ExportChainRequest, opts ...grpc.CallOption) (*ExportChainResponse, error) {
 	out := new(ExportChainResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ExportChainTree", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ExportChainTree", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2750,7 +2685,7 @@ func (c *walletRPCServiceClient) ExportChainTree(ctx context.Context, in *Export
 
 func (c *walletRPCServiceClient) ImportChainTree(ctx context.Context, in *ImportChainRequest, opts ...grpc.CallOption) (*ImportChainResponse, error) {
 	out := new(ImportChainResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ImportChainTree", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ImportChainTree", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2759,7 +2694,7 @@ func (c *walletRPCServiceClient) ImportChainTree(ctx context.Context, in *Import
 
 func (c *walletRPCServiceClient) GetTip(ctx context.Context, in *GetTipRequest, opts ...grpc.CallOption) (*GetTipResponse, error) {
 	out := new(GetTipResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/GetTip", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/GetTip", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2768,7 +2703,7 @@ func (c *walletRPCServiceClient) GetTip(ctx context.Context, in *GetTipRequest, 
 
 func (c *walletRPCServiceClient) ListChainIds(ctx context.Context, in *ListChainIdsRequest, opts ...grpc.CallOption) (*ListChainIdsResponse, error) {
 	out := new(ListChainIdsResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ListChainIds", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ListChainIds", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2777,7 +2712,7 @@ func (c *walletRPCServiceClient) ListChainIds(ctx context.Context, in *ListChain
 
 func (c *walletRPCServiceClient) ListKeys(ctx context.Context, in *ListKeysRequest, opts ...grpc.CallOption) (*ListKeysResponse, error) {
 	out := new(ListKeysResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ListKeys", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ListKeys", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2786,7 +2721,7 @@ func (c *walletRPCServiceClient) ListKeys(ctx context.Context, in *ListKeysReque
 
 func (c *walletRPCServiceClient) SetOwner(ctx context.Context, in *SetOwnerRequest, opts ...grpc.CallOption) (*SetOwnerResponse, error) {
 	out := new(SetOwnerResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/SetOwner", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/SetOwner", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2795,7 +2730,7 @@ func (c *walletRPCServiceClient) SetOwner(ctx context.Context, in *SetOwnerReque
 
 func (c *walletRPCServiceClient) SetData(ctx context.Context, in *SetDataRequest, opts ...grpc.CallOption) (*SetDataResponse, error) {
 	out := new(SetDataResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/SetData", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/SetData", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2804,7 +2739,7 @@ func (c *walletRPCServiceClient) SetData(ctx context.Context, in *SetDataRequest
 
 func (c *walletRPCServiceClient) Resolve(ctx context.Context, in *ResolveRequest, opts ...grpc.CallOption) (*ResolveResponse, error) {
 	out := new(ResolveResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/Resolve", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/Resolve", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2813,7 +2748,7 @@ func (c *walletRPCServiceClient) Resolve(ctx context.Context, in *ResolveRequest
 
 func (c *walletRPCServiceClient) ResolveAt(ctx context.Context, in *ResolveAtRequest, opts ...grpc.CallOption) (*ResolveResponse, error) {
 	out := new(ResolveResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ResolveAt", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ResolveAt", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2822,7 +2757,7 @@ func (c *walletRPCServiceClient) ResolveAt(ctx context.Context, in *ResolveAtReq
 
 func (c *walletRPCServiceClient) EstablishToken(ctx context.Context, in *EstablishTokenRequest, opts ...grpc.CallOption) (*EstablishTokenResponse, error) {
 	out := new(EstablishTokenResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/EstablishToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/EstablishToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2831,7 +2766,7 @@ func (c *walletRPCServiceClient) EstablishToken(ctx context.Context, in *Establi
 
 func (c *walletRPCServiceClient) MintToken(ctx context.Context, in *MintTokenRequest, opts ...grpc.CallOption) (*MintTokenResponse, error) {
 	out := new(MintTokenResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/MintToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/MintToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2840,7 +2775,7 @@ func (c *walletRPCServiceClient) MintToken(ctx context.Context, in *MintTokenReq
 
 func (c *walletRPCServiceClient) SendToken(ctx context.Context, in *SendTokenRequest, opts ...grpc.CallOption) (*SendTokenResponse, error) {
 	out := new(SendTokenResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/SendToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/SendToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2849,7 +2784,7 @@ func (c *walletRPCServiceClient) SendToken(ctx context.Context, in *SendTokenReq
 
 func (c *walletRPCServiceClient) ReceiveToken(ctx context.Context, in *ReceiveTokenRequest, opts ...grpc.CallOption) (*ReceiveTokenResponse, error) {
 	out := new(ReceiveTokenResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/ReceiveToken", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/ReceiveToken", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2858,7 +2793,7 @@ func (c *walletRPCServiceClient) ReceiveToken(ctx context.Context, in *ReceiveTo
 
 func (c *walletRPCServiceClient) PlayTransactions(ctx context.Context, in *PlayTransactionsRequest, opts ...grpc.CallOption) (*PlayTransactionsResponse, error) {
 	out := new(PlayTransactionsResponse)
-	err := c.cc.Invoke(ctx, "/services.WalletRPCService/PlayTransactions", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/v1services.WalletRPCService/PlayTransactions", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -2956,7 +2891,7 @@ func _WalletRPCService_Register_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/Register",
+		FullMethod: "/v1services.WalletRPCService/Register",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).Register(ctx, req.(*RegisterWalletRequest))
@@ -2974,7 +2909,7 @@ func _WalletRPCService_GenerateKey_Handler(srv interface{}, ctx context.Context,
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/GenerateKey",
+		FullMethod: "/v1services.WalletRPCService/GenerateKey",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).GenerateKey(ctx, req.(*GenerateKeyRequest))
@@ -2992,7 +2927,7 @@ func _WalletRPCService_CreateChainTree_Handler(srv interface{}, ctx context.Cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/CreateChainTree",
+		FullMethod: "/v1services.WalletRPCService/CreateChainTree",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).CreateChainTree(ctx, req.(*GenerateChainRequest))
@@ -3010,7 +2945,7 @@ func _WalletRPCService_ExportChainTree_Handler(srv interface{}, ctx context.Cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ExportChainTree",
+		FullMethod: "/v1services.WalletRPCService/ExportChainTree",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ExportChainTree(ctx, req.(*ExportChainRequest))
@@ -3028,7 +2963,7 @@ func _WalletRPCService_ImportChainTree_Handler(srv interface{}, ctx context.Cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ImportChainTree",
+		FullMethod: "/v1services.WalletRPCService/ImportChainTree",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ImportChainTree(ctx, req.(*ImportChainRequest))
@@ -3046,7 +2981,7 @@ func _WalletRPCService_GetTip_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/GetTip",
+		FullMethod: "/v1services.WalletRPCService/GetTip",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).GetTip(ctx, req.(*GetTipRequest))
@@ -3064,7 +2999,7 @@ func _WalletRPCService_ListChainIds_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ListChainIds",
+		FullMethod: "/v1services.WalletRPCService/ListChainIds",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ListChainIds(ctx, req.(*ListChainIdsRequest))
@@ -3082,7 +3017,7 @@ func _WalletRPCService_ListKeys_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ListKeys",
+		FullMethod: "/v1services.WalletRPCService/ListKeys",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ListKeys(ctx, req.(*ListKeysRequest))
@@ -3100,7 +3035,7 @@ func _WalletRPCService_SetOwner_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/SetOwner",
+		FullMethod: "/v1services.WalletRPCService/SetOwner",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).SetOwner(ctx, req.(*SetOwnerRequest))
@@ -3118,7 +3053,7 @@ func _WalletRPCService_SetData_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/SetData",
+		FullMethod: "/v1services.WalletRPCService/SetData",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).SetData(ctx, req.(*SetDataRequest))
@@ -3136,7 +3071,7 @@ func _WalletRPCService_Resolve_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/Resolve",
+		FullMethod: "/v1services.WalletRPCService/Resolve",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).Resolve(ctx, req.(*ResolveRequest))
@@ -3154,7 +3089,7 @@ func _WalletRPCService_ResolveAt_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ResolveAt",
+		FullMethod: "/v1services.WalletRPCService/ResolveAt",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ResolveAt(ctx, req.(*ResolveAtRequest))
@@ -3172,7 +3107,7 @@ func _WalletRPCService_EstablishToken_Handler(srv interface{}, ctx context.Conte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/EstablishToken",
+		FullMethod: "/v1services.WalletRPCService/EstablishToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).EstablishToken(ctx, req.(*EstablishTokenRequest))
@@ -3190,7 +3125,7 @@ func _WalletRPCService_MintToken_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/MintToken",
+		FullMethod: "/v1services.WalletRPCService/MintToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).MintToken(ctx, req.(*MintTokenRequest))
@@ -3208,7 +3143,7 @@ func _WalletRPCService_SendToken_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/SendToken",
+		FullMethod: "/v1services.WalletRPCService/SendToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).SendToken(ctx, req.(*SendTokenRequest))
@@ -3226,7 +3161,7 @@ func _WalletRPCService_ReceiveToken_Handler(srv interface{}, ctx context.Context
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/ReceiveToken",
+		FullMethod: "/v1services.WalletRPCService/ReceiveToken",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).ReceiveToken(ctx, req.(*ReceiveTokenRequest))
@@ -3244,7 +3179,7 @@ func _WalletRPCService_PlayTransactions_Handler(srv interface{}, ctx context.Con
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/services.WalletRPCService/PlayTransactions",
+		FullMethod: "/v1services.WalletRPCService/PlayTransactions",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(WalletRPCServiceServer).PlayTransactions(ctx, req.(*PlayTransactionsRequest))
@@ -3253,7 +3188,7 @@ func _WalletRPCService_PlayTransactions_Handler(srv interface{}, ctx context.Con
 }
 
 var _WalletRPCService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "services.WalletRPCService",
+	ServiceName: "v1services.WalletRPCService",
 	HandlerType: (*WalletRPCServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -3332,7 +3267,7 @@ var _WalletRPCService_serviceDesc = grpc.ServiceDesc{
 func (m *AddBlockRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3340,54 +3275,64 @@ func (m *AddBlockRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *AddBlockRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *AddBlockRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.ObjectId) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ObjectId)))
-		i += copy(dAtA[i:], m.ObjectId)
-	}
-	if len(m.PreviousTip) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.PreviousTip)))
-		i += copy(dAtA[i:], m.PreviousTip)
-	}
-	if m.Height != 0 {
-		dAtA[i] = 0x18
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Height))
-	}
-	if len(m.NewTip) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.NewTip)))
-		i += copy(dAtA[i:], m.NewTip)
-	}
-	if len(m.Payload) > 0 {
-		dAtA[i] = 0x2a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Payload)))
-		i += copy(dAtA[i:], m.Payload)
-	}
 	if len(m.State) > 0 {
-		for _, b := range m.State {
+		for iNdEx := len(m.State) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.State[iNdEx])
+			copy(dAtA[i:], m.State[iNdEx])
+			i = encodeVarintServices(dAtA, i, uint64(len(m.State[iNdEx])))
+			i--
 			dAtA[i] = 0x32
-			i++
-			i = encodeVarintServices(dAtA, i, uint64(len(b)))
-			i += copy(dAtA[i:], b)
 		}
 	}
-	return i, nil
+	if len(m.Payload) > 0 {
+		i -= len(m.Payload)
+		copy(dAtA[i:], m.Payload)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Payload)))
+		i--
+		dAtA[i] = 0x2a
+	}
+	if len(m.NewTip) > 0 {
+		i -= len(m.NewTip)
+		copy(dAtA[i:], m.NewTip)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.NewTip)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if m.Height != 0 {
+		i = encodeVarintServices(dAtA, i, uint64(m.Height))
+		i--
+		dAtA[i] = 0x18
+	}
+	if len(m.PreviousTip) > 0 {
+		i -= len(m.PreviousTip)
+		copy(dAtA[i:], m.PreviousTip)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.PreviousTip)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.ObjectId) > 0 {
+		i -= len(m.ObjectId)
+		copy(dAtA[i:], m.ObjectId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ObjectId)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ReceiveCurrentStateSnapshot) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3395,23 +3340,29 @@ func (m *ReceiveCurrentStateSnapshot) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ReceiveCurrentStateSnapshot) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ReceiveCurrentStateSnapshot) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Payload) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Payload)
+		copy(dAtA[i:], m.Payload)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Payload)))
-		i += copy(dAtA[i:], m.Payload)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *RequestCurrentStateSnapshot) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3419,17 +3370,22 @@ func (m *RequestCurrentStateSnapshot) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *RequestCurrentStateSnapshot) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *RequestCurrentStateSnapshot) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *Ping) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3437,23 +3393,29 @@ func (m *Ping) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Ping) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Ping) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Msg) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Msg)
+		copy(dAtA[i:], m.Msg)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Msg)))
-		i += copy(dAtA[i:], m.Msg)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *Pong) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3461,23 +3423,29 @@ func (m *Pong) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Pong) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Pong) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Msg) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Msg)
+		copy(dAtA[i:], m.Msg)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Msg)))
-		i += copy(dAtA[i:], m.Msg)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *Credentials) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3485,29 +3453,36 @@ func (m *Credentials) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Credentials) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Credentials) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.WalletName) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.WalletName)))
-		i += copy(dAtA[i:], m.WalletName)
-	}
 	if len(m.PassPhrase) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.PassPhrase)
+		copy(dAtA[i:], m.PassPhrase)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.PassPhrase)))
-		i += copy(dAtA[i:], m.PassPhrase)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.WalletName) > 0 {
+		i -= len(m.WalletName)
+		copy(dAtA[i:], m.WalletName)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.WalletName)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *SerializableChainTree) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3515,59 +3490,64 @@ func (m *SerializableChainTree) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SerializableChainTree) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SerializableChainTree) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Dag) > 0 {
-		for _, b := range m.Dag {
-			dAtA[i] = 0xa
-			i++
-			i = encodeVarintServices(dAtA, i, uint64(len(b)))
-			i += copy(dAtA[i:], b)
-		}
+	if len(m.Tip) > 0 {
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
+		i--
+		dAtA[i] = 0x1a
 	}
 	if len(m.Signatures) > 0 {
-		for k, _ := range m.Signatures {
-			dAtA[i] = 0x12
-			i++
+		for k := range m.Signatures {
 			v := m.Signatures[k]
-			msgSize := 0
+			baseI := i
 			if v != nil {
-				msgSize = v.Size()
-				msgSize += 1 + sovServices(uint64(msgSize))
-			}
-			mapSize := 1 + len(k) + sovServices(uint64(len(k))) + msgSize
-			i = encodeVarintServices(dAtA, i, uint64(mapSize))
-			dAtA[i] = 0xa
-			i++
-			i = encodeVarintServices(dAtA, i, uint64(len(k)))
-			i += copy(dAtA[i:], k)
-			if v != nil {
-				dAtA[i] = 0x12
-				i++
-				i = encodeVarintServices(dAtA, i, uint64(v.Size()))
-				n1, err1 := v.MarshalTo(dAtA[i:])
-				if err1 != nil {
-					return 0, err1
+				{
+					size, err := v.MarshalToSizedBuffer(dAtA[:i])
+					if err != nil {
+						return 0, err
+					}
+					i -= size
+					i = encodeVarintServices(dAtA, i, uint64(size))
 				}
-				i += n1
+				i--
+				dAtA[i] = 0x12
 			}
+			i -= len(k)
+			copy(dAtA[i:], k)
+			i = encodeVarintServices(dAtA, i, uint64(len(k)))
+			i--
+			dAtA[i] = 0xa
+			i = encodeVarintServices(dAtA, i, uint64(baseI-i))
+			i--
+			dAtA[i] = 0x12
 		}
 	}
-	if len(m.Tip) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+	if len(m.Dag) > 0 {
+		for iNdEx := len(m.Dag) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.Dag[iNdEx])
+			copy(dAtA[i:], m.Dag[iNdEx])
+			i = encodeVarintServices(dAtA, i, uint64(len(m.Dag[iNdEx])))
+			i--
+			dAtA[i] = 0xa
+		}
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *RegisterWalletRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3575,27 +3555,34 @@ func (m *RegisterWalletRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *RegisterWalletRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *RegisterWalletRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n2, err2 := m.Creds.MarshalTo(dAtA[i:])
-		if err2 != nil {
-			return 0, err2
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n2
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *RegisterWalletResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3603,23 +3590,29 @@ func (m *RegisterWalletResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *RegisterWalletResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *RegisterWalletResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.WalletName) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.WalletName)
+		copy(dAtA[i:], m.WalletName)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.WalletName)))
-		i += copy(dAtA[i:], m.WalletName)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *StorageAdapterConfigForBadger) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3627,23 +3620,29 @@ func (m *StorageAdapterConfigForBadger) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *StorageAdapterConfigForBadger) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *StorageAdapterConfigForBadger) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Path) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Path)
+		copy(dAtA[i:], m.Path)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
-		i += copy(dAtA[i:], m.Path)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *StorageAdapterConfigForIpld) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3651,39 +3650,46 @@ func (m *StorageAdapterConfigForIpld) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *StorageAdapterConfigForIpld) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *StorageAdapterConfigForIpld) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Path) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
-		i += copy(dAtA[i:], m.Path)
-	}
-	if len(m.Address) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Address)))
-		i += copy(dAtA[i:], m.Address)
-	}
 	if m.Offline {
-		dAtA[i] = 0x18
-		i++
+		i--
 		if m.Offline {
 			dAtA[i] = 1
 		} else {
 			dAtA[i] = 0
 		}
-		i++
+		i--
+		dAtA[i] = 0x18
 	}
-	return i, nil
+	if len(m.Address) > 0 {
+		i -= len(m.Address)
+		copy(dAtA[i:], m.Address)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Address)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Path) > 0 {
+		i -= len(m.Path)
+		copy(dAtA[i:], m.Path)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *StorageAdapterConfig) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3691,52 +3697,71 @@ func (m *StorageAdapterConfig) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *StorageAdapterConfig) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *StorageAdapterConfig) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.AdapterConfig != nil {
-		nn3, err3 := m.AdapterConfig.MarshalTo(dAtA[i:])
-		if err3 != nil {
-			return 0, err3
+		{
+			size := m.AdapterConfig.Size()
+			i -= size
+			if _, err := m.AdapterConfig.MarshalTo(dAtA[i:]); err != nil {
+				return 0, err
+			}
 		}
-		i += nn3
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *StorageAdapterConfig_Badger) MarshalTo(dAtA []byte) (int, error) {
-	i := 0
+	return m.MarshalToSizedBuffer(dAtA[:m.Size()])
+}
+
+func (m *StorageAdapterConfig_Badger) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	if m.Badger != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Badger.Size()))
-		n4, err4 := m.Badger.MarshalTo(dAtA[i:])
-		if err4 != nil {
-			return 0, err4
+		{
+			size, err := m.Badger.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n4
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 func (m *StorageAdapterConfig_Ipld) MarshalTo(dAtA []byte) (int, error) {
-	i := 0
+	return m.MarshalToSizedBuffer(dAtA[:m.Size()])
+}
+
+func (m *StorageAdapterConfig_Ipld) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	if m.Ipld != nil {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Ipld.Size()))
-		n5, err5 := m.Ipld.MarshalTo(dAtA[i:])
-		if err5 != nil {
-			return 0, err5
+		{
+			size, err := m.Ipld.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n5
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 func (m *GenerateChainRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3744,43 +3769,53 @@ func (m *GenerateChainRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GenerateChainRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GenerateChainRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n6, err6 := m.Creds.MarshalTo(dAtA[i:])
-		if err6 != nil {
-			return 0, err6
+	if m.StorageAdapter != nil {
+		{
+			size, err := m.StorageAdapter.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n6
+		i--
+		dAtA[i] = 0x1a
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x12
 	}
-	if m.StorageAdapter != nil {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.StorageAdapter.Size()))
-		n7, err7 := m.StorageAdapter.MarshalTo(dAtA[i:])
-		if err7 != nil {
-			return 0, err7
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n7
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GenerateChainResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3788,23 +3823,29 @@ func (m *GenerateChainResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GenerateChainResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GenerateChainResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ExportChainRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3812,33 +3853,41 @@ func (m *ExportChainRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ExportChainRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ExportChainRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n8, err8 := m.Creds.MarshalTo(dAtA[i:])
-		if err8 != nil {
-			return 0, err8
-		}
-		i += n8
-	}
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ExportChainResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3846,23 +3895,29 @@ func (m *ExportChainResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ExportChainResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ExportChainResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.ChainTree) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.ChainTree)
+		copy(dAtA[i:], m.ChainTree)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainTree)))
-		i += copy(dAtA[i:], m.ChainTree)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ImportChainRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3870,53 +3925,63 @@ func (m *ImportChainRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ImportChainRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ImportChainRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n9, err9 := m.Creds.MarshalTo(dAtA[i:])
-		if err9 != nil {
-			return 0, err9
-		}
-		i += n9
-	}
-	if len(m.ChainTree) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainTree)))
-		i += copy(dAtA[i:], m.ChainTree)
-	}
-	if m.StorageAdapter != nil {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.StorageAdapter.Size()))
-		n10, err10 := m.StorageAdapter.MarshalTo(dAtA[i:])
-		if err10 != nil {
-			return 0, err10
-		}
-		i += n10
-	}
 	if m.SkipValidation {
-		dAtA[i] = 0x28
-		i++
+		i--
 		if m.SkipValidation {
 			dAtA[i] = 1
 		} else {
 			dAtA[i] = 0
 		}
-		i++
+		i--
+		dAtA[i] = 0x28
 	}
-	return i, nil
+	if m.StorageAdapter != nil {
+		{
+			size, err := m.StorageAdapter.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.ChainTree) > 0 {
+		i -= len(m.ChainTree)
+		copy(dAtA[i:], m.ChainTree)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainTree)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ImportChainResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3924,23 +3989,29 @@ func (m *ImportChainResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ImportChainResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ImportChainResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GenerateKeyRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3948,27 +4019,34 @@ func (m *GenerateKeyRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GenerateKeyRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GenerateKeyRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n11, err11 := m.Creds.MarshalTo(dAtA[i:])
-		if err11 != nil {
-			return 0, err11
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n11
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GenerateKeyResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -3976,23 +4054,29 @@ func (m *GenerateKeyResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GenerateKeyResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GenerateKeyResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GetTipRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4000,33 +4084,41 @@ func (m *GetTipRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GetTipRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GetTipRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n12, err12 := m.Creds.MarshalTo(dAtA[i:])
-		if err12 != nil {
-			return 0, err12
-		}
-		i += n12
-	}
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *GetTipResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4034,23 +4126,29 @@ func (m *GetTipResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GetTipResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GetTipResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ListChainIdsRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4058,27 +4156,34 @@ func (m *ListChainIdsRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ListChainIdsRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ListChainIdsRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n13, err13 := m.Creds.MarshalTo(dAtA[i:])
-		if err13 != nil {
-			return 0, err13
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n13
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ListChainIdsResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4086,32 +4191,31 @@ func (m *ListChainIdsResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ListChainIdsResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ListChainIdsResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.ChainIds) > 0 {
-		for _, s := range m.ChainIds {
+		for iNdEx := len(m.ChainIds) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.ChainIds[iNdEx])
+			copy(dAtA[i:], m.ChainIds[iNdEx])
+			i = encodeVarintServices(dAtA, i, uint64(len(m.ChainIds[iNdEx])))
+			i--
 			dAtA[i] = 0xa
-			i++
-			l = len(s)
-			for l >= 1<<7 {
-				dAtA[i] = uint8(uint64(l)&0x7f | 0x80)
-				l >>= 7
-				i++
-			}
-			dAtA[i] = uint8(l)
-			i++
-			i += copy(dAtA[i:], s)
 		}
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ListKeysRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4119,27 +4223,34 @@ func (m *ListKeysRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ListKeysRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ListKeysRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n14, err14 := m.Creds.MarshalTo(dAtA[i:])
-		if err14 != nil {
-			return 0, err14
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n14
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ListKeysResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4147,32 +4258,31 @@ func (m *ListKeysResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ListKeysResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ListKeysResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.KeyAddrs) > 0 {
-		for _, s := range m.KeyAddrs {
+		for iNdEx := len(m.KeyAddrs) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.KeyAddrs[iNdEx])
+			copy(dAtA[i:], m.KeyAddrs[iNdEx])
+			i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddrs[iNdEx])))
+			i--
 			dAtA[i] = 0xa
-			i++
-			l = len(s)
-			for l >= 1<<7 {
-				dAtA[i] = uint8(uint64(l)&0x7f | 0x80)
-				l >>= 7
-				i++
-			}
-			dAtA[i] = uint8(l)
-			i++
-			i += copy(dAtA[i:], s)
 		}
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SetOwnerRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4180,49 +4290,60 @@ func (m *SetOwnerRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetOwnerRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetOwnerRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n15, err15 := m.Creds.MarshalTo(dAtA[i:])
-		if err15 != nil {
-			return 0, err15
+	if m.Payload != nil {
+		{
+			size, err := m.Payload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n15
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x2a
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if m.Payload != nil {
-		dAtA[i] = 0x2a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Payload.Size()))
-		n16, err16 := m.Payload.MarshalTo(dAtA[i:])
-		if err16 != nil {
-			return 0, err16
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n16
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SetOwnerResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4230,23 +4351,29 @@ func (m *SetOwnerResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetOwnerResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetOwnerResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SetDataRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4254,49 +4381,60 @@ func (m *SetDataRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetDataRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetDataRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n17, err17 := m.Creds.MarshalTo(dAtA[i:])
-		if err17 != nil {
-			return 0, err17
+	if m.Payload != nil {
+		{
+			size, err := m.Payload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n17
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x32
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if m.Payload != nil {
-		dAtA[i] = 0x32
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Payload.Size()))
-		n18, err18 := m.Payload.MarshalTo(dAtA[i:])
-		if err18 != nil {
-			return 0, err18
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n18
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SetDataResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4304,23 +4442,29 @@ func (m *SetDataResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetDataResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetDataResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ResolveRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4328,39 +4472,48 @@ func (m *ResolveRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ResolveRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ResolveRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n19, err19 := m.Creds.MarshalTo(dAtA[i:])
-		if err19 != nil {
-			return 0, err19
-		}
-		i += n19
+	if len(m.Path) > 0 {
+		i -= len(m.Path)
+		copy(dAtA[i:], m.Path)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
+		i--
+		dAtA[i] = 0x1a
 	}
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x12
 	}
-	if len(m.Path) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
-		i += copy(dAtA[i:], m.Path)
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *ResolveResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4368,29 +4521,36 @@ func (m *ResolveResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ResolveResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ResolveResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.RemainingPath) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.RemainingPath)))
-		i += copy(dAtA[i:], m.RemainingPath)
-	}
 	if len(m.Data) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.Data)
+		copy(dAtA[i:], m.Data)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Data)))
-		i += copy(dAtA[i:], m.Data)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.RemainingPath) > 0 {
+		i -= len(m.RemainingPath)
+		copy(dAtA[i:], m.RemainingPath)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.RemainingPath)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ResolveAtRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4398,45 +4558,55 @@ func (m *ResolveAtRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ResolveAtRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ResolveAtRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n20, err20 := m.Creds.MarshalTo(dAtA[i:])
-		if err20 != nil {
-			return 0, err20
-		}
-		i += n20
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+	if len(m.Path) > 0 {
+		i -= len(m.Path)
+		copy(dAtA[i:], m.Path)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
+		i--
+		dAtA[i] = 0x22
 	}
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if len(m.Path) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.Path)))
-		i += copy(dAtA[i:], m.Path)
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *EstablishTokenRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4444,49 +4614,60 @@ func (m *EstablishTokenRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *EstablishTokenRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *EstablishTokenRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n21, err21 := m.Creds.MarshalTo(dAtA[i:])
-		if err21 != nil {
-			return 0, err21
+	if m.Payload != nil {
+		{
+			size, err := m.Payload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n21
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x32
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if m.Payload != nil {
-		dAtA[i] = 0x32
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Payload.Size()))
-		n22, err22 := m.Payload.MarshalTo(dAtA[i:])
-		if err22 != nil {
-			return 0, err22
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n22
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *EstablishTokenResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4494,23 +4675,29 @@ func (m *EstablishTokenResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *EstablishTokenResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *EstablishTokenResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *MintTokenRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4518,49 +4705,60 @@ func (m *MintTokenRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *MintTokenRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MintTokenRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n23, err23 := m.Creds.MarshalTo(dAtA[i:])
-		if err23 != nil {
-			return 0, err23
+	if m.Payload != nil {
+		{
+			size, err := m.Payload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n23
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x32
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if m.Payload != nil {
-		dAtA[i] = 0x32
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Payload.Size()))
-		n24, err24 := m.Payload.MarshalTo(dAtA[i:])
-		if err24 != nil {
-			return 0, err24
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n24
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *MintTokenResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4568,23 +4766,29 @@ func (m *MintTokenResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *MintTokenResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MintTokenResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SendTokenRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4592,66 +4796,79 @@ func (m *SendTokenRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SendTokenRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SendTokenRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n25, err25 := m.Creds.MarshalTo(dAtA[i:])
-		if err25 != nil {
-			return 0, err25
+	if m.Payload != nil {
+		{
+			size, err := m.Payload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n25
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
-	}
-	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
-	}
-	if len(m.TokenName) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenName)))
-		i += copy(dAtA[i:], m.TokenName)
-	}
-	if len(m.DestinationChainId) > 0 {
-		dAtA[i] = 0x2a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.DestinationChainId)))
-		i += copy(dAtA[i:], m.DestinationChainId)
+		i--
+		dAtA[i] = 0x3a
 	}
 	if m.Amount != 0 {
-		dAtA[i] = 0x30
-		i++
 		i = encodeVarintServices(dAtA, i, uint64(m.Amount))
+		i--
+		dAtA[i] = 0x30
 	}
-	if m.Payload != nil {
-		dAtA[i] = 0x3a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Payload.Size()))
-		n26, err26 := m.Payload.MarshalTo(dAtA[i:])
-		if err26 != nil {
-			return 0, err26
+	if len(m.DestinationChainId) > 0 {
+		i -= len(m.DestinationChainId)
+		copy(dAtA[i:], m.DestinationChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.DestinationChainId)))
+		i--
+		dAtA[i] = 0x2a
+	}
+	if len(m.TokenName) > 0 {
+		i -= len(m.TokenName)
+		copy(dAtA[i:], m.TokenName)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenName)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.KeyAddr) > 0 {
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
-		i += n26
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SendTokenResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4659,29 +4876,36 @@ func (m *SendTokenResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SendTokenResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SendTokenResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.SendToken) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.SendToken)))
-		i += copy(dAtA[i:], m.SendToken)
-	}
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.SendToken) > 0 {
+		i -= len(m.SendToken)
+		copy(dAtA[i:], m.SendToken)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.SendToken)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ReceiveTokenRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4689,45 +4913,55 @@ func (m *ReceiveTokenRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ReceiveTokenRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ReceiveTokenRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n27, err27 := m.Creds.MarshalTo(dAtA[i:])
-		if err27 != nil {
-			return 0, err27
-		}
-		i += n27
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+	if len(m.TokenPayload) > 0 {
+		i -= len(m.TokenPayload)
+		copy(dAtA[i:], m.TokenPayload)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenPayload)))
+		i--
+		dAtA[i] = 0x22
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if len(m.TokenPayload) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenPayload)))
-		i += copy(dAtA[i:], m.TokenPayload)
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ReceiveTokenResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4735,23 +4969,29 @@ func (m *ReceiveTokenResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ReceiveTokenResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ReceiveTokenResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GetTokenBalanceRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4759,39 +4999,48 @@ func (m *GetTokenBalanceRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GetTokenBalanceRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GetTokenBalanceRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n28, err28 := m.Creds.MarshalTo(dAtA[i:])
-		if err28 != nil {
-			return 0, err28
-		}
-		i += n28
+	if len(m.TokenName) > 0 {
+		i -= len(m.TokenName)
+		copy(dAtA[i:], m.TokenName)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenName)))
+		i--
+		dAtA[i] = 0x1a
 	}
 	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
+		i--
+		dAtA[i] = 0x12
 	}
-	if len(m.TokenName) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.TokenName)))
-		i += copy(dAtA[i:], m.TokenName)
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *GetTokenBalanceResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4799,22 +5048,27 @@ func (m *GetTokenBalanceResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *GetTokenBalanceResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *GetTokenBalanceResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Amount != 0 {
-		dAtA[i] = 0x8
-		i++
 		i = encodeVarintServices(dAtA, i, uint64(m.Amount))
+		i--
+		dAtA[i] = 0x8
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *PlayTransactionsRequest) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4822,51 +5076,62 @@ func (m *PlayTransactionsRequest) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *PlayTransactionsRequest) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *PlayTransactionsRequest) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Creds != nil {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(m.Creds.Size()))
-		n29, err29 := m.Creds.MarshalTo(dAtA[i:])
-		if err29 != nil {
-			return 0, err29
+	if len(m.Transactions) > 0 {
+		for iNdEx := len(m.Transactions) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.Transactions[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintServices(dAtA, i, uint64(size))
+			}
+			i--
+			dAtA[i] = 0x22
 		}
-		i += n29
-	}
-	if len(m.ChainId) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
-		i += copy(dAtA[i:], m.ChainId)
 	}
 	if len(m.KeyAddr) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.KeyAddr)
+		copy(dAtA[i:], m.KeyAddr)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.KeyAddr)))
-		i += copy(dAtA[i:], m.KeyAddr)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if len(m.Transactions) > 0 {
-		for _, msg := range m.Transactions {
-			dAtA[i] = 0x22
-			i++
-			i = encodeVarintServices(dAtA, i, uint64(msg.Size()))
-			n, err := msg.MarshalTo(dAtA[i:])
+	if len(m.ChainId) > 0 {
+		i -= len(m.ChainId)
+		copy(dAtA[i:], m.ChainId)
+		i = encodeVarintServices(dAtA, i, uint64(len(m.ChainId)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Creds != nil {
+		{
+			size, err := m.Creds.MarshalToSizedBuffer(dAtA[:i])
 			if err != nil {
 				return 0, err
 			}
-			i += n
+			i -= size
+			i = encodeVarintServices(dAtA, i, uint64(size))
 		}
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *PlayTransactionsResponse) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -4874,27 +5139,35 @@ func (m *PlayTransactionsResponse) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *PlayTransactionsResponse) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *PlayTransactionsResponse) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Tip) > 0 {
-		dAtA[i] = 0xa
-		i++
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
 		i = encodeVarintServices(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+		i--
+		dAtA[i] = 0xa
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func encodeVarintServices(dAtA []byte, offset int, v uint64) int {
+	offset -= sovServices(v)
+	base := offset
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
 		v >>= 7
 		offset++
 	}
 	dAtA[offset] = uint8(v)
-	return offset + 1
+	return base
 }
 func (m *AddBlockRequest) Size() (n int) {
 	if m == nil {
