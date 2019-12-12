@@ -1,3 +1,4 @@
+// source: config/config.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -60,13 +61,15 @@ if (goog.DEBUG && !COMPILED) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.config.PublicKeySet.prototype.toObject = function(opt_includeInstance) {
@@ -76,8 +79,8 @@ proto.config.PublicKeySet.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.config.PublicKeySet} msg The msg instance to transform.
  * @return {!Object}
@@ -210,9 +213,12 @@ proto.config.PublicKeySet.prototype.getVerKey_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.config.PublicKeySet} returns this
+ */
 proto.config.PublicKeySet.prototype.setVerKey = function(value) {
-  jspb.Message.setProto3BytesField(this, 1, value);
+  return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
@@ -249,9 +255,12 @@ proto.config.PublicKeySet.prototype.getDestKey_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.config.PublicKeySet} returns this
+ */
 proto.config.PublicKeySet.prototype.setDestKey = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value);
+  return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -267,13 +276,15 @@ proto.config.NotaryGroup.repeatedFields_ = [6,7,8,9];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.config.NotaryGroup.prototype.toObject = function(opt_includeInstance) {
@@ -283,8 +294,8 @@ proto.config.NotaryGroup.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.config.NotaryGroup} msg The msg instance to transform.
  * @return {!Object}
@@ -297,11 +308,11 @@ proto.config.NotaryGroup.toObject = function(includeInstance, msg) {
     burnAmount: jspb.Message.getFieldWithDefault(msg, 3, 0),
     transactionTopic: jspb.Message.getFieldWithDefault(msg, 4, ""),
     commitTopic: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    validatorGeneratorsList: jspb.Message.getRepeatedField(msg, 6),
-    transactionsList: jspb.Message.getRepeatedField(msg, 7),
+    validatorGeneratorsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    transactionsList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f,
     signersList: jspb.Message.toObjectList(msg.getSignersList(),
     proto.config.PublicKeySet.toObject, includeInstance),
-    bootstrapAddressesList: jspb.Message.getRepeatedField(msg, 9)
+    bootstrapAddressesList: (f = jspb.Message.getRepeatedField(msg, 9)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -480,9 +491,12 @@ proto.config.NotaryGroup.prototype.getId = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -495,9 +509,12 @@ proto.config.NotaryGroup.prototype.getTransactionToken = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setTransactionToken = function(value) {
-  jspb.Message.setProto3StringField(this, 2, value);
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -510,9 +527,12 @@ proto.config.NotaryGroup.prototype.getBurnAmount = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setBurnAmount = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
+  return jspb.Message.setProto3IntField(this, 3, value);
 };
 
 
@@ -525,9 +545,12 @@ proto.config.NotaryGroup.prototype.getTransactionTopic = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setTransactionTopic = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -540,9 +563,12 @@ proto.config.NotaryGroup.prototype.getCommitTopic = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setCommitTopic = function(value) {
-  jspb.Message.setProto3StringField(this, 5, value);
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -555,26 +581,31 @@ proto.config.NotaryGroup.prototype.getValidatorGeneratorsList = function() {
 };
 
 
-/** @param {!Array<string>} value */
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setValidatorGeneratorsList = function(value) {
-  jspb.Message.setField(this, 6, value || []);
+  return jspb.Message.setField(this, 6, value || []);
 };
 
 
 /**
  * @param {string} value
  * @param {number=} opt_index
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.addValidatorGenerators = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.clearValidatorGeneratorsList = function() {
-  this.setValidatorGeneratorsList([]);
+  return this.setValidatorGeneratorsList([]);
 };
 
 
@@ -587,26 +618,31 @@ proto.config.NotaryGroup.prototype.getTransactionsList = function() {
 };
 
 
-/** @param {!Array<string>} value */
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setTransactionsList = function(value) {
-  jspb.Message.setField(this, 7, value || []);
+  return jspb.Message.setField(this, 7, value || []);
 };
 
 
 /**
  * @param {string} value
  * @param {number=} opt_index
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.addTransactions = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.clearTransactionsList = function() {
-  this.setTransactionsList([]);
+  return this.setTransactionsList([]);
 };
 
 
@@ -620,9 +656,12 @@ proto.config.NotaryGroup.prototype.getSignersList = function() {
 };
 
 
-/** @param {!Array<!proto.config.PublicKeySet>} value */
+/**
+ * @param {!Array<!proto.config.PublicKeySet>} value
+ * @return {!proto.config.NotaryGroup} returns this
+*/
 proto.config.NotaryGroup.prototype.setSignersList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 8, value);
+  return jspb.Message.setRepeatedWrapperField(this, 8, value);
 };
 
 
@@ -638,9 +677,10 @@ proto.config.NotaryGroup.prototype.addSigners = function(opt_value, opt_index) {
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.clearSignersList = function() {
-  this.setSignersList([]);
+  return this.setSignersList([]);
 };
 
 
@@ -653,26 +693,31 @@ proto.config.NotaryGroup.prototype.getBootstrapAddressesList = function() {
 };
 
 
-/** @param {!Array<string>} value */
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.config.NotaryGroup} returns this
+ */
 proto.config.NotaryGroup.prototype.setBootstrapAddressesList = function(value) {
-  jspb.Message.setField(this, 9, value || []);
+  return jspb.Message.setField(this, 9, value || []);
 };
 
 
 /**
  * @param {string} value
  * @param {number=} opt_index
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.addBootstrapAddresses = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 9, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 9, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.config.NotaryGroup} returns this
  */
 proto.config.NotaryGroup.prototype.clearBootstrapAddressesList = function() {
-  this.setBootstrapAddressesList([]);
+  return this.setBootstrapAddressesList([]);
 };
 
 
