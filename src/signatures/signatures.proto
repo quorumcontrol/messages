@@ -1,5 +1,5 @@
 syntax = "proto3";
-package v1signatures;
+package signatures;
 
 option go_package = "github.com/quorumcontrol/messages/build/go/signatures";
 

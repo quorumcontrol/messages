@@ -1,5 +1,5 @@
 syntax = "proto3";
-package v1services;
+package services;
 
 option go_package = "github.com/quorumcontrol/messages/build/go/services";
 
@@ -39,7 +39,7 @@ message Credentials {
 
 message SerializableChainTree {
   repeated bytes dag = 1;
-  map<string, v1signatures.Signature> signatures = 2;
+  map<string, signatures.Signature> signatures = 2;
   // tip is a string because of compatability with the javascript layer
   // which cannot seem to parse a golang cid.Bytes()
   string tip = 3;
@@ -140,7 +140,7 @@ message SetOwnerRequest {
   string chain_id = 2;
   string key_addr = 3;
   // index 4 is a deleted key and intentionally omitted
-  v1transactions.SetOwnershipPayload payload = 5;
+  transactions.SetOwnershipPayload payload = 5;
 }
 
 message SetOwnerResponse {
@@ -152,7 +152,7 @@ message SetDataRequest {
   string chain_id = 2;
   string key_addr = 3;
   // indexes 4 and 5 are deleted keys and intentionally omitted
-  v1transactions.SetDataPayload payload = 6;
+  transactions.SetDataPayload payload = 6;
 }
 
 message SetDataResponse {
@@ -182,7 +182,7 @@ message EstablishTokenRequest {
   string chain_id = 2;
   string key_addr = 3;
   // indexes 4 and 5 are deleted keys and intentionally omitted
-  v1transactions.EstablishTokenPayload payload = 6;
+  transactions.EstablishTokenPayload payload = 6;
 }
 
 message EstablishTokenResponse {
@@ -194,7 +194,7 @@ message MintTokenRequest {
   string chain_id = 2;
   string key_addr = 3;
   // indexes 4 and 5 are deleted keys and intentionally omitted
-  v1transactions.MintTokenPayload payload = 6;
+  transactions.MintTokenPayload payload = 6;
 }
 
 message MintTokenResponse {
@@ -208,7 +208,7 @@ message SendTokenRequest {
   string token_name = 4;
   string destination_chain_id = 5;
   uint64 amount = 6;
-  v1transactions.SendTokenPayload payload = 7;
+  transactions.SendTokenPayload payload = 7;
 }
 
 message SendTokenResponse {
@@ -239,7 +239,7 @@ message PlayTransactionsRequest {
   Credentials creds = 1;
   string chain_id = 2;
   string key_addr = 3;
-  repeated v1transactions.Transaction transactions = 4;
+  repeated transactions.Transaction transactions = 4;
 }
 
 message PlayTransactionsResponse {

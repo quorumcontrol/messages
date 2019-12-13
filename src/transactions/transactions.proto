@@ -1,5 +1,5 @@
 syntax = "proto3";
-package v1transactions;
+package transactions;
 
 option go_package = "github.com/quorumcontrol/messages/build/go/transactions";
 
@@ -38,22 +38,22 @@ message SendTokenPayload{
 message ReceiveTokenPayload{
   string send_token_transaction_id = 1;
   bytes tip = 2;
-  v1signatures.Signature signature = 3;
+  signatures.Signature signature = 3;
   repeated bytes Leaves = 4;
 }
 
 message TokenPayload {
   string transaction_id = 1;
   string tip = 2;
-  v1signatures.Signature signature = 3;
+  signatures.Signature signature = 3;
   repeated bytes leaves = 4;
 }
 
 message StakePayload{
   string group_id = 1;
   uint64 amount = 2;
-  v1signatures.PublicKey dst_key = 3;
-  v1signatures.PublicKey ver_key = 4;
+  signatures.PublicKey dst_key = 3;
+  signatures.PublicKey ver_key = 4;
 }
 
 message Transaction{

@@ -1,7 +1,7 @@
 syntax = "proto3";
 option go_package = "github.com/quorumcontrol/messages/build/go/community";
 
-package v1community;
+package community;
 
 message Envelope {
     bytes id = 1; // sha256(to + from + payload + sequence)
