@@ -1,5 +1,5 @@
 syntax = "proto3";
-package config;
+package v2config;
 
 option go_package = "github.com/quorumcontrol/messages/v2/build/go/config";
 
