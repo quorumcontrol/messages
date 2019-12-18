@@ -1,4 +1,4 @@
-// package: v1bridge
+// package: bridge
 // file: bridge/bridge.proto
 
 import * as jspb from "google-protobuf";

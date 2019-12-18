@@ -1,4 +1,4 @@
-// package: v1transactions
+// package: transactions
 // file: transactions/transactions.proto
 
 import * as jspb from "google-protobuf";

@@ -1,4 +1,4 @@
-// package: v1signatures
+// package: signatures
 // file: signatures/signatures.proto
 
 import * as jspb from "google-protobuf";

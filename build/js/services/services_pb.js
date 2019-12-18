@@ -16,52 +16,52 @@ var signatures_signatures_pb = require('../signatures/signatures_pb.js');
 goog.object.extend(proto, signatures_signatures_pb);
 var transactions_transactions_pb = require('../transactions/transactions_pb.js');
 goog.object.extend(proto, transactions_transactions_pb);
-goog.exportSymbol('proto.v1services.AddBlockRequest', null, global);
-goog.exportSymbol('proto.v1services.Credentials', null, global);
-goog.exportSymbol('proto.v1services.EstablishTokenRequest', null, global);
-goog.exportSymbol('proto.v1services.EstablishTokenResponse', null, global);
-goog.exportSymbol('proto.v1services.ExportChainRequest', null, global);
-goog.exportSymbol('proto.v1services.ExportChainResponse', null, global);
-goog.exportSymbol('proto.v1services.GenerateChainRequest', null, global);
-goog.exportSymbol('proto.v1services.GenerateChainResponse', null, global);
-goog.exportSymbol('proto.v1services.GenerateKeyRequest', null, global);
-goog.exportSymbol('proto.v1services.GenerateKeyResponse', null, global);
-goog.exportSymbol('proto.v1services.GetTipRequest', null, global);
-goog.exportSymbol('proto.v1services.GetTipResponse', null, global);
-goog.exportSymbol('proto.v1services.GetTokenBalanceRequest', null, global);
-goog.exportSymbol('proto.v1services.GetTokenBalanceResponse', null, global);
-goog.exportSymbol('proto.v1services.ImportChainRequest', null, global);
-goog.exportSymbol('proto.v1services.ImportChainResponse', null, global);
-goog.exportSymbol('proto.v1services.ListChainIdsRequest', null, global);
-goog.exportSymbol('proto.v1services.ListChainIdsResponse', null, global);
-goog.exportSymbol('proto.v1services.ListKeysRequest', null, global);
-goog.exportSymbol('proto.v1services.ListKeysResponse', null, global);
-goog.exportSymbol('proto.v1services.MintTokenRequest', null, global);
-goog.exportSymbol('proto.v1services.MintTokenResponse', null, global);
-goog.exportSymbol('proto.v1services.Ping', null, global);
-goog.exportSymbol('proto.v1services.PlayTransactionsRequest', null, global);
-goog.exportSymbol('proto.v1services.PlayTransactionsResponse', null, global);
-goog.exportSymbol('proto.v1services.Pong', null, global);
-goog.exportSymbol('proto.v1services.ReceiveCurrentStateSnapshot', null, global);
-goog.exportSymbol('proto.v1services.ReceiveTokenRequest', null, global);
-goog.exportSymbol('proto.v1services.ReceiveTokenResponse', null, global);
-goog.exportSymbol('proto.v1services.RegisterWalletRequest', null, global);
-goog.exportSymbol('proto.v1services.RegisterWalletResponse', null, global);
-goog.exportSymbol('proto.v1services.RequestCurrentStateSnapshot', null, global);
-goog.exportSymbol('proto.v1services.ResolveAtRequest', null, global);
-goog.exportSymbol('proto.v1services.ResolveRequest', null, global);
-goog.exportSymbol('proto.v1services.ResolveResponse', null, global);
-goog.exportSymbol('proto.v1services.SendTokenRequest', null, global);
-goog.exportSymbol('proto.v1services.SendTokenResponse', null, global);
-goog.exportSymbol('proto.v1services.SerializableChainTree', null, global);
-goog.exportSymbol('proto.v1services.SetDataRequest', null, global);
-goog.exportSymbol('proto.v1services.SetDataResponse', null, global);
-goog.exportSymbol('proto.v1services.SetOwnerRequest', null, global);
-goog.exportSymbol('proto.v1services.SetOwnerResponse', null, global);
-goog.exportSymbol('proto.v1services.StorageAdapterConfig', null, global);
-goog.exportSymbol('proto.v1services.StorageAdapterConfig.AdapterConfigCase', null, global);
-goog.exportSymbol('proto.v1services.StorageAdapterConfigForBadger', null, global);
-goog.exportSymbol('proto.v1services.StorageAdapterConfigForIpld', null, global);
+goog.exportSymbol('proto.services.AddBlockRequest', null, global);
+goog.exportSymbol('proto.services.Credentials', null, global);
+goog.exportSymbol('proto.services.EstablishTokenRequest', null, global);
+goog.exportSymbol('proto.services.EstablishTokenResponse', null, global);
+goog.exportSymbol('proto.services.ExportChainRequest', null, global);
+goog.exportSymbol('proto.services.ExportChainResponse', null, global);
+goog.exportSymbol('proto.services.GenerateChainRequest', null, global);
+goog.exportSymbol('proto.services.GenerateChainResponse', null, global);
+goog.exportSymbol('proto.services.GenerateKeyRequest', null, global);
+goog.exportSymbol('proto.services.GenerateKeyResponse', null, global);
+goog.exportSymbol('proto.services.GetTipRequest', null, global);
+goog.exportSymbol('proto.services.GetTipResponse', null, global);
+goog.exportSymbol('proto.services.GetTokenBalanceRequest', null, global);
+goog.exportSymbol('proto.services.GetTokenBalanceResponse', null, global);
+goog.exportSymbol('proto.services.ImportChainRequest', null, global);
+goog.exportSymbol('proto.services.ImportChainResponse', null, global);
+goog.exportSymbol('proto.services.ListChainIdsRequest', null, global);
+goog.exportSymbol('proto.services.ListChainIdsResponse', null, global);
+goog.exportSymbol('proto.services.ListKeysRequest', null, global);
+goog.exportSymbol('proto.services.ListKeysResponse', null, global);
+goog.exportSymbol('proto.services.MintTokenRequest', null, global);
+goog.exportSymbol('proto.services.MintTokenResponse', null, global);
+goog.exportSymbol('proto.services.Ping', null, global);
+goog.exportSymbol('proto.services.PlayTransactionsRequest', null, global);
+goog.exportSymbol('proto.services.PlayTransactionsResponse', null, global);
+goog.exportSymbol('proto.services.Pong', null, global);
+goog.exportSymbol('proto.services.ReceiveCurrentStateSnapshot', null, global);
+goog.exportSymbol('proto.services.ReceiveTokenRequest', null, global);
+goog.exportSymbol('proto.services.ReceiveTokenResponse', null, global);
+goog.exportSymbol('proto.services.RegisterWalletRequest', null, global);
+goog.exportSymbol('proto.services.RegisterWalletResponse', null, global);
+goog.exportSymbol('proto.services.RequestCurrentStateSnapshot', null, global);
+goog.exportSymbol('proto.services.ResolveAtRequest', null, global);
+goog.exportSymbol('proto.services.ResolveRequest', null, global);
+goog.exportSymbol('proto.services.ResolveResponse', null, global);
+goog.exportSymbol('proto.services.SendTokenRequest', null, global);
+goog.exportSymbol('proto.services.SendTokenResponse', null, global);
+goog.exportSymbol('proto.services.SerializableChainTree', null, global);
+goog.exportSymbol('proto.services.SetDataRequest', null, global);
+goog.exportSymbol('proto.services.SetDataResponse', null, global);
+goog.exportSymbol('proto.services.SetOwnerRequest', null, global);
+goog.exportSymbol('proto.services.SetOwnerResponse', null, global);
+goog.exportSymbol('proto.services.StorageAdapterConfig', null, global);
+goog.exportSymbol('proto.services.StorageAdapterConfig.AdapterConfigCase', null, global);
+goog.exportSymbol('proto.services.StorageAdapterConfigForBadger', null, global);
+goog.exportSymbol('proto.services.StorageAdapterConfigForIpld', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -72,16 +72,16 @@ goog.exportSymbol('proto.v1services.StorageAdapterConfigForIpld', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.AddBlockRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.v1services.AddBlockRequest.repeatedFields_, null);
+proto.services.AddBlockRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.AddBlockRequest.repeatedFields_, null);
 };
-goog.inherits(proto.v1services.AddBlockRequest, jspb.Message);
+goog.inherits(proto.services.AddBlockRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.AddBlockRequest.displayName = 'proto.v1services.AddBlockRequest';
+  proto.services.AddBlockRequest.displayName = 'proto.services.AddBlockRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -93,16 +93,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ReceiveCurrentStateSnapshot = function(opt_data) {
+proto.services.ReceiveCurrentStateSnapshot = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ReceiveCurrentStateSnapshot, jspb.Message);
+goog.inherits(proto.services.ReceiveCurrentStateSnapshot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ReceiveCurrentStateSnapshot.displayName = 'proto.v1services.ReceiveCurrentStateSnapshot';
+  proto.services.ReceiveCurrentStateSnapshot.displayName = 'proto.services.ReceiveCurrentStateSnapshot';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -114,16 +114,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.RequestCurrentStateSnapshot = function(opt_data) {
+proto.services.RequestCurrentStateSnapshot = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.RequestCurrentStateSnapshot, jspb.Message);
+goog.inherits(proto.services.RequestCurrentStateSnapshot, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.RequestCurrentStateSnapshot.displayName = 'proto.v1services.RequestCurrentStateSnapshot';
+  proto.services.RequestCurrentStateSnapshot.displayName = 'proto.services.RequestCurrentStateSnapshot';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -135,16 +135,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.Ping = function(opt_data) {
+proto.services.Ping = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.Ping, jspb.Message);
+goog.inherits(proto.services.Ping, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.Ping.displayName = 'proto.v1services.Ping';
+  proto.services.Ping.displayName = 'proto.services.Ping';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -156,16 +156,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.Pong = function(opt_data) {
+proto.services.Pong = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.Pong, jspb.Message);
+goog.inherits(proto.services.Pong, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.Pong.displayName = 'proto.v1services.Pong';
+  proto.services.Pong.displayName = 'proto.services.Pong';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -177,16 +177,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.Credentials = function(opt_data) {
+proto.services.Credentials = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.Credentials, jspb.Message);
+goog.inherits(proto.services.Credentials, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.Credentials.displayName = 'proto.v1services.Credentials';
+  proto.services.Credentials.displayName = 'proto.services.Credentials';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -198,16 +198,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SerializableChainTree = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.v1services.SerializableChainTree.repeatedFields_, null);
+proto.services.SerializableChainTree = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.SerializableChainTree.repeatedFields_, null);
 };
-goog.inherits(proto.v1services.SerializableChainTree, jspb.Message);
+goog.inherits(proto.services.SerializableChainTree, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SerializableChainTree.displayName = 'proto.v1services.SerializableChainTree';
+  proto.services.SerializableChainTree.displayName = 'proto.services.SerializableChainTree';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -219,16 +219,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.RegisterWalletRequest = function(opt_data) {
+proto.services.RegisterWalletRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.RegisterWalletRequest, jspb.Message);
+goog.inherits(proto.services.RegisterWalletRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.RegisterWalletRequest.displayName = 'proto.v1services.RegisterWalletRequest';
+  proto.services.RegisterWalletRequest.displayName = 'proto.services.RegisterWalletRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -240,16 +240,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.RegisterWalletResponse = function(opt_data) {
+proto.services.RegisterWalletResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.RegisterWalletResponse, jspb.Message);
+goog.inherits(proto.services.RegisterWalletResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.RegisterWalletResponse.displayName = 'proto.v1services.RegisterWalletResponse';
+  proto.services.RegisterWalletResponse.displayName = 'proto.services.RegisterWalletResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -261,16 +261,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.StorageAdapterConfigForBadger = function(opt_data) {
+proto.services.StorageAdapterConfigForBadger = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.StorageAdapterConfigForBadger, jspb.Message);
+goog.inherits(proto.services.StorageAdapterConfigForBadger, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.StorageAdapterConfigForBadger.displayName = 'proto.v1services.StorageAdapterConfigForBadger';
+  proto.services.StorageAdapterConfigForBadger.displayName = 'proto.services.StorageAdapterConfigForBadger';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -282,16 +282,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.StorageAdapterConfigForIpld = function(opt_data) {
+proto.services.StorageAdapterConfigForIpld = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.StorageAdapterConfigForIpld, jspb.Message);
+goog.inherits(proto.services.StorageAdapterConfigForIpld, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.StorageAdapterConfigForIpld.displayName = 'proto.v1services.StorageAdapterConfigForIpld';
+  proto.services.StorageAdapterConfigForIpld.displayName = 'proto.services.StorageAdapterConfigForIpld';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -303,16 +303,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.StorageAdapterConfig = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.v1services.StorageAdapterConfig.oneofGroups_);
+proto.services.StorageAdapterConfig = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.services.StorageAdapterConfig.oneofGroups_);
 };
-goog.inherits(proto.v1services.StorageAdapterConfig, jspb.Message);
+goog.inherits(proto.services.StorageAdapterConfig, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.StorageAdapterConfig.displayName = 'proto.v1services.StorageAdapterConfig';
+  proto.services.StorageAdapterConfig.displayName = 'proto.services.StorageAdapterConfig';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -324,16 +324,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GenerateChainRequest = function(opt_data) {
+proto.services.GenerateChainRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GenerateChainRequest, jspb.Message);
+goog.inherits(proto.services.GenerateChainRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GenerateChainRequest.displayName = 'proto.v1services.GenerateChainRequest';
+  proto.services.GenerateChainRequest.displayName = 'proto.services.GenerateChainRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -345,16 +345,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GenerateChainResponse = function(opt_data) {
+proto.services.GenerateChainResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GenerateChainResponse, jspb.Message);
+goog.inherits(proto.services.GenerateChainResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GenerateChainResponse.displayName = 'proto.v1services.GenerateChainResponse';
+  proto.services.GenerateChainResponse.displayName = 'proto.services.GenerateChainResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -366,16 +366,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ExportChainRequest = function(opt_data) {
+proto.services.ExportChainRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ExportChainRequest, jspb.Message);
+goog.inherits(proto.services.ExportChainRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ExportChainRequest.displayName = 'proto.v1services.ExportChainRequest';
+  proto.services.ExportChainRequest.displayName = 'proto.services.ExportChainRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -387,16 +387,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ExportChainResponse = function(opt_data) {
+proto.services.ExportChainResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ExportChainResponse, jspb.Message);
+goog.inherits(proto.services.ExportChainResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ExportChainResponse.displayName = 'proto.v1services.ExportChainResponse';
+  proto.services.ExportChainResponse.displayName = 'proto.services.ExportChainResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -408,16 +408,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ImportChainRequest = function(opt_data) {
+proto.services.ImportChainRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ImportChainRequest, jspb.Message);
+goog.inherits(proto.services.ImportChainRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ImportChainRequest.displayName = 'proto.v1services.ImportChainRequest';
+  proto.services.ImportChainRequest.displayName = 'proto.services.ImportChainRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -429,16 +429,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ImportChainResponse = function(opt_data) {
+proto.services.ImportChainResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ImportChainResponse, jspb.Message);
+goog.inherits(proto.services.ImportChainResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ImportChainResponse.displayName = 'proto.v1services.ImportChainResponse';
+  proto.services.ImportChainResponse.displayName = 'proto.services.ImportChainResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -450,16 +450,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GenerateKeyRequest = function(opt_data) {
+proto.services.GenerateKeyRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GenerateKeyRequest, jspb.Message);
+goog.inherits(proto.services.GenerateKeyRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GenerateKeyRequest.displayName = 'proto.v1services.GenerateKeyRequest';
+  proto.services.GenerateKeyRequest.displayName = 'proto.services.GenerateKeyRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -471,16 +471,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GenerateKeyResponse = function(opt_data) {
+proto.services.GenerateKeyResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GenerateKeyResponse, jspb.Message);
+goog.inherits(proto.services.GenerateKeyResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GenerateKeyResponse.displayName = 'proto.v1services.GenerateKeyResponse';
+  proto.services.GenerateKeyResponse.displayName = 'proto.services.GenerateKeyResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -492,16 +492,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GetTipRequest = function(opt_data) {
+proto.services.GetTipRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GetTipRequest, jspb.Message);
+goog.inherits(proto.services.GetTipRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GetTipRequest.displayName = 'proto.v1services.GetTipRequest';
+  proto.services.GetTipRequest.displayName = 'proto.services.GetTipRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -513,16 +513,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GetTipResponse = function(opt_data) {
+proto.services.GetTipResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GetTipResponse, jspb.Message);
+goog.inherits(proto.services.GetTipResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GetTipResponse.displayName = 'proto.v1services.GetTipResponse';
+  proto.services.GetTipResponse.displayName = 'proto.services.GetTipResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -534,16 +534,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ListChainIdsRequest = function(opt_data) {
+proto.services.ListChainIdsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ListChainIdsRequest, jspb.Message);
+goog.inherits(proto.services.ListChainIdsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ListChainIdsRequest.displayName = 'proto.v1services.ListChainIdsRequest';
+  proto.services.ListChainIdsRequest.displayName = 'proto.services.ListChainIdsRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -555,16 +555,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ListChainIdsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.v1services.ListChainIdsResponse.repeatedFields_, null);
+proto.services.ListChainIdsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.ListChainIdsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.v1services.ListChainIdsResponse, jspb.Message);
+goog.inherits(proto.services.ListChainIdsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ListChainIdsResponse.displayName = 'proto.v1services.ListChainIdsResponse';
+  proto.services.ListChainIdsResponse.displayName = 'proto.services.ListChainIdsResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -576,16 +576,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ListKeysRequest = function(opt_data) {
+proto.services.ListKeysRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ListKeysRequest, jspb.Message);
+goog.inherits(proto.services.ListKeysRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ListKeysRequest.displayName = 'proto.v1services.ListKeysRequest';
+  proto.services.ListKeysRequest.displayName = 'proto.services.ListKeysRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -597,16 +597,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ListKeysResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.v1services.ListKeysResponse.repeatedFields_, null);
+proto.services.ListKeysResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.ListKeysResponse.repeatedFields_, null);
 };
-goog.inherits(proto.v1services.ListKeysResponse, jspb.Message);
+goog.inherits(proto.services.ListKeysResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ListKeysResponse.displayName = 'proto.v1services.ListKeysResponse';
+  proto.services.ListKeysResponse.displayName = 'proto.services.ListKeysResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -618,16 +618,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SetOwnerRequest = function(opt_data) {
+proto.services.SetOwnerRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SetOwnerRequest, jspb.Message);
+goog.inherits(proto.services.SetOwnerRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SetOwnerRequest.displayName = 'proto.v1services.SetOwnerRequest';
+  proto.services.SetOwnerRequest.displayName = 'proto.services.SetOwnerRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -639,16 +639,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SetOwnerResponse = function(opt_data) {
+proto.services.SetOwnerResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SetOwnerResponse, jspb.Message);
+goog.inherits(proto.services.SetOwnerResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SetOwnerResponse.displayName = 'proto.v1services.SetOwnerResponse';
+  proto.services.SetOwnerResponse.displayName = 'proto.services.SetOwnerResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -660,16 +660,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SetDataRequest = function(opt_data) {
+proto.services.SetDataRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SetDataRequest, jspb.Message);
+goog.inherits(proto.services.SetDataRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SetDataRequest.displayName = 'proto.v1services.SetDataRequest';
+  proto.services.SetDataRequest.displayName = 'proto.services.SetDataRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -681,16 +681,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SetDataResponse = function(opt_data) {
+proto.services.SetDataResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SetDataResponse, jspb.Message);
+goog.inherits(proto.services.SetDataResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SetDataResponse.displayName = 'proto.v1services.SetDataResponse';
+  proto.services.SetDataResponse.displayName = 'proto.services.SetDataResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -702,16 +702,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ResolveRequest = function(opt_data) {
+proto.services.ResolveRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ResolveRequest, jspb.Message);
+goog.inherits(proto.services.ResolveRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ResolveRequest.displayName = 'proto.v1services.ResolveRequest';
+  proto.services.ResolveRequest.displayName = 'proto.services.ResolveRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -723,16 +723,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ResolveResponse = function(opt_data) {
+proto.services.ResolveResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ResolveResponse, jspb.Message);
+goog.inherits(proto.services.ResolveResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ResolveResponse.displayName = 'proto.v1services.ResolveResponse';
+  proto.services.ResolveResponse.displayName = 'proto.services.ResolveResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -744,16 +744,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ResolveAtRequest = function(opt_data) {
+proto.services.ResolveAtRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ResolveAtRequest, jspb.Message);
+goog.inherits(proto.services.ResolveAtRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ResolveAtRequest.displayName = 'proto.v1services.ResolveAtRequest';
+  proto.services.ResolveAtRequest.displayName = 'proto.services.ResolveAtRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -765,16 +765,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.EstablishTokenRequest = function(opt_data) {
+proto.services.EstablishTokenRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.EstablishTokenRequest, jspb.Message);
+goog.inherits(proto.services.EstablishTokenRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.EstablishTokenRequest.displayName = 'proto.v1services.EstablishTokenRequest';
+  proto.services.EstablishTokenRequest.displayName = 'proto.services.EstablishTokenRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -786,16 +786,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.EstablishTokenResponse = function(opt_data) {
+proto.services.EstablishTokenResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.EstablishTokenResponse, jspb.Message);
+goog.inherits(proto.services.EstablishTokenResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.EstablishTokenResponse.displayName = 'proto.v1services.EstablishTokenResponse';
+  proto.services.EstablishTokenResponse.displayName = 'proto.services.EstablishTokenResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -807,16 +807,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.MintTokenRequest = function(opt_data) {
+proto.services.MintTokenRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.MintTokenRequest, jspb.Message);
+goog.inherits(proto.services.MintTokenRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.MintTokenRequest.displayName = 'proto.v1services.MintTokenRequest';
+  proto.services.MintTokenRequest.displayName = 'proto.services.MintTokenRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -828,16 +828,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.MintTokenResponse = function(opt_data) {
+proto.services.MintTokenResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.MintTokenResponse, jspb.Message);
+goog.inherits(proto.services.MintTokenResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.MintTokenResponse.displayName = 'proto.v1services.MintTokenResponse';
+  proto.services.MintTokenResponse.displayName = 'proto.services.MintTokenResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -849,16 +849,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SendTokenRequest = function(opt_data) {
+proto.services.SendTokenRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SendTokenRequest, jspb.Message);
+goog.inherits(proto.services.SendTokenRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SendTokenRequest.displayName = 'proto.v1services.SendTokenRequest';
+  proto.services.SendTokenRequest.displayName = 'proto.services.SendTokenRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -870,16 +870,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.SendTokenResponse = function(opt_data) {
+proto.services.SendTokenResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.SendTokenResponse, jspb.Message);
+goog.inherits(proto.services.SendTokenResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.SendTokenResponse.displayName = 'proto.v1services.SendTokenResponse';
+  proto.services.SendTokenResponse.displayName = 'proto.services.SendTokenResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -891,16 +891,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ReceiveTokenRequest = function(opt_data) {
+proto.services.ReceiveTokenRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ReceiveTokenRequest, jspb.Message);
+goog.inherits(proto.services.ReceiveTokenRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ReceiveTokenRequest.displayName = 'proto.v1services.ReceiveTokenRequest';
+  proto.services.ReceiveTokenRequest.displayName = 'proto.services.ReceiveTokenRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -912,16 +912,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.ReceiveTokenResponse = function(opt_data) {
+proto.services.ReceiveTokenResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.ReceiveTokenResponse, jspb.Message);
+goog.inherits(proto.services.ReceiveTokenResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.ReceiveTokenResponse.displayName = 'proto.v1services.ReceiveTokenResponse';
+  proto.services.ReceiveTokenResponse.displayName = 'proto.services.ReceiveTokenResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -933,16 +933,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GetTokenBalanceRequest = function(opt_data) {
+proto.services.GetTokenBalanceRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GetTokenBalanceRequest, jspb.Message);
+goog.inherits(proto.services.GetTokenBalanceRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GetTokenBalanceRequest.displayName = 'proto.v1services.GetTokenBalanceRequest';
+  proto.services.GetTokenBalanceRequest.displayName = 'proto.services.GetTokenBalanceRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -954,16 +954,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.GetTokenBalanceResponse = function(opt_data) {
+proto.services.GetTokenBalanceResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.GetTokenBalanceResponse, jspb.Message);
+goog.inherits(proto.services.GetTokenBalanceResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.GetTokenBalanceResponse.displayName = 'proto.v1services.GetTokenBalanceResponse';
+  proto.services.GetTokenBalanceResponse.displayName = 'proto.services.GetTokenBalanceResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -975,16 +975,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.PlayTransactionsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.v1services.PlayTransactionsRequest.repeatedFields_, null);
+proto.services.PlayTransactionsRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.services.PlayTransactionsRequest.repeatedFields_, null);
 };
-goog.inherits(proto.v1services.PlayTransactionsRequest, jspb.Message);
+goog.inherits(proto.services.PlayTransactionsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.PlayTransactionsRequest.displayName = 'proto.v1services.PlayTransactionsRequest';
+  proto.services.PlayTransactionsRequest.displayName = 'proto.services.PlayTransactionsRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -996,16 +996,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.v1services.PlayTransactionsResponse = function(opt_data) {
+proto.services.PlayTransactionsResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.v1services.PlayTransactionsResponse, jspb.Message);
+goog.inherits(proto.services.PlayTransactionsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.v1services.PlayTransactionsResponse.displayName = 'proto.v1services.PlayTransactionsResponse';
+  proto.services.PlayTransactionsResponse.displayName = 'proto.services.PlayTransactionsResponse';
 }
 
 /**
@@ -1013,7 +1013,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.v1services.AddBlockRequest.repeatedFields_ = [6];
+proto.services.AddBlockRequest.repeatedFields_ = [6];
 
 
 
@@ -1030,8 +1030,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.AddBlockRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.AddBlockRequest.toObject(opt_includeInstance, this);
+proto.services.AddBlockRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.AddBlockRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -1040,11 +1040,11 @@ proto.v1services.AddBlockRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.AddBlockRequest} msg The msg instance to transform.
+ * @param {!proto.services.AddBlockRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.AddBlockRequest.toObject = function(includeInstance, msg) {
+proto.services.AddBlockRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     objectId: msg.getObjectId_asB64(),
     previousTip: msg.getPreviousTip_asB64(),
@@ -1065,23 +1065,23 @@ proto.v1services.AddBlockRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.AddBlockRequest}
+ * @return {!proto.services.AddBlockRequest}
  */
-proto.v1services.AddBlockRequest.deserializeBinary = function(bytes) {
+proto.services.AddBlockRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.AddBlockRequest;
-  return proto.v1services.AddBlockRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.AddBlockRequest;
+  return proto.services.AddBlockRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.AddBlockRequest} msg The message object to deserialize into.
+ * @param {!proto.services.AddBlockRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.AddBlockRequest}
+ * @return {!proto.services.AddBlockRequest}
  */
-proto.v1services.AddBlockRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.AddBlockRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1125,9 +1125,9 @@ proto.v1services.AddBlockRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.AddBlockRequest.prototype.serializeBinary = function() {
+proto.services.AddBlockRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.AddBlockRequest.serializeBinaryToWriter(this, writer);
+  proto.services.AddBlockRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1135,11 +1135,11 @@ proto.v1services.AddBlockRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.AddBlockRequest} message
+ * @param {!proto.services.AddBlockRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.AddBlockRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.AddBlockRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getObjectId_asU8();
   if (f.length > 0) {
@@ -1190,7 +1190,7 @@ proto.v1services.AddBlockRequest.serializeBinaryToWriter = function(message, wri
  * optional bytes object_id = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.AddBlockRequest.prototype.getObjectId = function() {
+proto.services.AddBlockRequest.prototype.getObjectId = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1200,7 +1200,7 @@ proto.v1services.AddBlockRequest.prototype.getObjectId = function() {
  * This is a type-conversion wrapper around `getObjectId()`
  * @return {string}
  */
-proto.v1services.AddBlockRequest.prototype.getObjectId_asB64 = function() {
+proto.services.AddBlockRequest.prototype.getObjectId_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getObjectId()));
 };
@@ -1213,7 +1213,7 @@ proto.v1services.AddBlockRequest.prototype.getObjectId_asB64 = function() {
  * This is a type-conversion wrapper around `getObjectId()`
  * @return {!Uint8Array}
  */
-proto.v1services.AddBlockRequest.prototype.getObjectId_asU8 = function() {
+proto.services.AddBlockRequest.prototype.getObjectId_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getObjectId()));
 };
@@ -1221,9 +1221,9 @@ proto.v1services.AddBlockRequest.prototype.getObjectId_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setObjectId = function(value) {
+proto.services.AddBlockRequest.prototype.setObjectId = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -1232,7 +1232,7 @@ proto.v1services.AddBlockRequest.prototype.setObjectId = function(value) {
  * optional bytes previous_tip = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.AddBlockRequest.prototype.getPreviousTip = function() {
+proto.services.AddBlockRequest.prototype.getPreviousTip = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -1242,7 +1242,7 @@ proto.v1services.AddBlockRequest.prototype.getPreviousTip = function() {
  * This is a type-conversion wrapper around `getPreviousTip()`
  * @return {string}
  */
-proto.v1services.AddBlockRequest.prototype.getPreviousTip_asB64 = function() {
+proto.services.AddBlockRequest.prototype.getPreviousTip_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getPreviousTip()));
 };
@@ -1255,7 +1255,7 @@ proto.v1services.AddBlockRequest.prototype.getPreviousTip_asB64 = function() {
  * This is a type-conversion wrapper around `getPreviousTip()`
  * @return {!Uint8Array}
  */
-proto.v1services.AddBlockRequest.prototype.getPreviousTip_asU8 = function() {
+proto.services.AddBlockRequest.prototype.getPreviousTip_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getPreviousTip()));
 };
@@ -1263,9 +1263,9 @@ proto.v1services.AddBlockRequest.prototype.getPreviousTip_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setPreviousTip = function(value) {
+proto.services.AddBlockRequest.prototype.setPreviousTip = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -1274,16 +1274,16 @@ proto.v1services.AddBlockRequest.prototype.setPreviousTip = function(value) {
  * optional uint64 height = 3;
  * @return {number}
  */
-proto.v1services.AddBlockRequest.prototype.getHeight = function() {
+proto.services.AddBlockRequest.prototype.getHeight = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setHeight = function(value) {
+proto.services.AddBlockRequest.prototype.setHeight = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -1292,7 +1292,7 @@ proto.v1services.AddBlockRequest.prototype.setHeight = function(value) {
  * optional bytes new_tip = 4;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.AddBlockRequest.prototype.getNewTip = function() {
+proto.services.AddBlockRequest.prototype.getNewTip = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -1302,7 +1302,7 @@ proto.v1services.AddBlockRequest.prototype.getNewTip = function() {
  * This is a type-conversion wrapper around `getNewTip()`
  * @return {string}
  */
-proto.v1services.AddBlockRequest.prototype.getNewTip_asB64 = function() {
+proto.services.AddBlockRequest.prototype.getNewTip_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getNewTip()));
 };
@@ -1315,7 +1315,7 @@ proto.v1services.AddBlockRequest.prototype.getNewTip_asB64 = function() {
  * This is a type-conversion wrapper around `getNewTip()`
  * @return {!Uint8Array}
  */
-proto.v1services.AddBlockRequest.prototype.getNewTip_asU8 = function() {
+proto.services.AddBlockRequest.prototype.getNewTip_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getNewTip()));
 };
@@ -1323,9 +1323,9 @@ proto.v1services.AddBlockRequest.prototype.getNewTip_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setNewTip = function(value) {
+proto.services.AddBlockRequest.prototype.setNewTip = function(value) {
   return jspb.Message.setProto3BytesField(this, 4, value);
 };
 
@@ -1334,7 +1334,7 @@ proto.v1services.AddBlockRequest.prototype.setNewTip = function(value) {
  * optional bytes payload = 5;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.AddBlockRequest.prototype.getPayload = function() {
+proto.services.AddBlockRequest.prototype.getPayload = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -1344,7 +1344,7 @@ proto.v1services.AddBlockRequest.prototype.getPayload = function() {
  * This is a type-conversion wrapper around `getPayload()`
  * @return {string}
  */
-proto.v1services.AddBlockRequest.prototype.getPayload_asB64 = function() {
+proto.services.AddBlockRequest.prototype.getPayload_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getPayload()));
 };
@@ -1357,7 +1357,7 @@ proto.v1services.AddBlockRequest.prototype.getPayload_asB64 = function() {
  * This is a type-conversion wrapper around `getPayload()`
  * @return {!Uint8Array}
  */
-proto.v1services.AddBlockRequest.prototype.getPayload_asU8 = function() {
+proto.services.AddBlockRequest.prototype.getPayload_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getPayload()));
 };
@@ -1365,9 +1365,9 @@ proto.v1services.AddBlockRequest.prototype.getPayload_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setPayload = function(value) {
+proto.services.AddBlockRequest.prototype.setPayload = function(value) {
   return jspb.Message.setProto3BytesField(this, 5, value);
 };
 
@@ -1376,7 +1376,7 @@ proto.v1services.AddBlockRequest.prototype.setPayload = function(value) {
  * repeated bytes state = 6;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.v1services.AddBlockRequest.prototype.getStateList = function() {
+proto.services.AddBlockRequest.prototype.getStateList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 6));
 };
 
@@ -1386,7 +1386,7 @@ proto.v1services.AddBlockRequest.prototype.getStateList = function() {
  * This is a type-conversion wrapper around `getStateList()`
  * @return {!Array<string>}
  */
-proto.v1services.AddBlockRequest.prototype.getStateList_asB64 = function() {
+proto.services.AddBlockRequest.prototype.getStateList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getStateList()));
 };
@@ -1399,7 +1399,7 @@ proto.v1services.AddBlockRequest.prototype.getStateList_asB64 = function() {
  * This is a type-conversion wrapper around `getStateList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.v1services.AddBlockRequest.prototype.getStateList_asU8 = function() {
+proto.services.AddBlockRequest.prototype.getStateList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getStateList()));
 };
@@ -1407,9 +1407,9 @@ proto.v1services.AddBlockRequest.prototype.getStateList_asU8 = function() {
 
 /**
  * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.setStateList = function(value) {
+proto.services.AddBlockRequest.prototype.setStateList = function(value) {
   return jspb.Message.setField(this, 6, value || []);
 };
 
@@ -1417,18 +1417,18 @@ proto.v1services.AddBlockRequest.prototype.setStateList = function(value) {
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.addState = function(value, opt_index) {
+proto.services.AddBlockRequest.prototype.addState = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v1services.AddBlockRequest} returns this
+ * @return {!proto.services.AddBlockRequest} returns this
  */
-proto.v1services.AddBlockRequest.prototype.clearStateList = function() {
+proto.services.AddBlockRequest.prototype.clearStateList = function() {
   return this.setStateList([]);
 };
 
@@ -1449,8 +1449,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ReceiveCurrentStateSnapshot.toObject(opt_includeInstance, this);
+proto.services.ReceiveCurrentStateSnapshot.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ReceiveCurrentStateSnapshot.toObject(opt_includeInstance, this);
 };
 
 
@@ -1459,11 +1459,11 @@ proto.v1services.ReceiveCurrentStateSnapshot.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ReceiveCurrentStateSnapshot} msg The msg instance to transform.
+ * @param {!proto.services.ReceiveCurrentStateSnapshot} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveCurrentStateSnapshot.toObject = function(includeInstance, msg) {
+proto.services.ReceiveCurrentStateSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
     payload: msg.getPayload_asB64()
   };
@@ -1479,23 +1479,23 @@ proto.v1services.ReceiveCurrentStateSnapshot.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ReceiveCurrentStateSnapshot}
+ * @return {!proto.services.ReceiveCurrentStateSnapshot}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.deserializeBinary = function(bytes) {
+proto.services.ReceiveCurrentStateSnapshot.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ReceiveCurrentStateSnapshot;
-  return proto.v1services.ReceiveCurrentStateSnapshot.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ReceiveCurrentStateSnapshot;
+  return proto.services.ReceiveCurrentStateSnapshot.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ReceiveCurrentStateSnapshot} msg The message object to deserialize into.
+ * @param {!proto.services.ReceiveCurrentStateSnapshot} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ReceiveCurrentStateSnapshot}
+ * @return {!proto.services.ReceiveCurrentStateSnapshot}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ReceiveCurrentStateSnapshot.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1519,9 +1519,9 @@ proto.v1services.ReceiveCurrentStateSnapshot.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.serializeBinary = function() {
+proto.services.ReceiveCurrentStateSnapshot.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ReceiveCurrentStateSnapshot.serializeBinaryToWriter(this, writer);
+  proto.services.ReceiveCurrentStateSnapshot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1529,11 +1529,11 @@ proto.v1services.ReceiveCurrentStateSnapshot.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ReceiveCurrentStateSnapshot} message
+ * @param {!proto.services.ReceiveCurrentStateSnapshot} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveCurrentStateSnapshot.serializeBinaryToWriter = function(message, writer) {
+proto.services.ReceiveCurrentStateSnapshot.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPayload_asU8();
   if (f.length > 0) {
@@ -1549,7 +1549,7 @@ proto.v1services.ReceiveCurrentStateSnapshot.serializeBinaryToWriter = function(
  * optional bytes payload = 1;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload = function() {
+proto.services.ReceiveCurrentStateSnapshot.prototype.getPayload = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
@@ -1559,7 +1559,7 @@ proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload = function() {
  * This is a type-conversion wrapper around `getPayload()`
  * @return {string}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload_asB64 = function() {
+proto.services.ReceiveCurrentStateSnapshot.prototype.getPayload_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getPayload()));
 };
@@ -1572,7 +1572,7 @@ proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload_asB64 = functi
  * This is a type-conversion wrapper around `getPayload()`
  * @return {!Uint8Array}
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload_asU8 = function() {
+proto.services.ReceiveCurrentStateSnapshot.prototype.getPayload_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getPayload()));
 };
@@ -1580,9 +1580,9 @@ proto.v1services.ReceiveCurrentStateSnapshot.prototype.getPayload_asU8 = functio
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.ReceiveCurrentStateSnapshot} returns this
+ * @return {!proto.services.ReceiveCurrentStateSnapshot} returns this
  */
-proto.v1services.ReceiveCurrentStateSnapshot.prototype.setPayload = function(value) {
+proto.services.ReceiveCurrentStateSnapshot.prototype.setPayload = function(value) {
   return jspb.Message.setProto3BytesField(this, 1, value);
 };
 
@@ -1603,8 +1603,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.RequestCurrentStateSnapshot.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.RequestCurrentStateSnapshot.toObject(opt_includeInstance, this);
+proto.services.RequestCurrentStateSnapshot.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.RequestCurrentStateSnapshot.toObject(opt_includeInstance, this);
 };
 
 
@@ -1613,11 +1613,11 @@ proto.v1services.RequestCurrentStateSnapshot.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.RequestCurrentStateSnapshot} msg The msg instance to transform.
+ * @param {!proto.services.RequestCurrentStateSnapshot} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RequestCurrentStateSnapshot.toObject = function(includeInstance, msg) {
+proto.services.RequestCurrentStateSnapshot.toObject = function(includeInstance, msg) {
   var f, obj = {
 
   };
@@ -1633,23 +1633,23 @@ proto.v1services.RequestCurrentStateSnapshot.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.RequestCurrentStateSnapshot}
+ * @return {!proto.services.RequestCurrentStateSnapshot}
  */
-proto.v1services.RequestCurrentStateSnapshot.deserializeBinary = function(bytes) {
+proto.services.RequestCurrentStateSnapshot.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.RequestCurrentStateSnapshot;
-  return proto.v1services.RequestCurrentStateSnapshot.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.RequestCurrentStateSnapshot;
+  return proto.services.RequestCurrentStateSnapshot.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.RequestCurrentStateSnapshot} msg The message object to deserialize into.
+ * @param {!proto.services.RequestCurrentStateSnapshot} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.RequestCurrentStateSnapshot}
+ * @return {!proto.services.RequestCurrentStateSnapshot}
  */
-proto.v1services.RequestCurrentStateSnapshot.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.RequestCurrentStateSnapshot.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1669,9 +1669,9 @@ proto.v1services.RequestCurrentStateSnapshot.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.RequestCurrentStateSnapshot.prototype.serializeBinary = function() {
+proto.services.RequestCurrentStateSnapshot.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.RequestCurrentStateSnapshot.serializeBinaryToWriter(this, writer);
+  proto.services.RequestCurrentStateSnapshot.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1679,11 +1679,11 @@ proto.v1services.RequestCurrentStateSnapshot.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.RequestCurrentStateSnapshot} message
+ * @param {!proto.services.RequestCurrentStateSnapshot} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RequestCurrentStateSnapshot.serializeBinaryToWriter = function(message, writer) {
+proto.services.RequestCurrentStateSnapshot.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
 };
 
@@ -1704,8 +1704,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.Ping.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.Ping.toObject(opt_includeInstance, this);
+proto.services.Ping.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.Ping.toObject(opt_includeInstance, this);
 };
 
 
@@ -1714,11 +1714,11 @@ proto.v1services.Ping.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.Ping} msg The msg instance to transform.
+ * @param {!proto.services.Ping} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Ping.toObject = function(includeInstance, msg) {
+proto.services.Ping.toObject = function(includeInstance, msg) {
   var f, obj = {
     msg: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -1734,23 +1734,23 @@ proto.v1services.Ping.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.Ping}
+ * @return {!proto.services.Ping}
  */
-proto.v1services.Ping.deserializeBinary = function(bytes) {
+proto.services.Ping.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.Ping;
-  return proto.v1services.Ping.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.Ping;
+  return proto.services.Ping.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.Ping} msg The message object to deserialize into.
+ * @param {!proto.services.Ping} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.Ping}
+ * @return {!proto.services.Ping}
  */
-proto.v1services.Ping.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.Ping.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1774,9 +1774,9 @@ proto.v1services.Ping.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.Ping.prototype.serializeBinary = function() {
+proto.services.Ping.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.Ping.serializeBinaryToWriter(this, writer);
+  proto.services.Ping.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1784,11 +1784,11 @@ proto.v1services.Ping.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.Ping} message
+ * @param {!proto.services.Ping} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Ping.serializeBinaryToWriter = function(message, writer) {
+proto.services.Ping.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMsg();
   if (f.length > 0) {
@@ -1804,16 +1804,16 @@ proto.v1services.Ping.serializeBinaryToWriter = function(message, writer) {
  * optional string msg = 1;
  * @return {string}
  */
-proto.v1services.Ping.prototype.getMsg = function() {
+proto.services.Ping.prototype.getMsg = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.Ping} returns this
+ * @return {!proto.services.Ping} returns this
  */
-proto.v1services.Ping.prototype.setMsg = function(value) {
+proto.services.Ping.prototype.setMsg = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1834,8 +1834,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.Pong.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.Pong.toObject(opt_includeInstance, this);
+proto.services.Pong.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.Pong.toObject(opt_includeInstance, this);
 };
 
 
@@ -1844,11 +1844,11 @@ proto.v1services.Pong.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.Pong} msg The msg instance to transform.
+ * @param {!proto.services.Pong} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Pong.toObject = function(includeInstance, msg) {
+proto.services.Pong.toObject = function(includeInstance, msg) {
   var f, obj = {
     msg: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -1864,23 +1864,23 @@ proto.v1services.Pong.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.Pong}
+ * @return {!proto.services.Pong}
  */
-proto.v1services.Pong.deserializeBinary = function(bytes) {
+proto.services.Pong.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.Pong;
-  return proto.v1services.Pong.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.Pong;
+  return proto.services.Pong.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.Pong} msg The message object to deserialize into.
+ * @param {!proto.services.Pong} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.Pong}
+ * @return {!proto.services.Pong}
  */
-proto.v1services.Pong.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.Pong.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1904,9 +1904,9 @@ proto.v1services.Pong.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.Pong.prototype.serializeBinary = function() {
+proto.services.Pong.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.Pong.serializeBinaryToWriter(this, writer);
+  proto.services.Pong.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1914,11 +1914,11 @@ proto.v1services.Pong.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.Pong} message
+ * @param {!proto.services.Pong} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Pong.serializeBinaryToWriter = function(message, writer) {
+proto.services.Pong.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getMsg();
   if (f.length > 0) {
@@ -1934,16 +1934,16 @@ proto.v1services.Pong.serializeBinaryToWriter = function(message, writer) {
  * optional string msg = 1;
  * @return {string}
  */
-proto.v1services.Pong.prototype.getMsg = function() {
+proto.services.Pong.prototype.getMsg = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.Pong} returns this
+ * @return {!proto.services.Pong} returns this
  */
-proto.v1services.Pong.prototype.setMsg = function(value) {
+proto.services.Pong.prototype.setMsg = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1964,8 +1964,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.Credentials.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.Credentials.toObject(opt_includeInstance, this);
+proto.services.Credentials.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.Credentials.toObject(opt_includeInstance, this);
 };
 
 
@@ -1974,11 +1974,11 @@ proto.v1services.Credentials.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.Credentials} msg The msg instance to transform.
+ * @param {!proto.services.Credentials} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Credentials.toObject = function(includeInstance, msg) {
+proto.services.Credentials.toObject = function(includeInstance, msg) {
   var f, obj = {
     walletName: jspb.Message.getFieldWithDefault(msg, 1, ""),
     passPhrase: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -1995,23 +1995,23 @@ proto.v1services.Credentials.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.Credentials}
+ * @return {!proto.services.Credentials}
  */
-proto.v1services.Credentials.deserializeBinary = function(bytes) {
+proto.services.Credentials.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.Credentials;
-  return proto.v1services.Credentials.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.Credentials;
+  return proto.services.Credentials.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.Credentials} msg The message object to deserialize into.
+ * @param {!proto.services.Credentials} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.Credentials}
+ * @return {!proto.services.Credentials}
  */
-proto.v1services.Credentials.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.Credentials.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2039,9 +2039,9 @@ proto.v1services.Credentials.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.Credentials.prototype.serializeBinary = function() {
+proto.services.Credentials.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.Credentials.serializeBinaryToWriter(this, writer);
+  proto.services.Credentials.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2049,11 +2049,11 @@ proto.v1services.Credentials.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.Credentials} message
+ * @param {!proto.services.Credentials} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.Credentials.serializeBinaryToWriter = function(message, writer) {
+proto.services.Credentials.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getWalletName();
   if (f.length > 0) {
@@ -2076,16 +2076,16 @@ proto.v1services.Credentials.serializeBinaryToWriter = function(message, writer)
  * optional string wallet_name = 1;
  * @return {string}
  */
-proto.v1services.Credentials.prototype.getWalletName = function() {
+proto.services.Credentials.prototype.getWalletName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.Credentials} returns this
+ * @return {!proto.services.Credentials} returns this
  */
-proto.v1services.Credentials.prototype.setWalletName = function(value) {
+proto.services.Credentials.prototype.setWalletName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2094,16 +2094,16 @@ proto.v1services.Credentials.prototype.setWalletName = function(value) {
  * optional string pass_phrase = 2;
  * @return {string}
  */
-proto.v1services.Credentials.prototype.getPassPhrase = function() {
+proto.services.Credentials.prototype.getPassPhrase = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.Credentials} returns this
+ * @return {!proto.services.Credentials} returns this
  */
-proto.v1services.Credentials.prototype.setPassPhrase = function(value) {
+proto.services.Credentials.prototype.setPassPhrase = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2114,7 +2114,7 @@ proto.v1services.Credentials.prototype.setPassPhrase = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.v1services.SerializableChainTree.repeatedFields_ = [1];
+proto.services.SerializableChainTree.repeatedFields_ = [1];
 
 
 
@@ -2131,8 +2131,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SerializableChainTree.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SerializableChainTree.toObject(opt_includeInstance, this);
+proto.services.SerializableChainTree.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SerializableChainTree.toObject(opt_includeInstance, this);
 };
 
 
@@ -2141,14 +2141,14 @@ proto.v1services.SerializableChainTree.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SerializableChainTree} msg The msg instance to transform.
+ * @param {!proto.services.SerializableChainTree} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SerializableChainTree.toObject = function(includeInstance, msg) {
+proto.services.SerializableChainTree.toObject = function(includeInstance, msg) {
   var f, obj = {
     dagList: msg.getDagList_asB64(),
-    signaturesMap: (f = msg.getSignaturesMap()) ? f.toObject(includeInstance, proto.v1signatures.Signature.toObject) : [],
+    signaturesMap: (f = msg.getSignaturesMap()) ? f.toObject(includeInstance, proto.signatures.Signature.toObject) : [],
     tip: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
@@ -2163,23 +2163,23 @@ proto.v1services.SerializableChainTree.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SerializableChainTree}
+ * @return {!proto.services.SerializableChainTree}
  */
-proto.v1services.SerializableChainTree.deserializeBinary = function(bytes) {
+proto.services.SerializableChainTree.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SerializableChainTree;
-  return proto.v1services.SerializableChainTree.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SerializableChainTree;
+  return proto.services.SerializableChainTree.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SerializableChainTree} msg The message object to deserialize into.
+ * @param {!proto.services.SerializableChainTree} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SerializableChainTree}
+ * @return {!proto.services.SerializableChainTree}
  */
-proto.v1services.SerializableChainTree.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SerializableChainTree.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2193,7 +2193,7 @@ proto.v1services.SerializableChainTree.deserializeBinaryFromReader = function(ms
     case 2:
       var value = msg.getSignaturesMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.v1signatures.Signature.deserializeBinaryFromReader, "", new proto.v1signatures.Signature());
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.signatures.Signature.deserializeBinaryFromReader, "", new proto.signatures.Signature());
          });
       break;
     case 3:
@@ -2213,9 +2213,9 @@ proto.v1services.SerializableChainTree.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SerializableChainTree.prototype.serializeBinary = function() {
+proto.services.SerializableChainTree.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SerializableChainTree.serializeBinaryToWriter(this, writer);
+  proto.services.SerializableChainTree.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2223,11 +2223,11 @@ proto.v1services.SerializableChainTree.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SerializableChainTree} message
+ * @param {!proto.services.SerializableChainTree} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SerializableChainTree.serializeBinaryToWriter = function(message, writer) {
+proto.services.SerializableChainTree.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDagList_asU8();
   if (f.length > 0) {
@@ -2238,7 +2238,7 @@ proto.v1services.SerializableChainTree.serializeBinaryToWriter = function(messag
   }
   f = message.getSignaturesMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.v1signatures.Signature.serializeBinaryToWriter);
+    f.serializeBinary(2, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.signatures.Signature.serializeBinaryToWriter);
   }
   f = message.getTip();
   if (f.length > 0) {
@@ -2254,7 +2254,7 @@ proto.v1services.SerializableChainTree.serializeBinaryToWriter = function(messag
  * repeated bytes dag = 1;
  * @return {!(Array<!Uint8Array>|Array<string>)}
  */
-proto.v1services.SerializableChainTree.prototype.getDagList = function() {
+proto.services.SerializableChainTree.prototype.getDagList = function() {
   return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
@@ -2264,7 +2264,7 @@ proto.v1services.SerializableChainTree.prototype.getDagList = function() {
  * This is a type-conversion wrapper around `getDagList()`
  * @return {!Array<string>}
  */
-proto.v1services.SerializableChainTree.prototype.getDagList_asB64 = function() {
+proto.services.SerializableChainTree.prototype.getDagList_asB64 = function() {
   return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
       this.getDagList()));
 };
@@ -2277,7 +2277,7 @@ proto.v1services.SerializableChainTree.prototype.getDagList_asB64 = function() {
  * This is a type-conversion wrapper around `getDagList()`
  * @return {!Array<!Uint8Array>}
  */
-proto.v1services.SerializableChainTree.prototype.getDagList_asU8 = function() {
+proto.services.SerializableChainTree.prototype.getDagList_asU8 = function() {
   return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
       this.getDagList()));
 };
@@ -2285,9 +2285,9 @@ proto.v1services.SerializableChainTree.prototype.getDagList_asU8 = function() {
 
 /**
  * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.v1services.SerializableChainTree} returns this
+ * @return {!proto.services.SerializableChainTree} returns this
  */
-proto.v1services.SerializableChainTree.prototype.setDagList = function(value) {
+proto.services.SerializableChainTree.prototype.setDagList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -2295,40 +2295,40 @@ proto.v1services.SerializableChainTree.prototype.setDagList = function(value) {
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.v1services.SerializableChainTree} returns this
+ * @return {!proto.services.SerializableChainTree} returns this
  */
-proto.v1services.SerializableChainTree.prototype.addDag = function(value, opt_index) {
+proto.services.SerializableChainTree.prototype.addDag = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v1services.SerializableChainTree} returns this
+ * @return {!proto.services.SerializableChainTree} returns this
  */
-proto.v1services.SerializableChainTree.prototype.clearDagList = function() {
+proto.services.SerializableChainTree.prototype.clearDagList = function() {
   return this.setDagList([]);
 };
 
 
 /**
- * map<string, v1signatures.Signature> signatures = 2;
+ * map<string, signatures.Signature> signatures = 2;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
- * @return {!jspb.Map<string,!proto.v1signatures.Signature>}
+ * @return {!jspb.Map<string,!proto.signatures.Signature>}
  */
-proto.v1services.SerializableChainTree.prototype.getSignaturesMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,!proto.v1signatures.Signature>} */ (
+proto.services.SerializableChainTree.prototype.getSignaturesMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.signatures.Signature>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
-      proto.v1signatures.Signature));
+      proto.signatures.Signature));
 };
 
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.v1services.SerializableChainTree} returns this
+ * @return {!proto.services.SerializableChainTree} returns this
  */
-proto.v1services.SerializableChainTree.prototype.clearSignaturesMap = function() {
+proto.services.SerializableChainTree.prototype.clearSignaturesMap = function() {
   this.getSignaturesMap().clear();
   return this;};
 
@@ -2337,16 +2337,16 @@ proto.v1services.SerializableChainTree.prototype.clearSignaturesMap = function()
  * optional string tip = 3;
  * @return {string}
  */
-proto.v1services.SerializableChainTree.prototype.getTip = function() {
+proto.services.SerializableChainTree.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SerializableChainTree} returns this
+ * @return {!proto.services.SerializableChainTree} returns this
  */
-proto.v1services.SerializableChainTree.prototype.setTip = function(value) {
+proto.services.SerializableChainTree.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -2367,8 +2367,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.RegisterWalletRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.RegisterWalletRequest.toObject(opt_includeInstance, this);
+proto.services.RegisterWalletRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.RegisterWalletRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2377,13 +2377,13 @@ proto.v1services.RegisterWalletRequest.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.RegisterWalletRequest} msg The msg instance to transform.
+ * @param {!proto.services.RegisterWalletRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RegisterWalletRequest.toObject = function(includeInstance, msg) {
+proto.services.RegisterWalletRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f)
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -2397,23 +2397,23 @@ proto.v1services.RegisterWalletRequest.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.RegisterWalletRequest}
+ * @return {!proto.services.RegisterWalletRequest}
  */
-proto.v1services.RegisterWalletRequest.deserializeBinary = function(bytes) {
+proto.services.RegisterWalletRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.RegisterWalletRequest;
-  return proto.v1services.RegisterWalletRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.RegisterWalletRequest;
+  return proto.services.RegisterWalletRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.RegisterWalletRequest} msg The message object to deserialize into.
+ * @param {!proto.services.RegisterWalletRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.RegisterWalletRequest}
+ * @return {!proto.services.RegisterWalletRequest}
  */
-proto.v1services.RegisterWalletRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.RegisterWalletRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2421,8 +2421,8 @@ proto.v1services.RegisterWalletRequest.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     default:
@@ -2438,9 +2438,9 @@ proto.v1services.RegisterWalletRequest.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.RegisterWalletRequest.prototype.serializeBinary = function() {
+proto.services.RegisterWalletRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.RegisterWalletRequest.serializeBinaryToWriter(this, writer);
+  proto.services.RegisterWalletRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2448,18 +2448,18 @@ proto.v1services.RegisterWalletRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.RegisterWalletRequest} message
+ * @param {!proto.services.RegisterWalletRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RegisterWalletRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.RegisterWalletRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
 };
@@ -2467,28 +2467,28 @@ proto.v1services.RegisterWalletRequest.serializeBinaryToWriter = function(messag
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.RegisterWalletRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.RegisterWalletRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.RegisterWalletRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.RegisterWalletRequest} returns this
 */
-proto.v1services.RegisterWalletRequest.prototype.setCreds = function(value) {
+proto.services.RegisterWalletRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.RegisterWalletRequest} returns this
+ * @return {!proto.services.RegisterWalletRequest} returns this
  */
-proto.v1services.RegisterWalletRequest.prototype.clearCreds = function() {
+proto.services.RegisterWalletRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -2497,7 +2497,7 @@ proto.v1services.RegisterWalletRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.RegisterWalletRequest.prototype.hasCreds = function() {
+proto.services.RegisterWalletRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -2518,8 +2518,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.RegisterWalletResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.RegisterWalletResponse.toObject(opt_includeInstance, this);
+proto.services.RegisterWalletResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.RegisterWalletResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -2528,11 +2528,11 @@ proto.v1services.RegisterWalletResponse.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.RegisterWalletResponse} msg The msg instance to transform.
+ * @param {!proto.services.RegisterWalletResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RegisterWalletResponse.toObject = function(includeInstance, msg) {
+proto.services.RegisterWalletResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     walletName: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -2548,23 +2548,23 @@ proto.v1services.RegisterWalletResponse.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.RegisterWalletResponse}
+ * @return {!proto.services.RegisterWalletResponse}
  */
-proto.v1services.RegisterWalletResponse.deserializeBinary = function(bytes) {
+proto.services.RegisterWalletResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.RegisterWalletResponse;
-  return proto.v1services.RegisterWalletResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.RegisterWalletResponse;
+  return proto.services.RegisterWalletResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.RegisterWalletResponse} msg The message object to deserialize into.
+ * @param {!proto.services.RegisterWalletResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.RegisterWalletResponse}
+ * @return {!proto.services.RegisterWalletResponse}
  */
-proto.v1services.RegisterWalletResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.RegisterWalletResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2588,9 +2588,9 @@ proto.v1services.RegisterWalletResponse.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.RegisterWalletResponse.prototype.serializeBinary = function() {
+proto.services.RegisterWalletResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.RegisterWalletResponse.serializeBinaryToWriter(this, writer);
+  proto.services.RegisterWalletResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2598,11 +2598,11 @@ proto.v1services.RegisterWalletResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.RegisterWalletResponse} message
+ * @param {!proto.services.RegisterWalletResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.RegisterWalletResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.RegisterWalletResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getWalletName();
   if (f.length > 0) {
@@ -2618,16 +2618,16 @@ proto.v1services.RegisterWalletResponse.serializeBinaryToWriter = function(messa
  * optional string wallet_name = 1;
  * @return {string}
  */
-proto.v1services.RegisterWalletResponse.prototype.getWalletName = function() {
+proto.services.RegisterWalletResponse.prototype.getWalletName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.RegisterWalletResponse} returns this
+ * @return {!proto.services.RegisterWalletResponse} returns this
  */
-proto.v1services.RegisterWalletResponse.prototype.setWalletName = function(value) {
+proto.services.RegisterWalletResponse.prototype.setWalletName = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2648,8 +2648,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.StorageAdapterConfigForBadger.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.StorageAdapterConfigForBadger.toObject(opt_includeInstance, this);
+proto.services.StorageAdapterConfigForBadger.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.StorageAdapterConfigForBadger.toObject(opt_includeInstance, this);
 };
 
 
@@ -2658,11 +2658,11 @@ proto.v1services.StorageAdapterConfigForBadger.prototype.toObject = function(opt
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.StorageAdapterConfigForBadger} msg The msg instance to transform.
+ * @param {!proto.services.StorageAdapterConfigForBadger} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfigForBadger.toObject = function(includeInstance, msg) {
+proto.services.StorageAdapterConfigForBadger.toObject = function(includeInstance, msg) {
   var f, obj = {
     path: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -2678,23 +2678,23 @@ proto.v1services.StorageAdapterConfigForBadger.toObject = function(includeInstan
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.StorageAdapterConfigForBadger}
+ * @return {!proto.services.StorageAdapterConfigForBadger}
  */
-proto.v1services.StorageAdapterConfigForBadger.deserializeBinary = function(bytes) {
+proto.services.StorageAdapterConfigForBadger.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.StorageAdapterConfigForBadger;
-  return proto.v1services.StorageAdapterConfigForBadger.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.StorageAdapterConfigForBadger;
+  return proto.services.StorageAdapterConfigForBadger.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.StorageAdapterConfigForBadger} msg The message object to deserialize into.
+ * @param {!proto.services.StorageAdapterConfigForBadger} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.StorageAdapterConfigForBadger}
+ * @return {!proto.services.StorageAdapterConfigForBadger}
  */
-proto.v1services.StorageAdapterConfigForBadger.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.StorageAdapterConfigForBadger.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2718,9 +2718,9 @@ proto.v1services.StorageAdapterConfigForBadger.deserializeBinaryFromReader = fun
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.StorageAdapterConfigForBadger.prototype.serializeBinary = function() {
+proto.services.StorageAdapterConfigForBadger.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.StorageAdapterConfigForBadger.serializeBinaryToWriter(this, writer);
+  proto.services.StorageAdapterConfigForBadger.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2728,11 +2728,11 @@ proto.v1services.StorageAdapterConfigForBadger.prototype.serializeBinary = funct
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.StorageAdapterConfigForBadger} message
+ * @param {!proto.services.StorageAdapterConfigForBadger} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfigForBadger.serializeBinaryToWriter = function(message, writer) {
+proto.services.StorageAdapterConfigForBadger.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPath();
   if (f.length > 0) {
@@ -2748,16 +2748,16 @@ proto.v1services.StorageAdapterConfigForBadger.serializeBinaryToWriter = functio
  * optional string path = 1;
  * @return {string}
  */
-proto.v1services.StorageAdapterConfigForBadger.prototype.getPath = function() {
+proto.services.StorageAdapterConfigForBadger.prototype.getPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.StorageAdapterConfigForBadger} returns this
+ * @return {!proto.services.StorageAdapterConfigForBadger} returns this
  */
-proto.v1services.StorageAdapterConfigForBadger.prototype.setPath = function(value) {
+proto.services.StorageAdapterConfigForBadger.prototype.setPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2778,8 +2778,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.StorageAdapterConfigForIpld.toObject(opt_includeInstance, this);
+proto.services.StorageAdapterConfigForIpld.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.StorageAdapterConfigForIpld.toObject(opt_includeInstance, this);
 };
 
 
@@ -2788,11 +2788,11 @@ proto.v1services.StorageAdapterConfigForIpld.prototype.toObject = function(opt_i
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.StorageAdapterConfigForIpld} msg The msg instance to transform.
+ * @param {!proto.services.StorageAdapterConfigForIpld} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfigForIpld.toObject = function(includeInstance, msg) {
+proto.services.StorageAdapterConfigForIpld.toObject = function(includeInstance, msg) {
   var f, obj = {
     path: jspb.Message.getFieldWithDefault(msg, 1, ""),
     address: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -2810,23 +2810,23 @@ proto.v1services.StorageAdapterConfigForIpld.toObject = function(includeInstance
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.StorageAdapterConfigForIpld}
+ * @return {!proto.services.StorageAdapterConfigForIpld}
  */
-proto.v1services.StorageAdapterConfigForIpld.deserializeBinary = function(bytes) {
+proto.services.StorageAdapterConfigForIpld.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.StorageAdapterConfigForIpld;
-  return proto.v1services.StorageAdapterConfigForIpld.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.StorageAdapterConfigForIpld;
+  return proto.services.StorageAdapterConfigForIpld.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.StorageAdapterConfigForIpld} msg The message object to deserialize into.
+ * @param {!proto.services.StorageAdapterConfigForIpld} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.StorageAdapterConfigForIpld}
+ * @return {!proto.services.StorageAdapterConfigForIpld}
  */
-proto.v1services.StorageAdapterConfigForIpld.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.StorageAdapterConfigForIpld.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2858,9 +2858,9 @@ proto.v1services.StorageAdapterConfigForIpld.deserializeBinaryFromReader = funct
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.serializeBinary = function() {
+proto.services.StorageAdapterConfigForIpld.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.StorageAdapterConfigForIpld.serializeBinaryToWriter(this, writer);
+  proto.services.StorageAdapterConfigForIpld.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2868,11 +2868,11 @@ proto.v1services.StorageAdapterConfigForIpld.prototype.serializeBinary = functio
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.StorageAdapterConfigForIpld} message
+ * @param {!proto.services.StorageAdapterConfigForIpld} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfigForIpld.serializeBinaryToWriter = function(message, writer) {
+proto.services.StorageAdapterConfigForIpld.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPath();
   if (f.length > 0) {
@@ -2902,16 +2902,16 @@ proto.v1services.StorageAdapterConfigForIpld.serializeBinaryToWriter = function(
  * optional string path = 1;
  * @return {string}
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.getPath = function() {
+proto.services.StorageAdapterConfigForIpld.prototype.getPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.StorageAdapterConfigForIpld} returns this
+ * @return {!proto.services.StorageAdapterConfigForIpld} returns this
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.setPath = function(value) {
+proto.services.StorageAdapterConfigForIpld.prototype.setPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2920,16 +2920,16 @@ proto.v1services.StorageAdapterConfigForIpld.prototype.setPath = function(value)
  * optional string address = 2;
  * @return {string}
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.getAddress = function() {
+proto.services.StorageAdapterConfigForIpld.prototype.getAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.StorageAdapterConfigForIpld} returns this
+ * @return {!proto.services.StorageAdapterConfigForIpld} returns this
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.setAddress = function(value) {
+proto.services.StorageAdapterConfigForIpld.prototype.setAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2938,16 +2938,16 @@ proto.v1services.StorageAdapterConfigForIpld.prototype.setAddress = function(val
  * optional bool offline = 3;
  * @return {boolean}
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.getOffline = function() {
+proto.services.StorageAdapterConfigForIpld.prototype.getOffline = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 3, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.v1services.StorageAdapterConfigForIpld} returns this
+ * @return {!proto.services.StorageAdapterConfigForIpld} returns this
  */
-proto.v1services.StorageAdapterConfigForIpld.prototype.setOffline = function(value) {
+proto.services.StorageAdapterConfigForIpld.prototype.setOffline = function(value) {
   return jspb.Message.setProto3BooleanField(this, 3, value);
 };
 
@@ -2961,22 +2961,22 @@ proto.v1services.StorageAdapterConfigForIpld.prototype.setOffline = function(val
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.v1services.StorageAdapterConfig.oneofGroups_ = [[1,2]];
+proto.services.StorageAdapterConfig.oneofGroups_ = [[1,2]];
 
 /**
  * @enum {number}
  */
-proto.v1services.StorageAdapterConfig.AdapterConfigCase = {
+proto.services.StorageAdapterConfig.AdapterConfigCase = {
   ADAPTER_CONFIG_NOT_SET: 0,
   BADGER: 1,
   IPLD: 2
 };
 
 /**
- * @return {proto.v1services.StorageAdapterConfig.AdapterConfigCase}
+ * @return {proto.services.StorageAdapterConfig.AdapterConfigCase}
  */
-proto.v1services.StorageAdapterConfig.prototype.getAdapterConfigCase = function() {
-  return /** @type {proto.v1services.StorageAdapterConfig.AdapterConfigCase} */(jspb.Message.computeOneofCase(this, proto.v1services.StorageAdapterConfig.oneofGroups_[0]));
+proto.services.StorageAdapterConfig.prototype.getAdapterConfigCase = function() {
+  return /** @type {proto.services.StorageAdapterConfig.AdapterConfigCase} */(jspb.Message.computeOneofCase(this, proto.services.StorageAdapterConfig.oneofGroups_[0]));
 };
 
 
@@ -2994,8 +2994,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.StorageAdapterConfig.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.StorageAdapterConfig.toObject(opt_includeInstance, this);
+proto.services.StorageAdapterConfig.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.StorageAdapterConfig.toObject(opt_includeInstance, this);
 };
 
 
@@ -3004,14 +3004,14 @@ proto.v1services.StorageAdapterConfig.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.StorageAdapterConfig} msg The msg instance to transform.
+ * @param {!proto.services.StorageAdapterConfig} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfig.toObject = function(includeInstance, msg) {
+proto.services.StorageAdapterConfig.toObject = function(includeInstance, msg) {
   var f, obj = {
-    badger: (f = msg.getBadger()) && proto.v1services.StorageAdapterConfigForBadger.toObject(includeInstance, f),
-    ipld: (f = msg.getIpld()) && proto.v1services.StorageAdapterConfigForIpld.toObject(includeInstance, f)
+    badger: (f = msg.getBadger()) && proto.services.StorageAdapterConfigForBadger.toObject(includeInstance, f),
+    ipld: (f = msg.getIpld()) && proto.services.StorageAdapterConfigForIpld.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3025,23 +3025,23 @@ proto.v1services.StorageAdapterConfig.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.StorageAdapterConfig}
+ * @return {!proto.services.StorageAdapterConfig}
  */
-proto.v1services.StorageAdapterConfig.deserializeBinary = function(bytes) {
+proto.services.StorageAdapterConfig.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.StorageAdapterConfig;
-  return proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.StorageAdapterConfig;
+  return proto.services.StorageAdapterConfig.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.StorageAdapterConfig} msg The message object to deserialize into.
+ * @param {!proto.services.StorageAdapterConfig} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.StorageAdapterConfig}
+ * @return {!proto.services.StorageAdapterConfig}
  */
-proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.StorageAdapterConfig.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3049,13 +3049,13 @@ proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader = function(msg
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.StorageAdapterConfigForBadger;
-      reader.readMessage(value,proto.v1services.StorageAdapterConfigForBadger.deserializeBinaryFromReader);
+      var value = new proto.services.StorageAdapterConfigForBadger;
+      reader.readMessage(value,proto.services.StorageAdapterConfigForBadger.deserializeBinaryFromReader);
       msg.setBadger(value);
       break;
     case 2:
-      var value = new proto.v1services.StorageAdapterConfigForIpld;
-      reader.readMessage(value,proto.v1services.StorageAdapterConfigForIpld.deserializeBinaryFromReader);
+      var value = new proto.services.StorageAdapterConfigForIpld;
+      reader.readMessage(value,proto.services.StorageAdapterConfigForIpld.deserializeBinaryFromReader);
       msg.setIpld(value);
       break;
     default:
@@ -3071,9 +3071,9 @@ proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.StorageAdapterConfig.prototype.serializeBinary = function() {
+proto.services.StorageAdapterConfig.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.StorageAdapterConfig.serializeBinaryToWriter(this, writer);
+  proto.services.StorageAdapterConfig.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3081,18 +3081,18 @@ proto.v1services.StorageAdapterConfig.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.StorageAdapterConfig} message
+ * @param {!proto.services.StorageAdapterConfig} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.StorageAdapterConfig.serializeBinaryToWriter = function(message, writer) {
+proto.services.StorageAdapterConfig.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getBadger();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.StorageAdapterConfigForBadger.serializeBinaryToWriter
+      proto.services.StorageAdapterConfigForBadger.serializeBinaryToWriter
     );
   }
   f = message.getIpld();
@@ -3100,7 +3100,7 @@ proto.v1services.StorageAdapterConfig.serializeBinaryToWriter = function(message
     writer.writeMessage(
       2,
       f,
-      proto.v1services.StorageAdapterConfigForIpld.serializeBinaryToWriter
+      proto.services.StorageAdapterConfigForIpld.serializeBinaryToWriter
     );
   }
 };
@@ -3108,28 +3108,28 @@ proto.v1services.StorageAdapterConfig.serializeBinaryToWriter = function(message
 
 /**
  * optional StorageAdapterConfigForBadger badger = 1;
- * @return {?proto.v1services.StorageAdapterConfigForBadger}
+ * @return {?proto.services.StorageAdapterConfigForBadger}
  */
-proto.v1services.StorageAdapterConfig.prototype.getBadger = function() {
-  return /** @type{?proto.v1services.StorageAdapterConfigForBadger} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.StorageAdapterConfigForBadger, 1));
+proto.services.StorageAdapterConfig.prototype.getBadger = function() {
+  return /** @type{?proto.services.StorageAdapterConfigForBadger} */ (
+    jspb.Message.getWrapperField(this, proto.services.StorageAdapterConfigForBadger, 1));
 };
 
 
 /**
- * @param {?proto.v1services.StorageAdapterConfigForBadger|undefined} value
- * @return {!proto.v1services.StorageAdapterConfig} returns this
+ * @param {?proto.services.StorageAdapterConfigForBadger|undefined} value
+ * @return {!proto.services.StorageAdapterConfig} returns this
 */
-proto.v1services.StorageAdapterConfig.prototype.setBadger = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 1, proto.v1services.StorageAdapterConfig.oneofGroups_[0], value);
+proto.services.StorageAdapterConfig.prototype.setBadger = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 1, proto.services.StorageAdapterConfig.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.StorageAdapterConfig} returns this
+ * @return {!proto.services.StorageAdapterConfig} returns this
  */
-proto.v1services.StorageAdapterConfig.prototype.clearBadger = function() {
+proto.services.StorageAdapterConfig.prototype.clearBadger = function() {
   return this.setBadger(undefined);
 };
 
@@ -3138,35 +3138,35 @@ proto.v1services.StorageAdapterConfig.prototype.clearBadger = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.StorageAdapterConfig.prototype.hasBadger = function() {
+proto.services.StorageAdapterConfig.prototype.hasBadger = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
 
 /**
  * optional StorageAdapterConfigForIpld ipld = 2;
- * @return {?proto.v1services.StorageAdapterConfigForIpld}
+ * @return {?proto.services.StorageAdapterConfigForIpld}
  */
-proto.v1services.StorageAdapterConfig.prototype.getIpld = function() {
-  return /** @type{?proto.v1services.StorageAdapterConfigForIpld} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.StorageAdapterConfigForIpld, 2));
+proto.services.StorageAdapterConfig.prototype.getIpld = function() {
+  return /** @type{?proto.services.StorageAdapterConfigForIpld} */ (
+    jspb.Message.getWrapperField(this, proto.services.StorageAdapterConfigForIpld, 2));
 };
 
 
 /**
- * @param {?proto.v1services.StorageAdapterConfigForIpld|undefined} value
- * @return {!proto.v1services.StorageAdapterConfig} returns this
+ * @param {?proto.services.StorageAdapterConfigForIpld|undefined} value
+ * @return {!proto.services.StorageAdapterConfig} returns this
 */
-proto.v1services.StorageAdapterConfig.prototype.setIpld = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 2, proto.v1services.StorageAdapterConfig.oneofGroups_[0], value);
+proto.services.StorageAdapterConfig.prototype.setIpld = function(value) {
+  return jspb.Message.setOneofWrapperField(this, 2, proto.services.StorageAdapterConfig.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.StorageAdapterConfig} returns this
+ * @return {!proto.services.StorageAdapterConfig} returns this
  */
-proto.v1services.StorageAdapterConfig.prototype.clearIpld = function() {
+proto.services.StorageAdapterConfig.prototype.clearIpld = function() {
   return this.setIpld(undefined);
 };
 
@@ -3175,7 +3175,7 @@ proto.v1services.StorageAdapterConfig.prototype.clearIpld = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.StorageAdapterConfig.prototype.hasIpld = function() {
+proto.services.StorageAdapterConfig.prototype.hasIpld = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -3196,8 +3196,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GenerateChainRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GenerateChainRequest.toObject(opt_includeInstance, this);
+proto.services.GenerateChainRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GenerateChainRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3206,15 +3206,15 @@ proto.v1services.GenerateChainRequest.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GenerateChainRequest} msg The msg instance to transform.
+ * @param {!proto.services.GenerateChainRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateChainRequest.toObject = function(includeInstance, msg) {
+proto.services.GenerateChainRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    storageAdapter: (f = msg.getStorageAdapter()) && proto.v1services.StorageAdapterConfig.toObject(includeInstance, f)
+    storageAdapter: (f = msg.getStorageAdapter()) && proto.services.StorageAdapterConfig.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3228,23 +3228,23 @@ proto.v1services.GenerateChainRequest.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GenerateChainRequest}
+ * @return {!proto.services.GenerateChainRequest}
  */
-proto.v1services.GenerateChainRequest.deserializeBinary = function(bytes) {
+proto.services.GenerateChainRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GenerateChainRequest;
-  return proto.v1services.GenerateChainRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GenerateChainRequest;
+  return proto.services.GenerateChainRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GenerateChainRequest} msg The message object to deserialize into.
+ * @param {!proto.services.GenerateChainRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GenerateChainRequest}
+ * @return {!proto.services.GenerateChainRequest}
  */
-proto.v1services.GenerateChainRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GenerateChainRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3252,8 +3252,8 @@ proto.v1services.GenerateChainRequest.deserializeBinaryFromReader = function(msg
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -3261,8 +3261,8 @@ proto.v1services.GenerateChainRequest.deserializeBinaryFromReader = function(msg
       msg.setKeyAddr(value);
       break;
     case 3:
-      var value = new proto.v1services.StorageAdapterConfig;
-      reader.readMessage(value,proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader);
+      var value = new proto.services.StorageAdapterConfig;
+      reader.readMessage(value,proto.services.StorageAdapterConfig.deserializeBinaryFromReader);
       msg.setStorageAdapter(value);
       break;
     default:
@@ -3278,9 +3278,9 @@ proto.v1services.GenerateChainRequest.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GenerateChainRequest.prototype.serializeBinary = function() {
+proto.services.GenerateChainRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GenerateChainRequest.serializeBinaryToWriter(this, writer);
+  proto.services.GenerateChainRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3288,18 +3288,18 @@ proto.v1services.GenerateChainRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GenerateChainRequest} message
+ * @param {!proto.services.GenerateChainRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateChainRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.GenerateChainRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getKeyAddr();
@@ -3314,7 +3314,7 @@ proto.v1services.GenerateChainRequest.serializeBinaryToWriter = function(message
     writer.writeMessage(
       3,
       f,
-      proto.v1services.StorageAdapterConfig.serializeBinaryToWriter
+      proto.services.StorageAdapterConfig.serializeBinaryToWriter
     );
   }
 };
@@ -3322,28 +3322,28 @@ proto.v1services.GenerateChainRequest.serializeBinaryToWriter = function(message
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.GenerateChainRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.GenerateChainRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.GenerateChainRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.GenerateChainRequest} returns this
 */
-proto.v1services.GenerateChainRequest.prototype.setCreds = function(value) {
+proto.services.GenerateChainRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.GenerateChainRequest} returns this
+ * @return {!proto.services.GenerateChainRequest} returns this
  */
-proto.v1services.GenerateChainRequest.prototype.clearCreds = function() {
+proto.services.GenerateChainRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -3352,7 +3352,7 @@ proto.v1services.GenerateChainRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.GenerateChainRequest.prototype.hasCreds = function() {
+proto.services.GenerateChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3361,44 +3361,44 @@ proto.v1services.GenerateChainRequest.prototype.hasCreds = function() {
  * optional string key_addr = 2;
  * @return {string}
  */
-proto.v1services.GenerateChainRequest.prototype.getKeyAddr = function() {
+proto.services.GenerateChainRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GenerateChainRequest} returns this
+ * @return {!proto.services.GenerateChainRequest} returns this
  */
-proto.v1services.GenerateChainRequest.prototype.setKeyAddr = function(value) {
+proto.services.GenerateChainRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
  * optional StorageAdapterConfig storage_adapter = 3;
- * @return {?proto.v1services.StorageAdapterConfig}
+ * @return {?proto.services.StorageAdapterConfig}
  */
-proto.v1services.GenerateChainRequest.prototype.getStorageAdapter = function() {
-  return /** @type{?proto.v1services.StorageAdapterConfig} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.StorageAdapterConfig, 3));
+proto.services.GenerateChainRequest.prototype.getStorageAdapter = function() {
+  return /** @type{?proto.services.StorageAdapterConfig} */ (
+    jspb.Message.getWrapperField(this, proto.services.StorageAdapterConfig, 3));
 };
 
 
 /**
- * @param {?proto.v1services.StorageAdapterConfig|undefined} value
- * @return {!proto.v1services.GenerateChainRequest} returns this
+ * @param {?proto.services.StorageAdapterConfig|undefined} value
+ * @return {!proto.services.GenerateChainRequest} returns this
 */
-proto.v1services.GenerateChainRequest.prototype.setStorageAdapter = function(value) {
+proto.services.GenerateChainRequest.prototype.setStorageAdapter = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.GenerateChainRequest} returns this
+ * @return {!proto.services.GenerateChainRequest} returns this
  */
-proto.v1services.GenerateChainRequest.prototype.clearStorageAdapter = function() {
+proto.services.GenerateChainRequest.prototype.clearStorageAdapter = function() {
   return this.setStorageAdapter(undefined);
 };
 
@@ -3407,7 +3407,7 @@ proto.v1services.GenerateChainRequest.prototype.clearStorageAdapter = function()
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.GenerateChainRequest.prototype.hasStorageAdapter = function() {
+proto.services.GenerateChainRequest.prototype.hasStorageAdapter = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -3428,8 +3428,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GenerateChainResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GenerateChainResponse.toObject(opt_includeInstance, this);
+proto.services.GenerateChainResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GenerateChainResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3438,11 +3438,11 @@ proto.v1services.GenerateChainResponse.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GenerateChainResponse} msg The msg instance to transform.
+ * @param {!proto.services.GenerateChainResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateChainResponse.toObject = function(includeInstance, msg) {
+proto.services.GenerateChainResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     chainId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -3458,23 +3458,23 @@ proto.v1services.GenerateChainResponse.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GenerateChainResponse}
+ * @return {!proto.services.GenerateChainResponse}
  */
-proto.v1services.GenerateChainResponse.deserializeBinary = function(bytes) {
+proto.services.GenerateChainResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GenerateChainResponse;
-  return proto.v1services.GenerateChainResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GenerateChainResponse;
+  return proto.services.GenerateChainResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GenerateChainResponse} msg The message object to deserialize into.
+ * @param {!proto.services.GenerateChainResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GenerateChainResponse}
+ * @return {!proto.services.GenerateChainResponse}
  */
-proto.v1services.GenerateChainResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GenerateChainResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3498,9 +3498,9 @@ proto.v1services.GenerateChainResponse.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GenerateChainResponse.prototype.serializeBinary = function() {
+proto.services.GenerateChainResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GenerateChainResponse.serializeBinaryToWriter(this, writer);
+  proto.services.GenerateChainResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3508,11 +3508,11 @@ proto.v1services.GenerateChainResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GenerateChainResponse} message
+ * @param {!proto.services.GenerateChainResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateChainResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.GenerateChainResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getChainId();
   if (f.length > 0) {
@@ -3528,16 +3528,16 @@ proto.v1services.GenerateChainResponse.serializeBinaryToWriter = function(messag
  * optional string chain_id = 1;
  * @return {string}
  */
-proto.v1services.GenerateChainResponse.prototype.getChainId = function() {
+proto.services.GenerateChainResponse.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GenerateChainResponse} returns this
+ * @return {!proto.services.GenerateChainResponse} returns this
  */
-proto.v1services.GenerateChainResponse.prototype.setChainId = function(value) {
+proto.services.GenerateChainResponse.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3558,8 +3558,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ExportChainRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ExportChainRequest.toObject(opt_includeInstance, this);
+proto.services.ExportChainRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ExportChainRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3568,13 +3568,13 @@ proto.v1services.ExportChainRequest.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ExportChainRequest} msg The msg instance to transform.
+ * @param {!proto.services.ExportChainRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ExportChainRequest.toObject = function(includeInstance, msg) {
+proto.services.ExportChainRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -3589,23 +3589,23 @@ proto.v1services.ExportChainRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ExportChainRequest}
+ * @return {!proto.services.ExportChainRequest}
  */
-proto.v1services.ExportChainRequest.deserializeBinary = function(bytes) {
+proto.services.ExportChainRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ExportChainRequest;
-  return proto.v1services.ExportChainRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ExportChainRequest;
+  return proto.services.ExportChainRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ExportChainRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ExportChainRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ExportChainRequest}
+ * @return {!proto.services.ExportChainRequest}
  */
-proto.v1services.ExportChainRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ExportChainRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3613,8 +3613,8 @@ proto.v1services.ExportChainRequest.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -3634,9 +3634,9 @@ proto.v1services.ExportChainRequest.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ExportChainRequest.prototype.serializeBinary = function() {
+proto.services.ExportChainRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ExportChainRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ExportChainRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3644,18 +3644,18 @@ proto.v1services.ExportChainRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ExportChainRequest} message
+ * @param {!proto.services.ExportChainRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ExportChainRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ExportChainRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -3670,28 +3670,28 @@ proto.v1services.ExportChainRequest.serializeBinaryToWriter = function(message, 
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ExportChainRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ExportChainRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ExportChainRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ExportChainRequest} returns this
 */
-proto.v1services.ExportChainRequest.prototype.setCreds = function(value) {
+proto.services.ExportChainRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ExportChainRequest} returns this
+ * @return {!proto.services.ExportChainRequest} returns this
  */
-proto.v1services.ExportChainRequest.prototype.clearCreds = function() {
+proto.services.ExportChainRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -3700,7 +3700,7 @@ proto.v1services.ExportChainRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ExportChainRequest.prototype.hasCreds = function() {
+proto.services.ExportChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -3709,16 +3709,16 @@ proto.v1services.ExportChainRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.ExportChainRequest.prototype.getChainId = function() {
+proto.services.ExportChainRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ExportChainRequest} returns this
+ * @return {!proto.services.ExportChainRequest} returns this
  */
-proto.v1services.ExportChainRequest.prototype.setChainId = function(value) {
+proto.services.ExportChainRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -3739,8 +3739,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ExportChainResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ExportChainResponse.toObject(opt_includeInstance, this);
+proto.services.ExportChainResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ExportChainResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -3749,11 +3749,11 @@ proto.v1services.ExportChainResponse.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ExportChainResponse} msg The msg instance to transform.
+ * @param {!proto.services.ExportChainResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ExportChainResponse.toObject = function(includeInstance, msg) {
+proto.services.ExportChainResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     chainTree: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -3769,23 +3769,23 @@ proto.v1services.ExportChainResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ExportChainResponse}
+ * @return {!proto.services.ExportChainResponse}
  */
-proto.v1services.ExportChainResponse.deserializeBinary = function(bytes) {
+proto.services.ExportChainResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ExportChainResponse;
-  return proto.v1services.ExportChainResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ExportChainResponse;
+  return proto.services.ExportChainResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ExportChainResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ExportChainResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ExportChainResponse}
+ * @return {!proto.services.ExportChainResponse}
  */
-proto.v1services.ExportChainResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ExportChainResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3809,9 +3809,9 @@ proto.v1services.ExportChainResponse.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ExportChainResponse.prototype.serializeBinary = function() {
+proto.services.ExportChainResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ExportChainResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ExportChainResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3819,11 +3819,11 @@ proto.v1services.ExportChainResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ExportChainResponse} message
+ * @param {!proto.services.ExportChainResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ExportChainResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ExportChainResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getChainTree();
   if (f.length > 0) {
@@ -3839,16 +3839,16 @@ proto.v1services.ExportChainResponse.serializeBinaryToWriter = function(message,
  * optional string chain_tree = 1;
  * @return {string}
  */
-proto.v1services.ExportChainResponse.prototype.getChainTree = function() {
+proto.services.ExportChainResponse.prototype.getChainTree = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ExportChainResponse} returns this
+ * @return {!proto.services.ExportChainResponse} returns this
  */
-proto.v1services.ExportChainResponse.prototype.setChainTree = function(value) {
+proto.services.ExportChainResponse.prototype.setChainTree = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3869,8 +3869,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ImportChainRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ImportChainRequest.toObject(opt_includeInstance, this);
+proto.services.ImportChainRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ImportChainRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -3879,15 +3879,15 @@ proto.v1services.ImportChainRequest.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ImportChainRequest} msg The msg instance to transform.
+ * @param {!proto.services.ImportChainRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ImportChainRequest.toObject = function(includeInstance, msg) {
+proto.services.ImportChainRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainTree: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    storageAdapter: (f = msg.getStorageAdapter()) && proto.v1services.StorageAdapterConfig.toObject(includeInstance, f),
+    storageAdapter: (f = msg.getStorageAdapter()) && proto.services.StorageAdapterConfig.toObject(includeInstance, f),
     skipValidation: jspb.Message.getBooleanFieldWithDefault(msg, 5, false)
   };
 
@@ -3902,23 +3902,23 @@ proto.v1services.ImportChainRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ImportChainRequest}
+ * @return {!proto.services.ImportChainRequest}
  */
-proto.v1services.ImportChainRequest.deserializeBinary = function(bytes) {
+proto.services.ImportChainRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ImportChainRequest;
-  return proto.v1services.ImportChainRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ImportChainRequest;
+  return proto.services.ImportChainRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ImportChainRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ImportChainRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ImportChainRequest}
+ * @return {!proto.services.ImportChainRequest}
  */
-proto.v1services.ImportChainRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ImportChainRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3926,8 +3926,8 @@ proto.v1services.ImportChainRequest.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 3:
@@ -3935,8 +3935,8 @@ proto.v1services.ImportChainRequest.deserializeBinaryFromReader = function(msg, 
       msg.setChainTree(value);
       break;
     case 4:
-      var value = new proto.v1services.StorageAdapterConfig;
-      reader.readMessage(value,proto.v1services.StorageAdapterConfig.deserializeBinaryFromReader);
+      var value = new proto.services.StorageAdapterConfig;
+      reader.readMessage(value,proto.services.StorageAdapterConfig.deserializeBinaryFromReader);
       msg.setStorageAdapter(value);
       break;
     case 5:
@@ -3956,9 +3956,9 @@ proto.v1services.ImportChainRequest.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ImportChainRequest.prototype.serializeBinary = function() {
+proto.services.ImportChainRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ImportChainRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ImportChainRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3966,18 +3966,18 @@ proto.v1services.ImportChainRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ImportChainRequest} message
+ * @param {!proto.services.ImportChainRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ImportChainRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ImportChainRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainTree();
@@ -3992,7 +3992,7 @@ proto.v1services.ImportChainRequest.serializeBinaryToWriter = function(message, 
     writer.writeMessage(
       4,
       f,
-      proto.v1services.StorageAdapterConfig.serializeBinaryToWriter
+      proto.services.StorageAdapterConfig.serializeBinaryToWriter
     );
   }
   f = message.getSkipValidation();
@@ -4007,28 +4007,28 @@ proto.v1services.ImportChainRequest.serializeBinaryToWriter = function(message, 
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ImportChainRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ImportChainRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ImportChainRequest} returns this
 */
-proto.v1services.ImportChainRequest.prototype.setCreds = function(value) {
+proto.services.ImportChainRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @return {!proto.services.ImportChainRequest} returns this
  */
-proto.v1services.ImportChainRequest.prototype.clearCreds = function() {
+proto.services.ImportChainRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -4037,7 +4037,7 @@ proto.v1services.ImportChainRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ImportChainRequest.prototype.hasCreds = function() {
+proto.services.ImportChainRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4046,44 +4046,44 @@ proto.v1services.ImportChainRequest.prototype.hasCreds = function() {
  * optional string chain_tree = 3;
  * @return {string}
  */
-proto.v1services.ImportChainRequest.prototype.getChainTree = function() {
+proto.services.ImportChainRequest.prototype.getChainTree = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @return {!proto.services.ImportChainRequest} returns this
  */
-proto.v1services.ImportChainRequest.prototype.setChainTree = function(value) {
+proto.services.ImportChainRequest.prototype.setChainTree = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
  * optional StorageAdapterConfig storage_adapter = 4;
- * @return {?proto.v1services.StorageAdapterConfig}
+ * @return {?proto.services.StorageAdapterConfig}
  */
-proto.v1services.ImportChainRequest.prototype.getStorageAdapter = function() {
-  return /** @type{?proto.v1services.StorageAdapterConfig} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.StorageAdapterConfig, 4));
+proto.services.ImportChainRequest.prototype.getStorageAdapter = function() {
+  return /** @type{?proto.services.StorageAdapterConfig} */ (
+    jspb.Message.getWrapperField(this, proto.services.StorageAdapterConfig, 4));
 };
 
 
 /**
- * @param {?proto.v1services.StorageAdapterConfig|undefined} value
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @param {?proto.services.StorageAdapterConfig|undefined} value
+ * @return {!proto.services.ImportChainRequest} returns this
 */
-proto.v1services.ImportChainRequest.prototype.setStorageAdapter = function(value) {
+proto.services.ImportChainRequest.prototype.setStorageAdapter = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @return {!proto.services.ImportChainRequest} returns this
  */
-proto.v1services.ImportChainRequest.prototype.clearStorageAdapter = function() {
+proto.services.ImportChainRequest.prototype.clearStorageAdapter = function() {
   return this.setStorageAdapter(undefined);
 };
 
@@ -4092,7 +4092,7 @@ proto.v1services.ImportChainRequest.prototype.clearStorageAdapter = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ImportChainRequest.prototype.hasStorageAdapter = function() {
+proto.services.ImportChainRequest.prototype.hasStorageAdapter = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -4101,16 +4101,16 @@ proto.v1services.ImportChainRequest.prototype.hasStorageAdapter = function() {
  * optional bool skip_validation = 5;
  * @return {boolean}
  */
-proto.v1services.ImportChainRequest.prototype.getSkipValidation = function() {
+proto.services.ImportChainRequest.prototype.getSkipValidation = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.v1services.ImportChainRequest} returns this
+ * @return {!proto.services.ImportChainRequest} returns this
  */
-proto.v1services.ImportChainRequest.prototype.setSkipValidation = function(value) {
+proto.services.ImportChainRequest.prototype.setSkipValidation = function(value) {
   return jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
@@ -4131,8 +4131,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ImportChainResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ImportChainResponse.toObject(opt_includeInstance, this);
+proto.services.ImportChainResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ImportChainResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4141,11 +4141,11 @@ proto.v1services.ImportChainResponse.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ImportChainResponse} msg The msg instance to transform.
+ * @param {!proto.services.ImportChainResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ImportChainResponse.toObject = function(includeInstance, msg) {
+proto.services.ImportChainResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     chainId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -4161,23 +4161,23 @@ proto.v1services.ImportChainResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ImportChainResponse}
+ * @return {!proto.services.ImportChainResponse}
  */
-proto.v1services.ImportChainResponse.deserializeBinary = function(bytes) {
+proto.services.ImportChainResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ImportChainResponse;
-  return proto.v1services.ImportChainResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ImportChainResponse;
+  return proto.services.ImportChainResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ImportChainResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ImportChainResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ImportChainResponse}
+ * @return {!proto.services.ImportChainResponse}
  */
-proto.v1services.ImportChainResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ImportChainResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4201,9 +4201,9 @@ proto.v1services.ImportChainResponse.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ImportChainResponse.prototype.serializeBinary = function() {
+proto.services.ImportChainResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ImportChainResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ImportChainResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4211,11 +4211,11 @@ proto.v1services.ImportChainResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ImportChainResponse} message
+ * @param {!proto.services.ImportChainResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ImportChainResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ImportChainResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getChainId();
   if (f.length > 0) {
@@ -4231,16 +4231,16 @@ proto.v1services.ImportChainResponse.serializeBinaryToWriter = function(message,
  * optional string chain_id = 1;
  * @return {string}
  */
-proto.v1services.ImportChainResponse.prototype.getChainId = function() {
+proto.services.ImportChainResponse.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ImportChainResponse} returns this
+ * @return {!proto.services.ImportChainResponse} returns this
  */
-proto.v1services.ImportChainResponse.prototype.setChainId = function(value) {
+proto.services.ImportChainResponse.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4261,8 +4261,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GenerateKeyRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GenerateKeyRequest.toObject(opt_includeInstance, this);
+proto.services.GenerateKeyRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GenerateKeyRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4271,13 +4271,13 @@ proto.v1services.GenerateKeyRequest.prototype.toObject = function(opt_includeIns
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GenerateKeyRequest} msg The msg instance to transform.
+ * @param {!proto.services.GenerateKeyRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateKeyRequest.toObject = function(includeInstance, msg) {
+proto.services.GenerateKeyRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f)
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4291,23 +4291,23 @@ proto.v1services.GenerateKeyRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GenerateKeyRequest}
+ * @return {!proto.services.GenerateKeyRequest}
  */
-proto.v1services.GenerateKeyRequest.deserializeBinary = function(bytes) {
+proto.services.GenerateKeyRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GenerateKeyRequest;
-  return proto.v1services.GenerateKeyRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GenerateKeyRequest;
+  return proto.services.GenerateKeyRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GenerateKeyRequest} msg The message object to deserialize into.
+ * @param {!proto.services.GenerateKeyRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GenerateKeyRequest}
+ * @return {!proto.services.GenerateKeyRequest}
  */
-proto.v1services.GenerateKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GenerateKeyRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4315,8 +4315,8 @@ proto.v1services.GenerateKeyRequest.deserializeBinaryFromReader = function(msg, 
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     default:
@@ -4332,9 +4332,9 @@ proto.v1services.GenerateKeyRequest.deserializeBinaryFromReader = function(msg, 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GenerateKeyRequest.prototype.serializeBinary = function() {
+proto.services.GenerateKeyRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GenerateKeyRequest.serializeBinaryToWriter(this, writer);
+  proto.services.GenerateKeyRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4342,18 +4342,18 @@ proto.v1services.GenerateKeyRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GenerateKeyRequest} message
+ * @param {!proto.services.GenerateKeyRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateKeyRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.GenerateKeyRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
 };
@@ -4361,28 +4361,28 @@ proto.v1services.GenerateKeyRequest.serializeBinaryToWriter = function(message, 
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.GenerateKeyRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.GenerateKeyRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.GenerateKeyRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.GenerateKeyRequest} returns this
 */
-proto.v1services.GenerateKeyRequest.prototype.setCreds = function(value) {
+proto.services.GenerateKeyRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.GenerateKeyRequest} returns this
+ * @return {!proto.services.GenerateKeyRequest} returns this
  */
-proto.v1services.GenerateKeyRequest.prototype.clearCreds = function() {
+proto.services.GenerateKeyRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -4391,7 +4391,7 @@ proto.v1services.GenerateKeyRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.GenerateKeyRequest.prototype.hasCreds = function() {
+proto.services.GenerateKeyRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4412,8 +4412,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GenerateKeyResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GenerateKeyResponse.toObject(opt_includeInstance, this);
+proto.services.GenerateKeyResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GenerateKeyResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4422,11 +4422,11 @@ proto.v1services.GenerateKeyResponse.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GenerateKeyResponse} msg The msg instance to transform.
+ * @param {!proto.services.GenerateKeyResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateKeyResponse.toObject = function(includeInstance, msg) {
+proto.services.GenerateKeyResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     keyAddr: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -4442,23 +4442,23 @@ proto.v1services.GenerateKeyResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GenerateKeyResponse}
+ * @return {!proto.services.GenerateKeyResponse}
  */
-proto.v1services.GenerateKeyResponse.deserializeBinary = function(bytes) {
+proto.services.GenerateKeyResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GenerateKeyResponse;
-  return proto.v1services.GenerateKeyResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GenerateKeyResponse;
+  return proto.services.GenerateKeyResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GenerateKeyResponse} msg The message object to deserialize into.
+ * @param {!proto.services.GenerateKeyResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GenerateKeyResponse}
+ * @return {!proto.services.GenerateKeyResponse}
  */
-proto.v1services.GenerateKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GenerateKeyResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4482,9 +4482,9 @@ proto.v1services.GenerateKeyResponse.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GenerateKeyResponse.prototype.serializeBinary = function() {
+proto.services.GenerateKeyResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GenerateKeyResponse.serializeBinaryToWriter(this, writer);
+  proto.services.GenerateKeyResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4492,11 +4492,11 @@ proto.v1services.GenerateKeyResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GenerateKeyResponse} message
+ * @param {!proto.services.GenerateKeyResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GenerateKeyResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.GenerateKeyResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getKeyAddr();
   if (f.length > 0) {
@@ -4512,16 +4512,16 @@ proto.v1services.GenerateKeyResponse.serializeBinaryToWriter = function(message,
  * optional string key_addr = 1;
  * @return {string}
  */
-proto.v1services.GenerateKeyResponse.prototype.getKeyAddr = function() {
+proto.services.GenerateKeyResponse.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GenerateKeyResponse} returns this
+ * @return {!proto.services.GenerateKeyResponse} returns this
  */
-proto.v1services.GenerateKeyResponse.prototype.setKeyAddr = function(value) {
+proto.services.GenerateKeyResponse.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4542,8 +4542,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GetTipRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GetTipRequest.toObject(opt_includeInstance, this);
+proto.services.GetTipRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GetTipRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4552,13 +4552,13 @@ proto.v1services.GetTipRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GetTipRequest} msg The msg instance to transform.
+ * @param {!proto.services.GetTipRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTipRequest.toObject = function(includeInstance, msg) {
+proto.services.GetTipRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, "")
   };
 
@@ -4573,23 +4573,23 @@ proto.v1services.GetTipRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GetTipRequest}
+ * @return {!proto.services.GetTipRequest}
  */
-proto.v1services.GetTipRequest.deserializeBinary = function(bytes) {
+proto.services.GetTipRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GetTipRequest;
-  return proto.v1services.GetTipRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GetTipRequest;
+  return proto.services.GetTipRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GetTipRequest} msg The message object to deserialize into.
+ * @param {!proto.services.GetTipRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GetTipRequest}
+ * @return {!proto.services.GetTipRequest}
  */
-proto.v1services.GetTipRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GetTipRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4597,8 +4597,8 @@ proto.v1services.GetTipRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -4618,9 +4618,9 @@ proto.v1services.GetTipRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GetTipRequest.prototype.serializeBinary = function() {
+proto.services.GetTipRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GetTipRequest.serializeBinaryToWriter(this, writer);
+  proto.services.GetTipRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4628,18 +4628,18 @@ proto.v1services.GetTipRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GetTipRequest} message
+ * @param {!proto.services.GetTipRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTipRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.GetTipRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -4654,28 +4654,28 @@ proto.v1services.GetTipRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.GetTipRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.GetTipRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.GetTipRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.GetTipRequest} returns this
 */
-proto.v1services.GetTipRequest.prototype.setCreds = function(value) {
+proto.services.GetTipRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.GetTipRequest} returns this
+ * @return {!proto.services.GetTipRequest} returns this
  */
-proto.v1services.GetTipRequest.prototype.clearCreds = function() {
+proto.services.GetTipRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -4684,7 +4684,7 @@ proto.v1services.GetTipRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.GetTipRequest.prototype.hasCreds = function() {
+proto.services.GetTipRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4693,16 +4693,16 @@ proto.v1services.GetTipRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.GetTipRequest.prototype.getChainId = function() {
+proto.services.GetTipRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GetTipRequest} returns this
+ * @return {!proto.services.GetTipRequest} returns this
  */
-proto.v1services.GetTipRequest.prototype.setChainId = function(value) {
+proto.services.GetTipRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -4723,8 +4723,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GetTipResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GetTipResponse.toObject(opt_includeInstance, this);
+proto.services.GetTipResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GetTipResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -4733,11 +4733,11 @@ proto.v1services.GetTipResponse.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GetTipResponse} msg The msg instance to transform.
+ * @param {!proto.services.GetTipResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTipResponse.toObject = function(includeInstance, msg) {
+proto.services.GetTipResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -4753,23 +4753,23 @@ proto.v1services.GetTipResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GetTipResponse}
+ * @return {!proto.services.GetTipResponse}
  */
-proto.v1services.GetTipResponse.deserializeBinary = function(bytes) {
+proto.services.GetTipResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GetTipResponse;
-  return proto.v1services.GetTipResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GetTipResponse;
+  return proto.services.GetTipResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GetTipResponse} msg The message object to deserialize into.
+ * @param {!proto.services.GetTipResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GetTipResponse}
+ * @return {!proto.services.GetTipResponse}
  */
-proto.v1services.GetTipResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GetTipResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4793,9 +4793,9 @@ proto.v1services.GetTipResponse.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GetTipResponse.prototype.serializeBinary = function() {
+proto.services.GetTipResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GetTipResponse.serializeBinaryToWriter(this, writer);
+  proto.services.GetTipResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4803,11 +4803,11 @@ proto.v1services.GetTipResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GetTipResponse} message
+ * @param {!proto.services.GetTipResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTipResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.GetTipResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -4823,16 +4823,16 @@ proto.v1services.GetTipResponse.serializeBinaryToWriter = function(message, writ
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.GetTipResponse.prototype.getTip = function() {
+proto.services.GetTipResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GetTipResponse} returns this
+ * @return {!proto.services.GetTipResponse} returns this
  */
-proto.v1services.GetTipResponse.prototype.setTip = function(value) {
+proto.services.GetTipResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -4853,8 +4853,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ListChainIdsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ListChainIdsRequest.toObject(opt_includeInstance, this);
+proto.services.ListChainIdsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ListChainIdsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -4863,13 +4863,13 @@ proto.v1services.ListChainIdsRequest.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ListChainIdsRequest} msg The msg instance to transform.
+ * @param {!proto.services.ListChainIdsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListChainIdsRequest.toObject = function(includeInstance, msg) {
+proto.services.ListChainIdsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f)
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4883,23 +4883,23 @@ proto.v1services.ListChainIdsRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ListChainIdsRequest}
+ * @return {!proto.services.ListChainIdsRequest}
  */
-proto.v1services.ListChainIdsRequest.deserializeBinary = function(bytes) {
+proto.services.ListChainIdsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ListChainIdsRequest;
-  return proto.v1services.ListChainIdsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ListChainIdsRequest;
+  return proto.services.ListChainIdsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ListChainIdsRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ListChainIdsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ListChainIdsRequest}
+ * @return {!proto.services.ListChainIdsRequest}
  */
-proto.v1services.ListChainIdsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ListChainIdsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4907,8 +4907,8 @@ proto.v1services.ListChainIdsRequest.deserializeBinaryFromReader = function(msg,
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     default:
@@ -4924,9 +4924,9 @@ proto.v1services.ListChainIdsRequest.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ListChainIdsRequest.prototype.serializeBinary = function() {
+proto.services.ListChainIdsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ListChainIdsRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ListChainIdsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4934,18 +4934,18 @@ proto.v1services.ListChainIdsRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ListChainIdsRequest} message
+ * @param {!proto.services.ListChainIdsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListChainIdsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ListChainIdsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
 };
@@ -4953,28 +4953,28 @@ proto.v1services.ListChainIdsRequest.serializeBinaryToWriter = function(message,
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ListChainIdsRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ListChainIdsRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ListChainIdsRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ListChainIdsRequest} returns this
 */
-proto.v1services.ListChainIdsRequest.prototype.setCreds = function(value) {
+proto.services.ListChainIdsRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ListChainIdsRequest} returns this
+ * @return {!proto.services.ListChainIdsRequest} returns this
  */
-proto.v1services.ListChainIdsRequest.prototype.clearCreds = function() {
+proto.services.ListChainIdsRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -4983,7 +4983,7 @@ proto.v1services.ListChainIdsRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ListChainIdsRequest.prototype.hasCreds = function() {
+proto.services.ListChainIdsRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4994,7 +4994,7 @@ proto.v1services.ListChainIdsRequest.prototype.hasCreds = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.v1services.ListChainIdsResponse.repeatedFields_ = [1];
+proto.services.ListChainIdsResponse.repeatedFields_ = [1];
 
 
 
@@ -5011,8 +5011,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ListChainIdsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ListChainIdsResponse.toObject(opt_includeInstance, this);
+proto.services.ListChainIdsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ListChainIdsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5021,11 +5021,11 @@ proto.v1services.ListChainIdsResponse.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ListChainIdsResponse} msg The msg instance to transform.
+ * @param {!proto.services.ListChainIdsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListChainIdsResponse.toObject = function(includeInstance, msg) {
+proto.services.ListChainIdsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     chainIdsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
@@ -5041,23 +5041,23 @@ proto.v1services.ListChainIdsResponse.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ListChainIdsResponse}
+ * @return {!proto.services.ListChainIdsResponse}
  */
-proto.v1services.ListChainIdsResponse.deserializeBinary = function(bytes) {
+proto.services.ListChainIdsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ListChainIdsResponse;
-  return proto.v1services.ListChainIdsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ListChainIdsResponse;
+  return proto.services.ListChainIdsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ListChainIdsResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ListChainIdsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ListChainIdsResponse}
+ * @return {!proto.services.ListChainIdsResponse}
  */
-proto.v1services.ListChainIdsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ListChainIdsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5081,9 +5081,9 @@ proto.v1services.ListChainIdsResponse.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ListChainIdsResponse.prototype.serializeBinary = function() {
+proto.services.ListChainIdsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ListChainIdsResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ListChainIdsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5091,11 +5091,11 @@ proto.v1services.ListChainIdsResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ListChainIdsResponse} message
+ * @param {!proto.services.ListChainIdsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListChainIdsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ListChainIdsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getChainIdsList();
   if (f.length > 0) {
@@ -5111,16 +5111,16 @@ proto.v1services.ListChainIdsResponse.serializeBinaryToWriter = function(message
  * repeated string chain_ids = 1;
  * @return {!Array<string>}
  */
-proto.v1services.ListChainIdsResponse.prototype.getChainIdsList = function() {
+proto.services.ListChainIdsResponse.prototype.getChainIdsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.v1services.ListChainIdsResponse} returns this
+ * @return {!proto.services.ListChainIdsResponse} returns this
  */
-proto.v1services.ListChainIdsResponse.prototype.setChainIdsList = function(value) {
+proto.services.ListChainIdsResponse.prototype.setChainIdsList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -5128,18 +5128,18 @@ proto.v1services.ListChainIdsResponse.prototype.setChainIdsList = function(value
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.v1services.ListChainIdsResponse} returns this
+ * @return {!proto.services.ListChainIdsResponse} returns this
  */
-proto.v1services.ListChainIdsResponse.prototype.addChainIds = function(value, opt_index) {
+proto.services.ListChainIdsResponse.prototype.addChainIds = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v1services.ListChainIdsResponse} returns this
+ * @return {!proto.services.ListChainIdsResponse} returns this
  */
-proto.v1services.ListChainIdsResponse.prototype.clearChainIdsList = function() {
+proto.services.ListChainIdsResponse.prototype.clearChainIdsList = function() {
   return this.setChainIdsList([]);
 };
 
@@ -5160,8 +5160,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ListKeysRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ListKeysRequest.toObject(opt_includeInstance, this);
+proto.services.ListKeysRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ListKeysRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5170,13 +5170,13 @@ proto.v1services.ListKeysRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ListKeysRequest} msg The msg instance to transform.
+ * @param {!proto.services.ListKeysRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListKeysRequest.toObject = function(includeInstance, msg) {
+proto.services.ListKeysRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f)
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5190,23 +5190,23 @@ proto.v1services.ListKeysRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ListKeysRequest}
+ * @return {!proto.services.ListKeysRequest}
  */
-proto.v1services.ListKeysRequest.deserializeBinary = function(bytes) {
+proto.services.ListKeysRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ListKeysRequest;
-  return proto.v1services.ListKeysRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ListKeysRequest;
+  return proto.services.ListKeysRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ListKeysRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ListKeysRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ListKeysRequest}
+ * @return {!proto.services.ListKeysRequest}
  */
-proto.v1services.ListKeysRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ListKeysRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5214,8 +5214,8 @@ proto.v1services.ListKeysRequest.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     default:
@@ -5231,9 +5231,9 @@ proto.v1services.ListKeysRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ListKeysRequest.prototype.serializeBinary = function() {
+proto.services.ListKeysRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ListKeysRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ListKeysRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5241,18 +5241,18 @@ proto.v1services.ListKeysRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ListKeysRequest} message
+ * @param {!proto.services.ListKeysRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListKeysRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ListKeysRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
 };
@@ -5260,28 +5260,28 @@ proto.v1services.ListKeysRequest.serializeBinaryToWriter = function(message, wri
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ListKeysRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ListKeysRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ListKeysRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ListKeysRequest} returns this
 */
-proto.v1services.ListKeysRequest.prototype.setCreds = function(value) {
+proto.services.ListKeysRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ListKeysRequest} returns this
+ * @return {!proto.services.ListKeysRequest} returns this
  */
-proto.v1services.ListKeysRequest.prototype.clearCreds = function() {
+proto.services.ListKeysRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -5290,7 +5290,7 @@ proto.v1services.ListKeysRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ListKeysRequest.prototype.hasCreds = function() {
+proto.services.ListKeysRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -5301,7 +5301,7 @@ proto.v1services.ListKeysRequest.prototype.hasCreds = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.v1services.ListKeysResponse.repeatedFields_ = [1];
+proto.services.ListKeysResponse.repeatedFields_ = [1];
 
 
 
@@ -5318,8 +5318,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ListKeysResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ListKeysResponse.toObject(opt_includeInstance, this);
+proto.services.ListKeysResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ListKeysResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5328,11 +5328,11 @@ proto.v1services.ListKeysResponse.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ListKeysResponse} msg The msg instance to transform.
+ * @param {!proto.services.ListKeysResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListKeysResponse.toObject = function(includeInstance, msg) {
+proto.services.ListKeysResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     keyAddrsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
   };
@@ -5348,23 +5348,23 @@ proto.v1services.ListKeysResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ListKeysResponse}
+ * @return {!proto.services.ListKeysResponse}
  */
-proto.v1services.ListKeysResponse.deserializeBinary = function(bytes) {
+proto.services.ListKeysResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ListKeysResponse;
-  return proto.v1services.ListKeysResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ListKeysResponse;
+  return proto.services.ListKeysResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ListKeysResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ListKeysResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ListKeysResponse}
+ * @return {!proto.services.ListKeysResponse}
  */
-proto.v1services.ListKeysResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ListKeysResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5388,9 +5388,9 @@ proto.v1services.ListKeysResponse.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ListKeysResponse.prototype.serializeBinary = function() {
+proto.services.ListKeysResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ListKeysResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ListKeysResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5398,11 +5398,11 @@ proto.v1services.ListKeysResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ListKeysResponse} message
+ * @param {!proto.services.ListKeysResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ListKeysResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ListKeysResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getKeyAddrsList();
   if (f.length > 0) {
@@ -5418,16 +5418,16 @@ proto.v1services.ListKeysResponse.serializeBinaryToWriter = function(message, wr
  * repeated string key_addrs = 1;
  * @return {!Array<string>}
  */
-proto.v1services.ListKeysResponse.prototype.getKeyAddrsList = function() {
+proto.services.ListKeysResponse.prototype.getKeyAddrsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.v1services.ListKeysResponse} returns this
+ * @return {!proto.services.ListKeysResponse} returns this
  */
-proto.v1services.ListKeysResponse.prototype.setKeyAddrsList = function(value) {
+proto.services.ListKeysResponse.prototype.setKeyAddrsList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -5435,18 +5435,18 @@ proto.v1services.ListKeysResponse.prototype.setKeyAddrsList = function(value) {
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.v1services.ListKeysResponse} returns this
+ * @return {!proto.services.ListKeysResponse} returns this
  */
-proto.v1services.ListKeysResponse.prototype.addKeyAddrs = function(value, opt_index) {
+proto.services.ListKeysResponse.prototype.addKeyAddrs = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v1services.ListKeysResponse} returns this
+ * @return {!proto.services.ListKeysResponse} returns this
  */
-proto.v1services.ListKeysResponse.prototype.clearKeyAddrsList = function() {
+proto.services.ListKeysResponse.prototype.clearKeyAddrsList = function() {
   return this.setKeyAddrsList([]);
 };
 
@@ -5467,8 +5467,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SetOwnerRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SetOwnerRequest.toObject(opt_includeInstance, this);
+proto.services.SetOwnerRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SetOwnerRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5477,13 +5477,13 @@ proto.v1services.SetOwnerRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SetOwnerRequest} msg The msg instance to transform.
+ * @param {!proto.services.SetOwnerRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetOwnerRequest.toObject = function(includeInstance, msg) {
+proto.services.SetOwnerRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     payload: (f = msg.getPayload()) && transactions_transactions_pb.SetOwnershipPayload.toObject(includeInstance, f)
@@ -5500,23 +5500,23 @@ proto.v1services.SetOwnerRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SetOwnerRequest}
+ * @return {!proto.services.SetOwnerRequest}
  */
-proto.v1services.SetOwnerRequest.deserializeBinary = function(bytes) {
+proto.services.SetOwnerRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SetOwnerRequest;
-  return proto.v1services.SetOwnerRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SetOwnerRequest;
+  return proto.services.SetOwnerRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SetOwnerRequest} msg The message object to deserialize into.
+ * @param {!proto.services.SetOwnerRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SetOwnerRequest}
+ * @return {!proto.services.SetOwnerRequest}
  */
-proto.v1services.SetOwnerRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SetOwnerRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5524,8 +5524,8 @@ proto.v1services.SetOwnerRequest.deserializeBinaryFromReader = function(msg, rea
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -5554,9 +5554,9 @@ proto.v1services.SetOwnerRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SetOwnerRequest.prototype.serializeBinary = function() {
+proto.services.SetOwnerRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SetOwnerRequest.serializeBinaryToWriter(this, writer);
+  proto.services.SetOwnerRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5564,18 +5564,18 @@ proto.v1services.SetOwnerRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SetOwnerRequest} message
+ * @param {!proto.services.SetOwnerRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetOwnerRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.SetOwnerRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -5605,28 +5605,28 @@ proto.v1services.SetOwnerRequest.serializeBinaryToWriter = function(message, wri
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.SetOwnerRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.SetOwnerRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.SetOwnerRequest} returns this
 */
-proto.v1services.SetOwnerRequest.prototype.setCreds = function(value) {
+proto.services.SetOwnerRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @return {!proto.services.SetOwnerRequest} returns this
  */
-proto.v1services.SetOwnerRequest.prototype.clearCreds = function() {
+proto.services.SetOwnerRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -5635,7 +5635,7 @@ proto.v1services.SetOwnerRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SetOwnerRequest.prototype.hasCreds = function() {
+proto.services.SetOwnerRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -5644,16 +5644,16 @@ proto.v1services.SetOwnerRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.SetOwnerRequest.prototype.getChainId = function() {
+proto.services.SetOwnerRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @return {!proto.services.SetOwnerRequest} returns this
  */
-proto.v1services.SetOwnerRequest.prototype.setChainId = function(value) {
+proto.services.SetOwnerRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -5662,44 +5662,44 @@ proto.v1services.SetOwnerRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.SetOwnerRequest.prototype.getKeyAddr = function() {
+proto.services.SetOwnerRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @return {!proto.services.SetOwnerRequest} returns this
  */
-proto.v1services.SetOwnerRequest.prototype.setKeyAddr = function(value) {
+proto.services.SetOwnerRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional v1transactions.SetOwnershipPayload payload = 5;
- * @return {?proto.v1transactions.SetOwnershipPayload}
+ * optional transactions.SetOwnershipPayload payload = 5;
+ * @return {?proto.transactions.SetOwnershipPayload}
  */
-proto.v1services.SetOwnerRequest.prototype.getPayload = function() {
-  return /** @type{?proto.v1transactions.SetOwnershipPayload} */ (
+proto.services.SetOwnerRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.SetOwnershipPayload} */ (
     jspb.Message.getWrapperField(this, transactions_transactions_pb.SetOwnershipPayload, 5));
 };
 
 
 /**
- * @param {?proto.v1transactions.SetOwnershipPayload|undefined} value
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @param {?proto.transactions.SetOwnershipPayload|undefined} value
+ * @return {!proto.services.SetOwnerRequest} returns this
 */
-proto.v1services.SetOwnerRequest.prototype.setPayload = function(value) {
+proto.services.SetOwnerRequest.prototype.setPayload = function(value) {
   return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SetOwnerRequest} returns this
+ * @return {!proto.services.SetOwnerRequest} returns this
  */
-proto.v1services.SetOwnerRequest.prototype.clearPayload = function() {
+proto.services.SetOwnerRequest.prototype.clearPayload = function() {
   return this.setPayload(undefined);
 };
 
@@ -5708,7 +5708,7 @@ proto.v1services.SetOwnerRequest.prototype.clearPayload = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SetOwnerRequest.prototype.hasPayload = function() {
+proto.services.SetOwnerRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -5729,8 +5729,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SetOwnerResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SetOwnerResponse.toObject(opt_includeInstance, this);
+proto.services.SetOwnerResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SetOwnerResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -5739,11 +5739,11 @@ proto.v1services.SetOwnerResponse.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SetOwnerResponse} msg The msg instance to transform.
+ * @param {!proto.services.SetOwnerResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetOwnerResponse.toObject = function(includeInstance, msg) {
+proto.services.SetOwnerResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -5759,23 +5759,23 @@ proto.v1services.SetOwnerResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SetOwnerResponse}
+ * @return {!proto.services.SetOwnerResponse}
  */
-proto.v1services.SetOwnerResponse.deserializeBinary = function(bytes) {
+proto.services.SetOwnerResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SetOwnerResponse;
-  return proto.v1services.SetOwnerResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SetOwnerResponse;
+  return proto.services.SetOwnerResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SetOwnerResponse} msg The message object to deserialize into.
+ * @param {!proto.services.SetOwnerResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SetOwnerResponse}
+ * @return {!proto.services.SetOwnerResponse}
  */
-proto.v1services.SetOwnerResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SetOwnerResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5799,9 +5799,9 @@ proto.v1services.SetOwnerResponse.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SetOwnerResponse.prototype.serializeBinary = function() {
+proto.services.SetOwnerResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SetOwnerResponse.serializeBinaryToWriter(this, writer);
+  proto.services.SetOwnerResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5809,11 +5809,11 @@ proto.v1services.SetOwnerResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SetOwnerResponse} message
+ * @param {!proto.services.SetOwnerResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetOwnerResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.SetOwnerResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -5829,16 +5829,16 @@ proto.v1services.SetOwnerResponse.serializeBinaryToWriter = function(message, wr
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.SetOwnerResponse.prototype.getTip = function() {
+proto.services.SetOwnerResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetOwnerResponse} returns this
+ * @return {!proto.services.SetOwnerResponse} returns this
  */
-proto.v1services.SetOwnerResponse.prototype.setTip = function(value) {
+proto.services.SetOwnerResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5859,8 +5859,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SetDataRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SetDataRequest.toObject(opt_includeInstance, this);
+proto.services.SetDataRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SetDataRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5869,13 +5869,13 @@ proto.v1services.SetDataRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SetDataRequest} msg The msg instance to transform.
+ * @param {!proto.services.SetDataRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetDataRequest.toObject = function(includeInstance, msg) {
+proto.services.SetDataRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     payload: (f = msg.getPayload()) && transactions_transactions_pb.SetDataPayload.toObject(includeInstance, f)
@@ -5892,23 +5892,23 @@ proto.v1services.SetDataRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SetDataRequest}
+ * @return {!proto.services.SetDataRequest}
  */
-proto.v1services.SetDataRequest.deserializeBinary = function(bytes) {
+proto.services.SetDataRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SetDataRequest;
-  return proto.v1services.SetDataRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SetDataRequest;
+  return proto.services.SetDataRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SetDataRequest} msg The message object to deserialize into.
+ * @param {!proto.services.SetDataRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SetDataRequest}
+ * @return {!proto.services.SetDataRequest}
  */
-proto.v1services.SetDataRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SetDataRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5916,8 +5916,8 @@ proto.v1services.SetDataRequest.deserializeBinaryFromReader = function(msg, read
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -5946,9 +5946,9 @@ proto.v1services.SetDataRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SetDataRequest.prototype.serializeBinary = function() {
+proto.services.SetDataRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SetDataRequest.serializeBinaryToWriter(this, writer);
+  proto.services.SetDataRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5956,18 +5956,18 @@ proto.v1services.SetDataRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SetDataRequest} message
+ * @param {!proto.services.SetDataRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetDataRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.SetDataRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -5997,28 +5997,28 @@ proto.v1services.SetDataRequest.serializeBinaryToWriter = function(message, writ
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.SetDataRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.SetDataRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.SetDataRequest} returns this
 */
-proto.v1services.SetDataRequest.prototype.setCreds = function(value) {
+proto.services.SetDataRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @return {!proto.services.SetDataRequest} returns this
  */
-proto.v1services.SetDataRequest.prototype.clearCreds = function() {
+proto.services.SetDataRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -6027,7 +6027,7 @@ proto.v1services.SetDataRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SetDataRequest.prototype.hasCreds = function() {
+proto.services.SetDataRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -6036,16 +6036,16 @@ proto.v1services.SetDataRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.SetDataRequest.prototype.getChainId = function() {
+proto.services.SetDataRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @return {!proto.services.SetDataRequest} returns this
  */
-proto.v1services.SetDataRequest.prototype.setChainId = function(value) {
+proto.services.SetDataRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -6054,44 +6054,44 @@ proto.v1services.SetDataRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.SetDataRequest.prototype.getKeyAddr = function() {
+proto.services.SetDataRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @return {!proto.services.SetDataRequest} returns this
  */
-proto.v1services.SetDataRequest.prototype.setKeyAddr = function(value) {
+proto.services.SetDataRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional v1transactions.SetDataPayload payload = 6;
- * @return {?proto.v1transactions.SetDataPayload}
+ * optional transactions.SetDataPayload payload = 6;
+ * @return {?proto.transactions.SetDataPayload}
  */
-proto.v1services.SetDataRequest.prototype.getPayload = function() {
-  return /** @type{?proto.v1transactions.SetDataPayload} */ (
+proto.services.SetDataRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.SetDataPayload} */ (
     jspb.Message.getWrapperField(this, transactions_transactions_pb.SetDataPayload, 6));
 };
 
 
 /**
- * @param {?proto.v1transactions.SetDataPayload|undefined} value
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @param {?proto.transactions.SetDataPayload|undefined} value
+ * @return {!proto.services.SetDataRequest} returns this
 */
-proto.v1services.SetDataRequest.prototype.setPayload = function(value) {
+proto.services.SetDataRequest.prototype.setPayload = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SetDataRequest} returns this
+ * @return {!proto.services.SetDataRequest} returns this
  */
-proto.v1services.SetDataRequest.prototype.clearPayload = function() {
+proto.services.SetDataRequest.prototype.clearPayload = function() {
   return this.setPayload(undefined);
 };
 
@@ -6100,7 +6100,7 @@ proto.v1services.SetDataRequest.prototype.clearPayload = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SetDataRequest.prototype.hasPayload = function() {
+proto.services.SetDataRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -6121,8 +6121,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SetDataResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SetDataResponse.toObject(opt_includeInstance, this);
+proto.services.SetDataResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SetDataResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -6131,11 +6131,11 @@ proto.v1services.SetDataResponse.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SetDataResponse} msg The msg instance to transform.
+ * @param {!proto.services.SetDataResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetDataResponse.toObject = function(includeInstance, msg) {
+proto.services.SetDataResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -6151,23 +6151,23 @@ proto.v1services.SetDataResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SetDataResponse}
+ * @return {!proto.services.SetDataResponse}
  */
-proto.v1services.SetDataResponse.deserializeBinary = function(bytes) {
+proto.services.SetDataResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SetDataResponse;
-  return proto.v1services.SetDataResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SetDataResponse;
+  return proto.services.SetDataResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SetDataResponse} msg The message object to deserialize into.
+ * @param {!proto.services.SetDataResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SetDataResponse}
+ * @return {!proto.services.SetDataResponse}
  */
-proto.v1services.SetDataResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SetDataResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6191,9 +6191,9 @@ proto.v1services.SetDataResponse.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SetDataResponse.prototype.serializeBinary = function() {
+proto.services.SetDataResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SetDataResponse.serializeBinaryToWriter(this, writer);
+  proto.services.SetDataResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6201,11 +6201,11 @@ proto.v1services.SetDataResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SetDataResponse} message
+ * @param {!proto.services.SetDataResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SetDataResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.SetDataResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -6221,16 +6221,16 @@ proto.v1services.SetDataResponse.serializeBinaryToWriter = function(message, wri
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.SetDataResponse.prototype.getTip = function() {
+proto.services.SetDataResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SetDataResponse} returns this
+ * @return {!proto.services.SetDataResponse} returns this
  */
-proto.v1services.SetDataResponse.prototype.setTip = function(value) {
+proto.services.SetDataResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6251,8 +6251,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ResolveRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ResolveRequest.toObject(opt_includeInstance, this);
+proto.services.ResolveRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ResolveRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6261,13 +6261,13 @@ proto.v1services.ResolveRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ResolveRequest} msg The msg instance to transform.
+ * @param {!proto.services.ResolveRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveRequest.toObject = function(includeInstance, msg) {
+proto.services.ResolveRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     path: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
@@ -6283,23 +6283,23 @@ proto.v1services.ResolveRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ResolveRequest}
+ * @return {!proto.services.ResolveRequest}
  */
-proto.v1services.ResolveRequest.deserializeBinary = function(bytes) {
+proto.services.ResolveRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ResolveRequest;
-  return proto.v1services.ResolveRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ResolveRequest;
+  return proto.services.ResolveRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ResolveRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ResolveRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ResolveRequest}
+ * @return {!proto.services.ResolveRequest}
  */
-proto.v1services.ResolveRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ResolveRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6307,8 +6307,8 @@ proto.v1services.ResolveRequest.deserializeBinaryFromReader = function(msg, read
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -6332,9 +6332,9 @@ proto.v1services.ResolveRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ResolveRequest.prototype.serializeBinary = function() {
+proto.services.ResolveRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ResolveRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ResolveRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6342,18 +6342,18 @@ proto.v1services.ResolveRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ResolveRequest} message
+ * @param {!proto.services.ResolveRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ResolveRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -6375,28 +6375,28 @@ proto.v1services.ResolveRequest.serializeBinaryToWriter = function(message, writ
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ResolveRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ResolveRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ResolveRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ResolveRequest} returns this
 */
-proto.v1services.ResolveRequest.prototype.setCreds = function(value) {
+proto.services.ResolveRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ResolveRequest} returns this
+ * @return {!proto.services.ResolveRequest} returns this
  */
-proto.v1services.ResolveRequest.prototype.clearCreds = function() {
+proto.services.ResolveRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -6405,7 +6405,7 @@ proto.v1services.ResolveRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ResolveRequest.prototype.hasCreds = function() {
+proto.services.ResolveRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -6414,16 +6414,16 @@ proto.v1services.ResolveRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.ResolveRequest.prototype.getChainId = function() {
+proto.services.ResolveRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveRequest} returns this
+ * @return {!proto.services.ResolveRequest} returns this
  */
-proto.v1services.ResolveRequest.prototype.setChainId = function(value) {
+proto.services.ResolveRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -6432,16 +6432,16 @@ proto.v1services.ResolveRequest.prototype.setChainId = function(value) {
  * optional string path = 3;
  * @return {string}
  */
-proto.v1services.ResolveRequest.prototype.getPath = function() {
+proto.services.ResolveRequest.prototype.getPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveRequest} returns this
+ * @return {!proto.services.ResolveRequest} returns this
  */
-proto.v1services.ResolveRequest.prototype.setPath = function(value) {
+proto.services.ResolveRequest.prototype.setPath = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -6462,8 +6462,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ResolveResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ResolveResponse.toObject(opt_includeInstance, this);
+proto.services.ResolveResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ResolveResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -6472,11 +6472,11 @@ proto.v1services.ResolveResponse.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ResolveResponse} msg The msg instance to transform.
+ * @param {!proto.services.ResolveResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveResponse.toObject = function(includeInstance, msg) {
+proto.services.ResolveResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     remainingPath: jspb.Message.getFieldWithDefault(msg, 1, ""),
     data: msg.getData_asB64()
@@ -6493,23 +6493,23 @@ proto.v1services.ResolveResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ResolveResponse}
+ * @return {!proto.services.ResolveResponse}
  */
-proto.v1services.ResolveResponse.deserializeBinary = function(bytes) {
+proto.services.ResolveResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ResolveResponse;
-  return proto.v1services.ResolveResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ResolveResponse;
+  return proto.services.ResolveResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ResolveResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ResolveResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ResolveResponse}
+ * @return {!proto.services.ResolveResponse}
  */
-proto.v1services.ResolveResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ResolveResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6537,9 +6537,9 @@ proto.v1services.ResolveResponse.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ResolveResponse.prototype.serializeBinary = function() {
+proto.services.ResolveResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ResolveResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ResolveResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6547,11 +6547,11 @@ proto.v1services.ResolveResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ResolveResponse} message
+ * @param {!proto.services.ResolveResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ResolveResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getRemainingPath();
   if (f.length > 0) {
@@ -6574,16 +6574,16 @@ proto.v1services.ResolveResponse.serializeBinaryToWriter = function(message, wri
  * optional string remaining_path = 1;
  * @return {string}
  */
-proto.v1services.ResolveResponse.prototype.getRemainingPath = function() {
+proto.services.ResolveResponse.prototype.getRemainingPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveResponse} returns this
+ * @return {!proto.services.ResolveResponse} returns this
  */
-proto.v1services.ResolveResponse.prototype.setRemainingPath = function(value) {
+proto.services.ResolveResponse.prototype.setRemainingPath = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6592,7 +6592,7 @@ proto.v1services.ResolveResponse.prototype.setRemainingPath = function(value) {
  * optional bytes data = 2;
  * @return {!(string|Uint8Array)}
  */
-proto.v1services.ResolveResponse.prototype.getData = function() {
+proto.services.ResolveResponse.prototype.getData = function() {
   return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -6602,7 +6602,7 @@ proto.v1services.ResolveResponse.prototype.getData = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.v1services.ResolveResponse.prototype.getData_asB64 = function() {
+proto.services.ResolveResponse.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getData()));
 };
@@ -6615,7 +6615,7 @@ proto.v1services.ResolveResponse.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.v1services.ResolveResponse.prototype.getData_asU8 = function() {
+proto.services.ResolveResponse.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getData()));
 };
@@ -6623,9 +6623,9 @@ proto.v1services.ResolveResponse.prototype.getData_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.v1services.ResolveResponse} returns this
+ * @return {!proto.services.ResolveResponse} returns this
  */
-proto.v1services.ResolveResponse.prototype.setData = function(value) {
+proto.services.ResolveResponse.prototype.setData = function(value) {
   return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
@@ -6646,8 +6646,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ResolveAtRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ResolveAtRequest.toObject(opt_includeInstance, this);
+proto.services.ResolveAtRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ResolveAtRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6656,13 +6656,13 @@ proto.v1services.ResolveAtRequest.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ResolveAtRequest} msg The msg instance to transform.
+ * @param {!proto.services.ResolveAtRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveAtRequest.toObject = function(includeInstance, msg) {
+proto.services.ResolveAtRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     tip: jspb.Message.getFieldWithDefault(msg, 3, ""),
     path: jspb.Message.getFieldWithDefault(msg, 4, "")
@@ -6679,23 +6679,23 @@ proto.v1services.ResolveAtRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ResolveAtRequest}
+ * @return {!proto.services.ResolveAtRequest}
  */
-proto.v1services.ResolveAtRequest.deserializeBinary = function(bytes) {
+proto.services.ResolveAtRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ResolveAtRequest;
-  return proto.v1services.ResolveAtRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ResolveAtRequest;
+  return proto.services.ResolveAtRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ResolveAtRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ResolveAtRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ResolveAtRequest}
+ * @return {!proto.services.ResolveAtRequest}
  */
-proto.v1services.ResolveAtRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ResolveAtRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6703,8 +6703,8 @@ proto.v1services.ResolveAtRequest.deserializeBinaryFromReader = function(msg, re
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -6732,9 +6732,9 @@ proto.v1services.ResolveAtRequest.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ResolveAtRequest.prototype.serializeBinary = function() {
+proto.services.ResolveAtRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ResolveAtRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ResolveAtRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6742,18 +6742,18 @@ proto.v1services.ResolveAtRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ResolveAtRequest} message
+ * @param {!proto.services.ResolveAtRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ResolveAtRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ResolveAtRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -6782,28 +6782,28 @@ proto.v1services.ResolveAtRequest.serializeBinaryToWriter = function(message, wr
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ResolveAtRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ResolveAtRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ResolveAtRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ResolveAtRequest} returns this
 */
-proto.v1services.ResolveAtRequest.prototype.setCreds = function(value) {
+proto.services.ResolveAtRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ResolveAtRequest} returns this
+ * @return {!proto.services.ResolveAtRequest} returns this
  */
-proto.v1services.ResolveAtRequest.prototype.clearCreds = function() {
+proto.services.ResolveAtRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -6812,7 +6812,7 @@ proto.v1services.ResolveAtRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ResolveAtRequest.prototype.hasCreds = function() {
+proto.services.ResolveAtRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -6821,16 +6821,16 @@ proto.v1services.ResolveAtRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.ResolveAtRequest.prototype.getChainId = function() {
+proto.services.ResolveAtRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveAtRequest} returns this
+ * @return {!proto.services.ResolveAtRequest} returns this
  */
-proto.v1services.ResolveAtRequest.prototype.setChainId = function(value) {
+proto.services.ResolveAtRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -6839,16 +6839,16 @@ proto.v1services.ResolveAtRequest.prototype.setChainId = function(value) {
  * optional string tip = 3;
  * @return {string}
  */
-proto.v1services.ResolveAtRequest.prototype.getTip = function() {
+proto.services.ResolveAtRequest.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveAtRequest} returns this
+ * @return {!proto.services.ResolveAtRequest} returns this
  */
-proto.v1services.ResolveAtRequest.prototype.setTip = function(value) {
+proto.services.ResolveAtRequest.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -6857,16 +6857,16 @@ proto.v1services.ResolveAtRequest.prototype.setTip = function(value) {
  * optional string path = 4;
  * @return {string}
  */
-proto.v1services.ResolveAtRequest.prototype.getPath = function() {
+proto.services.ResolveAtRequest.prototype.getPath = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ResolveAtRequest} returns this
+ * @return {!proto.services.ResolveAtRequest} returns this
  */
-proto.v1services.ResolveAtRequest.prototype.setPath = function(value) {
+proto.services.ResolveAtRequest.prototype.setPath = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -6887,8 +6887,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.EstablishTokenRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.EstablishTokenRequest.toObject(opt_includeInstance, this);
+proto.services.EstablishTokenRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.EstablishTokenRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6897,13 +6897,13 @@ proto.v1services.EstablishTokenRequest.prototype.toObject = function(opt_include
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.EstablishTokenRequest} msg The msg instance to transform.
+ * @param {!proto.services.EstablishTokenRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.EstablishTokenRequest.toObject = function(includeInstance, msg) {
+proto.services.EstablishTokenRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     payload: (f = msg.getPayload()) && transactions_transactions_pb.EstablishTokenPayload.toObject(includeInstance, f)
@@ -6920,23 +6920,23 @@ proto.v1services.EstablishTokenRequest.toObject = function(includeInstance, msg)
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.EstablishTokenRequest}
+ * @return {!proto.services.EstablishTokenRequest}
  */
-proto.v1services.EstablishTokenRequest.deserializeBinary = function(bytes) {
+proto.services.EstablishTokenRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.EstablishTokenRequest;
-  return proto.v1services.EstablishTokenRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.EstablishTokenRequest;
+  return proto.services.EstablishTokenRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.EstablishTokenRequest} msg The message object to deserialize into.
+ * @param {!proto.services.EstablishTokenRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.EstablishTokenRequest}
+ * @return {!proto.services.EstablishTokenRequest}
  */
-proto.v1services.EstablishTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.EstablishTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6944,8 +6944,8 @@ proto.v1services.EstablishTokenRequest.deserializeBinaryFromReader = function(ms
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -6974,9 +6974,9 @@ proto.v1services.EstablishTokenRequest.deserializeBinaryFromReader = function(ms
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.EstablishTokenRequest.prototype.serializeBinary = function() {
+proto.services.EstablishTokenRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.EstablishTokenRequest.serializeBinaryToWriter(this, writer);
+  proto.services.EstablishTokenRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6984,18 +6984,18 @@ proto.v1services.EstablishTokenRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.EstablishTokenRequest} message
+ * @param {!proto.services.EstablishTokenRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.EstablishTokenRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.EstablishTokenRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -7025,28 +7025,28 @@ proto.v1services.EstablishTokenRequest.serializeBinaryToWriter = function(messag
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.EstablishTokenRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.EstablishTokenRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.EstablishTokenRequest} returns this
 */
-proto.v1services.EstablishTokenRequest.prototype.setCreds = function(value) {
+proto.services.EstablishTokenRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @return {!proto.services.EstablishTokenRequest} returns this
  */
-proto.v1services.EstablishTokenRequest.prototype.clearCreds = function() {
+proto.services.EstablishTokenRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -7055,7 +7055,7 @@ proto.v1services.EstablishTokenRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.EstablishTokenRequest.prototype.hasCreds = function() {
+proto.services.EstablishTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -7064,16 +7064,16 @@ proto.v1services.EstablishTokenRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.EstablishTokenRequest.prototype.getChainId = function() {
+proto.services.EstablishTokenRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @return {!proto.services.EstablishTokenRequest} returns this
  */
-proto.v1services.EstablishTokenRequest.prototype.setChainId = function(value) {
+proto.services.EstablishTokenRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -7082,44 +7082,44 @@ proto.v1services.EstablishTokenRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.EstablishTokenRequest.prototype.getKeyAddr = function() {
+proto.services.EstablishTokenRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @return {!proto.services.EstablishTokenRequest} returns this
  */
-proto.v1services.EstablishTokenRequest.prototype.setKeyAddr = function(value) {
+proto.services.EstablishTokenRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional v1transactions.EstablishTokenPayload payload = 6;
- * @return {?proto.v1transactions.EstablishTokenPayload}
+ * optional transactions.EstablishTokenPayload payload = 6;
+ * @return {?proto.transactions.EstablishTokenPayload}
  */
-proto.v1services.EstablishTokenRequest.prototype.getPayload = function() {
-  return /** @type{?proto.v1transactions.EstablishTokenPayload} */ (
+proto.services.EstablishTokenRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.EstablishTokenPayload} */ (
     jspb.Message.getWrapperField(this, transactions_transactions_pb.EstablishTokenPayload, 6));
 };
 
 
 /**
- * @param {?proto.v1transactions.EstablishTokenPayload|undefined} value
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @param {?proto.transactions.EstablishTokenPayload|undefined} value
+ * @return {!proto.services.EstablishTokenRequest} returns this
 */
-proto.v1services.EstablishTokenRequest.prototype.setPayload = function(value) {
+proto.services.EstablishTokenRequest.prototype.setPayload = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.EstablishTokenRequest} returns this
+ * @return {!proto.services.EstablishTokenRequest} returns this
  */
-proto.v1services.EstablishTokenRequest.prototype.clearPayload = function() {
+proto.services.EstablishTokenRequest.prototype.clearPayload = function() {
   return this.setPayload(undefined);
 };
 
@@ -7128,7 +7128,7 @@ proto.v1services.EstablishTokenRequest.prototype.clearPayload = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.EstablishTokenRequest.prototype.hasPayload = function() {
+proto.services.EstablishTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -7149,8 +7149,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.EstablishTokenResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.EstablishTokenResponse.toObject(opt_includeInstance, this);
+proto.services.EstablishTokenResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.EstablishTokenResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -7159,11 +7159,11 @@ proto.v1services.EstablishTokenResponse.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.EstablishTokenResponse} msg The msg instance to transform.
+ * @param {!proto.services.EstablishTokenResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.EstablishTokenResponse.toObject = function(includeInstance, msg) {
+proto.services.EstablishTokenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -7179,23 +7179,23 @@ proto.v1services.EstablishTokenResponse.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.EstablishTokenResponse}
+ * @return {!proto.services.EstablishTokenResponse}
  */
-proto.v1services.EstablishTokenResponse.deserializeBinary = function(bytes) {
+proto.services.EstablishTokenResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.EstablishTokenResponse;
-  return proto.v1services.EstablishTokenResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.EstablishTokenResponse;
+  return proto.services.EstablishTokenResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.EstablishTokenResponse} msg The message object to deserialize into.
+ * @param {!proto.services.EstablishTokenResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.EstablishTokenResponse}
+ * @return {!proto.services.EstablishTokenResponse}
  */
-proto.v1services.EstablishTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.EstablishTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7219,9 +7219,9 @@ proto.v1services.EstablishTokenResponse.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.EstablishTokenResponse.prototype.serializeBinary = function() {
+proto.services.EstablishTokenResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.EstablishTokenResponse.serializeBinaryToWriter(this, writer);
+  proto.services.EstablishTokenResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7229,11 +7229,11 @@ proto.v1services.EstablishTokenResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.EstablishTokenResponse} message
+ * @param {!proto.services.EstablishTokenResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.EstablishTokenResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.EstablishTokenResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -7249,16 +7249,16 @@ proto.v1services.EstablishTokenResponse.serializeBinaryToWriter = function(messa
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.EstablishTokenResponse.prototype.getTip = function() {
+proto.services.EstablishTokenResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.EstablishTokenResponse} returns this
+ * @return {!proto.services.EstablishTokenResponse} returns this
  */
-proto.v1services.EstablishTokenResponse.prototype.setTip = function(value) {
+proto.services.EstablishTokenResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -7279,8 +7279,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.MintTokenRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.MintTokenRequest.toObject(opt_includeInstance, this);
+proto.services.MintTokenRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.MintTokenRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7289,13 +7289,13 @@ proto.v1services.MintTokenRequest.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.MintTokenRequest} msg The msg instance to transform.
+ * @param {!proto.services.MintTokenRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.MintTokenRequest.toObject = function(includeInstance, msg) {
+proto.services.MintTokenRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     payload: (f = msg.getPayload()) && transactions_transactions_pb.MintTokenPayload.toObject(includeInstance, f)
@@ -7312,23 +7312,23 @@ proto.v1services.MintTokenRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.MintTokenRequest}
+ * @return {!proto.services.MintTokenRequest}
  */
-proto.v1services.MintTokenRequest.deserializeBinary = function(bytes) {
+proto.services.MintTokenRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.MintTokenRequest;
-  return proto.v1services.MintTokenRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.MintTokenRequest;
+  return proto.services.MintTokenRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.MintTokenRequest} msg The message object to deserialize into.
+ * @param {!proto.services.MintTokenRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.MintTokenRequest}
+ * @return {!proto.services.MintTokenRequest}
  */
-proto.v1services.MintTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.MintTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7336,8 +7336,8 @@ proto.v1services.MintTokenRequest.deserializeBinaryFromReader = function(msg, re
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -7366,9 +7366,9 @@ proto.v1services.MintTokenRequest.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.MintTokenRequest.prototype.serializeBinary = function() {
+proto.services.MintTokenRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.MintTokenRequest.serializeBinaryToWriter(this, writer);
+  proto.services.MintTokenRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7376,18 +7376,18 @@ proto.v1services.MintTokenRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.MintTokenRequest} message
+ * @param {!proto.services.MintTokenRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.MintTokenRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.MintTokenRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -7417,28 +7417,28 @@ proto.v1services.MintTokenRequest.serializeBinaryToWriter = function(message, wr
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.MintTokenRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.MintTokenRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.MintTokenRequest} returns this
 */
-proto.v1services.MintTokenRequest.prototype.setCreds = function(value) {
+proto.services.MintTokenRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @return {!proto.services.MintTokenRequest} returns this
  */
-proto.v1services.MintTokenRequest.prototype.clearCreds = function() {
+proto.services.MintTokenRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -7447,7 +7447,7 @@ proto.v1services.MintTokenRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.MintTokenRequest.prototype.hasCreds = function() {
+proto.services.MintTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -7456,16 +7456,16 @@ proto.v1services.MintTokenRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.MintTokenRequest.prototype.getChainId = function() {
+proto.services.MintTokenRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @return {!proto.services.MintTokenRequest} returns this
  */
-proto.v1services.MintTokenRequest.prototype.setChainId = function(value) {
+proto.services.MintTokenRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -7474,44 +7474,44 @@ proto.v1services.MintTokenRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.MintTokenRequest.prototype.getKeyAddr = function() {
+proto.services.MintTokenRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @return {!proto.services.MintTokenRequest} returns this
  */
-proto.v1services.MintTokenRequest.prototype.setKeyAddr = function(value) {
+proto.services.MintTokenRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional v1transactions.MintTokenPayload payload = 6;
- * @return {?proto.v1transactions.MintTokenPayload}
+ * optional transactions.MintTokenPayload payload = 6;
+ * @return {?proto.transactions.MintTokenPayload}
  */
-proto.v1services.MintTokenRequest.prototype.getPayload = function() {
-  return /** @type{?proto.v1transactions.MintTokenPayload} */ (
+proto.services.MintTokenRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.MintTokenPayload} */ (
     jspb.Message.getWrapperField(this, transactions_transactions_pb.MintTokenPayload, 6));
 };
 
 
 /**
- * @param {?proto.v1transactions.MintTokenPayload|undefined} value
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @param {?proto.transactions.MintTokenPayload|undefined} value
+ * @return {!proto.services.MintTokenRequest} returns this
 */
-proto.v1services.MintTokenRequest.prototype.setPayload = function(value) {
+proto.services.MintTokenRequest.prototype.setPayload = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.MintTokenRequest} returns this
+ * @return {!proto.services.MintTokenRequest} returns this
  */
-proto.v1services.MintTokenRequest.prototype.clearPayload = function() {
+proto.services.MintTokenRequest.prototype.clearPayload = function() {
   return this.setPayload(undefined);
 };
 
@@ -7520,7 +7520,7 @@ proto.v1services.MintTokenRequest.prototype.clearPayload = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.MintTokenRequest.prototype.hasPayload = function() {
+proto.services.MintTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -7541,8 +7541,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.MintTokenResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.MintTokenResponse.toObject(opt_includeInstance, this);
+proto.services.MintTokenResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.MintTokenResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -7551,11 +7551,11 @@ proto.v1services.MintTokenResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.MintTokenResponse} msg The msg instance to transform.
+ * @param {!proto.services.MintTokenResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.MintTokenResponse.toObject = function(includeInstance, msg) {
+proto.services.MintTokenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -7571,23 +7571,23 @@ proto.v1services.MintTokenResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.MintTokenResponse}
+ * @return {!proto.services.MintTokenResponse}
  */
-proto.v1services.MintTokenResponse.deserializeBinary = function(bytes) {
+proto.services.MintTokenResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.MintTokenResponse;
-  return proto.v1services.MintTokenResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.MintTokenResponse;
+  return proto.services.MintTokenResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.MintTokenResponse} msg The message object to deserialize into.
+ * @param {!proto.services.MintTokenResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.MintTokenResponse}
+ * @return {!proto.services.MintTokenResponse}
  */
-proto.v1services.MintTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.MintTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7611,9 +7611,9 @@ proto.v1services.MintTokenResponse.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.MintTokenResponse.prototype.serializeBinary = function() {
+proto.services.MintTokenResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.MintTokenResponse.serializeBinaryToWriter(this, writer);
+  proto.services.MintTokenResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7621,11 +7621,11 @@ proto.v1services.MintTokenResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.MintTokenResponse} message
+ * @param {!proto.services.MintTokenResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.MintTokenResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.MintTokenResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -7641,16 +7641,16 @@ proto.v1services.MintTokenResponse.serializeBinaryToWriter = function(message, w
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.MintTokenResponse.prototype.getTip = function() {
+proto.services.MintTokenResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.MintTokenResponse} returns this
+ * @return {!proto.services.MintTokenResponse} returns this
  */
-proto.v1services.MintTokenResponse.prototype.setTip = function(value) {
+proto.services.MintTokenResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -7671,8 +7671,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SendTokenRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SendTokenRequest.toObject(opt_includeInstance, this);
+proto.services.SendTokenRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SendTokenRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7681,13 +7681,13 @@ proto.v1services.SendTokenRequest.prototype.toObject = function(opt_includeInsta
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SendTokenRequest} msg The msg instance to transform.
+ * @param {!proto.services.SendTokenRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SendTokenRequest.toObject = function(includeInstance, msg) {
+proto.services.SendTokenRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tokenName: jspb.Message.getFieldWithDefault(msg, 4, ""),
@@ -7707,23 +7707,23 @@ proto.v1services.SendTokenRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SendTokenRequest}
+ * @return {!proto.services.SendTokenRequest}
  */
-proto.v1services.SendTokenRequest.deserializeBinary = function(bytes) {
+proto.services.SendTokenRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SendTokenRequest;
-  return proto.v1services.SendTokenRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SendTokenRequest;
+  return proto.services.SendTokenRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SendTokenRequest} msg The message object to deserialize into.
+ * @param {!proto.services.SendTokenRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SendTokenRequest}
+ * @return {!proto.services.SendTokenRequest}
  */
-proto.v1services.SendTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SendTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7731,8 +7731,8 @@ proto.v1services.SendTokenRequest.deserializeBinaryFromReader = function(msg, re
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -7773,9 +7773,9 @@ proto.v1services.SendTokenRequest.deserializeBinaryFromReader = function(msg, re
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SendTokenRequest.prototype.serializeBinary = function() {
+proto.services.SendTokenRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SendTokenRequest.serializeBinaryToWriter(this, writer);
+  proto.services.SendTokenRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7783,18 +7783,18 @@ proto.v1services.SendTokenRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SendTokenRequest} message
+ * @param {!proto.services.SendTokenRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SendTokenRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.SendTokenRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -7845,28 +7845,28 @@ proto.v1services.SendTokenRequest.serializeBinaryToWriter = function(message, wr
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.SendTokenRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.SendTokenRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.SendTokenRequest} returns this
 */
-proto.v1services.SendTokenRequest.prototype.setCreds = function(value) {
+proto.services.SendTokenRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.clearCreds = function() {
+proto.services.SendTokenRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -7875,7 +7875,7 @@ proto.v1services.SendTokenRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SendTokenRequest.prototype.hasCreds = function() {
+proto.services.SendTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -7884,16 +7884,16 @@ proto.v1services.SendTokenRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.SendTokenRequest.prototype.getChainId = function() {
+proto.services.SendTokenRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.setChainId = function(value) {
+proto.services.SendTokenRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -7902,16 +7902,16 @@ proto.v1services.SendTokenRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.SendTokenRequest.prototype.getKeyAddr = function() {
+proto.services.SendTokenRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.setKeyAddr = function(value) {
+proto.services.SendTokenRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -7920,16 +7920,16 @@ proto.v1services.SendTokenRequest.prototype.setKeyAddr = function(value) {
  * optional string token_name = 4;
  * @return {string}
  */
-proto.v1services.SendTokenRequest.prototype.getTokenName = function() {
+proto.services.SendTokenRequest.prototype.getTokenName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.setTokenName = function(value) {
+proto.services.SendTokenRequest.prototype.setTokenName = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -7938,16 +7938,16 @@ proto.v1services.SendTokenRequest.prototype.setTokenName = function(value) {
  * optional string destination_chain_id = 5;
  * @return {string}
  */
-proto.v1services.SendTokenRequest.prototype.getDestinationChainId = function() {
+proto.services.SendTokenRequest.prototype.getDestinationChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.setDestinationChainId = function(value) {
+proto.services.SendTokenRequest.prototype.setDestinationChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 5, value);
 };
 
@@ -7956,44 +7956,44 @@ proto.v1services.SendTokenRequest.prototype.setDestinationChainId = function(val
  * optional uint64 amount = 6;
  * @return {number}
  */
-proto.v1services.SendTokenRequest.prototype.getAmount = function() {
+proto.services.SendTokenRequest.prototype.getAmount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.setAmount = function(value) {
+proto.services.SendTokenRequest.prototype.setAmount = function(value) {
   return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
 /**
- * optional v1transactions.SendTokenPayload payload = 7;
- * @return {?proto.v1transactions.SendTokenPayload}
+ * optional transactions.SendTokenPayload payload = 7;
+ * @return {?proto.transactions.SendTokenPayload}
  */
-proto.v1services.SendTokenRequest.prototype.getPayload = function() {
-  return /** @type{?proto.v1transactions.SendTokenPayload} */ (
+proto.services.SendTokenRequest.prototype.getPayload = function() {
+  return /** @type{?proto.transactions.SendTokenPayload} */ (
     jspb.Message.getWrapperField(this, transactions_transactions_pb.SendTokenPayload, 7));
 };
 
 
 /**
- * @param {?proto.v1transactions.SendTokenPayload|undefined} value
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @param {?proto.transactions.SendTokenPayload|undefined} value
+ * @return {!proto.services.SendTokenRequest} returns this
 */
-proto.v1services.SendTokenRequest.prototype.setPayload = function(value) {
+proto.services.SendTokenRequest.prototype.setPayload = function(value) {
   return jspb.Message.setWrapperField(this, 7, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.SendTokenRequest} returns this
+ * @return {!proto.services.SendTokenRequest} returns this
  */
-proto.v1services.SendTokenRequest.prototype.clearPayload = function() {
+proto.services.SendTokenRequest.prototype.clearPayload = function() {
   return this.setPayload(undefined);
 };
 
@@ -8002,7 +8002,7 @@ proto.v1services.SendTokenRequest.prototype.clearPayload = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.SendTokenRequest.prototype.hasPayload = function() {
+proto.services.SendTokenRequest.prototype.hasPayload = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 
@@ -8023,8 +8023,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.SendTokenResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.SendTokenResponse.toObject(opt_includeInstance, this);
+proto.services.SendTokenResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.SendTokenResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -8033,11 +8033,11 @@ proto.v1services.SendTokenResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.SendTokenResponse} msg The msg instance to transform.
+ * @param {!proto.services.SendTokenResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SendTokenResponse.toObject = function(includeInstance, msg) {
+proto.services.SendTokenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     sendToken: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -8054,23 +8054,23 @@ proto.v1services.SendTokenResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.SendTokenResponse}
+ * @return {!proto.services.SendTokenResponse}
  */
-proto.v1services.SendTokenResponse.deserializeBinary = function(bytes) {
+proto.services.SendTokenResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.SendTokenResponse;
-  return proto.v1services.SendTokenResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.SendTokenResponse;
+  return proto.services.SendTokenResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.SendTokenResponse} msg The message object to deserialize into.
+ * @param {!proto.services.SendTokenResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.SendTokenResponse}
+ * @return {!proto.services.SendTokenResponse}
  */
-proto.v1services.SendTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.SendTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8098,9 +8098,9 @@ proto.v1services.SendTokenResponse.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.SendTokenResponse.prototype.serializeBinary = function() {
+proto.services.SendTokenResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.SendTokenResponse.serializeBinaryToWriter(this, writer);
+  proto.services.SendTokenResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8108,11 +8108,11 @@ proto.v1services.SendTokenResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.SendTokenResponse} message
+ * @param {!proto.services.SendTokenResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.SendTokenResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.SendTokenResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getSendToken();
   if (f.length > 0) {
@@ -8135,16 +8135,16 @@ proto.v1services.SendTokenResponse.serializeBinaryToWriter = function(message, w
  * optional string send_token = 1;
  * @return {string}
  */
-proto.v1services.SendTokenResponse.prototype.getSendToken = function() {
+proto.services.SendTokenResponse.prototype.getSendToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenResponse} returns this
+ * @return {!proto.services.SendTokenResponse} returns this
  */
-proto.v1services.SendTokenResponse.prototype.setSendToken = function(value) {
+proto.services.SendTokenResponse.prototype.setSendToken = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -8153,16 +8153,16 @@ proto.v1services.SendTokenResponse.prototype.setSendToken = function(value) {
  * optional string tip = 2;
  * @return {string}
  */
-proto.v1services.SendTokenResponse.prototype.getTip = function() {
+proto.services.SendTokenResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.SendTokenResponse} returns this
+ * @return {!proto.services.SendTokenResponse} returns this
  */
-proto.v1services.SendTokenResponse.prototype.setTip = function(value) {
+proto.services.SendTokenResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -8183,8 +8183,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ReceiveTokenRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ReceiveTokenRequest.toObject(opt_includeInstance, this);
+proto.services.ReceiveTokenRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ReceiveTokenRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8193,13 +8193,13 @@ proto.v1services.ReceiveTokenRequest.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ReceiveTokenRequest} msg The msg instance to transform.
+ * @param {!proto.services.ReceiveTokenRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveTokenRequest.toObject = function(includeInstance, msg) {
+proto.services.ReceiveTokenRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     tokenPayload: jspb.Message.getFieldWithDefault(msg, 4, "")
@@ -8216,23 +8216,23 @@ proto.v1services.ReceiveTokenRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ReceiveTokenRequest}
+ * @return {!proto.services.ReceiveTokenRequest}
  */
-proto.v1services.ReceiveTokenRequest.deserializeBinary = function(bytes) {
+proto.services.ReceiveTokenRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ReceiveTokenRequest;
-  return proto.v1services.ReceiveTokenRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ReceiveTokenRequest;
+  return proto.services.ReceiveTokenRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ReceiveTokenRequest} msg The message object to deserialize into.
+ * @param {!proto.services.ReceiveTokenRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ReceiveTokenRequest}
+ * @return {!proto.services.ReceiveTokenRequest}
  */
-proto.v1services.ReceiveTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ReceiveTokenRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8240,8 +8240,8 @@ proto.v1services.ReceiveTokenRequest.deserializeBinaryFromReader = function(msg,
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -8269,9 +8269,9 @@ proto.v1services.ReceiveTokenRequest.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ReceiveTokenRequest.prototype.serializeBinary = function() {
+proto.services.ReceiveTokenRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ReceiveTokenRequest.serializeBinaryToWriter(this, writer);
+  proto.services.ReceiveTokenRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8279,18 +8279,18 @@ proto.v1services.ReceiveTokenRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ReceiveTokenRequest} message
+ * @param {!proto.services.ReceiveTokenRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveTokenRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.ReceiveTokenRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -8319,28 +8319,28 @@ proto.v1services.ReceiveTokenRequest.serializeBinaryToWriter = function(message,
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.ReceiveTokenRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.ReceiveTokenRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.ReceiveTokenRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.ReceiveTokenRequest} returns this
 */
-proto.v1services.ReceiveTokenRequest.prototype.setCreds = function(value) {
+proto.services.ReceiveTokenRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.ReceiveTokenRequest} returns this
+ * @return {!proto.services.ReceiveTokenRequest} returns this
  */
-proto.v1services.ReceiveTokenRequest.prototype.clearCreds = function() {
+proto.services.ReceiveTokenRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -8349,7 +8349,7 @@ proto.v1services.ReceiveTokenRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.ReceiveTokenRequest.prototype.hasCreds = function() {
+proto.services.ReceiveTokenRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8358,16 +8358,16 @@ proto.v1services.ReceiveTokenRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.ReceiveTokenRequest.prototype.getChainId = function() {
+proto.services.ReceiveTokenRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ReceiveTokenRequest} returns this
+ * @return {!proto.services.ReceiveTokenRequest} returns this
  */
-proto.v1services.ReceiveTokenRequest.prototype.setChainId = function(value) {
+proto.services.ReceiveTokenRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -8376,16 +8376,16 @@ proto.v1services.ReceiveTokenRequest.prototype.setChainId = function(value) {
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.ReceiveTokenRequest.prototype.getKeyAddr = function() {
+proto.services.ReceiveTokenRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ReceiveTokenRequest} returns this
+ * @return {!proto.services.ReceiveTokenRequest} returns this
  */
-proto.v1services.ReceiveTokenRequest.prototype.setKeyAddr = function(value) {
+proto.services.ReceiveTokenRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -8394,16 +8394,16 @@ proto.v1services.ReceiveTokenRequest.prototype.setKeyAddr = function(value) {
  * optional string token_payload = 4;
  * @return {string}
  */
-proto.v1services.ReceiveTokenRequest.prototype.getTokenPayload = function() {
+proto.services.ReceiveTokenRequest.prototype.getTokenPayload = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ReceiveTokenRequest} returns this
+ * @return {!proto.services.ReceiveTokenRequest} returns this
  */
-proto.v1services.ReceiveTokenRequest.prototype.setTokenPayload = function(value) {
+proto.services.ReceiveTokenRequest.prototype.setTokenPayload = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -8424,8 +8424,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.ReceiveTokenResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.ReceiveTokenResponse.toObject(opt_includeInstance, this);
+proto.services.ReceiveTokenResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.ReceiveTokenResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -8434,11 +8434,11 @@ proto.v1services.ReceiveTokenResponse.prototype.toObject = function(opt_includeI
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.ReceiveTokenResponse} msg The msg instance to transform.
+ * @param {!proto.services.ReceiveTokenResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveTokenResponse.toObject = function(includeInstance, msg) {
+proto.services.ReceiveTokenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -8454,23 +8454,23 @@ proto.v1services.ReceiveTokenResponse.toObject = function(includeInstance, msg) 
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.ReceiveTokenResponse}
+ * @return {!proto.services.ReceiveTokenResponse}
  */
-proto.v1services.ReceiveTokenResponse.deserializeBinary = function(bytes) {
+proto.services.ReceiveTokenResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.ReceiveTokenResponse;
-  return proto.v1services.ReceiveTokenResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.ReceiveTokenResponse;
+  return proto.services.ReceiveTokenResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.ReceiveTokenResponse} msg The message object to deserialize into.
+ * @param {!proto.services.ReceiveTokenResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.ReceiveTokenResponse}
+ * @return {!proto.services.ReceiveTokenResponse}
  */
-proto.v1services.ReceiveTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.ReceiveTokenResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8494,9 +8494,9 @@ proto.v1services.ReceiveTokenResponse.deserializeBinaryFromReader = function(msg
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.ReceiveTokenResponse.prototype.serializeBinary = function() {
+proto.services.ReceiveTokenResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.ReceiveTokenResponse.serializeBinaryToWriter(this, writer);
+  proto.services.ReceiveTokenResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8504,11 +8504,11 @@ proto.v1services.ReceiveTokenResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.ReceiveTokenResponse} message
+ * @param {!proto.services.ReceiveTokenResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.ReceiveTokenResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.ReceiveTokenResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -8524,16 +8524,16 @@ proto.v1services.ReceiveTokenResponse.serializeBinaryToWriter = function(message
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.ReceiveTokenResponse.prototype.getTip = function() {
+proto.services.ReceiveTokenResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.ReceiveTokenResponse} returns this
+ * @return {!proto.services.ReceiveTokenResponse} returns this
  */
-proto.v1services.ReceiveTokenResponse.prototype.setTip = function(value) {
+proto.services.ReceiveTokenResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -8554,8 +8554,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GetTokenBalanceRequest.toObject(opt_includeInstance, this);
+proto.services.GetTokenBalanceRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GetTokenBalanceRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8564,13 +8564,13 @@ proto.v1services.GetTokenBalanceRequest.prototype.toObject = function(opt_includ
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GetTokenBalanceRequest} msg The msg instance to transform.
+ * @param {!proto.services.GetTokenBalanceRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTokenBalanceRequest.toObject = function(includeInstance, msg) {
+proto.services.GetTokenBalanceRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     tokenName: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
@@ -8586,23 +8586,23 @@ proto.v1services.GetTokenBalanceRequest.toObject = function(includeInstance, msg
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GetTokenBalanceRequest}
+ * @return {!proto.services.GetTokenBalanceRequest}
  */
-proto.v1services.GetTokenBalanceRequest.deserializeBinary = function(bytes) {
+proto.services.GetTokenBalanceRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GetTokenBalanceRequest;
-  return proto.v1services.GetTokenBalanceRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GetTokenBalanceRequest;
+  return proto.services.GetTokenBalanceRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GetTokenBalanceRequest} msg The message object to deserialize into.
+ * @param {!proto.services.GetTokenBalanceRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GetTokenBalanceRequest}
+ * @return {!proto.services.GetTokenBalanceRequest}
  */
-proto.v1services.GetTokenBalanceRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GetTokenBalanceRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8610,8 +8610,8 @@ proto.v1services.GetTokenBalanceRequest.deserializeBinaryFromReader = function(m
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -8635,9 +8635,9 @@ proto.v1services.GetTokenBalanceRequest.deserializeBinaryFromReader = function(m
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.serializeBinary = function() {
+proto.services.GetTokenBalanceRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GetTokenBalanceRequest.serializeBinaryToWriter(this, writer);
+  proto.services.GetTokenBalanceRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8645,18 +8645,18 @@ proto.v1services.GetTokenBalanceRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GetTokenBalanceRequest} message
+ * @param {!proto.services.GetTokenBalanceRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTokenBalanceRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.GetTokenBalanceRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -8678,28 +8678,28 @@ proto.v1services.GetTokenBalanceRequest.serializeBinaryToWriter = function(messa
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.GetTokenBalanceRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.GetTokenBalanceRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.GetTokenBalanceRequest} returns this
 */
-proto.v1services.GetTokenBalanceRequest.prototype.setCreds = function(value) {
+proto.services.GetTokenBalanceRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.GetTokenBalanceRequest} returns this
+ * @return {!proto.services.GetTokenBalanceRequest} returns this
  */
-proto.v1services.GetTokenBalanceRequest.prototype.clearCreds = function() {
+proto.services.GetTokenBalanceRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -8708,7 +8708,7 @@ proto.v1services.GetTokenBalanceRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.hasCreds = function() {
+proto.services.GetTokenBalanceRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8717,16 +8717,16 @@ proto.v1services.GetTokenBalanceRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.getChainId = function() {
+proto.services.GetTokenBalanceRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GetTokenBalanceRequest} returns this
+ * @return {!proto.services.GetTokenBalanceRequest} returns this
  */
-proto.v1services.GetTokenBalanceRequest.prototype.setChainId = function(value) {
+proto.services.GetTokenBalanceRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -8735,16 +8735,16 @@ proto.v1services.GetTokenBalanceRequest.prototype.setChainId = function(value) {
  * optional string token_name = 3;
  * @return {string}
  */
-proto.v1services.GetTokenBalanceRequest.prototype.getTokenName = function() {
+proto.services.GetTokenBalanceRequest.prototype.getTokenName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.GetTokenBalanceRequest} returns this
+ * @return {!proto.services.GetTokenBalanceRequest} returns this
  */
-proto.v1services.GetTokenBalanceRequest.prototype.setTokenName = function(value) {
+proto.services.GetTokenBalanceRequest.prototype.setTokenName = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -8765,8 +8765,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.GetTokenBalanceResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.GetTokenBalanceResponse.toObject(opt_includeInstance, this);
+proto.services.GetTokenBalanceResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.GetTokenBalanceResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -8775,11 +8775,11 @@ proto.v1services.GetTokenBalanceResponse.prototype.toObject = function(opt_inclu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.GetTokenBalanceResponse} msg The msg instance to transform.
+ * @param {!proto.services.GetTokenBalanceResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTokenBalanceResponse.toObject = function(includeInstance, msg) {
+proto.services.GetTokenBalanceResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     amount: jspb.Message.getFieldWithDefault(msg, 1, 0)
   };
@@ -8795,23 +8795,23 @@ proto.v1services.GetTokenBalanceResponse.toObject = function(includeInstance, ms
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.GetTokenBalanceResponse}
+ * @return {!proto.services.GetTokenBalanceResponse}
  */
-proto.v1services.GetTokenBalanceResponse.deserializeBinary = function(bytes) {
+proto.services.GetTokenBalanceResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.GetTokenBalanceResponse;
-  return proto.v1services.GetTokenBalanceResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.GetTokenBalanceResponse;
+  return proto.services.GetTokenBalanceResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.GetTokenBalanceResponse} msg The message object to deserialize into.
+ * @param {!proto.services.GetTokenBalanceResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.GetTokenBalanceResponse}
+ * @return {!proto.services.GetTokenBalanceResponse}
  */
-proto.v1services.GetTokenBalanceResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.GetTokenBalanceResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8835,9 +8835,9 @@ proto.v1services.GetTokenBalanceResponse.deserializeBinaryFromReader = function(
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.GetTokenBalanceResponse.prototype.serializeBinary = function() {
+proto.services.GetTokenBalanceResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.GetTokenBalanceResponse.serializeBinaryToWriter(this, writer);
+  proto.services.GetTokenBalanceResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8845,11 +8845,11 @@ proto.v1services.GetTokenBalanceResponse.prototype.serializeBinary = function() 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.GetTokenBalanceResponse} message
+ * @param {!proto.services.GetTokenBalanceResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.GetTokenBalanceResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.GetTokenBalanceResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getAmount();
   if (f !== 0) {
@@ -8865,16 +8865,16 @@ proto.v1services.GetTokenBalanceResponse.serializeBinaryToWriter = function(mess
  * optional uint64 amount = 1;
  * @return {number}
  */
-proto.v1services.GetTokenBalanceResponse.prototype.getAmount = function() {
+proto.services.GetTokenBalanceResponse.prototype.getAmount = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.v1services.GetTokenBalanceResponse} returns this
+ * @return {!proto.services.GetTokenBalanceResponse} returns this
  */
-proto.v1services.GetTokenBalanceResponse.prototype.setAmount = function(value) {
+proto.services.GetTokenBalanceResponse.prototype.setAmount = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
@@ -8885,7 +8885,7 @@ proto.v1services.GetTokenBalanceResponse.prototype.setAmount = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.v1services.PlayTransactionsRequest.repeatedFields_ = [4];
+proto.services.PlayTransactionsRequest.repeatedFields_ = [4];
 
 
 
@@ -8902,8 +8902,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.PlayTransactionsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.PlayTransactionsRequest.toObject(opt_includeInstance, this);
+proto.services.PlayTransactionsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.PlayTransactionsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8912,13 +8912,13 @@ proto.v1services.PlayTransactionsRequest.prototype.toObject = function(opt_inclu
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.PlayTransactionsRequest} msg The msg instance to transform.
+ * @param {!proto.services.PlayTransactionsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.PlayTransactionsRequest.toObject = function(includeInstance, msg) {
+proto.services.PlayTransactionsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    creds: (f = msg.getCreds()) && proto.v1services.Credentials.toObject(includeInstance, f),
+    creds: (f = msg.getCreds()) && proto.services.Credentials.toObject(includeInstance, f),
     chainId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     keyAddr: jspb.Message.getFieldWithDefault(msg, 3, ""),
     transactionsList: jspb.Message.toObjectList(msg.getTransactionsList(),
@@ -8936,23 +8936,23 @@ proto.v1services.PlayTransactionsRequest.toObject = function(includeInstance, ms
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.PlayTransactionsRequest}
+ * @return {!proto.services.PlayTransactionsRequest}
  */
-proto.v1services.PlayTransactionsRequest.deserializeBinary = function(bytes) {
+proto.services.PlayTransactionsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.PlayTransactionsRequest;
-  return proto.v1services.PlayTransactionsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.PlayTransactionsRequest;
+  return proto.services.PlayTransactionsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.PlayTransactionsRequest} msg The message object to deserialize into.
+ * @param {!proto.services.PlayTransactionsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.PlayTransactionsRequest}
+ * @return {!proto.services.PlayTransactionsRequest}
  */
-proto.v1services.PlayTransactionsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.PlayTransactionsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8960,8 +8960,8 @@ proto.v1services.PlayTransactionsRequest.deserializeBinaryFromReader = function(
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.v1services.Credentials;
-      reader.readMessage(value,proto.v1services.Credentials.deserializeBinaryFromReader);
+      var value = new proto.services.Credentials;
+      reader.readMessage(value,proto.services.Credentials.deserializeBinaryFromReader);
       msg.setCreds(value);
       break;
     case 2:
@@ -8990,9 +8990,9 @@ proto.v1services.PlayTransactionsRequest.deserializeBinaryFromReader = function(
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.PlayTransactionsRequest.prototype.serializeBinary = function() {
+proto.services.PlayTransactionsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.PlayTransactionsRequest.serializeBinaryToWriter(this, writer);
+  proto.services.PlayTransactionsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9000,18 +9000,18 @@ proto.v1services.PlayTransactionsRequest.prototype.serializeBinary = function() 
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.PlayTransactionsRequest} message
+ * @param {!proto.services.PlayTransactionsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.PlayTransactionsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.services.PlayTransactionsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getCreds();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.v1services.Credentials.serializeBinaryToWriter
+      proto.services.Credentials.serializeBinaryToWriter
     );
   }
   f = message.getChainId();
@@ -9041,28 +9041,28 @@ proto.v1services.PlayTransactionsRequest.serializeBinaryToWriter = function(mess
 
 /**
  * optional Credentials creds = 1;
- * @return {?proto.v1services.Credentials}
+ * @return {?proto.services.Credentials}
  */
-proto.v1services.PlayTransactionsRequest.prototype.getCreds = function() {
-  return /** @type{?proto.v1services.Credentials} */ (
-    jspb.Message.getWrapperField(this, proto.v1services.Credentials, 1));
+proto.services.PlayTransactionsRequest.prototype.getCreds = function() {
+  return /** @type{?proto.services.Credentials} */ (
+    jspb.Message.getWrapperField(this, proto.services.Credentials, 1));
 };
 
 
 /**
- * @param {?proto.v1services.Credentials|undefined} value
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @param {?proto.services.Credentials|undefined} value
+ * @return {!proto.services.PlayTransactionsRequest} returns this
 */
-proto.v1services.PlayTransactionsRequest.prototype.setCreds = function(value) {
+proto.services.PlayTransactionsRequest.prototype.setCreds = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @return {!proto.services.PlayTransactionsRequest} returns this
  */
-proto.v1services.PlayTransactionsRequest.prototype.clearCreds = function() {
+proto.services.PlayTransactionsRequest.prototype.clearCreds = function() {
   return this.setCreds(undefined);
 };
 
@@ -9071,7 +9071,7 @@ proto.v1services.PlayTransactionsRequest.prototype.clearCreds = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.v1services.PlayTransactionsRequest.prototype.hasCreds = function() {
+proto.services.PlayTransactionsRequest.prototype.hasCreds = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -9080,16 +9080,16 @@ proto.v1services.PlayTransactionsRequest.prototype.hasCreds = function() {
  * optional string chain_id = 2;
  * @return {string}
  */
-proto.v1services.PlayTransactionsRequest.prototype.getChainId = function() {
+proto.services.PlayTransactionsRequest.prototype.getChainId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @return {!proto.services.PlayTransactionsRequest} returns this
  */
-proto.v1services.PlayTransactionsRequest.prototype.setChainId = function(value) {
+proto.services.PlayTransactionsRequest.prototype.setChainId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -9098,54 +9098,54 @@ proto.v1services.PlayTransactionsRequest.prototype.setChainId = function(value) 
  * optional string key_addr = 3;
  * @return {string}
  */
-proto.v1services.PlayTransactionsRequest.prototype.getKeyAddr = function() {
+proto.services.PlayTransactionsRequest.prototype.getKeyAddr = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @return {!proto.services.PlayTransactionsRequest} returns this
  */
-proto.v1services.PlayTransactionsRequest.prototype.setKeyAddr = function(value) {
+proto.services.PlayTransactionsRequest.prototype.setKeyAddr = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * repeated v1transactions.Transaction transactions = 4;
- * @return {!Array<!proto.v1transactions.Transaction>}
+ * repeated transactions.Transaction transactions = 4;
+ * @return {!Array<!proto.transactions.Transaction>}
  */
-proto.v1services.PlayTransactionsRequest.prototype.getTransactionsList = function() {
-  return /** @type{!Array<!proto.v1transactions.Transaction>} */ (
+proto.services.PlayTransactionsRequest.prototype.getTransactionsList = function() {
+  return /** @type{!Array<!proto.transactions.Transaction>} */ (
     jspb.Message.getRepeatedWrapperField(this, transactions_transactions_pb.Transaction, 4));
 };
 
 
 /**
- * @param {!Array<!proto.v1transactions.Transaction>} value
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @param {!Array<!proto.transactions.Transaction>} value
+ * @return {!proto.services.PlayTransactionsRequest} returns this
 */
-proto.v1services.PlayTransactionsRequest.prototype.setTransactionsList = function(value) {
+proto.services.PlayTransactionsRequest.prototype.setTransactionsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
 /**
- * @param {!proto.v1transactions.Transaction=} opt_value
+ * @param {!proto.transactions.Transaction=} opt_value
  * @param {number=} opt_index
- * @return {!proto.v1transactions.Transaction}
+ * @return {!proto.transactions.Transaction}
  */
-proto.v1services.PlayTransactionsRequest.prototype.addTransactions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.v1transactions.Transaction, opt_index);
+proto.services.PlayTransactionsRequest.prototype.addTransactions = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.transactions.Transaction, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v1services.PlayTransactionsRequest} returns this
+ * @return {!proto.services.PlayTransactionsRequest} returns this
  */
-proto.v1services.PlayTransactionsRequest.prototype.clearTransactionsList = function() {
+proto.services.PlayTransactionsRequest.prototype.clearTransactionsList = function() {
   return this.setTransactionsList([]);
 };
 
@@ -9166,8 +9166,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.v1services.PlayTransactionsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.v1services.PlayTransactionsResponse.toObject(opt_includeInstance, this);
+proto.services.PlayTransactionsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.services.PlayTransactionsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -9176,11 +9176,11 @@ proto.v1services.PlayTransactionsResponse.prototype.toObject = function(opt_incl
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.v1services.PlayTransactionsResponse} msg The msg instance to transform.
+ * @param {!proto.services.PlayTransactionsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.PlayTransactionsResponse.toObject = function(includeInstance, msg) {
+proto.services.PlayTransactionsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     tip: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -9196,23 +9196,23 @@ proto.v1services.PlayTransactionsResponse.toObject = function(includeInstance, m
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.v1services.PlayTransactionsResponse}
+ * @return {!proto.services.PlayTransactionsResponse}
  */
-proto.v1services.PlayTransactionsResponse.deserializeBinary = function(bytes) {
+proto.services.PlayTransactionsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.v1services.PlayTransactionsResponse;
-  return proto.v1services.PlayTransactionsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.services.PlayTransactionsResponse;
+  return proto.services.PlayTransactionsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.v1services.PlayTransactionsResponse} msg The message object to deserialize into.
+ * @param {!proto.services.PlayTransactionsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.v1services.PlayTransactionsResponse}
+ * @return {!proto.services.PlayTransactionsResponse}
  */
-proto.v1services.PlayTransactionsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.services.PlayTransactionsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9236,9 +9236,9 @@ proto.v1services.PlayTransactionsResponse.deserializeBinaryFromReader = function
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.v1services.PlayTransactionsResponse.prototype.serializeBinary = function() {
+proto.services.PlayTransactionsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.v1services.PlayTransactionsResponse.serializeBinaryToWriter(this, writer);
+  proto.services.PlayTransactionsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9246,11 +9246,11 @@ proto.v1services.PlayTransactionsResponse.prototype.serializeBinary = function()
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.v1services.PlayTransactionsResponse} message
+ * @param {!proto.services.PlayTransactionsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.v1services.PlayTransactionsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.services.PlayTransactionsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getTip();
   if (f.length > 0) {
@@ -9266,18 +9266,18 @@ proto.v1services.PlayTransactionsResponse.serializeBinaryToWriter = function(mes
  * optional string tip = 1;
  * @return {string}
  */
-proto.v1services.PlayTransactionsResponse.prototype.getTip = function() {
+proto.services.PlayTransactionsResponse.prototype.getTip = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.v1services.PlayTransactionsResponse} returns this
+ * @return {!proto.services.PlayTransactionsResponse} returns this
  */
-proto.v1services.PlayTransactionsResponse.prototype.setTip = function(value) {
+proto.services.PlayTransactionsResponse.prototype.setTip = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
-goog.object.extend(exports, proto.v1services);
+goog.object.extend(exports, proto.services);

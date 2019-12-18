@@ -1,3 +1,3 @@
-// package: v1community
+// package: community
 // file: community/community.proto
 

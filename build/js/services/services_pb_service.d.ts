@@ -1,4 +1,4 @@
-// package: v1services
+// package: services
 // file: services/services.proto
 
 import * as services_services_pb from "../services/services_pb";

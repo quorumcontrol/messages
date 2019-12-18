@@ -1,4 +1,4 @@
-// package: v1services
+// package: services
 // file: services/services.proto
 
 var services_services_pb = require("../services/services_pb");
@@ -6,7 +6,7 @@ var grpc = require("@improbable-eng/grpc-web").grpc;
 
 var WalletRPCService = (function () {
   function WalletRPCService() {}
-  WalletRPCService.serviceName = "v1services.WalletRPCService";
+  WalletRPCService.serviceName = "services.WalletRPCService";
   return WalletRPCService;
 }());
 

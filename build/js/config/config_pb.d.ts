@@ -1,4 +1,4 @@
-// package: v1config
+// package: config
 // file: config/config.proto
 
 import * as jspb from "google-protobuf";

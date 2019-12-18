@@ -1,4 +1,4 @@
-// package: v1community
+// package: community
 // file: community/community.proto
 
 import * as jspb from "google-protobuf";
