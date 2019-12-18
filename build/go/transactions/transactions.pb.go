@@ -21,7 +21,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Transaction_Type int32
 
@@ -85,7 +85,7 @@ func (m *SetDataPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return xxx_messageInfo_SetDataPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -136,7 +136,7 @@ func (m *SetOwnershipPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_SetOwnershipPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -180,7 +180,7 @@ func (m *TokenMonetaryPolicy) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_TokenMonetaryPolicy.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -225,7 +225,7 @@ func (m *EstablishTokenPayload) XXX_Marshal(b []byte, deterministic bool) ([]byt
 		return xxx_messageInfo_EstablishTokenPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -277,7 +277,7 @@ func (m *MintTokenPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_MintTokenPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -331,7 +331,7 @@ func (m *SendTokenPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, er
 		return xxx_messageInfo_SendTokenPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -399,7 +399,7 @@ func (m *ReceiveTokenPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte,
 		return xxx_messageInfo_ReceiveTokenPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -467,7 +467,7 @@ func (m *TokenPayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, error)
 		return xxx_messageInfo_TokenPayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -535,7 +535,7 @@ func (m *StakePayload) XXX_Marshal(b []byte, deterministic bool) ([]byte, error)
 		return xxx_messageInfo_StakePayload.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -583,7 +583,7 @@ func (m *StakePayload) GetVerKey() *signatures.PublicKey {
 }
 
 type Transaction struct {
-	Type                  Transaction_Type       `protobuf:"varint,1,opt,name=type,proto3,enum=transactions.Transaction_Type" json:"type,omitempty"`
+	Type                  Transaction_Type       `protobuf:"varint,1,opt,name=type,proto3,enum=v2transactions.Transaction_Type" json:"type,omitempty"`
 	SetDataPayload        *SetDataPayload        `protobuf:"bytes,2,opt,name=set_data_payload,json=setDataPayload,proto3" json:"set_data_payload,omitempty"`
 	SetOwnershipPayload   *SetOwnershipPayload   `protobuf:"bytes,3,opt,name=set_ownership_payload,json=setOwnershipPayload,proto3" json:"set_ownership_payload,omitempty"`
 	EstablishTokenPayload *EstablishTokenPayload `protobuf:"bytes,4,opt,name=establish_token_payload,json=establishTokenPayload,proto3" json:"establish_token_payload,omitempty"`
@@ -607,7 +607,7 @@ func (m *Transaction) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) 
 		return xxx_messageInfo_Transaction.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -683,82 +683,82 @@ func (m *Transaction) GetStakePayload() *StakePayload {
 }
 
 func init() {
-	proto.RegisterEnum("transactions.Transaction_Type", Transaction_Type_name, Transaction_Type_value)
-	proto.RegisterType((*SetDataPayload)(nil), "transactions.SetDataPayload")
-	proto.RegisterType((*SetOwnershipPayload)(nil), "transactions.SetOwnershipPayload")
-	proto.RegisterType((*TokenMonetaryPolicy)(nil), "transactions.TokenMonetaryPolicy")
-	proto.RegisterType((*EstablishTokenPayload)(nil), "transactions.EstablishTokenPayload")
-	proto.RegisterType((*MintTokenPayload)(nil), "transactions.MintTokenPayload")
-	proto.RegisterType((*SendTokenPayload)(nil), "transactions.SendTokenPayload")
-	proto.RegisterType((*ReceiveTokenPayload)(nil), "transactions.ReceiveTokenPayload")
-	proto.RegisterType((*TokenPayload)(nil), "transactions.TokenPayload")
-	proto.RegisterType((*StakePayload)(nil), "transactions.StakePayload")
-	proto.RegisterType((*Transaction)(nil), "transactions.Transaction")
+	proto.RegisterEnum("v2transactions.Transaction_Type", Transaction_Type_name, Transaction_Type_value)
+	proto.RegisterType((*SetDataPayload)(nil), "v2transactions.SetDataPayload")
+	proto.RegisterType((*SetOwnershipPayload)(nil), "v2transactions.SetOwnershipPayload")
+	proto.RegisterType((*TokenMonetaryPolicy)(nil), "v2transactions.TokenMonetaryPolicy")
+	proto.RegisterType((*EstablishTokenPayload)(nil), "v2transactions.EstablishTokenPayload")
+	proto.RegisterType((*MintTokenPayload)(nil), "v2transactions.MintTokenPayload")
+	proto.RegisterType((*SendTokenPayload)(nil), "v2transactions.SendTokenPayload")
+	proto.RegisterType((*ReceiveTokenPayload)(nil), "v2transactions.ReceiveTokenPayload")
+	proto.RegisterType((*TokenPayload)(nil), "v2transactions.TokenPayload")
+	proto.RegisterType((*StakePayload)(nil), "v2transactions.StakePayload")
+	proto.RegisterType((*Transaction)(nil), "v2transactions.Transaction")
 }
 
 func init() { proto.RegisterFile("transactions/transactions.proto", fileDescriptor_8af93f5a77b9779a) }
 
 var fileDescriptor_8af93f5a77b9779a = []byte{
-	// 841 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x55, 0xcd, 0x8e, 0xe3, 0x44,
-	0x10, 0x1e, 0x27, 0x4e, 0xb2, 0xa9, 0x64, 0x82, 0xd5, 0x21, 0x4b, 0x76, 0x41, 0x21, 0x18, 0x81,
-	0xe6, 0x94, 0x48, 0x81, 0x0b, 0x2b, 0x01, 0x9a, 0x65, 0x8c, 0x36, 0x64, 0x26, 0x13, 0xb5, 0x3d,
-	0xac, 0x04, 0x87, 0xa8, 0x13, 0x97, 0x12, 0x6b, 0xe2, 0x1f, 0xdc, 0xed, 0x2c, 0x3e, 0xf2, 0x06,
-	0x5c, 0x78, 0x00, 0xde, 0x80, 0xc7, 0xe0, 0xb8, 0x47, 0x8e, 0x68, 0xe6, 0x19, 0xb8, 0x23, 0xdb,
-	0xf1, 0xc4, 0xb6, 0xbc, 0x70, 0xd8, 0x5b, 0x7f, 0xe5, 0xaa, 0xaf, 0x3f, 0x97, 0xab, 0x3e, 0xc3,
-	0x87, 0xc2, 0x67, 0x0e, 0x67, 0x6b, 0x61, 0xb9, 0x0e, 0x1f, 0x67, 0xc1, 0xc8, 0xf3, 0x5d, 0xe1,
-	0x92, 0x76, 0x36, 0xf6, 0xf4, 0x7d, 0x6e, 0x6d, 0x1c, 0x26, 0x02, 0x1f, 0xf9, 0xf8, 0x78, 0x4c,
-	0x52, 0xd5, 0x67, 0xd0, 0xd1, 0x51, 0x5c, 0x30, 0xc1, 0x16, 0x2c, 0xdc, 0xb9, 0xcc, 0x24, 0x04,
-	0x64, 0x8f, 0x89, 0x6d, 0x5f, 0x1a, 0x4a, 0x67, 0x4d, 0x1a, 0x9f, 0xc9, 0xbb, 0x50, 0xdb, 0xb3,
-	0x5d, 0x80, 0xfd, 0xca, 0x50, 0x3a, 0x6b, 0xd3, 0x04, 0xa8, 0x5f, 0x42, 0x57, 0x47, 0x71, 0xfd,
-	0xca, 0x41, 0x9f, 0x6f, 0x2d, 0x2f, 0x25, 0xf8, 0x14, 0x3a, 0x2c, 0x10, 0x5b, 0x74, 0x84, 0xb5,
-	0x66, 0x91, 0x84, 0xbe, 0x34, 0xac, 0x9e, 0x35, 0x69, 0x21, 0xaa, 0x8e, 0xa1, 0x6b, 0xb8, 0xb7,
-	0xe8, 0x5c, 0xb9, 0x0e, 0x0a, 0xe6, 0x87, 0x0b, 0x77, 0x67, 0xad, 0x43, 0xd2, 0x87, 0x86, 0xcd,
-	0x7e, 0xb6, 0xec, 0xc0, 0x8e, 0x25, 0xc8, 0x34, 0x85, 0xea, 0x2b, 0xe8, 0x69, 0x5c, 0xb0, 0xd5,
-	0xce, 0xe2, 0xdb, 0xb8, 0x32, 0x23, 0xd9, 0x61, 0x36, 0xa6, 0x92, 0xa3, 0x33, 0xf9, 0x0e, 0xde,
-	0xb1, 0x0f, 0xc4, 0x4b, 0x2f, 0x66, 0x8e, 0xc5, 0xb7, 0x26, 0x1f, 0x8d, 0x72, 0x1d, 0x2b, 0x91,
-	0x40, 0x3b, 0x76, 0x0e, 0xab, 0x5f, 0x81, 0x72, 0x65, 0x39, 0xe2, 0x7f, 0xef, 0x7c, 0x0c, 0x75,
-	0x66, 0xbb, 0x81, 0x23, 0xe2, 0xab, 0x64, 0x7a, 0x40, 0xaa, 0x07, 0x8a, 0x8e, 0x8e, 0x99, 0xab,
-	0xef, 0x40, 0xc5, 0x32, 0x0f, 0xd5, 0x15, 0xeb, 0xc8, 0x57, 0x29, 0xe5, 0xab, 0x66, 0xf9, 0xc8,
-	0x10, 0x5a, 0x26, 0x72, 0x61, 0x39, 0x49, 0x7b, 0xe5, 0xb8, 0x24, 0x1b, 0x52, 0xff, 0x90, 0xa0,
-	0x4b, 0x71, 0x8d, 0xd6, 0x1e, 0x73, 0xb7, 0x7e, 0x01, 0x4f, 0x38, 0x3a, 0xe6, 0x52, 0x44, 0xc1,
-	0x65, 0xa6, 0x11, 0xcb, 0x07, 0x31, 0x8f, 0x79, 0x2a, 0xd5, 0x38, 0x3e, 0x9e, 0x9a, 0x44, 0x81,
-	0xaa, 0xb0, 0xbc, 0xc3, 0x04, 0x44, 0x47, 0xf2, 0x39, 0x80, 0xf0, 0x11, 0x97, 0x5c, 0x30, 0x81,
-	0xb1, 0xc4, 0xd6, 0xa4, 0x37, 0xca, 0x8c, 0x98, 0xe1, 0x23, 0xea, 0xd1, 0x43, 0xda, 0x14, 0xe9,
-	0x31, 0x7a, 0xa9, 0x4b, 0x64, 0x7b, 0xe4, 0x7d, 0x79, 0x58, 0x3d, 0x6b, 0xd3, 0x03, 0x52, 0x7f,
-	0x93, 0xa0, 0x9d, 0xd3, 0xfa, 0x09, 0x74, 0x4a, 0x05, 0x9e, 0x8a, 0x37, 0xe9, 0x6a, 0xbe, 0xa5,
-	0xae, 0x5d, 0x4e, 0x57, 0x82, 0xd4, 0xdf, 0x25, 0x68, 0xeb, 0x82, 0xdd, 0x62, 0xaa, 0xeb, 0x09,
-	0x3c, 0xda, 0xf8, 0x6e, 0xe0, 0x1d, 0x15, 0x35, 0x62, 0x3c, 0x35, 0xdf, 0x34, 0x00, 0x64, 0x04,
-	0x0d, 0x93, 0x8b, 0xe5, 0x2d, 0x86, 0x65, 0x72, 0x16, 0xc1, 0x6a, 0x67, 0xad, 0x67, 0x18, 0xd2,
-	0xba, 0xc9, 0xc5, 0x0c, 0xc3, 0x28, 0x7f, 0x8f, 0x7e, 0x9c, 0x2f, 0xff, 0x67, 0xfe, 0x1e, 0xfd,
-	0x19, 0x86, 0xea, 0x3f, 0x35, 0x68, 0x65, 0xbe, 0x16, 0x99, 0x80, 0x2c, 0x42, 0x2f, 0x19, 0xce,
-	0xce, 0x64, 0x50, 0x98, 0xf8, 0x23, 0x18, 0x19, 0xa1, 0x87, 0x34, 0xce, 0x25, 0xdf, 0x82, 0xc2,
-	0x51, 0x2c, 0x4d, 0x26, 0xd8, 0xd2, 0x4b, 0x5e, 0xf5, 0xb0, 0x31, 0x1f, 0xe4, 0xeb, 0xf3, 0x7e,
-	0x41, 0x3b, 0x3c, 0xef, 0x1f, 0x37, 0xd0, 0x8b, 0x78, 0xdc, 0xd4, 0x16, 0x1e, 0xc8, 0xaa, 0x65,
-	0xeb, 0x57, 0x62, 0x20, 0xb4, 0xcb, 0x4b, 0x5c, 0xe5, 0x47, 0x78, 0x0f, 0xd3, 0xe5, 0x3f, 0x8c,
-	0x6f, 0x4a, 0x9c, 0xb4, 0xe8, 0xe3, 0x3c, 0x71, 0xa9, 0x53, 0xd0, 0x1e, 0x96, 0x1a, 0xc8, 0x25,
-	0x10, 0xdb, 0x72, 0x44, 0x81, 0xb7, 0x16, 0xf3, 0x16, 0xba, 0x57, 0x34, 0x02, 0xaa, 0xd8, 0x45,
-	0x6b, 0xb8, 0x04, 0x92, 0x59, 0xb2, 0x94, 0xad, 0x5e, 0xc6, 0x56, 0xb4, 0x05, 0xaa, 0xf0, 0xa2,
-	0x51, 0xdc, 0x40, 0xcf, 0x4f, 0x36, 0xb9, 0x40, 0xd8, 0x28, 0xeb, 0x67, 0xc9, 0xd2, 0xd3, 0xae,
-	0x5f, 0xe2, 0x04, 0x5f, 0xc3, 0x29, 0x8f, 0xa6, 0xfa, 0x81, 0xee, 0x51, 0x4c, 0xf7, 0xb4, 0xa0,
-	0x2f, 0x33, 0xf8, 0xb4, 0xcd, 0x33, 0x48, 0xfd, 0x45, 0x02, 0x39, 0x1a, 0x1f, 0xd2, 0x82, 0xc6,
-	0xcd, 0x7c, 0x36, 0xbf, 0x7e, 0x39, 0x57, 0x4e, 0x22, 0xa0, 0x6b, 0xc6, 0xc5, 0xb9, 0x71, 0xae,
-	0x48, 0x44, 0x81, 0xb6, 0xae, 0x19, 0xd7, 0x2f, 0xe7, 0x1a, 0xd5, 0x5f, 0x4c, 0x17, 0x4a, 0x85,
-	0x10, 0xe8, 0x68, 0xba, 0x71, 0xfe, 0xfc, 0x72, 0xaa, 0xbf, 0x30, 0xae, 0x67, 0xda, 0x5c, 0xa9,
-	0x92, 0x53, 0x68, 0x5e, 0x4d, 0xe7, 0x46, 0x02, 0xe5, 0x08, 0xea, 0xda, 0xfc, 0x22, 0x81, 0xb5,
-	0x88, 0x83, 0x6a, 0xdf, 0x68, 0xd3, 0xef, 0xb5, 0x24, 0x52, 0x27, 0x4d, 0xa8, 0xe9, 0xc6, 0xf9,
-	0x4c, 0x53, 0x1a, 0xcf, 0x8d, 0x3f, 0xef, 0x06, 0xd2, 0xeb, 0xbb, 0x81, 0xf4, 0xf7, 0xdd, 0x40,
-	0xfa, 0xf5, 0x7e, 0x70, 0xf2, 0xfa, 0x7e, 0x70, 0xf2, 0xd7, 0xfd, 0xe0, 0xe4, 0x87, 0x67, 0x1b,
-	0x4b, 0x6c, 0x83, 0xd5, 0x68, 0xed, 0xda, 0xe3, 0x9f, 0x02, 0xd7, 0x0f, 0xec, 0xb5, 0xeb, 0x08,
-	0xdf, 0xdd, 0x8d, 0x6d, 0xe4, 0x9c, 0x6d, 0x90, 0x8f, 0xf7, 0x93, 0xf1, 0x2a, 0xb0, 0x76, 0xe6,
-	0x78, 0xe3, 0xe6, 0x7e, 0xa2, 0xab, 0x7a, 0xfc, 0x6b, 0xfc, 0xec, 0xdf, 0x00, 0x00, 0x00, 0xff,
-	0xff, 0x57, 0xb5, 0x57, 0xef, 0x68, 0x07, 0x00, 0x00,
+	// 845 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xa4, 0x55, 0xcd, 0x6e, 0xe3, 0x54,
+	0x14, 0xae, 0x93, 0x34, 0x99, 0x9c, 0x64, 0x8c, 0x75, 0x43, 0x67, 0x32, 0x80, 0x42, 0x64, 0x34,
+	0xa8, 0xab, 0x04, 0x05, 0x84, 0xc4, 0x48, 0x20, 0x65, 0xa8, 0xa5, 0x46, 0x69, 0xdd, 0xea, 0xda,
+	0x50, 0x09, 0x09, 0x45, 0x37, 0xf1, 0x51, 0x62, 0x35, 0xfe, 0xc1, 0xf7, 0x3a, 0xe0, 0x25, 0x0b,
+	0xf6, 0xec, 0x78, 0x02, 0x5e, 0x80, 0xa7, 0x60, 0x39, 0x4b, 0x96, 0xa8, 0x7d, 0x11, 0x64, 0x3b,
+	0x6e, 0x6c, 0xd7, 0xa3, 0x59, 0xb0, 0x3b, 0xdf, 0xb1, 0xcf, 0x77, 0x3f, 0x1f, 0x9f, 0xf3, 0x5d,
+	0xf8, 0x58, 0x04, 0xcc, 0xe5, 0x6c, 0x25, 0x6c, 0xcf, 0xe5, 0xe3, 0x3c, 0x18, 0xf9, 0x81, 0x27,
+	0x3c, 0x22, 0xef, 0x26, 0xf9, 0xec, 0x07, 0x1f, 0x72, 0x7b, 0xed, 0x32, 0x11, 0x06, 0xc8, 0xc7,
+	0x87, 0x30, 0x7d, 0x59, 0x7d, 0x05, 0xb2, 0x81, 0xe2, 0x8c, 0x09, 0x76, 0xcd, 0xa2, 0xad, 0xc7,
+	0x2c, 0x42, 0xa0, 0xe1, 0x33, 0xb1, 0xe9, 0x4b, 0x43, 0xe9, 0xb4, 0x4d, 0x93, 0x98, 0xbc, 0x0f,
+	0xc7, 0x3b, 0xb6, 0x0d, 0xb1, 0x5f, 0x1b, 0x4a, 0xa7, 0x5d, 0x9a, 0x02, 0xf5, 0x6b, 0xe8, 0x19,
+	0x28, 0xae, 0x7e, 0x76, 0x31, 0xe0, 0x1b, 0xdb, 0xcf, 0x08, 0x3e, 0x05, 0x99, 0x85, 0x62, 0x83,
+	0xae, 0xb0, 0x57, 0x2c, 0x96, 0xd0, 0x97, 0x86, 0xf5, 0xd3, 0x36, 0x2d, 0x65, 0xd5, 0x31, 0xf4,
+	0x4c, 0xef, 0x16, 0xdd, 0x4b, 0xcf, 0x45, 0xc1, 0x82, 0xe8, 0xda, 0xdb, 0xda, 0xab, 0x88, 0xf4,
+	0xa1, 0xe5, 0xb0, 0x5f, 0x6c, 0x27, 0x74, 0x12, 0x09, 0x0d, 0x9a, 0x41, 0x35, 0x82, 0x13, 0x8d,
+	0x0b, 0xb6, 0xdc, 0xda, 0x7c, 0x93, 0x54, 0xe6, 0x24, 0xbb, 0xcc, 0xc1, 0x4c, 0x72, 0x1c, 0x93,
+	0x0b, 0x78, 0xcf, 0xd9, 0x13, 0x2f, 0xfc, 0x84, 0x39, 0x11, 0xdf, 0x99, 0x7c, 0x32, 0x2a, 0xf6,
+	0x67, 0x54, 0x21, 0x82, 0xca, 0x4e, 0x01, 0xab, 0xdf, 0x80, 0x72, 0x69, 0xbb, 0xe2, 0x9d, 0xa7,
+	0x3e, 0x83, 0x26, 0x73, 0xbc, 0xd0, 0x15, 0xc9, 0x61, 0x0d, 0xba, 0x47, 0xaa, 0x0f, 0x8a, 0x81,
+	0xae, 0x55, 0xa8, 0x97, 0xa1, 0x66, 0x5b, 0xfb, 0xea, 0x9a, 0x7d, 0xe0, 0xab, 0x55, 0xf2, 0xd5,
+	0xf3, 0x7c, 0x64, 0x08, 0x1d, 0x0b, 0xb9, 0xb0, 0xdd, 0xb4, 0xc1, 0x8d, 0xa4, 0x24, 0x9f, 0x52,
+	0xff, 0x92, 0xa0, 0x47, 0x71, 0x85, 0xf6, 0x0e, 0x0b, 0xa7, 0x7e, 0x05, 0x2f, 0x38, 0xba, 0xd6,
+	0x42, 0xc4, 0xc9, 0x45, 0xae, 0x11, 0x8b, 0x07, 0x31, 0xcf, 0x78, 0x26, 0xd5, 0x3c, 0x3c, 0x9e,
+	0x59, 0x44, 0x81, 0xba, 0xb0, 0xfd, 0xfd, 0x0c, 0xc4, 0x21, 0xf9, 0x12, 0x40, 0x04, 0x88, 0x0b,
+	0x2e, 0x98, 0xc0, 0x44, 0x62, 0x67, 0xf2, 0x7c, 0xb4, 0x9b, 0xe4, 0xc6, 0xcc, 0x0c, 0x10, 0x8d,
+	0xf8, 0x31, 0x6d, 0x8b, 0x2c, 0x8c, 0x3f, 0xeb, 0x02, 0xd9, 0x0e, 0x79, 0xbf, 0x31, 0xac, 0x9f,
+	0x76, 0xe9, 0x1e, 0xa9, 0x7f, 0x48, 0xd0, 0x2d, 0xa8, 0x7d, 0x09, 0x72, 0xa5, 0xc4, 0xa7, 0xe2,
+	0x6d, 0xca, 0xda, 0xff, 0x5b, 0xd9, 0xb6, 0xa0, 0x2c, 0x45, 0xea, 0x9f, 0x12, 0x74, 0x0d, 0xc1,
+	0x6e, 0x31, 0x53, 0xf6, 0x02, 0x9e, 0xac, 0x03, 0x2f, 0xf4, 0x0f, 0x9a, 0x5a, 0x09, 0x9e, 0x59,
+	0x6f, 0x1b, 0x02, 0xf2, 0x19, 0xb4, 0x2c, 0x2e, 0x16, 0xb7, 0x18, 0x55, 0x0b, 0xba, 0x0e, 0x97,
+	0x5b, 0x7b, 0x35, 0xc7, 0x88, 0x36, 0x2d, 0x2e, 0xe6, 0x18, 0xc5, 0x15, 0x3b, 0x0c, 0x92, 0x8a,
+	0xc6, 0x3b, 0x2a, 0x76, 0x18, 0xcc, 0x31, 0x52, 0x7f, 0x6b, 0x42, 0x27, 0xf7, 0xd7, 0xc8, 0x17,
+	0xd0, 0x10, 0x91, 0x9f, 0x0e, 0xa9, 0x3c, 0x19, 0x3e, 0x9a, 0xfd, 0x03, 0x18, 0x99, 0x91, 0x8f,
+	0x34, 0x79, 0x9b, 0x9c, 0x83, 0xc2, 0x51, 0x2c, 0x2c, 0x26, 0xd8, 0xc2, 0x4f, 0x3f, 0x78, 0xbf,
+	0x3d, 0x83, 0x32, 0x43, 0xd1, 0x3d, 0xa8, 0xcc, 0x8b, 0x6e, 0x72, 0x03, 0x27, 0x31, 0x93, 0x97,
+	0x99, 0xc4, 0x03, 0x5d, 0xbd, 0x7a, 0x19, 0x2b, 0x0c, 0x85, 0xf6, 0x78, 0x85, 0xcb, 0xfc, 0x08,
+	0xcf, 0x31, 0x33, 0x83, 0xfd, 0x30, 0x67, 0xd4, 0x69, 0xab, 0x5e, 0x96, 0xa9, 0x2b, 0xbd, 0x83,
+	0x9e, 0x60, 0xa5, 0xa5, 0xe8, 0x40, 0x1c, 0xdb, 0x15, 0x25, 0xe6, 0xe3, 0x84, 0xf9, 0x51, 0x17,
+	0xcb, 0xd6, 0x40, 0x15, 0xa7, 0x6c, 0x16, 0x3a, 0x90, 0xdc, 0xda, 0x65, 0x7c, 0xcd, 0x6a, 0xbe,
+	0xb2, 0x55, 0x50, 0x85, 0x97, 0xcd, 0xe3, 0x06, 0x4e, 0x82, 0x74, 0xbb, 0x4b, 0x94, 0xad, 0xea,
+	0xbe, 0x56, 0x58, 0x01, 0xed, 0x05, 0x15, 0xfe, 0x30, 0x85, 0xa7, 0x3c, 0x9e, 0xf3, 0x07, 0xc2,
+	0x27, 0x09, 0xe1, 0x47, 0x8f, 0x34, 0xe6, 0x96, 0x81, 0x76, 0x79, 0x0e, 0xa9, 0xbf, 0x4a, 0xd0,
+	0x88, 0x87, 0x89, 0x74, 0xa0, 0xf5, 0x9d, 0x3e, 0xd7, 0xaf, 0x6e, 0x74, 0xe5, 0x28, 0x06, 0x86,
+	0x66, 0x9e, 0x4d, 0xcd, 0xa9, 0x22, 0x11, 0x05, 0xba, 0x86, 0x66, 0x5e, 0xdd, 0xe8, 0x1a, 0x35,
+	0xce, 0x67, 0xd7, 0x4a, 0x8d, 0x10, 0x90, 0x35, 0xc3, 0x9c, 0xbe, 0xbe, 0x98, 0x19, 0xe7, 0xe6,
+	0xd5, 0x5c, 0xd3, 0x95, 0x3a, 0x79, 0x0a, 0xed, 0xcb, 0x99, 0x6e, 0xa6, 0xb0, 0x11, 0x43, 0x43,
+	0xd3, 0xcf, 0x52, 0x78, 0x1c, 0x73, 0x50, 0xed, 0x5b, 0x6d, 0xf6, 0xbd, 0x96, 0x66, 0x9a, 0xa4,
+	0x0d, 0xc7, 0x86, 0x39, 0x9d, 0x6b, 0x4a, 0xeb, 0xb5, 0xf9, 0xf7, 0xdd, 0x40, 0x7a, 0x73, 0x37,
+	0x90, 0xfe, 0xbd, 0x1b, 0x48, 0xbf, 0xdf, 0x0f, 0x8e, 0xde, 0xdc, 0x0f, 0x8e, 0xfe, 0xb9, 0x1f,
+	0x1c, 0xfd, 0xf0, 0x6a, 0x6d, 0x8b, 0x4d, 0xb8, 0x1c, 0xad, 0x3c, 0x67, 0xfc, 0x53, 0xe8, 0x05,
+	0xa1, 0xb3, 0xf2, 0x5c, 0x11, 0x78, 0xdb, 0xb1, 0x83, 0x9c, 0xb3, 0x35, 0xf2, 0xf1, 0x6e, 0x32,
+	0x5e, 0x86, 0xf6, 0xd6, 0x1a, 0xaf, 0xbd, 0xc2, 0x05, 0xbb, 0x6c, 0x26, 0x97, 0xe6, 0xe7, 0xff,
+	0x05, 0x00, 0x00, 0xff, 0xff, 0xcd, 0xb8, 0xf4, 0xfc, 0x84, 0x07, 0x00, 0x00,
 }
 
 func (m *SetDataPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -766,29 +766,36 @@ func (m *SetDataPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetDataPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetDataPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Path) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Path)))
-		i += copy(dAtA[i:], m.Path)
-	}
 	if len(m.Value) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.Value)
+		copy(dAtA[i:], m.Value)
 		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Value)))
-		i += copy(dAtA[i:], m.Value)
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.Path) > 0 {
+		i -= len(m.Path)
+		copy(dAtA[i:], m.Path)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Path)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *SetOwnershipPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -796,32 +803,31 @@ func (m *SetOwnershipPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SetOwnershipPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SetOwnershipPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if len(m.Authentication) > 0 {
-		for _, s := range m.Authentication {
+		for iNdEx := len(m.Authentication) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.Authentication[iNdEx])
+			copy(dAtA[i:], m.Authentication[iNdEx])
+			i = encodeVarintTransactions(dAtA, i, uint64(len(m.Authentication[iNdEx])))
+			i--
 			dAtA[i] = 0xa
-			i++
-			l = len(s)
-			for l >= 1<<7 {
-				dAtA[i] = uint8(uint64(l)&0x7f | 0x80)
-				l >>= 7
-				i++
-			}
-			dAtA[i] = uint8(l)
-			i++
-			i += copy(dAtA[i:], s)
 		}
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *TokenMonetaryPolicy) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -829,22 +835,27 @@ func (m *TokenMonetaryPolicy) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *TokenMonetaryPolicy) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *TokenMonetaryPolicy) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
 	if m.Maximum != 0 {
-		dAtA[i] = 0x8
-		i++
 		i = encodeVarintTransactions(dAtA, i, uint64(m.Maximum))
+		i--
+		dAtA[i] = 0x8
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *EstablishTokenPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -852,33 +863,41 @@ func (m *EstablishTokenPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *EstablishTokenPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *EstablishTokenPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Name) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
-		i += copy(dAtA[i:], m.Name)
-	}
 	if m.MonetaryPolicy != nil {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.MonetaryPolicy.Size()))
-		n1, err1 := m.MonetaryPolicy.MarshalTo(dAtA[i:])
-		if err1 != nil {
-			return 0, err1
+		{
+			size, err := m.MonetaryPolicy.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
 		}
-		i += n1
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.Name) > 0 {
+		i -= len(m.Name)
+		copy(dAtA[i:], m.Name)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *MintTokenPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -886,28 +905,34 @@ func (m *MintTokenPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *MintTokenPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *MintTokenPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Name) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
-		i += copy(dAtA[i:], m.Name)
-	}
 	if m.Amount != 0 {
-		dAtA[i] = 0x10
-		i++
 		i = encodeVarintTransactions(dAtA, i, uint64(m.Amount))
+		i--
+		dAtA[i] = 0x10
 	}
-	return i, nil
+	if len(m.Name) > 0 {
+		i -= len(m.Name)
+		copy(dAtA[i:], m.Name)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *SendTokenPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -915,40 +940,48 @@ func (m *SendTokenPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SendTokenPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SendTokenPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Id) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Id)))
-		i += copy(dAtA[i:], m.Id)
-	}
-	if len(m.Name) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
-		i += copy(dAtA[i:], m.Name)
+	if len(m.Destination) > 0 {
+		i -= len(m.Destination)
+		copy(dAtA[i:], m.Destination)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Destination)))
+		i--
+		dAtA[i] = 0x22
 	}
 	if m.Amount != 0 {
-		dAtA[i] = 0x18
-		i++
 		i = encodeVarintTransactions(dAtA, i, uint64(m.Amount))
+		i--
+		dAtA[i] = 0x18
 	}
-	if len(m.Destination) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Destination)))
-		i += copy(dAtA[i:], m.Destination)
+	if len(m.Name) > 0 {
+		i -= len(m.Name)
+		copy(dAtA[i:], m.Name)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Name)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.Id) > 0 {
+		i -= len(m.Id)
+		copy(dAtA[i:], m.Id)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Id)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *ReceiveTokenPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -956,47 +989,57 @@ func (m *ReceiveTokenPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *ReceiveTokenPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *ReceiveTokenPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.SendTokenTransactionId) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.SendTokenTransactionId)))
-		i += copy(dAtA[i:], m.SendTokenTransactionId)
-	}
-	if len(m.Tip) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+	if len(m.Leaves) > 0 {
+		for iNdEx := len(m.Leaves) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.Leaves[iNdEx])
+			copy(dAtA[i:], m.Leaves[iNdEx])
+			i = encodeVarintTransactions(dAtA, i, uint64(len(m.Leaves[iNdEx])))
+			i--
+			dAtA[i] = 0x22
+		}
 	}
 	if m.TreeState != nil {
+		{
+			size, err := m.TreeState.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
 		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.TreeState.Size()))
-		n2, err2 := m.TreeState.MarshalTo(dAtA[i:])
-		if err2 != nil {
-			return 0, err2
-		}
-		i += n2
 	}
-	if len(m.Leaves) > 0 {
-		for _, b := range m.Leaves {
-			dAtA[i] = 0x22
-			i++
-			i = encodeVarintTransactions(dAtA, i, uint64(len(b)))
-			i += copy(dAtA[i:], b)
-		}
+	if len(m.Tip) > 0 {
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Tip)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.SendTokenTransactionId) > 0 {
+		i -= len(m.SendTokenTransactionId)
+		copy(dAtA[i:], m.SendTokenTransactionId)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.SendTokenTransactionId)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *TokenPayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -1004,47 +1047,57 @@ func (m *TokenPayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *TokenPayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *TokenPayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.TransactionId) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.TransactionId)))
-		i += copy(dAtA[i:], m.TransactionId)
-	}
-	if len(m.Tip) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Tip)))
-		i += copy(dAtA[i:], m.Tip)
+	if len(m.Leaves) > 0 {
+		for iNdEx := len(m.Leaves) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.Leaves[iNdEx])
+			copy(dAtA[i:], m.Leaves[iNdEx])
+			i = encodeVarintTransactions(dAtA, i, uint64(len(m.Leaves[iNdEx])))
+			i--
+			dAtA[i] = 0x22
+		}
 	}
 	if m.TreeState != nil {
+		{
+			size, err := m.TreeState.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
 		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.TreeState.Size()))
-		n3, err3 := m.TreeState.MarshalTo(dAtA[i:])
-		if err3 != nil {
-			return 0, err3
-		}
-		i += n3
 	}
-	if len(m.Leaves) > 0 {
-		for _, b := range m.Leaves {
-			dAtA[i] = 0x22
-			i++
-			i = encodeVarintTransactions(dAtA, i, uint64(len(b)))
-			i += copy(dAtA[i:], b)
-		}
+	if len(m.Tip) > 0 {
+		i -= len(m.Tip)
+		copy(dAtA[i:], m.Tip)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.Tip)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.TransactionId) > 0 {
+		i -= len(m.TransactionId)
+		copy(dAtA[i:], m.TransactionId)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.TransactionId)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *StakePayload) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -1052,48 +1105,58 @@ func (m *StakePayload) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *StakePayload) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *StakePayload) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.GroupId) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(len(m.GroupId)))
-		i += copy(dAtA[i:], m.GroupId)
-	}
-	if m.Amount != 0 {
-		dAtA[i] = 0x10
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.Amount))
+	if m.VerKey != nil {
+		{
+			size, err := m.VerKey.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x22
 	}
 	if m.DstKey != nil {
+		{
+			size, err := m.DstKey.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
 		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.DstKey.Size()))
-		n4, err4 := m.DstKey.MarshalTo(dAtA[i:])
-		if err4 != nil {
-			return 0, err4
-		}
-		i += n4
 	}
-	if m.VerKey != nil {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.VerKey.Size()))
-		n5, err5 := m.VerKey.MarshalTo(dAtA[i:])
-		if err5 != nil {
-			return 0, err5
-		}
-		i += n5
+	if m.Amount != 0 {
+		i = encodeVarintTransactions(dAtA, i, uint64(m.Amount))
+		i--
+		dAtA[i] = 0x10
 	}
-	return i, nil
+	if len(m.GroupId) > 0 {
+		i -= len(m.GroupId)
+		copy(dAtA[i:], m.GroupId)
+		i = encodeVarintTransactions(dAtA, i, uint64(len(m.GroupId)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *Transaction) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -1101,96 +1164,117 @@ func (m *Transaction) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Transaction) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Transaction) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Type != 0 {
-		dAtA[i] = 0x8
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.Type))
-	}
-	if m.SetDataPayload != nil {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.SetDataPayload.Size()))
-		n6, err6 := m.SetDataPayload.MarshalTo(dAtA[i:])
-		if err6 != nil {
-			return 0, err6
+	if m.StakePayload != nil {
+		{
+			size, err := m.StakePayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
 		}
-		i += n6
-	}
-	if m.SetOwnershipPayload != nil {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.SetOwnershipPayload.Size()))
-		n7, err7 := m.SetOwnershipPayload.MarshalTo(dAtA[i:])
-		if err7 != nil {
-			return 0, err7
-		}
-		i += n7
-	}
-	if m.EstablishTokenPayload != nil {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.EstablishTokenPayload.Size()))
-		n8, err8 := m.EstablishTokenPayload.MarshalTo(dAtA[i:])
-		if err8 != nil {
-			return 0, err8
-		}
-		i += n8
-	}
-	if m.MintTokenPayload != nil {
-		dAtA[i] = 0x2a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.MintTokenPayload.Size()))
-		n9, err9 := m.MintTokenPayload.MarshalTo(dAtA[i:])
-		if err9 != nil {
-			return 0, err9
-		}
-		i += n9
-	}
-	if m.SendTokenPayload != nil {
-		dAtA[i] = 0x32
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.SendTokenPayload.Size()))
-		n10, err10 := m.SendTokenPayload.MarshalTo(dAtA[i:])
-		if err10 != nil {
-			return 0, err10
-		}
-		i += n10
+		i--
+		dAtA[i] = 0x42
 	}
 	if m.ReceiveTokenPayload != nil {
+		{
+			size, err := m.ReceiveTokenPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
 		dAtA[i] = 0x3a
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.ReceiveTokenPayload.Size()))
-		n11, err11 := m.ReceiveTokenPayload.MarshalTo(dAtA[i:])
-		if err11 != nil {
-			return 0, err11
-		}
-		i += n11
 	}
-	if m.StakePayload != nil {
-		dAtA[i] = 0x42
-		i++
-		i = encodeVarintTransactions(dAtA, i, uint64(m.StakePayload.Size()))
-		n12, err12 := m.StakePayload.MarshalTo(dAtA[i:])
-		if err12 != nil {
-			return 0, err12
+	if m.SendTokenPayload != nil {
+		{
+			size, err := m.SendTokenPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
 		}
-		i += n12
+		i--
+		dAtA[i] = 0x32
 	}
-	return i, nil
+	if m.MintTokenPayload != nil {
+		{
+			size, err := m.MintTokenPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x2a
+	}
+	if m.EstablishTokenPayload != nil {
+		{
+			size, err := m.EstablishTokenPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x22
+	}
+	if m.SetOwnershipPayload != nil {
+		{
+			size, err := m.SetOwnershipPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x1a
+	}
+	if m.SetDataPayload != nil {
+		{
+			size, err := m.SetDataPayload.MarshalToSizedBuffer(dAtA[:i])
+			if err != nil {
+				return 0, err
+			}
+			i -= size
+			i = encodeVarintTransactions(dAtA, i, uint64(size))
+		}
+		i--
+		dAtA[i] = 0x12
+	}
+	if m.Type != 0 {
+		i = encodeVarintTransactions(dAtA, i, uint64(m.Type))
+		i--
+		dAtA[i] = 0x8
+	}
+	return len(dAtA) - i, nil
 }
 
 func encodeVarintTransactions(dAtA []byte, offset int, v uint64) int {
+	offset -= sovTransactions(v)
+	base := offset
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
 		v >>= 7
 		offset++
 	}
 	dAtA[offset] = uint8(v)
-	return offset + 1
+	return base
 }
 func (m *SetDataPayload) Size() (n int) {
 	if m == nil {
