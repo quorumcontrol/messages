@@ -1,3 +1,3 @@
-// package: v1config
+// package: config
 // file: config/config.proto
 

@@ -1,3 +1,3 @@
-// package: v1transactions
+// package: transactions
 // file: transactions/transactions.proto
 

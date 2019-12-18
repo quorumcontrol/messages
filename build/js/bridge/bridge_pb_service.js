@@ -1,3 +1,3 @@
-// package: v1bridge
+// package: bridge
 // file: bridge/bridge.proto
 

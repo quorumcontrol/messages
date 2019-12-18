@@ -1,3 +1,3 @@
-// package: v1signatures
+// package: signatures
 // file: signatures/signatures.proto
 
