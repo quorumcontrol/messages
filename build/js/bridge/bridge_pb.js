@@ -1,4 +1,3 @@
-// source: bridge/bridge.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -63,15 +62,13 @@ if (goog.DEBUG && !COMPILED) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2bridge.ActorPID.prototype.toObject = function(opt_includeInstance) {
@@ -81,8 +78,8 @@ proto.v2bridge.ActorPID.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2bridge.ActorPID} msg The msg instance to transform.
  * @return {!Object}
@@ -191,12 +188,9 @@ proto.v2bridge.ActorPID.prototype.getAddress = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.v2bridge.ActorPID} returns this
- */
+/** @param {string} value */
 proto.v2bridge.ActorPID.prototype.setAddress = function(value) {
-  return jspb.Message.setProto3StringField(this, 1, value);
+  jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -209,12 +203,9 @@ proto.v2bridge.ActorPID.prototype.getId = function() {
 };
 
 
-/**
- * @param {string} value
- * @return {!proto.v2bridge.ActorPID} returns this
- */
+/** @param {string} value */
 proto.v2bridge.ActorPID.prototype.setId = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
+  jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -223,15 +214,13 @@ proto.v2bridge.ActorPID.prototype.setId = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2bridge.WireDelivery.prototype.toObject = function(opt_includeInstance) {
@@ -241,8 +230,8 @@ proto.v2bridge.WireDelivery.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2bridge.WireDelivery} msg The msg instance to transform.
  * @return {!Object}
@@ -254,7 +243,7 @@ proto.v2bridge.WireDelivery.toObject = function(includeInstance, msg) {
     message: (f = msg.getMessage()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
     target: (f = msg.getTarget()) && proto.v2bridge.ActorPID.toObject(includeInstance, f),
     sender: (f = msg.getSender()) && proto.v2bridge.ActorPID.toObject(includeInstance, f),
-    outgoing: jspb.Message.getBooleanFieldWithDefault(msg, 5, false),
+    outgoing: jspb.Message.getFieldWithDefault(msg, 5, false),
     tracingMap: (f = msg.getTracingMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -295,7 +284,7 @@ proto.v2bridge.WireDelivery.deserializeBinaryFromReader = function(msg, reader) 
     case 1:
       var value = msg.getHeaderMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
          });
       break;
     case 2:
@@ -320,7 +309,7 @@ proto.v2bridge.WireDelivery.deserializeBinaryFromReader = function(msg, reader) 
     case 6:
       var value = msg.getTracingMap();
       reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "");
          });
       break;
     default:
@@ -409,11 +398,10 @@ proto.v2bridge.WireDelivery.prototype.getHeaderMap = function(opt_noLazyCreate) 
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.v2bridge.WireDelivery} returns this
  */
 proto.v2bridge.WireDelivery.prototype.clearHeaderMap = function() {
   this.getHeaderMap().clear();
-  return this;};
+};
 
 
 /**
@@ -426,21 +414,17 @@ proto.v2bridge.WireDelivery.prototype.getMessage = function() {
 };
 
 
-/**
- * @param {?proto.google.protobuf.Any|undefined} value
- * @return {!proto.v2bridge.WireDelivery} returns this
-*/
+/** @param {?proto.google.protobuf.Any|undefined} value */
 proto.v2bridge.WireDelivery.prototype.setMessage = function(value) {
-  return jspb.Message.setWrapperField(this, 2, value);
+  jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v2bridge.WireDelivery} returns this
  */
 proto.v2bridge.WireDelivery.prototype.clearMessage = function() {
-  return this.setMessage(undefined);
+  this.setMessage(undefined);
 };
 
 
@@ -463,21 +447,17 @@ proto.v2bridge.WireDelivery.prototype.getTarget = function() {
 };
 
 
-/**
- * @param {?proto.v2bridge.ActorPID|undefined} value
- * @return {!proto.v2bridge.WireDelivery} returns this
-*/
+/** @param {?proto.v2bridge.ActorPID|undefined} value */
 proto.v2bridge.WireDelivery.prototype.setTarget = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v2bridge.WireDelivery} returns this
  */
 proto.v2bridge.WireDelivery.prototype.clearTarget = function() {
-  return this.setTarget(undefined);
+  this.setTarget(undefined);
 };
 
 
@@ -500,21 +480,17 @@ proto.v2bridge.WireDelivery.prototype.getSender = function() {
 };
 
 
-/**
- * @param {?proto.v2bridge.ActorPID|undefined} value
- * @return {!proto.v2bridge.WireDelivery} returns this
-*/
+/** @param {?proto.v2bridge.ActorPID|undefined} value */
 proto.v2bridge.WireDelivery.prototype.setSender = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.v2bridge.WireDelivery} returns this
  */
 proto.v2bridge.WireDelivery.prototype.clearSender = function() {
-  return this.setSender(undefined);
+  this.setSender(undefined);
 };
 
 
@@ -529,19 +505,18 @@ proto.v2bridge.WireDelivery.prototype.hasSender = function() {
 
 /**
  * optional bool outgoing = 5;
+ * Note that Boolean fields may be set to 0/1 when serialized from a Java server.
+ * You should avoid comparisons like {@code val === true/false} in those cases.
  * @return {boolean}
  */
 proto.v2bridge.WireDelivery.prototype.getOutgoing = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 5, false));
+  return /** @type {boolean} */ (jspb.Message.getFieldWithDefault(this, 5, false));
 };
 
 
-/**
- * @param {boolean} value
- * @return {!proto.v2bridge.WireDelivery} returns this
- */
+/** @param {boolean} value */
 proto.v2bridge.WireDelivery.prototype.setOutgoing = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 5, value);
+  jspb.Message.setProto3BooleanField(this, 5, value);
 };
 
 
@@ -560,11 +535,10 @@ proto.v2bridge.WireDelivery.prototype.getTracingMap = function(opt_noLazyCreate)
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.v2bridge.WireDelivery} returns this
  */
 proto.v2bridge.WireDelivery.prototype.clearTracingMap = function() {
   this.getTracingMap().clear();
-  return this;};
+};
 
 
 goog.object.extend(exports, proto.v2bridge);

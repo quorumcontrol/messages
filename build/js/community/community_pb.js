@@ -1,4 +1,3 @@
-// source: community/community.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -112,15 +111,13 @@ proto.v2community.Envelope.repeatedFields_ = [6];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2community.Envelope.prototype.toObject = function(opt_includeInstance) {
@@ -130,8 +127,8 @@ proto.v2community.Envelope.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2community.Envelope} msg The msg instance to transform.
  * @return {!Object}
@@ -324,12 +321,9 @@ proto.v2community.Envelope.prototype.getId_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Envelope.prototype.setId = function(value) {
-  return jspb.Message.setProto3BytesField(this, 1, value);
+  jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
@@ -366,12 +360,9 @@ proto.v2community.Envelope.prototype.getTo_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Envelope.prototype.setTo = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -408,12 +399,9 @@ proto.v2community.Envelope.prototype.getFrom_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Envelope.prototype.setFrom = function(value) {
-  return jspb.Message.setProto3BytesField(this, 3, value);
+  jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -450,12 +438,9 @@ proto.v2community.Envelope.prototype.getPayload_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Envelope.prototype.setPayload = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -468,12 +453,9 @@ proto.v2community.Envelope.prototype.getSequence = function() {
 };
 
 
-/**
- * @param {number} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {number} value */
 proto.v2community.Envelope.prototype.setSequence = function(value) {
-  return jspb.Message.setProto3IntField(this, 5, value);
+  jspb.Message.setProto3IntField(this, 5, value);
 };
 
 
@@ -510,31 +492,26 @@ proto.v2community.Envelope.prototype.getTopicsList_asU8 = function() {
 };
 
 
-/**
- * @param {!(Array<!Uint8Array>|Array<string>)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(Array<!Uint8Array>|Array<string>)} value */
 proto.v2community.Envelope.prototype.setTopicsList = function(value) {
-  return jspb.Message.setField(this, 6, value || []);
+  jspb.Message.setField(this, 6, value || []);
 };
 
 
 /**
  * @param {!(string|Uint8Array)} value
  * @param {number=} opt_index
- * @return {!proto.v2community.Envelope} returns this
  */
 proto.v2community.Envelope.prototype.addTopics = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+  jspb.Message.addToRepeatedField(this, 6, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v2community.Envelope} returns this
  */
 proto.v2community.Envelope.prototype.clearTopicsList = function() {
-  return this.setTopicsList([]);
+  this.setTopicsList([]);
 };
 
 
@@ -571,12 +548,9 @@ proto.v2community.Envelope.prototype.getSignature_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Envelope} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Envelope.prototype.setSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 7, value);
+  jspb.Message.setProto3BytesField(this, 7, value);
 };
 
 
@@ -585,15 +559,13 @@ proto.v2community.Envelope.prototype.setSignature = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2community.Ack.prototype.toObject = function(opt_includeInstance) {
@@ -603,8 +575,8 @@ proto.v2community.Ack.prototype.toObject = function(opt_includeInstance) {
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2community.Ack} msg The msg instance to transform.
  * @return {!Object}
@@ -761,12 +733,9 @@ proto.v2community.Ack.prototype.getId_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Ack} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Ack.prototype.setId = function(value) {
-  return jspb.Message.setProto3BytesField(this, 1, value);
+  jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
@@ -803,12 +772,9 @@ proto.v2community.Ack.prototype.getTo_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Ack} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Ack.prototype.setTo = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -845,12 +811,9 @@ proto.v2community.Ack.prototype.getFrom_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Ack} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Ack.prototype.setFrom = function(value) {
-  return jspb.Message.setProto3BytesField(this, 3, value);
+  jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -887,12 +850,9 @@ proto.v2community.Ack.prototype.getSignature_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.Ack} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.Ack.prototype.setSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -901,15 +861,13 @@ proto.v2community.Ack.prototype.setSignature = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2community.RequestMissing.prototype.toObject = function(opt_includeInstance) {
@@ -919,8 +877,8 @@ proto.v2community.RequestMissing.prototype.toObject = function(opt_includeInstan
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2community.RequestMissing} msg The msg instance to transform.
  * @return {!Object}
@@ -1041,12 +999,9 @@ proto.v2community.RequestMissing.prototype.getSequence = function() {
 };
 
 
-/**
- * @param {number} value
- * @return {!proto.v2community.RequestMissing} returns this
- */
+/** @param {number} value */
 proto.v2community.RequestMissing.prototype.setSequence = function(value) {
-  return jspb.Message.setProto3IntField(this, 1, value);
+  jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
@@ -1083,12 +1038,9 @@ proto.v2community.RequestMissing.prototype.getIdentifier_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.RequestMissing} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.RequestMissing.prototype.setIdentifier = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -1125,12 +1077,9 @@ proto.v2community.RequestMissing.prototype.getSignature_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.RequestMissing} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.RequestMissing.prototype.setSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 3, value);
+  jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -1146,15 +1095,13 @@ proto.v2community.SavedMessages.repeatedFields_ = [5];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto.
+ * Creates an object representation of this proto suitable for use in Soy templates.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
- * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
- * @param {boolean=} opt_includeInstance Deprecated. whether to include the
- *     JSPB instance for transitional soy proto support:
- *     http://goto/soy-param-migration
+ *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
+ * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
+ *     for transitional soy proto support: http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2community.SavedMessages.prototype.toObject = function(opt_includeInstance) {
@@ -1164,8 +1111,8 @@ proto.v2community.SavedMessages.prototype.toObject = function(opt_includeInstanc
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Deprecated. Whether to include
- *     the JSPB instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Whether to include the JSPB
+ *     instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2community.SavedMessages} msg The msg instance to transform.
  * @return {!Object}
@@ -1337,12 +1284,9 @@ proto.v2community.SavedMessages.prototype.getTo_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.SavedMessages} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.SavedMessages.prototype.setTo = function(value) {
-  return jspb.Message.setProto3BytesField(this, 1, value);
+  jspb.Message.setProto3BytesField(this, 1, value);
 };
 
 
@@ -1379,12 +1323,9 @@ proto.v2community.SavedMessages.prototype.getCid_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.SavedMessages} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.SavedMessages.prototype.setCid = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
+  jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -1421,12 +1362,9 @@ proto.v2community.SavedMessages.prototype.getProvider_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.SavedMessages} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.SavedMessages.prototype.setProvider = function(value) {
-  return jspb.Message.setProto3BytesField(this, 3, value);
+  jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -1463,12 +1401,9 @@ proto.v2community.SavedMessages.prototype.getSignature_asU8 = function() {
 };
 
 
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.v2community.SavedMessages} returns this
- */
+/** @param {!(string|Uint8Array)} value */
 proto.v2community.SavedMessages.prototype.setSignature = function(value) {
-  return jspb.Message.setProto3BytesField(this, 4, value);
+  jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -1482,12 +1417,9 @@ proto.v2community.SavedMessages.prototype.getMessagesList = function() {
 };
 
 
-/**
- * @param {!Array<!proto.v2community.Envelope>} value
- * @return {!proto.v2community.SavedMessages} returns this
-*/
+/** @param {!Array<!proto.v2community.Envelope>} value */
 proto.v2community.SavedMessages.prototype.setMessagesList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 5, value);
+  jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
@@ -1503,10 +1435,9 @@ proto.v2community.SavedMessages.prototype.addMessages = function(opt_value, opt_
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.v2community.SavedMessages} returns this
  */
 proto.v2community.SavedMessages.prototype.clearMessagesList = function() {
-  return this.setMessagesList([]);
+  this.setMessagesList([]);
 };
 
 
