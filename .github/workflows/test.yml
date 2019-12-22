@@ -1,0 +1,16 @@
+name: Run tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout messages
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: diff protobuf & generated code
+      run: make diff
+    - name: run Go code tests
+      run: make test
