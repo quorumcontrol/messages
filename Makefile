@@ -29,7 +29,7 @@ build/js/%_pb.js: src/%.proto ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(
 build/js/%_pb.d.ts: src/%.proto  ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
 	protoc -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --ts_out="build/js" $<
 
-test:
+test: go
 	cd build/go && go test ./...
 
 # Fails if protobuf generates code that differs from what's committed
