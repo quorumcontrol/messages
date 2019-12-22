@@ -32,9 +32,17 @@ build/js/%_pb.d.ts: src/%.proto  ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf
 test:
 	cd build/go && go test ./...
 
+# Fails if protobuf generates code that differs from what's committed
+# Intended for a CI check
+diff: all
+	@if [ -n "$$(git status --porcelain '*.pb.go' '*_pb.js' '*_pb.d.ts')" ]; then \
+	echo "Protobuf code doesn't match generated code in repo"; \
+	false; \
+	fi
+
 clean:
 	find build -name '*.pb.go' -exec rm {} \;
 	find build -name '*_pb.js' -exec rm {} \;
 	find build -name '*_pb.d.ts' -exec rm {} \;
 
-.PHONY: all clean go js ts test
+.PHONY: all clean go js ts test diff
