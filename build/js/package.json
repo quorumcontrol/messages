@@ -13,5 +13,8 @@
     "@types/google-protobuf": "^3.7.1",
     "@types/protobufjs": "^6.0.0",
     "google-protobuf": "~3.7.1"
+  },
+  "devDependencies": {
+    "ts-protoc-gen": "0.12.0"
   }
 }
