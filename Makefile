@@ -1,4 +1,27 @@
+PROTOC_VERSION := 3.11.2
+
 all: go js ts
+
+UNAME := $(shell uname)
+ifeq ($(UNAME),Darwin)
+  PLATFORM := osx
+else
+  ifeq ($(UNAME),Linux)
+    PLATFORM := linux
+  endif
+endif
+
+ifeq ($(shell protoc --version | awk '{print $$2}'),$(PROTOC_VERSION))
+  PROTOC := $(shell which protoc)
+else
+  PROTOC := .protoc/protoc-$(PROTOC_VERSION)
+endif
+
+.protoc/protoc-$(PROTOC_VERSION):
+	@echo "Downloading protoc $(PROTOC_VERSION) because you don't have it installed."
+	mkdir -p .protoc
+	curl -sL https://github.com/protocolbuffers/protobuf/releases/download/v$(PROTOC_VERSION)/protoc-$(PROTOC_VERSION)-$(PLATFORM)-x86_64.zip -o .protoc/protoc.zip
+	cd .protoc && unzip -jo protoc.zip bin/protoc && mv protoc protoc-$(PROTOC_VERSION) && rm protoc.zip
 
 FIRSTGOPATH = $(firstword $(subst :, ,$(GOPATH)))
 
@@ -20,14 +43,14 @@ js: build/js/community/community_pb.js build/js/config/config_pb.js build/js/ser
 
 ts: build/js/community/community_pb.d.ts build/js/config/config_pb.d.ts build/js/services/services_pb.d.ts build/js/signatures/signatures_pb.d.ts build/js/transactions/transactions_pb.d.ts build/js/bridge/bridge_pb.d.ts
 
-build/go/%.pb.go: src/%.proto ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
-	protoc -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --gogofaster_out=Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,paths=source_relative:build/go $<
+build/go/%.pb.go: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
+	$(PROTOC) -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --gogofaster_out=Mgoogle/protobuf/any.proto=github.com/gogo/protobuf/types,paths=source_relative:build/go $<
 
-build/js/%_pb.js: src/%.proto ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
-	protoc -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --js_out=import_style=commonjs,binary:build/js $<
+build/js/%_pb.js: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
+	$(PROTOC) -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --js_out=import_style=commonjs,binary:build/js $<
 
-build/js/%_pb.d.ts: src/%.proto  ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
-	protoc -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --ts_out="build/js" $<
+build/js/%_pb.d.ts: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
+	$(PROTOC) -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --ts_out="build/js" $<
 
 test: go
 	cd build/go && go test ./...
@@ -44,5 +67,6 @@ clean:
 	find build -name '*.pb.go' -exec rm {} \;
 	find build -name '*_pb.js' -exec rm {} \;
 	find build -name '*_pb.d.ts' -exec rm {} \;
+	rm -rf .protoc
 
 .PHONY: all clean go js ts test diff
