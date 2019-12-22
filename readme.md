@@ -8,7 +8,7 @@ You will need Make. Make will further install the NPM package 'ts-protoc-gen' if
 You will also need the protoc file installed. See: https://github.com/protocolbuffers/protobuf and  https://github.com/golang/protobuf
 
 ## Building
-Run `make` in the root directory. 
+Run `make` in the root directory.
 
 ## Testing
 ### Go
