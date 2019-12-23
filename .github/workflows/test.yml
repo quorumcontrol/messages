@@ -5,11 +5,16 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    env:
-      GOPATH: /home/runner/work/messages/go
     steps:
+    - name: checkout messages
+      uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
     - name: set env
-      run: echo ::set-env name=GOBIN::${GOPATH}/bin
+      run: |
+        mkdir -p ${GITHUB_WORKSPACE}/../go
+        echo ::set-env name=GOPATH::${GITHUB_WORKSPACE}/../go
+        echo ::set-env name=GOBIN::${GOPATH}/bin
     - name: add GOBIN to PATH
       run: echo ::add-path::${GOBIN}
     - uses: actions/setup-go@v1
@@ -18,10 +23,6 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '13.5.0'
-    - name: checkout messages
-      uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
     - name: diff protobuf & generated code
       run: |
         echo "PATH: ${PATH}"
