@@ -36,6 +36,7 @@ $(NODE_PROTOC_TS_PLUGIN):
 
 ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf:
 	go mod download
+	go install github.com/gogo/protobuf/...
 
 go: build/go/community/community.pb.go build/go/config/config.pb.go build/go/services/services.pb.go build/go/signatures/signatures.pb.go build/go/transactions/transactions.pb.go build/go/bridge/bridge.pb.go
 
