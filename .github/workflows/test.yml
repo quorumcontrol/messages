@@ -24,9 +24,9 @@ jobs:
         fetch-depth: 1
     - name: diff protobuf & generated code
       run: |
-      echo "PATH: ${PATH}"
-      echo "GOBIN: ${GOBIN}"
-      ls ${GOBIN}
-      make diff
+        echo "PATH: ${PATH}"
+        echo "GOBIN: ${GOBIN}"
+        ls ${GOBIN}
+        make diff
     - name: run Go code tests
       run: make test
