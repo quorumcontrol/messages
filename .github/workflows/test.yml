@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOPATH: /home/runner/work/messages/go
-      GOBIN: ${{ env.GOPATH }}/bin
-      PATH: ${{ env.GOBIN }}:${{ env.PATH }}
     steps:
+    - name: set env
+      run: echo ::set-env name=GOBIN::${GOPATH}/bin
+    - name: add GOBIN to PATH
+      run: echo ::add-path::${GOBIN}
     - uses: actions/setup-go@v1
       with:
         go-version: '1.13'
