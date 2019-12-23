@@ -30,7 +30,6 @@ jobs:
       run: |
         echo "PATH: ${PATH}"
         echo "GOBIN: ${GOBIN}"
-        ls ${GOBIN}
         make diff
     - name: run Go code tests
       run: make test
