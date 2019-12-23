@@ -69,5 +69,6 @@ clean:
 	find build -name '*_pb.js' -exec rm {} \;
 	find build -name '*_pb.d.ts' -exec rm {} \;
 	rm -rf .protoc
+	rm -rf build/js/node_modules
 
 .PHONY: all clean go js ts test diff
