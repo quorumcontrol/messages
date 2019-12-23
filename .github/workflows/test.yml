@@ -5,6 +5,9 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      GOPATH: /home/runner/work/messages/go
+      GOBIN: /home/runner/work/messages/go/bin
     steps:
     - uses: actions/setup-go@v1
       with:
