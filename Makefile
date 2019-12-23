@@ -50,7 +50,7 @@ build/go/%.pb.go: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/p
 build/js/%_pb.js: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
 	$(PROTOC) -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --js_out=import_style=commonjs,binary:build/js $<
 
-build/js/%_pb.d.ts: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf
+build/js/%_pb.d.ts: src/%.proto $(PROTOC) ${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf $(NODE_PROTOC_TS_PLUGIN)
 	$(PROTOC) -I=src -I=${FIRSTGOPATH}/pkg/mod/github.com/gogo/protobuf@$(GOGO_PROTOBUF_VERSION)/protobuf --ts_out="build/js" $<
 
 test: go
