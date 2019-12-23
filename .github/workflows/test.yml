@@ -7,8 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GOPATH: /home/runner/work/messages/go
-      GOBIN: ${GOPATH}/bin
-      PATH: ${GOBIN}:${PATH}
+      GOBIN: ${{ env.GOPATH }}/bin
+      PATH: ${{ env.GOBIN }}:${{ env.PATH }}
     steps:
     - uses: actions/setup-go@v1
       with:
