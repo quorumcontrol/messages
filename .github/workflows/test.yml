@@ -10,11 +10,12 @@ jobs:
       uses: actions/checkout@v1
       with:
         fetch-depth: 1
-    - name: set env
+    - name: set GOPATH
       run: |
         mkdir -p ${GITHUB_WORKSPACE}/../go
         echo ::set-env name=GOPATH::${GITHUB_WORKSPACE}/../go
-        echo ::set-env name=GOBIN::${GOPATH}/bin
+    - name: set GOBIN
+      run: echo ::set-env name=GOBIN::${GOPATH}/bin
     - name: add GOBIN to PATH
       run: echo ::add-path::${GOBIN}
     - uses: actions/setup-go@v1
