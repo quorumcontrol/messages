@@ -27,7 +27,7 @@ FIRSTGOPATH = $(firstword $(subst :, ,$(GOPATH)))
 
 GOGO_PROTOBUF_VERSION = $(shell grep github.com/gogo/protobuf go.mod | awk '{print $$2}')
 
-NODE_PROTOC_TS_PLUGIN = $(shell npm bin -g)/protoc-gen-ts
+NODE_PROTOC_TS_PLUGIN = $(shell cd build/js && npm bin)/protoc-gen-ts
 
 NPM_BIN = $(shell cd build/js && npm bin)
 
