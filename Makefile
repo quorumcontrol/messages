@@ -11,10 +11,14 @@ else
   endif
 endif
 
-ifeq ($(shell protoc --version | awk '{print $$2}'),$(PROTOC_VERSION))
-  PROTOC := $(shell which protoc)
+PROTOC_IN_PATH := $(shell hash protoc 2>/dev/null; echo $$?)
+
+ifeq ($(PROTOC_IN_PATH),0)
+  ifeq ($(shell protoc --version | awk '{print $$2}'),$(PROTOC_VERSION))
+    PROTOC := $(shell which protoc)
+  endif
 else
-  PROTOC := .protoc/protoc-$(PROTOC_VERSION)
+  PROTOC ?= .protoc/protoc-$(PROTOC_VERSION)
 endif
 
 .protoc/protoc-$(PROTOC_VERSION):
