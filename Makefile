@@ -31,9 +31,8 @@ FIRSTGOPATH = $(firstword $(subst :, ,$(GOPATH)))
 
 GOGO_PROTOBUF_VERSION = $(shell grep github.com/gogo/protobuf go.mod | awk '{print $$2}')
 
-NODE_PROTOC_TS_PLUGIN = $(shell cd build/js && npm bin)/protoc-gen-ts
-
 NPM_BIN = $(shell cd build/js && npm bin)
+NODE_PROTOC_TS_PLUGIN = $(NPM_BIN)/protoc-gen-ts
 
 $(NODE_PROTOC_TS_PLUGIN):
 	cd build/js && npm install --only=dev
