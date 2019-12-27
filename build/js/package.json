@@ -9,9 +9,10 @@
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Quorum Control",
-  "dependencies": {
+  "devDependencies": {
     "@types/google-protobuf": "^3.7.1",
     "@types/protobufjs": "^6.0.0",
-    "google-protobuf": "~3.7.1"
+    "google-protobuf": "~3.7.1",
+    "ts-protoc-gen": "0.12.0"
   }
 }

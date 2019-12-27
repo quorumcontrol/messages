@@ -1,3 +1,4 @@
+// source: signatures/signatures.proto
 /**
  * @fileoverview
  * @enhanceable
@@ -105,13 +106,15 @@ if (goog.DEBUG && !COMPILED) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2signatures.PublicKey.prototype.toObject = function(opt_includeInstance) {
@@ -121,8 +124,8 @@ proto.v2signatures.PublicKey.prototype.toObject = function(opt_includeInstance) 
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2signatures.PublicKey} msg The msg instance to transform.
  * @return {!Object}
@@ -239,9 +242,12 @@ proto.v2signatures.PublicKey.prototype.getType = function() {
 };
 
 
-/** @param {!proto.v2signatures.PublicKey.Type} value */
+/**
+ * @param {!proto.v2signatures.PublicKey.Type} value
+ * @return {!proto.v2signatures.PublicKey} returns this
+ */
 proto.v2signatures.PublicKey.prototype.setType = function(value) {
-  jspb.Message.setProto3EnumField(this, 1, value);
+  return jspb.Message.setProto3EnumField(this, 1, value);
 };
 
 
@@ -278,9 +284,12 @@ proto.v2signatures.PublicKey.prototype.getPublicKey_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.PublicKey} returns this
+ */
 proto.v2signatures.PublicKey.prototype.setPublicKey = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value);
+  return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -289,13 +298,15 @@ proto.v2signatures.PublicKey.prototype.setPublicKey = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2signatures.Ownership.prototype.toObject = function(opt_includeInstance) {
@@ -305,8 +316,8 @@ proto.v2signatures.Ownership.prototype.toObject = function(opt_includeInstance) 
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2signatures.Ownership} msg The msg instance to transform.
  * @return {!Object}
@@ -429,9 +440,12 @@ proto.v2signatures.Ownership.prototype.getId = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
 proto.v2signatures.Ownership.prototype.setId = function(value) {
-  jspb.Message.setProto3StringField(this, 1, value);
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
@@ -445,17 +459,21 @@ proto.v2signatures.Ownership.prototype.getPublicKey = function() {
 };
 
 
-/** @param {?proto.v2signatures.PublicKey|undefined} value */
+/**
+ * @param {?proto.v2signatures.PublicKey|undefined} value
+ * @return {!proto.v2signatures.Ownership} returns this
+*/
 proto.v2signatures.Ownership.prototype.setPublicKey = function(value) {
-  jspb.Message.setWrapperField(this, 2, value);
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.v2signatures.Ownership} returns this
  */
 proto.v2signatures.Ownership.prototype.clearPublicKey = function() {
-  this.setPublicKey(undefined);
+  return this.setPublicKey(undefined);
 };
 
 
@@ -477,9 +495,12 @@ proto.v2signatures.Ownership.prototype.getConditions = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
 proto.v2signatures.Ownership.prototype.setConditions = function(value) {
-  jspb.Message.setProto3StringField(this, 3, value);
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
@@ -495,13 +516,15 @@ proto.v2signatures.Signature.repeatedFields_ = [2];
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2signatures.Signature.prototype.toObject = function(opt_includeInstance) {
@@ -511,8 +534,8 @@ proto.v2signatures.Signature.prototype.toObject = function(opt_includeInstance) 
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2signatures.Signature} msg The msg instance to transform.
  * @return {!Object}
@@ -521,7 +544,7 @@ proto.v2signatures.Signature.prototype.toObject = function(opt_includeInstance) 
 proto.v2signatures.Signature.toObject = function(includeInstance, msg) {
   var f, obj = {
     ownership: (f = msg.getOwnership()) && proto.v2signatures.Ownership.toObject(includeInstance, f),
-    signersList: jspb.Message.getRepeatedField(msg, 2),
+    signersList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     signature: msg.getSignature_asB64(),
     preImage: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
@@ -648,17 +671,21 @@ proto.v2signatures.Signature.prototype.getOwnership = function() {
 };
 
 
-/** @param {?proto.v2signatures.Ownership|undefined} value */
+/**
+ * @param {?proto.v2signatures.Ownership|undefined} value
+ * @return {!proto.v2signatures.Signature} returns this
+*/
 proto.v2signatures.Signature.prototype.setOwnership = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.v2signatures.Signature} returns this
  */
 proto.v2signatures.Signature.prototype.clearOwnership = function() {
-  this.setOwnership(undefined);
+  return this.setOwnership(undefined);
 };
 
 
@@ -680,26 +707,31 @@ proto.v2signatures.Signature.prototype.getSignersList = function() {
 };
 
 
-/** @param {!Array<number>} value */
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.v2signatures.Signature} returns this
+ */
 proto.v2signatures.Signature.prototype.setSignersList = function(value) {
-  jspb.Message.setField(this, 2, value || []);
+  return jspb.Message.setField(this, 2, value || []);
 };
 
 
 /**
  * @param {number} value
  * @param {number=} opt_index
+ * @return {!proto.v2signatures.Signature} returns this
  */
 proto.v2signatures.Signature.prototype.addSigners = function(value, opt_index) {
-  jspb.Message.addToRepeatedField(this, 2, value, opt_index);
+  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
+ * @return {!proto.v2signatures.Signature} returns this
  */
 proto.v2signatures.Signature.prototype.clearSignersList = function() {
-  this.setSignersList([]);
+  return this.setSignersList([]);
 };
 
 
@@ -736,9 +768,12 @@ proto.v2signatures.Signature.prototype.getSignature_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.Signature} returns this
+ */
 proto.v2signatures.Signature.prototype.setSignature = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value);
+  return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -751,9 +786,12 @@ proto.v2signatures.Signature.prototype.getPreImage = function() {
 };
 
 
-/** @param {string} value */
+/**
+ * @param {string} value
+ * @return {!proto.v2signatures.Signature} returns this
+ */
 proto.v2signatures.Signature.prototype.setPreImage = function(value) {
-  jspb.Message.setProto3StringField(this, 4, value);
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
@@ -762,13 +800,15 @@ proto.v2signatures.Signature.prototype.setPreImage = function(value) {
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
 /**
- * Creates an object representation of this proto suitable for use in Soy templates.
+ * Creates an object representation of this proto.
  * Field names that are reserved in JavaScript and will be renamed to pb_name.
+ * Optional fields that are not set will be set to undefined.
  * To access a reserved field use, foo.pb_<name>, eg, foo.pb_default.
  * For the list of reserved names please see:
- *     com.google.apps.jspb.JsClassTemplate.JS_RESERVED_WORDS.
- * @param {boolean=} opt_includeInstance Whether to include the JSPB instance
- *     for transitional soy proto support: http://goto/soy-param-migration
+ *     net/proto2/compiler/js/internal/generator.cc#kKeyword.
+ * @param {boolean=} opt_includeInstance Deprecated. whether to include the
+ *     JSPB instance for transitional soy proto support:
+ *     http://goto/soy-param-migration
  * @return {!Object}
  */
 proto.v2signatures.TreeState.prototype.toObject = function(opt_includeInstance) {
@@ -778,8 +818,8 @@ proto.v2signatures.TreeState.prototype.toObject = function(opt_includeInstance) 
 
 /**
  * Static version of the {@see toObject} method.
- * @param {boolean|undefined} includeInstance Whether to include the JSPB
- *     instance for transitional soy proto support:
+ * @param {boolean|undefined} includeInstance Deprecated. Whether to include
+ *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
  * @param {!proto.v2signatures.TreeState} msg The msg instance to transform.
  * @return {!Object}
@@ -963,17 +1003,21 @@ proto.v2signatures.TreeState.prototype.getSignature = function() {
 };
 
 
-/** @param {?proto.v2signatures.Signature|undefined} value */
+/**
+ * @param {?proto.v2signatures.Signature|undefined} value
+ * @return {!proto.v2signatures.TreeState} returns this
+*/
 proto.v2signatures.TreeState.prototype.setSignature = function(value) {
-  jspb.Message.setWrapperField(this, 1, value);
+  return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
+ * @return {!proto.v2signatures.TreeState} returns this
  */
 proto.v2signatures.TreeState.prototype.clearSignature = function() {
-  this.setSignature(undefined);
+  return this.setSignature(undefined);
 };
 
 
@@ -1019,9 +1063,12 @@ proto.v2signatures.TreeState.prototype.getObjectId_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setObjectId = function(value) {
-  jspb.Message.setProto3BytesField(this, 2, value);
+  return jspb.Message.setProto3BytesField(this, 2, value);
 };
 
 
@@ -1058,9 +1105,12 @@ proto.v2signatures.TreeState.prototype.getPreviousTip_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setPreviousTip = function(value) {
-  jspb.Message.setProto3BytesField(this, 3, value);
+  return jspb.Message.setProto3BytesField(this, 3, value);
 };
 
 
@@ -1097,9 +1147,12 @@ proto.v2signatures.TreeState.prototype.getNewTip_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setNewTip = function(value) {
-  jspb.Message.setProto3BytesField(this, 4, value);
+  return jspb.Message.setProto3BytesField(this, 4, value);
 };
 
 
@@ -1136,9 +1189,12 @@ proto.v2signatures.TreeState.prototype.getTransactionId_asU8 = function() {
 };
 
 
-/** @param {!(string|Uint8Array)} value */
+/**
+ * @param {!(string|Uint8Array)} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setTransactionId = function(value) {
-  jspb.Message.setProto3BytesField(this, 5, value);
+  return jspb.Message.setProto3BytesField(this, 5, value);
 };
 
 
@@ -1151,9 +1207,12 @@ proto.v2signatures.TreeState.prototype.getHeight = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setHeight = function(value) {
-  jspb.Message.setProto3IntField(this, 6, value);
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
@@ -1166,9 +1225,12 @@ proto.v2signatures.TreeState.prototype.getView = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setView = function(value) {
-  jspb.Message.setProto3IntField(this, 7, value);
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 
@@ -1181,9 +1243,12 @@ proto.v2signatures.TreeState.prototype.getCycle = function() {
 };
 
 
-/** @param {number} value */
+/**
+ * @param {number} value
+ * @return {!proto.v2signatures.TreeState} returns this
+ */
 proto.v2signatures.TreeState.prototype.setCycle = function(value) {
-  jspb.Message.setProto3IntField(this, 8, value);
+  return jspb.Message.setProto3IntField(this, 8, value);
 };
 
 
