@@ -8,8 +8,6 @@ jobs:
     steps:
     - name: checkout messages
       uses: actions/checkout@v1
-      with:
-        fetch-depth: 1
     - name: create Go dirs
       run: mkdir -p ${GITHUB_WORKSPACE}/../go/bin
     - name: set GOPATH
