@@ -6,6 +6,7 @@ require (
 	github.com/btcsuite/btcd v0.20.1-beta // indirect
 	github.com/ethereum/go-ethereum v1.9.3
 	github.com/gogo/protobuf v1.3.1
+	github.com/golang/protobuf v1.3.2 // indirect
 	github.com/kr/pretty v0.1.0 // indirect
 	github.com/pkg/errors v0.8.1
 	github.com/stretchr/testify v1.3.0
