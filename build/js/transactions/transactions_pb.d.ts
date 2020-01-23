@@ -2,6 +2,7 @@
 // file: transactions/transactions.proto
 
 import * as jspb from "google-protobuf";
+import * as gossip_gossip_pb from "../gossip/gossip_pb";
 import * as signatures_signatures_pb from "../signatures/signatures_pb";
 
 export class SetDataPayload extends jspb.Message {
@@ -175,6 +176,11 @@ export class ReceiveTokenPayload extends jspb.Message {
   setLeavesList(value: Array<Uint8Array | string>): void;
   addLeaves(value: Uint8Array | string, index?: number): Uint8Array | string;
 
+  hasProof(): boolean;
+  clearProof(): void;
+  getProof(): gossip_gossip_pb.Proof | undefined;
+  setProof(value?: gossip_gossip_pb.Proof): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): ReceiveTokenPayload.AsObject;
   static toObject(includeInstance: boolean, msg: ReceiveTokenPayload): ReceiveTokenPayload.AsObject;
@@ -191,6 +197,7 @@ export namespace ReceiveTokenPayload {
     tip: Uint8Array | string,
     treeState?: signatures_signatures_pb.TreeState.AsObject,
     leavesList: Array<Uint8Array | string>,
+    proof?: gossip_gossip_pb.Proof.AsObject,
   }
 }
 

@@ -12,6 +12,8 @@ var jspb = require('google-protobuf');
 var goog = jspb;
 var global = Function('return this')();
 
+var gossip_gossip_pb = require('../gossip/gossip_pb.js');
+goog.object.extend(proto, gossip_gossip_pb);
 var signatures_signatures_pb = require('../signatures/signatures_pb.js');
 goog.object.extend(proto, signatures_signatures_pb);
 goog.exportSymbol('proto.v2transactions.EstablishTokenPayload', null, global);
@@ -1308,7 +1310,8 @@ proto.v2transactions.ReceiveTokenPayload.toObject = function(includeInstance, ms
     sendTokenTransactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: msg.getTip_asB64(),
     treeState: (f = msg.getTreeState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
-    leavesList: msg.getLeavesList_asB64()
+    leavesList: msg.getLeavesList_asB64(),
+    proof: (f = msg.getProof()) && gossip_gossip_pb.Proof.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1361,6 +1364,11 @@ proto.v2transactions.ReceiveTokenPayload.deserializeBinaryFromReader = function(
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.addLeaves(value);
+      break;
+    case 5:
+      var value = new gossip_gossip_pb.Proof;
+      reader.readMessage(value,gossip_gossip_pb.Proof.deserializeBinaryFromReader);
+      msg.setProof(value);
       break;
     default:
       reader.skipField();
@@ -1418,6 +1426,14 @@ proto.v2transactions.ReceiveTokenPayload.serializeBinaryToWriter = function(mess
     writer.writeRepeatedBytes(
       4,
       f
+    );
+  }
+  f = message.getProof();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      gossip_gossip_pb.Proof.serializeBinaryToWriter
     );
   }
 };
@@ -1578,6 +1594,43 @@ proto.v2transactions.ReceiveTokenPayload.prototype.addLeaves = function(value, o
  */
 proto.v2transactions.ReceiveTokenPayload.prototype.clearLeavesList = function() {
   return this.setLeavesList([]);
+};
+
+
+/**
+ * optional gossip.Proof proof = 5;
+ * @return {?proto.gossip.Proof}
+ */
+proto.v2transactions.ReceiveTokenPayload.prototype.getProof = function() {
+  return /** @type{?proto.gossip.Proof} */ (
+    jspb.Message.getWrapperField(this, gossip_gossip_pb.Proof, 5));
+};
+
+
+/**
+ * @param {?proto.gossip.Proof|undefined} value
+ * @return {!proto.v2transactions.ReceiveTokenPayload} returns this
+*/
+proto.v2transactions.ReceiveTokenPayload.prototype.setProof = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.v2transactions.ReceiveTokenPayload} returns this
+ */
+proto.v2transactions.ReceiveTokenPayload.prototype.clearProof = function() {
+  return this.setProof(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.v2transactions.ReceiveTokenPayload.prototype.hasProof = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
