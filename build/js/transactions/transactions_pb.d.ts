@@ -220,6 +220,11 @@ export class TokenPayload extends jspb.Message {
   setLeavesList(value: Array<Uint8Array | string>): void;
   addLeaves(value: Uint8Array | string, index?: number): Uint8Array | string;
 
+  hasProof(): boolean;
+  clearProof(): void;
+  getProof(): gossip_gossip_pb.Proof | undefined;
+  setProof(value?: gossip_gossip_pb.Proof): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TokenPayload.AsObject;
   static toObject(includeInstance: boolean, msg: TokenPayload): TokenPayload.AsObject;
@@ -236,6 +241,7 @@ export namespace TokenPayload {
     tip: string,
     treeState?: signatures_signatures_pb.TreeState.AsObject,
     leavesList: Array<Uint8Array | string>,
+    proof?: gossip_gossip_pb.Proof.AsObject,
   }
 }
 

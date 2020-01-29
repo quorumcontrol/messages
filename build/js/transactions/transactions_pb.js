@@ -1676,7 +1676,8 @@ proto.v2transactions.TokenPayload.toObject = function(includeInstance, msg) {
     transactionId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     tip: jspb.Message.getFieldWithDefault(msg, 2, ""),
     treeState: (f = msg.getTreeState()) && signatures_signatures_pb.TreeState.toObject(includeInstance, f),
-    leavesList: msg.getLeavesList_asB64()
+    leavesList: msg.getLeavesList_asB64(),
+    proof: (f = msg.getProof()) && gossip_gossip_pb.Proof.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1729,6 +1730,11 @@ proto.v2transactions.TokenPayload.deserializeBinaryFromReader = function(msg, re
     case 4:
       var value = /** @type {!Uint8Array} */ (reader.readBytes());
       msg.addLeaves(value);
+      break;
+    case 5:
+      var value = new gossip_gossip_pb.Proof;
+      reader.readMessage(value,gossip_gossip_pb.Proof.deserializeBinaryFromReader);
+      msg.setProof(value);
       break;
     default:
       reader.skipField();
@@ -1786,6 +1792,14 @@ proto.v2transactions.TokenPayload.serializeBinaryToWriter = function(message, wr
     writer.writeRepeatedBytes(
       4,
       f
+    );
+  }
+  f = message.getProof();
+  if (f != null) {
+    writer.writeMessage(
+      5,
+      f,
+      gossip_gossip_pb.Proof.serializeBinaryToWriter
     );
   }
 };
@@ -1922,6 +1936,43 @@ proto.v2transactions.TokenPayload.prototype.addLeaves = function(value, opt_inde
  */
 proto.v2transactions.TokenPayload.prototype.clearLeavesList = function() {
   return this.setLeavesList([]);
+};
+
+
+/**
+ * optional gossip.Proof proof = 5;
+ * @return {?proto.gossip.Proof}
+ */
+proto.v2transactions.TokenPayload.prototype.getProof = function() {
+  return /** @type{?proto.gossip.Proof} */ (
+    jspb.Message.getWrapperField(this, gossip_gossip_pb.Proof, 5));
+};
+
+
+/**
+ * @param {?proto.gossip.Proof|undefined} value
+ * @return {!proto.v2transactions.TokenPayload} returns this
+*/
+proto.v2transactions.TokenPayload.prototype.setProof = function(value) {
+  return jspb.Message.setWrapperField(this, 5, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.v2transactions.TokenPayload} returns this
+ */
+proto.v2transactions.TokenPayload.prototype.clearProof = function() {
+  return this.setProof(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.v2transactions.TokenPayload.prototype.hasProof = function() {
+  return jspb.Message.getField(this, 5) != null;
 };
 
 

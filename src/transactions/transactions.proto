@@ -49,6 +49,7 @@ message TokenPayload {
   string tip = 2;
   v2signatures.TreeState tree_state = 3;
   repeated bytes leaves = 4;
+  gossip.Proof proof = 5;
 }
 
 message StakePayload{
