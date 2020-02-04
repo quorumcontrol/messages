@@ -3,6 +3,7 @@ package v2transactions;
 
 option go_package = "github.com/quorumcontrol/messages/v2/build/go/transactions";
 
+import "gossip/gossip.proto";
 import "signatures/signatures.proto";
 
 message SetDataPayload {
@@ -40,6 +41,7 @@ message ReceiveTokenPayload{
   bytes tip = 2;
   v2signatures.TreeState tree_state = 3;
   repeated bytes Leaves = 4;
+  gossip.Proof proof = 5;
 }
 
 message TokenPayload {
@@ -47,6 +49,7 @@ message TokenPayload {
   string tip = 2;
   v2signatures.TreeState tree_state = 3;
   repeated bytes leaves = 4;
+  gossip.Proof proof = 5;
 }
 
 message StakePayload{
