@@ -17,9 +17,9 @@ ifeq ($(PROTOC_IN_PATH),0)
   ifeq ($(shell protoc --version | awk '{print $$2}'),$(PROTOC_VERSION))
     PROTOC := $(shell which protoc)
   endif
-else
-  PROTOC ?= .protoc/protoc-$(PROTOC_VERSION)
 endif
+
+PROTOC ?= .protoc/protoc-$(PROTOC_VERSION)
 
 .protoc/protoc-$(PROTOC_VERSION):
 	@echo "Downloading protoc $(PROTOC_VERSION) because you don't have it installed."
