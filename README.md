@@ -1,21 +1,41 @@
 # Messages
 
 This is the library that stores both the .proto files and also the generated
-JS/GO code for the serialized messages passed around the Tupelo ecosystem.
+JS & Go code for the serialized messages passed around the Tupelo ecosystem.
 
 ## Installing
-You will need Make. Make will further install the NPM package 'grpc-tools' if
-necessary.
 
-You will also need the protoc file installed. See:
+### Go
+
+`go get github.com/quorumcontrol/messages/v2`
+
+### JS
+
+`npm install tupelo-messages`
+
+## Developing
+
+### Prerequisites
+
+- GNU Make
+- NPM
+- curl
+- unzip
+- Go 1.13+
+
+You will also need to install the version of protoc specified at the top of the
+`Makefile` or be connected to the Internet so make can download it. See:
 https://github.com/protocolbuffers/protobuf and
 https://github.com/golang/protobuf
 
 ## Building
+
 Run `make` in the root directory.
 
 ## Testing
+
 ### Go
+
 ```
 make test
 ```
