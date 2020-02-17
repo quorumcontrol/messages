@@ -1,5 +1,5 @@
 syntax = "proto3";
-package signatures;
+package v2signatures;
 
 option go_package = "github.com/quorumcontrol/messages/v2/build/go/signatures";
 
@@ -35,4 +35,3 @@ message TreeState {
   uint64 view = 7;
   uint64 cycle = 8;
 }
-

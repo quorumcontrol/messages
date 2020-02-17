@@ -20,7 +20,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.GoGoProtoPackageIsVersion2 // please upgrade the proto package
+const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
 type Envelope struct {
 	Id        []byte   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
@@ -46,7 +46,7 @@ func (m *Envelope) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Envelope.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -135,7 +135,7 @@ func (m *Ack) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 		return xxx_messageInfo_Ack.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -202,7 +202,7 @@ func (m *RequestMissing) XXX_Marshal(b []byte, deterministic bool) ([]byte, erro
 		return xxx_messageInfo_RequestMissing.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -264,7 +264,7 @@ func (m *SavedMessages) XXX_Marshal(b []byte, deterministic bool) ([]byte, error
 		return xxx_messageInfo_SavedMessages.Marshal(b, m, deterministic)
 	} else {
 		b = b[:cap(b)]
-		n, err := m.MarshalTo(b)
+		n, err := m.MarshalToSizedBuffer(b)
 		if err != nil {
 			return nil, err
 		}
@@ -319,45 +319,46 @@ func (m *SavedMessages) GetMessages() []*Envelope {
 }
 
 func init() {
-	proto.RegisterType((*Envelope)(nil), "community.Envelope")
-	proto.RegisterType((*Ack)(nil), "community.Ack")
-	proto.RegisterType((*RequestMissing)(nil), "community.RequestMissing")
-	proto.RegisterType((*SavedMessages)(nil), "community.SavedMessages")
+	proto.RegisterType((*Envelope)(nil), "v2community.Envelope")
+	proto.RegisterType((*Ack)(nil), "v2community.Ack")
+	proto.RegisterType((*RequestMissing)(nil), "v2community.RequestMissing")
+	proto.RegisterType((*SavedMessages)(nil), "v2community.SavedMessages")
 }
 
 func init() { proto.RegisterFile("community/community.proto", fileDescriptor_663aacd61135a87b) }
 
 var fileDescriptor_663aacd61135a87b = []byte{
-	// 366 bytes of a gzipped FileDescriptorProto
+	// 371 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x9c, 0x92, 0xbd, 0x4e, 0xe3, 0x40,
-	0x14, 0x85, 0x33, 0xb1, 0xf3, 0x77, 0x37, 0x1b, 0xad, 0x66, 0xa5, 0xd5, 0x2c, 0x42, 0x96, 0x95,
-	0xca, 0x55, 0x2c, 0x85, 0x82, 0x1a, 0x24, 0xca, 0x14, 0x98, 0x02, 0x89, 0xce, 0xf1, 0x4c, 0xcc,
-	0x80, 0xed, 0x71, 0xe6, 0xc7, 0x52, 0xde, 0x82, 0x07, 0xe0, 0x09, 0x78, 0x12, 0xca, 0x94, 0x94,
-	0x28, 0x79, 0x11, 0x64, 0xe3, 0x38, 0x24, 0x05, 0x05, 0xdd, 0x3d, 0x47, 0xbe, 0xe7, 0x7c, 0xd6,
-	0x5c, 0xf8, 0x1f, 0x89, 0x34, 0x35, 0x19, 0xd7, 0x2b, 0xbf, 0x99, 0x26, 0xb9, 0x14, 0x5a, 0xe0,
-	0x41, 0x63, 0x8c, 0x5f, 0x10, 0xf4, 0xaf, 0xb2, 0x82, 0x25, 0x22, 0x67, 0x78, 0x04, 0x6d, 0x4e,
-	0x09, 0x72, 0x91, 0x37, 0x0c, 0xda, 0x9c, 0x96, 0x5a, 0x0b, 0xd2, 0xfe, 0xd4, 0x5a, 0x60, 0x0c,
-	0xf6, 0x42, 0x8a, 0x94, 0x58, 0x95, 0x53, 0xcd, 0x98, 0x40, 0x2f, 0x0f, 0x57, 0x89, 0x08, 0x29,
-	0xb1, 0x2b, 0x7b, 0x27, 0xf1, 0x09, 0xf4, 0x15, 0x5b, 0x1a, 0x96, 0x45, 0x8c, 0x74, 0x5c, 0xe4,
-	0xd9, 0x41, 0xa3, 0xf1, 0x3f, 0xe8, 0x6a, 0x91, 0xf3, 0x48, 0x91, 0xae, 0x6b, 0x79, 0xc3, 0xa0,
-	0x56, 0xf8, 0x14, 0x06, 0x8a, 0xc7, 0x59, 0xa8, 0x8d, 0x64, 0xa4, 0x57, 0xe5, 0xed, 0x8d, 0xf1,
-	0x2d, 0x58, 0x17, 0xd1, 0xe3, 0x8f, 0x30, 0x0f, 0x82, 0xed, 0xe3, 0xe0, 0x07, 0x18, 0x05, 0x25,
-	0x9a, 0xd2, 0x33, 0xae, 0x14, 0xcf, 0xe2, 0x03, 0x78, 0x74, 0x04, 0xef, 0x00, 0x70, 0xca, 0x32,
-	0xcd, 0x17, 0x9c, 0xc9, 0xba, 0xf7, 0x8b, 0x73, 0xd8, 0x65, 0x1d, 0x77, 0x3d, 0x23, 0xf8, 0x7d,
-	0x13, 0x16, 0x8c, 0xce, 0x98, 0x52, 0x61, 0xcc, 0x54, 0xcd, 0x8f, 0x1a, 0xfe, 0x3f, 0x60, 0x45,
-	0x9c, 0xd6, 0xc1, 0xe5, 0x58, 0xd2, 0xe4, 0x52, 0x14, 0x9c, 0x32, 0x59, 0x07, 0x36, 0xfa, 0xfb,
-	0x3f, 0xc3, 0x3e, 0xf4, 0xd3, 0xba, 0x87, 0x74, 0x5c, 0xcb, 0xfb, 0x35, 0xfd, 0x3b, 0xd9, 0x9f,
-	0xc3, 0xee, 0xe5, 0x83, 0xe6, 0xa3, 0xcb, 0xeb, 0xd7, 0x8d, 0x83, 0xd6, 0x1b, 0x07, 0xbd, 0x6f,
-	0x1c, 0xf4, 0xb4, 0x75, 0x5a, 0xeb, 0xad, 0xd3, 0x7a, 0xdb, 0x3a, 0xad, 0xbb, 0xf3, 0x98, 0xeb,
-	0x7b, 0x33, 0x2f, 0xd7, 0xfd, 0xa5, 0x11, 0xd2, 0xa4, 0x91, 0xc8, 0xb4, 0x14, 0x89, 0xbf, 0x5b,
-	0xf6, 0x8b, 0xa9, 0x3f, 0x37, 0x3c, 0xa1, 0x7e, 0x2c, 0xf6, 0x47, 0x37, 0xef, 0x56, 0x57, 0x77,
-	0xf6, 0x11, 0x00, 0x00, 0xff, 0xff, 0x58, 0xe2, 0x3a, 0x4a, 0x92, 0x02, 0x00, 0x00,
+	0x14, 0x85, 0x33, 0xb1, 0xf3, 0xb3, 0x93, 0x6c, 0xb4, 0x1a, 0x69, 0x57, 0xb3, 0x08, 0x59, 0x56,
+	0x2a, 0x57, 0xb6, 0x08, 0x05, 0x35, 0x48, 0x94, 0x29, 0x30, 0x05, 0x12, 0x9d, 0xe3, 0x99, 0x98,
+	0x01, 0xdb, 0xd7, 0x99, 0x19, 0x5b, 0xca, 0x5b, 0xf0, 0x04, 0x3c, 0x00, 0x4f, 0x42, 0x99, 0x92,
+	0x12, 0x25, 0x2f, 0x82, 0x6c, 0x1c, 0xe7, 0xa7, 0xa0, 0xa0, 0xbb, 0xe7, 0xc8, 0x3e, 0xe7, 0x1b,
+	0xdd, 0x8b, 0xff, 0x87, 0x90, 0x24, 0x79, 0x2a, 0xf4, 0xd2, 0x6b, 0x26, 0x37, 0x93, 0xa0, 0x81,
+	0x0c, 0x8a, 0x49, 0x63, 0x8d, 0x5f, 0x11, 0xee, 0x5f, 0xa7, 0x05, 0x8f, 0x21, 0xe3, 0x64, 0x84,
+	0xdb, 0x82, 0x51, 0x64, 0x23, 0x67, 0xe8, 0xb7, 0x05, 0x2b, 0xb5, 0x06, 0xda, 0xfe, 0xd2, 0x1a,
+	0x08, 0xc1, 0xe6, 0x5c, 0x42, 0x42, 0x8d, 0xca, 0xa9, 0x66, 0x42, 0x71, 0x2f, 0x0b, 0x96, 0x31,
+	0x04, 0x8c, 0x9a, 0x95, 0xbd, 0x95, 0xe4, 0x04, 0xf7, 0x15, 0x5f, 0xe4, 0x3c, 0x0d, 0x39, 0xed,
+	0xd8, 0xc8, 0x31, 0xfd, 0x46, 0x93, 0x7f, 0xb8, 0xab, 0x21, 0x13, 0xa1, 0xa2, 0x5d, 0xdb, 0x70,
+	0x86, 0x7e, 0xad, 0xc8, 0x29, 0xfe, 0xa5, 0x44, 0x94, 0x06, 0x3a, 0x97, 0x9c, 0xf6, 0xaa, 0xbc,
+	0x9d, 0x31, 0xbe, 0xc3, 0xc6, 0x65, 0xf8, 0xf4, 0x23, 0xcc, 0x83, 0x60, 0xf3, 0x38, 0xf8, 0x11,
+	0x8f, 0xfc, 0x12, 0x4d, 0xe9, 0xa9, 0x50, 0x4a, 0xa4, 0xd1, 0x01, 0x3c, 0x3a, 0x82, 0xb7, 0x30,
+	0x16, 0x8c, 0xa7, 0x5a, 0xcc, 0x05, 0x97, 0x75, 0xef, 0x9e, 0x73, 0xd8, 0x65, 0x1c, 0x77, 0xbd,
+	0x20, 0xfc, 0xfb, 0x36, 0x28, 0x38, 0x9b, 0x72, 0xa5, 0x82, 0x88, 0xab, 0x9a, 0x1f, 0x35, 0xfc,
+	0x7f, 0xb0, 0x11, 0x0a, 0x56, 0x07, 0x97, 0x63, 0x49, 0x93, 0x49, 0x28, 0x04, 0xe3, 0xb2, 0x0e,
+	0x6c, 0xf4, 0xf7, 0x2f, 0x23, 0x67, 0xb8, 0x9f, 0xd4, 0x3d, 0xb4, 0x63, 0x1b, 0xce, 0x60, 0xf2,
+	0xd7, 0xdd, 0xdb, 0xbf, 0xbb, 0xdd, 0xbd, 0xdf, 0x7c, 0x76, 0x75, 0xf3, 0xb6, 0xb6, 0xd0, 0x6a,
+	0x6d, 0xa1, 0x8f, 0xb5, 0x85, 0x9e, 0x37, 0x56, 0x6b, 0xb5, 0xb1, 0x5a, 0xef, 0x1b, 0xab, 0x75,
+	0x7f, 0x11, 0x09, 0xfd, 0x90, 0xcf, 0xdc, 0x10, 0x12, 0x6f, 0x91, 0x83, 0xcc, 0x93, 0x10, 0x52,
+	0x2d, 0x21, 0xf6, 0xb6, 0x3f, 0x7b, 0xc5, 0xc4, 0x9b, 0xe5, 0x22, 0x66, 0x5e, 0x04, 0xbb, 0xc3,
+	0x9b, 0x75, 0xab, 0xcb, 0x3b, 0xff, 0x0c, 0x00, 0x00, 0xff, 0xff, 0xfb, 0xd9, 0x70, 0xff, 0x96,
+	0x02, 0x00, 0x00,
 }
 
 func (m *Envelope) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -365,60 +366,71 @@ func (m *Envelope) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Envelope) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Envelope) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Id) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Id)))
-		i += copy(dAtA[i:], m.Id)
-	}
-	if len(m.To) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
-		i += copy(dAtA[i:], m.To)
-	}
-	if len(m.From) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.From)))
-		i += copy(dAtA[i:], m.From)
-	}
-	if len(m.Payload) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Payload)))
-		i += copy(dAtA[i:], m.Payload)
-	}
-	if m.Sequence != 0 {
-		dAtA[i] = 0x28
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(m.Sequence))
+	if len(m.Signature) > 0 {
+		i -= len(m.Signature)
+		copy(dAtA[i:], m.Signature)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
+		i--
+		dAtA[i] = 0x3a
 	}
 	if len(m.Topics) > 0 {
-		for _, b := range m.Topics {
+		for iNdEx := len(m.Topics) - 1; iNdEx >= 0; iNdEx-- {
+			i -= len(m.Topics[iNdEx])
+			copy(dAtA[i:], m.Topics[iNdEx])
+			i = encodeVarintCommunity(dAtA, i, uint64(len(m.Topics[iNdEx])))
+			i--
 			dAtA[i] = 0x32
-			i++
-			i = encodeVarintCommunity(dAtA, i, uint64(len(b)))
-			i += copy(dAtA[i:], b)
 		}
 	}
-	if len(m.Signature) > 0 {
-		dAtA[i] = 0x3a
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
-		i += copy(dAtA[i:], m.Signature)
+	if m.Sequence != 0 {
+		i = encodeVarintCommunity(dAtA, i, uint64(m.Sequence))
+		i--
+		dAtA[i] = 0x28
 	}
-	return i, nil
+	if len(m.Payload) > 0 {
+		i -= len(m.Payload)
+		copy(dAtA[i:], m.Payload)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Payload)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.From) > 0 {
+		i -= len(m.From)
+		copy(dAtA[i:], m.From)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.From)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if len(m.To) > 0 {
+		i -= len(m.To)
+		copy(dAtA[i:], m.To)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.Id) > 0 {
+		i -= len(m.Id)
+		copy(dAtA[i:], m.Id)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Id)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *Ack) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -426,41 +438,50 @@ func (m *Ack) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *Ack) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *Ack) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.Id) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Id)))
-		i += copy(dAtA[i:], m.Id)
-	}
-	if len(m.To) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
-		i += copy(dAtA[i:], m.To)
+	if len(m.Signature) > 0 {
+		i -= len(m.Signature)
+		copy(dAtA[i:], m.Signature)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
+		i--
+		dAtA[i] = 0x22
 	}
 	if len(m.From) > 0 {
-		dAtA[i] = 0x1a
-		i++
+		i -= len(m.From)
+		copy(dAtA[i:], m.From)
 		i = encodeVarintCommunity(dAtA, i, uint64(len(m.From)))
-		i += copy(dAtA[i:], m.From)
+		i--
+		dAtA[i] = 0x1a
 	}
-	if len(m.Signature) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
-		i += copy(dAtA[i:], m.Signature)
+	if len(m.To) > 0 {
+		i -= len(m.To)
+		copy(dAtA[i:], m.To)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
+		i--
+		dAtA[i] = 0x12
 	}
-	return i, nil
+	if len(m.Id) > 0 {
+		i -= len(m.Id)
+		copy(dAtA[i:], m.Id)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Id)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func (m *RequestMissing) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -468,34 +489,41 @@ func (m *RequestMissing) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *RequestMissing) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *RequestMissing) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if m.Sequence != 0 {
-		dAtA[i] = 0x8
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(m.Sequence))
+	if len(m.Signature) > 0 {
+		i -= len(m.Signature)
+		copy(dAtA[i:], m.Signature)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
+		i--
+		dAtA[i] = 0x1a
 	}
 	if len(m.Identifier) > 0 {
-		dAtA[i] = 0x12
-		i++
+		i -= len(m.Identifier)
+		copy(dAtA[i:], m.Identifier)
 		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Identifier)))
-		i += copy(dAtA[i:], m.Identifier)
+		i--
+		dAtA[i] = 0x12
 	}
-	if len(m.Signature) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
-		i += copy(dAtA[i:], m.Signature)
+	if m.Sequence != 0 {
+		i = encodeVarintCommunity(dAtA, i, uint64(m.Sequence))
+		i--
+		dAtA[i] = 0x8
 	}
-	return i, nil
+	return len(dAtA) - i, nil
 }
 
 func (m *SavedMessages) Marshal() (dAtA []byte, err error) {
 	size := m.Size()
 	dAtA = make([]byte, size)
-	n, err := m.MarshalTo(dAtA)
+	n, err := m.MarshalToSizedBuffer(dAtA[:size])
 	if err != nil {
 		return nil, err
 	}
@@ -503,57 +531,70 @@ func (m *SavedMessages) Marshal() (dAtA []byte, err error) {
 }
 
 func (m *SavedMessages) MarshalTo(dAtA []byte) (int, error) {
-	var i int
+	size := m.Size()
+	return m.MarshalToSizedBuffer(dAtA[:size])
+}
+
+func (m *SavedMessages) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+	i := len(dAtA)
 	_ = i
 	var l int
 	_ = l
-	if len(m.To) > 0 {
-		dAtA[i] = 0xa
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
-		i += copy(dAtA[i:], m.To)
-	}
-	if len(m.Cid) > 0 {
-		dAtA[i] = 0x12
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Cid)))
-		i += copy(dAtA[i:], m.Cid)
-	}
-	if len(m.Provider) > 0 {
-		dAtA[i] = 0x1a
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Provider)))
-		i += copy(dAtA[i:], m.Provider)
-	}
-	if len(m.Signature) > 0 {
-		dAtA[i] = 0x22
-		i++
-		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
-		i += copy(dAtA[i:], m.Signature)
-	}
 	if len(m.Messages) > 0 {
-		for _, msg := range m.Messages {
-			dAtA[i] = 0x2a
-			i++
-			i = encodeVarintCommunity(dAtA, i, uint64(msg.Size()))
-			n, err := msg.MarshalTo(dAtA[i:])
-			if err != nil {
-				return 0, err
+		for iNdEx := len(m.Messages) - 1; iNdEx >= 0; iNdEx-- {
+			{
+				size, err := m.Messages[iNdEx].MarshalToSizedBuffer(dAtA[:i])
+				if err != nil {
+					return 0, err
+				}
+				i -= size
+				i = encodeVarintCommunity(dAtA, i, uint64(size))
 			}
-			i += n
+			i--
+			dAtA[i] = 0x2a
 		}
 	}
-	return i, nil
+	if len(m.Signature) > 0 {
+		i -= len(m.Signature)
+		copy(dAtA[i:], m.Signature)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Signature)))
+		i--
+		dAtA[i] = 0x22
+	}
+	if len(m.Provider) > 0 {
+		i -= len(m.Provider)
+		copy(dAtA[i:], m.Provider)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Provider)))
+		i--
+		dAtA[i] = 0x1a
+	}
+	if len(m.Cid) > 0 {
+		i -= len(m.Cid)
+		copy(dAtA[i:], m.Cid)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.Cid)))
+		i--
+		dAtA[i] = 0x12
+	}
+	if len(m.To) > 0 {
+		i -= len(m.To)
+		copy(dAtA[i:], m.To)
+		i = encodeVarintCommunity(dAtA, i, uint64(len(m.To)))
+		i--
+		dAtA[i] = 0xa
+	}
+	return len(dAtA) - i, nil
 }
 
 func encodeVarintCommunity(dAtA []byte, offset int, v uint64) int {
+	offset -= sovCommunity(v)
+	base := offset
 	for v >= 1<<7 {
 		dAtA[offset] = uint8(v&0x7f | 0x80)
 		v >>= 7
 		offset++
 	}
 	dAtA[offset] = uint8(v)
-	return offset + 1
+	return base
 }
 func (m *Envelope) Size() (n int) {
 	if m == nil {
@@ -1504,6 +1545,7 @@ func (m *SavedMessages) Unmarshal(dAtA []byte) error {
 func skipCommunity(dAtA []byte) (n int, err error) {
 	l := len(dAtA)
 	iNdEx := 0
+	depth := 0
 	for iNdEx < l {
 		var wire uint64
 		for shift := uint(0); ; shift += 7 {
@@ -1535,10 +1577,8 @@ func skipCommunity(dAtA []byte) (n int, err error) {
 					break
 				}
 			}
-			return iNdEx, nil
 		case 1:
 			iNdEx += 8
-			return iNdEx, nil
 		case 2:
 			var length int
 			for shift := uint(0); ; shift += 7 {
@@ -1559,55 +1599,30 @@ func skipCommunity(dAtA []byte) (n int, err error) {
 				return 0, ErrInvalidLengthCommunity
 			}
 			iNdEx += length
-			if iNdEx < 0 {
-				return 0, ErrInvalidLengthCommunity
-			}
-			return iNdEx, nil
 		case 3:
-			for {
-				var innerWire uint64
-				var start int = iNdEx
-				for shift := uint(0); ; shift += 7 {
-					if shift >= 64 {
-						return 0, ErrIntOverflowCommunity
-					}
-					if iNdEx >= l {
-						return 0, io.ErrUnexpectedEOF
-					}
-					b := dAtA[iNdEx]
-					iNdEx++
-					innerWire |= (uint64(b) & 0x7F) << shift
-					if b < 0x80 {
-						break
-					}
-				}
-				innerWireType := int(innerWire & 0x7)
-				if innerWireType == 4 {
-					break
-				}
-				next, err := skipCommunity(dAtA[start:])
-				if err != nil {
-					return 0, err
-				}
-				iNdEx = start + next
-				if iNdEx < 0 {
-					return 0, ErrInvalidLengthCommunity
-				}
-			}
-			return iNdEx, nil
+			depth++
 		case 4:
-			return iNdEx, nil
+			if depth == 0 {
+				return 0, ErrUnexpectedEndOfGroupCommunity
+			}
+			depth--
 		case 5:
 			iNdEx += 4
-			return iNdEx, nil
 		default:
 			return 0, fmt.Errorf("proto: illegal wireType %d", wireType)
 		}
+		if iNdEx < 0 {
+			return 0, ErrInvalidLengthCommunity
+		}
+		if depth == 0 {
+			return iNdEx, nil
+		}
 	}
-	panic("unreachable")
+	return 0, io.ErrUnexpectedEOF
 }
 
 var (
-	ErrInvalidLengthCommunity = fmt.Errorf("proto: negative length found during unmarshaling")
-	ErrIntOverflowCommunity   = fmt.Errorf("proto: integer overflow")
+	ErrInvalidLengthCommunity        = fmt.Errorf("proto: negative length found during unmarshaling")
+	ErrIntOverflowCommunity          = fmt.Errorf("proto: integer overflow")
+	ErrUnexpectedEndOfGroupCommunity = fmt.Errorf("proto: unexpected end of group")
 )
