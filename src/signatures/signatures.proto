@@ -7,6 +7,7 @@ message PublicKey {
   enum Type {
     KeyTypeBLSGroupSig = 0;
     KeyTypeSecp256k1 = 1;
+    KeyTypeHash = 2;
   }
   Type type = 1;
   bytes public_key = 2;
@@ -16,12 +17,21 @@ message Ownership {
   string id = 1;
   PublicKey public_key = 2;
   string conditions = 3;
+
+  // co_owners is an array of other owners
+  // that `co_owner_threshold` must have also signed
+  // for this ownership to be valid.
+  repeated string co_owners = 4;
+  // the number of co_owners that must have also signed 
+  uint32 co_owner_threshold = 5;
 }
 
 message Signature {
   Ownership ownership = 1;
   repeated uint32 signers = 2;
   bytes signature = 3;
+  // pre_image is in the process of deprecation, 
+  // use the Hash public key type
   string pre_image = 4;
 }
 

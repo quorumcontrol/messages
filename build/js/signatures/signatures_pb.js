@@ -49,7 +49,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.v2signatures.Ownership = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.v2signatures.Ownership.repeatedFields_, null);
 };
 goog.inherits(proto.v2signatures.Ownership, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -230,7 +230,8 @@ proto.v2signatures.PublicKey.serializeBinaryToWriter = function(message, writer)
  */
 proto.v2signatures.PublicKey.Type = {
   KEYTYPEBLSGROUPSIG: 0,
-  KEYTYPESECP256K1: 1
+  KEYTYPESECP256K1: 1,
+  KEYTYPEHASH: 2
 };
 
 /**
@@ -294,6 +295,13 @@ proto.v2signatures.PublicKey.prototype.setPublicKey = function(value) {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.v2signatures.Ownership.repeatedFields_ = [4];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -327,7 +335,9 @@ proto.v2signatures.Ownership.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     publicKey: (f = msg.getPublicKey()) && proto.v2signatures.PublicKey.toObject(includeInstance, f),
-    conditions: jspb.Message.getFieldWithDefault(msg, 3, "")
+    conditions: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    coOwnersList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    coOwnerThreshold: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -377,6 +387,14 @@ proto.v2signatures.Ownership.deserializeBinaryFromReader = function(msg, reader)
       var value = /** @type {string} */ (reader.readString());
       msg.setConditions(value);
       break;
+    case 4:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addCoOwners(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setCoOwnerThreshold(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -425,6 +443,20 @@ proto.v2signatures.Ownership.serializeBinaryToWriter = function(message, writer)
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getCoOwnersList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      4,
+      f
+    );
+  }
+  f = message.getCoOwnerThreshold();
+  if (f !== 0) {
+    writer.writeUint32(
+      5,
       f
     );
   }
@@ -501,6 +533,61 @@ proto.v2signatures.Ownership.prototype.getConditions = function() {
  */
 proto.v2signatures.Ownership.prototype.setConditions = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * repeated string co_owners = 4;
+ * @return {!Array<string>}
+ */
+proto.v2signatures.Ownership.prototype.getCoOwnersList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 4));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
+proto.v2signatures.Ownership.prototype.setCoOwnersList = function(value) {
+  return jspb.Message.setField(this, 4, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
+proto.v2signatures.Ownership.prototype.addCoOwners = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
+proto.v2signatures.Ownership.prototype.clearCoOwnersList = function() {
+  return this.setCoOwnersList([]);
+};
+
+
+/**
+ * optional uint32 co_owner_threshold = 5;
+ * @return {number}
+ */
+proto.v2signatures.Ownership.prototype.getCoOwnerThreshold = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.v2signatures.Ownership} returns this
+ */
+proto.v2signatures.Ownership.prototype.setCoOwnerThreshold = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
 };
 
 

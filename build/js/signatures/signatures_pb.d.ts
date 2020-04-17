@@ -31,6 +31,7 @@ export namespace PublicKey {
   export interface TypeMap {
     KEYTYPEBLSGROUPSIG: 0;
     KEYTYPESECP256K1: 1;
+    KEYTYPEHASH: 2;
   }
 
   export const Type: TypeMap;
@@ -48,6 +49,14 @@ export class Ownership extends jspb.Message {
   getConditions(): string;
   setConditions(value: string): void;
 
+  clearCoOwnersList(): void;
+  getCoOwnersList(): Array<string>;
+  setCoOwnersList(value: Array<string>): void;
+  addCoOwners(value: string, index?: number): string;
+
+  getCoOwnerThreshold(): number;
+  setCoOwnerThreshold(value: number): void;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Ownership.AsObject;
   static toObject(includeInstance: boolean, msg: Ownership): Ownership.AsObject;
@@ -63,6 +72,8 @@ export namespace Ownership {
     id: string,
     publicKey?: PublicKey.AsObject,
     conditions: string,
+    coOwnersList: Array<string>,
+    coOwnerThreshold: number,
   }
 }
 
